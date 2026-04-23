@@ -806,6 +806,54 @@ body::before {
 .practice-feedback.correct { color: var(--teal-light); }
 .practice-feedback.wrong { color: #e74c3c; }
 
+.timer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background: var(--surface2);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.timer-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.timer-display.warning {
+  color: #e74c3c;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.toggle-btn {
+  background: var(--border2);
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.toggle-btn.active {
+  background: var(--gold-dim);
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
 .hint-reveal {
   color: var(--gold);
   font-weight: bold;
@@ -5086,6 +5134,7 @@ function shuffleArray(array) {
 }
 
 function toggleFlashcardMode() {
+  stopPracticeTimer();
   flashcardMode = !flashcardMode;
   practiceMode = false; // Disable practice mode when enabling flashcards
   isFlipped = false;
@@ -5140,6 +5189,94 @@ function saveState() {
 }
 
 // ─── INIT ───
+let practiceTimerActive = false;
+let practiceTimer = null;
+let timeLeft = 30;
+
+function startPracticeTimer() {
+  stopPracticeTimer();
+  if (!practiceTimerActive) return;
+  
+  timeLeft = 30;
+  updateTimerUI();
+  
+  practiceTimer = setInterval(() => {
+    timeLeft--;
+    updateTimerUI();
+    
+    if (timeLeft <= 0) {
+      handlePracticeTimeout();
+    }
+  }, 1000);
+}
+
+function stopPracticeTimer() {
+  if (practiceTimer) {
+    clearInterval(practiceTimer);
+    practiceTimer = null;
+  }
+}
+
+function updateTimerUI() {
+  const display = document.getElementById('timer-display');
+  if (!display) return;
+  
+  display.textContent = `Time left: ${timeLeft}s`;
+  if (timeLeft <= 10) {
+    display.classList.add('warning');
+  } else {
+    display.classList.remove('warning');
+  }
+}
+
+function togglePracticeTimer() {
+  practiceTimerActive = !practiceTimerActive;
+  const btn = document.getElementById('timer-toggle-btn');
+  if (btn) {
+    if (practiceTimerActive) {
+      btn.classList.add('active');
+      btn.textContent = 'Timer: ON';
+      startPracticeTimer();
+    } else {
+      btn.classList.remove('active');
+      btn.textContent = 'Timer: OFF';
+      stopPracticeTimer();
+      const display = document.getElementById('timer-display');
+      if (display) display.textContent = '';
+    }
+  }
+}
+
+function handlePracticeTimeout() {
+  stopPracticeTimer();
+  const feedback = document.getElementById('practice-feedback');
+  const input = document.getElementById('practice-input');
+  const w = WORDS[currentIdx];
+  
+  if (feedback) {
+    feedback.innerHTML = `<span style="display:flex; align-items:center; gap:8px;">${ICONS.error} Time's up! Added to Hitlist.</span>`;
+    feedback.className = "practice-feedback wrong";
+  }
+  
+  if (input) {
+    input.value = w.w; // Show the answer
+    input.disabled = true;
+    input.style.borderBottomColor = "#e74c3c";
+  }
+  
+  // Add to hitlist
+  if (!hitlist.has(currentIdx)) {
+    hitlist.add(currentIdx);
+    mastered.delete(currentIdx);
+    updateProgress();
+    saveState();
+  }
+  
+  setTimeout(() => {
+    if (practiceMode) navigate(1);
+  }, 2000);
+}
+
 function init() {
   updateThemeIcon();
   buildGroupTabs();
@@ -5397,11 +5534,12 @@ function showPractice() {
 }
 
 function renderPractice() {
+  stopPracticeTimer();
   const w = WORDS[currentIdx];
   const listToUse = practiceWords.length > 0 ? practiceWords : filteredWords;
   const currentInList = listToUse.findIndex(f => f === w);
   const totalInList = listToUse.length;
-  
+
   // Bottom nav
   document.getElementById('bottom-word-name').textContent = "PRACTICE MODE";
   document.getElementById('bottom-group').textContent = `GROUP ${w.g} · ${w.pos}`;
@@ -5422,6 +5560,13 @@ function renderPractice() {
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase;">Practice Mode</div>
       </div>
 
+      <div class="timer-wrap">
+        <div id="timer-display" class="timer-display">${practiceTimerActive ? `Time left: ${timeLeft}s` : ''}</div>
+        <button id="timer-toggle-btn" class="toggle-btn ${practiceTimerActive ? 'active' : ''}" onclick="togglePracticeTimer()">
+          Timer: ${practiceTimerActive ? 'ON' : 'OFF'}
+        </button>
+      </div>
+
       <div class="practice-def-label">Definition</div>
       <div class="practice-def">${w.def}</div>
 
@@ -5431,17 +5576,17 @@ function renderPractice() {
           ${hintContent}
         </button>
       </div>
-      
+
       <div id="practice-feedback" class="practice-feedback"></div>
     </div>
   `;
-  
+
   setTimeout(() => {
     const input = document.getElementById('practice-input');
     if(input) input.focus();
+    if(practiceTimerActive) startPracticeTimer();
   }, 100);
 }
-
 function showPracticeHint() {
   hintRevealed = true;
   renderPractice();
@@ -5456,6 +5601,7 @@ function checkPracticeAnswer() {
   const correctVal = WORDS[currentIdx].w.toLowerCase();
   
   if (userVal === correctVal) {
+    stopPracticeTimer();
     feedback.innerHTML = `<span style="display:flex; align-items:center; gap:8px;">${ICONS.confirm} Correct! Well done.</span>`;
     feedback.className = "practice-feedback correct";
     input.style.borderBottomColor = "var(--teal)";
@@ -5725,6 +5871,7 @@ function toggleHitlist() {
 }
 
 function navigate(dir) {
+  stopPracticeTimer();
   const listToUse = (practiceMode && practiceWords.length > 0) ? practiceWords : filteredWords;
   const currentInList = listToUse.findIndex(w => w === WORDS[currentIdx]);
   
