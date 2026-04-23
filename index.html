@@ -287,6 +287,74 @@ body::before {
   z-index: 10;
 }
 
+/* Synonym Cluster View Styles */
+.synonym-cluster-view {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: fadeUp 0.4s ease-out;
+}
+
+.cluster-hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 40px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.cluster-meaning-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.cluster-meaning-text {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -1px;
+}
+
+.cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.cluster-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cluster-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  background: var(--surface2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cc-word {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.cc-def {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .progress-label span { color: var(--gold); }
 
 /* ── MAIN ── */
@@ -4917,13 +4985,56 @@ function setGroup(g) {
   activeGroup = g;
   buildGroupTabs();
   filterWords();
+  
+  if (g === 'synonyms' && !searchTerm) {
+    showSynonymClusters();
+    return;
+  }
+  
   if (practiceMode) {
     practiceWords = shuffleArray(filteredWords);
     if (practiceWords.length > 0) {
       currentIdx = WORDS.indexOf(practiceWords[0]);
       showPractice();
     }
+  } else {
+    showCard();
   }
+}
+
+function showSynonymClusters() {
+  document.getElementById('input-screen').style.display = 'none';
+  document.getElementById('practice-view').style.display = 'none';
+  document.getElementById('card-view').style.display = 'block';
+  document.getElementById('bottom-nav').style.display = 'none';
+  
+  let html = `<div class="synonym-cluster-view">
+    <div class="cluster-hero">
+      <div class="cluster-meaning-label">Meaning → Words</div>
+      <div class="cluster-meaning-text">Grouped by Shared Meaning</div>
+    </div>
+    <div class="cluster-grid">`;
+    
+  SYNONYM_CLUSTERS.forEach(cluster => {
+    const clusterWords = WORDS.filter(w => cluster.words.includes(w.w));
+    if (clusterWords.length > 0) {
+      html += `
+        <div class="cluster-card" onclick="setGroup('synonyms'); searchTerm='${cluster.name.split('/')[0].trim().toLowerCase()}'; filterWords();">
+          <div class="cluster-meaning-label">${cluster.name}</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            ${clusterWords.map(w => `<span class="wi-name" style="color:var(--gold); font-weight:600;">${w.w}</span>`).join('<span style="color:var(--dim)">•</span>')}
+          </div>
+          <div style="margin-top:16px; font-size:12px; color:var(--muted); line-height:1.4;">
+            ${clusterWords[0].def.substring(0, 80)}...
+          </div>
+        </div>
+      `;
+    }
+  });
+  
+  html += `</div></div>`;
+  document.getElementById('card-view').innerHTML = html;
+  buildSidebar();
 }
 function filterWords() {
   searchTerm = document.getElementById('sidebar-search').value.toLowerCase();
