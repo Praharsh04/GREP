@@ -5186,28 +5186,34 @@ function speakWord(word) {
   }
 
   window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(word);
-
-  // Natural sounding settings
-  utterance.rate = 0.85; 
-  utterance.pitch = 1.0;
-  utterance.volume = 1.0;
-
   const voices = window.speechSynthesis.getVoices();
 
-  // Priority list for "natural" sounding voices across platforms
-  const preferredVoice = voices.find(v => v.name.includes('Natural') || v.name.includes('Neural')) ||
-                        voices.find(v => v.name.includes('Google US English')) ||
-                        voices.find(v => v.name.includes('Microsoft Aria') || v.name.includes('Microsoft Jenny')) ||
-                        voices.find(v => v.name.includes('Samantha') || v.name.includes('Alex')) ||
-                        voices.find(v => v.lang.startsWith('en-US')) ||
-                        voices.find(v => v.lang.startsWith('en'));
+  // Priority: Neerja (Neural), then any Indian English, then any English
+  const voice = voices.find(v => v.name.includes('Neerja') || v.name.includes('en-IN')) || 
+                voices.find(v => v.lang === 'en-IN') ||
+                voices.find(v => v.lang.startsWith('en'));
 
-  if (preferredVoice) utterance.voice = preferredVoice;
+  // 1. Pronounce normally once
+  const wordUtterance = new SpeechSynthesisUtterance(word);
+  if (voice) wordUtterance.voice = voice;
+  wordUtterance.rate = 0.85; // Natural pace
+  wordUtterance.pitch = 1.0;
 
-  window.speechSynthesis.speak(utterance);
+  // 2. Spell it out slowly after the word is spoken
+  wordUtterance.onend = () => {
+    setTimeout(() => {
+      // Split into letters and add spaces/dots for deliberate pacing
+      const spelling = word.split('').join(' . '); 
+      const spellingUtterance = new SpeechSynthesisUtterance(spelling);
+      if (voice) spellingUtterance.voice = voice;
+      spellingUtterance.rate = 0.55; // Slow for spelling
+      spellingUtterance.pitch = 1.0;
+      window.speechSynthesis.speak(spellingUtterance);
+    }, 600); // 600ms breath between word and spelling
+  };
+
+  window.speechSynthesis.speak(wordUtterance);
 }
-
 // Ensure voices are loaded (required for some browsers)
 window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();// ─── INIT ───
 let practiceTimerActive = false;
