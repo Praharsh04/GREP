@@ -353,72 +353,138 @@ body::before {
   z-index: 10;
 }
 
-/* Synonym Cluster View Styles */
-.synonym-cluster-view {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+/* Synonym Accordion Styles */
+.synonym-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   animation: fadeUp 0.4s ease-out;
 }
 
-.cluster-hero {
-  text-align: center;
-  margin-bottom: 60px;
-  padding: 40px;
-  background: var(--surface2);
+.accordion-item {
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cluster-meaning-label {
+.accordion-item:hover {
+  border-color: var(--border2);
+}
+
+.accordion-item.active {
+  border-color: var(--gold);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.accordion-header {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  background: var(--surface2);
+}
+
+.accordion-title {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   color: var(--gold);
   text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 16px;
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
-.cluster-meaning-text {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--cream);
-  letter-spacing: -1px;
+.accordion-icon {
+  transition: transform 0.3s ease;
+  color: var(--dim);
 }
 
-.cluster-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+  color: var(--gold);
 }
 
-.cluster-card {
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 1200px;
+}
+
+.cluster-image-wrap {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.cluster-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.9;
+  transition: transform 0.6s ease;
+}
+
+.accordion-item.active .cluster-image {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.cluster-details {
   padding: 24px;
+}
+
+.cluster-meaning-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.cluster-meaning-body {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--cream);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.cluster-word-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cluster-word-tag {
+  background: var(--gold-dim);
+  border: 1px solid rgba(201,168,76,0.2);
+  color: var(--gold);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.cluster-card:hover {
-  border-color: var(--gold);
-  transform: translateY(-4px);
-  background: var(--surface2);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.cc-word {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--gold);
-  margin-bottom: 12px;
-}
-
-.cc-def {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.5;
+.cluster-word-tag:hover {
+  background: var(--gold);
+  color: var(--bg);
+  transform: translateY(-1px);
 }
 
 .progress-label span { color: var(--gold); }
@@ -4883,29 +4949,29 @@ hook:"The network's security team had to remain <span class='hook-keyword'>vigil
 
 // ─── SYNONYMS ───
 const SYNONYM_CLUSTERS = [
-  { name: "Talkative / Wordy", words: ["Loquacious", "Garrulous", "Verbose", "Voluble", "Prolix"] },
-  { name: "Brief / Concise", words: ["Laconic", "Terse", "Pithy", "Succinct"] },
-  { name: "Stubborn / Inflexible", words: ["Obdurate", "Obstinate", "Intransigent", "Implacable", "Intractable", "Pertinacious"] },
-  { name: "Generous / Kind", words: ["Munificent", "Magnanimous", "Largesse", "Beneficent", "Altruistic", "Benign"] },
-  { name: "Skillful / Expert", words: ["Adept", "Deft", "Adroit", "Proficient", "Perspicacious", "Acumen", "Polymath"] },
-  { name: "Short-lived / Fleeting", words: ["Ephemeral", "Transient", "Transitory", "Evanescent", "Momentary", "Fugacious"] },
-  { name: "Arrogant / Haughty", words: ["Imperious", "Haughty", "Presumptuous", "Supercilious", "Effrontery", "Hubris"] },
-  { name: "Beginner / Amateur", words: ["Neophyte", "Novice", "Tyro", "Fledgling", "Dilettante", "Inchoate"] },
-  { name: "Truthful / Candid", words: ["Veracity", "Veritable", "Candid", "Probity", "Ingenuous"] },
-  { name: "Dishonest / Deceptive", words: ["Mendacity", "Duplicitous", "Specious", "Spurious", "Chicanery", "Guile", "Dissemble", "Prevaricate"] },
-  { name: "Calm / Peaceful", words: ["Placid", "Tranquil", "Serene", "Equanimity", "Stolid", "Quiescent"] },
-  { name: "Mysterious / Obscure", words: ["Arcane", "Esoteric", "Recondite", "Abstruse", "Enigmatic", "Clandestine", "Covert", "Surreptitious", "Inscrutable", "Opaque"] },
-  { name: "Hard to Control / Rebellious", words: ["Restive", "Obstreperous", "Fractious", "Wayward", "Insubordinate", "Mutiny"] },
-  { name: "Praise / Approve", words: ["Laudable", "Approbation", "Acclaim", "Venerate", "Deify", "Sanction"] },
-  { name: "Criticize / Disapprove", words: ["Censure", "Castigate", "Reproach", "Upbraid", "Lambaste", "Excoriate", "Deride", "Repudiate"] },
-  { name: "Abundant / Plentiful", words: ["Abound", "Copious", "Profuse", "Surfeit", "Prodigious", "Proliferate"] },
-  { name: "Lacking / Scant", words: ["Dearth", "Scant", "Sparse", "Tenuous", "Exiguous", "Paucity"] },
-  { name: "Waver / Hesitate", words: ["Vacillate", "Irresolute", "Demur", "Oscillate", "Dither"] },
-  { name: "Harmful / Hostile", words: ["Deleterious", "Inimical", "Noxious", "Pernicious", "Virulent", "Bane", "Malign"] },
-  { name: "Wealthy / Money", words: ["Avaricious", "Penurious", "Mercenary", "Lucrative", "Remuneration"] },
-  { name: "Angry / Belligerent", words: ["Antipathy", "Animus", "Irascible", "Pugnacious", "Belligerent", "Truculent", "Acrimonious"] },
-  { name: "Friendly / Sociable", words: ["Congenial", "Convivial", "Gregarious", "Amiable", "Cordial"] },
-  { name: "Active / Energetic", words: ["Alacrity", "Fervid", "Zeal", "Verve", "Vivacious", "Galvanize"] }
+  { name: "Talkative / Wordy", words: ["Loquacious", "Garrulous", "Verbose", "Voluble", "Prolix"], img: "talkative.png" },
+  { name: "Brief / Concise", words: ["Laconic", "Terse", "Pithy", "Succinct"], img: "concise_bried.jpg" },
+  { name: "Stubborn / Inflexible", words: ["Obdurate", "Obstinate", "Intransigent", "Implacable", "Intractable", "Pertinacious"], img: "stubborn.jpeg" },
+  { name: "Generous / Kind", words: ["Munificent", "Magnanimous", "Largesse", "Beneficent", "Altruistic", "Benign"], img: "generous.png" },
+  { name: "Skillful / Expert", words: ["Adept", "Deft", "Adroit", "Proficient", "Perspicacious", "Acumen", "Polymath"], img: "Skillful_expert.webp" },
+  { name: "Short-lived / Fleeting", words: ["Ephemeral", "Transient", "Transitory", "Evanescent", "Momentary", "Fugacious"], img: "Short-lived.jpg" },
+  { name: "Arrogant / Haughty", words: ["Imperious", "Haughty", "Presumptuous", "Supercilious", "Effrontery", "Hubris"], img: "arrogant_dominant.png" },
+  { name: "Beginner / Amateur", words: ["Neophyte", "Novice", "Tyro", "Fledgling", "Dilettante", "Inchoate"], img: "amateur.jpeg" },
+  { name: "Truthful / Candid", words: ["Veracity", "Veritable", "Candid", "Probity", "Ingenuous"], img: "honest.jpeg" },
+  { name: "Dishonest / Deceptive", words: ["Mendacity", "Duplicitous", "Specious", "Spurious", "Chicanery", "Guile", "Dissemble", "Prevaricate"], img: "dishonest.jpeg" },
+  { name: "Calm / Peaceful", words: ["Placid", "Tranquil", "Serene", "Equanimity", "Stolid", "Quiescent"], img: "peacefull.webp" },
+  { name: "Mysterious / Obscure", words: ["Arcane", "Esoteric", "Recondite", "Abstruse", "Enigmatic", "Clandestine", "Covert", "Surreptitious", "Inscrutable", "Opaque"], img: "mysterious.jpeg" },
+  { name: "Hard to Control / Rebellious", words: ["Restive", "Obstreperous", "Fractious", "Wayward", "Insubordinate", "Mutiny"], img: "rebelious.jpg" },
+  { name: "Praise / Approve", words: ["Laudable", "Approbation", "Acclaim", "Venerate", "Deify", "Sanction"], img: "praise_approval.jpg" },
+  { name: "Criticize / Disapprove", words: ["Censure", "Castigate", "Reproach", "Upbraid", "Lambaste", "Excoriate", "Deride", "Repudiate"], img: "criticism.jpeg" },
+  { name: "Abundant / Plentiful", words: ["Abound", "Copious", "Profuse", "Surfeit", "Prodigious", "Proliferate"], img: "abundance.jpeg" },
+  { name: "Lacking / Scant", words: ["Dearth", "Scant", "Sparse", "Tenuous", "Exiguous", "Paucity"], img: "scarcity.jpg" },
+  { name: "Waver / Hesitate", words: ["Vacillate", "Irresolute", "Demur", "Oscillate", "Dither"], img: "hesitation.jpeg" },
+  { name: "Harmful / Hostile", words: ["Deleterious", "Inimical", "Noxious", "Pernicious", "Virulent", "Bane", "Malign"], img: "harmfull.webp" },
+  { name: "Wealthy / Money", words: ["Avaricious", "Penurious", "Mercenary", "Lucrative", "Remuneration"], img: "wealth.avif" },
+  { name: "Angry / Belligerent", words: ["Antipathy", "Animus", "Irascible", "Pugnacious", "Belligerent", "Truculent", "Acrimonious"], img: "angry_aggrestion.jpeg" },
+  { name: "Friendly / Sociable", words: ["Congenial", "Convivial", "Gregarious", "Amiable", "Cordial"], img: "freindly.jpg" },
+  { name: "Active / Energetic", words: ["Alacrity", "Fervid", "Zeal", "Verve", "Vivacious", "Galvanize"], img: "enrgetic.webp" }
 ];
 
 // ─── ICONS (Premium SVGs) ───
@@ -4918,7 +4984,10 @@ const ICONS = {
   hint: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21h6"></path><path d="M9 17h6"></path><path d="M10 3c-4.42 0-8 3.58-8 8 0 2.12.83 4.05 2.2 5.5l1.8 1.5c.34.28.5.7.5 1.15V21h7v-1.85c0-.45.16-.87.5-1.15l1.8-1.5c1.37-1.45 2.2-3.38 2.2-5.5 0-4.42-3.58-8-8-8z"></path></svg>`,
   arrowRight: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`,
   arrowLeft: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>`,
-  external: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>`
+  external: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>`,
+  chevronDown: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>`,
+  confirm: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`,
+  error: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>`
 };
 
 // ─── STATE ───
@@ -5093,24 +5162,44 @@ function showSynonymClusters() {
   document.getElementById('card-view').style.display = 'block';
   document.getElementById('bottom-nav').style.display = 'none';
   
-  let html = `<div class="synonym-cluster-view">
-    <div class="cluster-hero">
-      <div class="cluster-meaning-label">Meaning → Words</div>
-      <div class="cluster-meaning-text">Grouped by Shared Meaning</div>
+  let html = `<div class="synonym-cluster-view" style="max-width:800px; margin:0 auto; padding:40px 20px;">
+    <div class="word-hero" style="text-align:center; margin-bottom:60px;">
+      <div class="word-group-tag" style="justify-content:center;">Synonym Clusters</div>
+      <div class="word-main">Meaning → Words</div>
+      <div style="color:var(--dim); font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase;">Master words by shared concept</div>
     </div>
-    <div class="cluster-grid">`;
     
-  SYNONYM_CLUSTERS.forEach(cluster => {
+    <div class="synonym-accordion">`;
+    
+  SYNONYM_CLUSTERS.forEach((cluster, idx) => {
     const clusterWords = WORDS.filter(w => cluster.words.includes(w.w));
     if (clusterWords.length > 0) {
+      const firstDef = clusterWords[0].def;
+      const imgPath = `Images/${cluster.img}`;
+      
       html += `
-        <div class="cluster-card" onclick="setGroup('synonyms'); searchTerm='${cluster.name.split('/')[0].trim().toLowerCase()}'; filterWords();">
-          <div class="cluster-meaning-label">${cluster.name}</div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            ${clusterWords.map(w => `<span class="wi-name" style="color:var(--gold); font-weight:600;">${w.w}</span>`).join('<span style="color:var(--dim)">•</span>')}
+        <div class="accordion-item" id="cluster-${idx}">
+          <div class="accordion-header" onclick="toggleAccordion(${idx})">
+            <span class="accordion-title">${cluster.name}</span>
+            <span class="accordion-icon">${ICONS.chevronDown}</span>
           </div>
-          <div style="margin-top:16px; font-size:12px; color:var(--muted); line-height:1.4;">
-            ${clusterWords[0].def.substring(0, 80)}...
+          <div class="accordion-content">
+            <div class="cluster-image-wrap">
+              <img src="${imgPath}" class="cluster-image" alt="${cluster.name}" onerror="this.style.display='none'">
+            </div>
+            <div class="cluster-details">
+              <div class="cluster-meaning-label">Core Meaning</div>
+              <div class="cluster-meaning-body">${firstDef}</div>
+              
+              <div class="cluster-meaning-label">Synonym Words</div>
+              <div class="cluster-word-list">
+                ${clusterWords.map(w => `
+                  <div class="cluster-word-tag" onclick="event.stopPropagation(); goToWord(${WORDS.indexOf(w)})">
+                    ${w.w}
+                  </div>
+                `).join('')}
+              </div>
+            </div>
           </div>
         </div>
       `;
@@ -5120,6 +5209,24 @@ function showSynonymClusters() {
   html += `</div></div>`;
   document.getElementById('card-view').innerHTML = html;
   buildSidebar();
+}
+
+function toggleAccordion(index) {
+  const items = document.querySelectorAll('.accordion-item');
+  const target = document.getElementById(`cluster-${index}`);
+  const isActive = target.classList.contains('active');
+
+  // Close all others
+  items.forEach(item => item.classList.remove('active'));
+
+  // Toggle target
+  if (!isActive) {
+    target.classList.add('active');
+    // Smooth scroll into view after animation starts
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
+  }
 }
 function filterWords() {
   searchTerm = document.getElementById('sidebar-search').value.toLowerCase();
