@@ -1230,7 +1230,9 @@ body::before {
 </head>
 <body>
 <div class="backdrop" id="sidebar-backdrop" onclick="toggleSidebar()"></div>
-<button class="menu-toggle" onclick="toggleSidebar()" title="Toggle Menu">☰</button>
+<button class="menu-toggle" onclick="toggleSidebar()" title="Toggle Menu">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+</button>
 
 <div class="shell">
   <!-- SIDEBAR -->
@@ -1238,21 +1240,21 @@ body::before {
     <div class="sidebar-header">
       <div style="display:flex; justify-content:space-between; align-items:center;">
         <div class="logo">GREP<span>GRE MASTERY SYSTEM</span></div>
-        <button id="theme-toggle" class="nav-btn" onclick="toggleTheme()" title="Toggle Light/Dark Mode" style="width:30px; height:30px; font-size:14px;">🌙</button>
+        <button id="theme-toggle" class="nav-btn theme-btn" onclick="toggleTheme()" title="Toggle Light/Dark Mode"></button>
       </div>
     </div>
     <div class="search-wrap">
       <div class="search-box">
-        <span class="search-icon">⌕</span>
+        <span class="search-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
         <input type="text" class="search-input" id="sidebar-search" placeholder="Search words..." oninput="filterWords()">
       </div>
     </div>
     <div class="mode-toggle-wrap" style="display:flex; flex-direction:column; gap:8px;">
       <button class="mode-btn" id="mode-toggle" onclick="toggleFlashcardMode()">
-        <span id="mode-icon">🎴</span> <span id="mode-text">Flashcard Mode</span>
+        <span id="mode-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span> <span id="mode-text">Flashcard Mode</span>
       </button>
       <button class="mode-btn" id="practice-toggle" onclick="togglePracticeMode()">
-        <span>🎯</span> <span id="practice-text">Practice Group</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span> <span id="practice-text">Practice Group</span>
       </button>
     </div>
     <div class="group-tabs" id="group-tabs"></div>
@@ -4763,6 +4765,19 @@ const SYNONYM_CLUSTERS = [
   { name: "Active / Energetic", words: ["Alacrity", "Fervid", "Zeal", "Verve", "Vivacious", "Galvanize"] }
 ];
 
+// ─── ICONS (Premium SVGs) ───
+const ICONS = {
+  moon: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`,
+  sun: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
+  flashcard: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>`,
+  immersive: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path><path d="M12 22V12"></path></svg>`,
+  practice: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>`,
+  hint: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21h6"></path><path d="M9 17h6"></path><path d="M10 3c-4.42 0-8 3.58-8 8 0 2.12.83 4.05 2.2 5.5l1.8 1.5c.34.28.5.7.5 1.15V21h7v-1.85c0-.45.16-.87.5-1.15l1.8-1.5c1.37-1.45 2.2-3.38 2.2-5.5 0-4.42-3.58-8-8-8z"></path></svg>`,
+  arrowRight: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`,
+  arrowLeft: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>`,
+  external: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>`
+};
+
 // ─── STATE ───
 let theme = localStorage.getItem('grep-theme') || 'dark';
 document.documentElement.setAttribute('data-theme', theme);
@@ -4789,7 +4804,7 @@ function toggleTheme() {
 
 function updateThemeIcon() {
   const btn = document.getElementById('theme-toggle');
-  if (btn) btn.textContent = theme === 'dark' ? '🌙' : '☀️';
+  if (btn) btn.innerHTML = theme === 'dark' ? ICONS.moon : ICONS.sun;
 }
 
 function shuffleArray(array) {
@@ -4810,14 +4825,15 @@ function toggleFlashcardMode() {
   
   const btn = document.getElementById('mode-toggle');
   const text = document.getElementById('mode-text');
+  const icon = document.getElementById('mode-icon');
   if (flashcardMode) {
     btn.classList.add('active');
     text.textContent = 'Immersive Mode';
-    document.getElementById('mode-icon').textContent = '✨';
+    icon.innerHTML = ICONS.immersive;
   } else {
     btn.classList.remove('active');
     text.textContent = 'Flashcard Mode';
-    document.getElementById('mode-icon').textContent = '🎴';
+    icon.innerHTML = ICONS.flashcard;
   }
   renderCard();
 }
@@ -4829,7 +4845,7 @@ function togglePracticeMode() {
   
   document.getElementById('mode-toggle').classList.remove('active');
   document.getElementById('mode-text').textContent = 'Flashcard Mode';
-  document.getElementById('mode-icon').textContent = '🎴';
+  document.getElementById('mode-icon').innerHTML = ICONS.flashcard;
   
   const btn = document.getElementById('practice-toggle');
   if (practiceMode) {
@@ -5016,18 +5032,18 @@ function renderPractice() {
   document.getElementById('bottom-word-name').textContent = "PRACTICE MODE";
   document.getElementById('bottom-group').textContent = `GROUP ${w.g} · ${w.pos}`;
   document.getElementById('prev-btn').disabled = currentInList <= 0;
-  document.getElementById('next-btn').textContent = currentInList < totalInList - 1 ? 'Next →' : 'Done ✓';
+  document.getElementById('next-btn').innerHTML = currentInList < totalInList - 1 ? `Next ${ICONS.arrowRight}` : `Done ${ICONS.confirm}`;
   document.getElementById('next-btn').disabled = currentInList >= totalInList - 1;
 
-  const hintContent = hintRevealed ? `<span class="hint-reveal">${w.w.substring(0, 2)}...</span>` : '';
+  const hintContent = hintRevealed ? `<span class="hint-reveal">${w.w.substring(0, 2)}...</span>` : ICONS.hint;
 
   document.getElementById('practice-view').innerHTML = `
     <div class="practice-container">
       <div class="card-nav">
         <div class="card-nav-left">
-          <button class="nav-btn" onclick="navigate(-1)">←</button>
+          <button class="nav-btn" onclick="navigate(-1)">${ICONS.arrowLeft}</button>
           <span class="card-counter">${currentInList + 1} / ${totalInList}</span>
-          <button class="nav-btn" onclick="navigate(1)">→</button>
+          <button class="nav-btn" onclick="navigate(1)">${ICONS.arrowRight}</button>
         </div>
         <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase;">Practice Mode</div>
       </div>
@@ -5038,7 +5054,7 @@ function renderPractice() {
       <div class="practice-input-wrap">
         <input type="text" class="practice-input" id="practice-input" placeholder="Type the word..." autocomplete="off" onkeyup="if(event.key==='Enter') checkPracticeAnswer()">
         <button class="hint-trigger" onclick="showPracticeHint()" title="Reveal Hint">
-          💡 ${hintContent}
+          ${hintContent}
         </button>
       </div>
       
@@ -5066,7 +5082,7 @@ function checkPracticeAnswer() {
   const correctVal = WORDS[currentIdx].w.toLowerCase();
   
   if (userVal === correctVal) {
-    feedback.textContent = "✓ Correct! Well done.";
+    feedback.innerHTML = `<span style="display:flex; align-items:center; gap:8px;">${ICONS.confirm} Correct! Well done.</span>`;
     feedback.className = "practice-feedback correct";
     input.style.borderBottomColor = "var(--teal)";
     
@@ -5077,7 +5093,7 @@ function checkPracticeAnswer() {
     
     setTimeout(() => navigate(1), 1500);
   } else {
-    feedback.textContent = "✗ Not quite. Try again!";
+    feedback.innerHTML = `<span style="display:flex; align-items:center; gap:8px;">${ICONS.error} Not quite. Try again!</span>`;
     feedback.className = "practice-feedback wrong";
     input.style.borderBottomColor = "#e74c3c";
     input.classList.add('shake');
