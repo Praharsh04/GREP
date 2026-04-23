@@ -5185,21 +5185,31 @@ function speakWord(word) {
     return;
   }
 
-  // Cancel any ongoing speech
   window.speechSynthesis.cancel();
-
   const utterance = new SpeechSynthesisUtterance(word);
-  utterance.rate = 0.9; // Slightly slower for clarity
-  utterance.pitch = 1;
 
-  // Try to find a high-quality Google voice if available
+  // Natural sounding settings
+  utterance.rate = 0.85; 
+  utterance.pitch = 1.0;
+  utterance.volume = 1.0;
+
   const voices = window.speechSynthesis.getVoices();
-  const googleVoice = voices.find(v => v.name.includes('Google') && v.lang.startsWith('en'));
-  if (googleVoice) utterance.voice = googleVoice;
+
+  // Priority list for "natural" sounding voices across platforms
+  const preferredVoice = voices.find(v => v.name.includes('Natural') || v.name.includes('Neural')) ||
+                        voices.find(v => v.name.includes('Google US English')) ||
+                        voices.find(v => v.name.includes('Microsoft Aria') || v.name.includes('Microsoft Jenny')) ||
+                        voices.find(v => v.name.includes('Samantha') || v.name.includes('Alex')) ||
+                        voices.find(v => v.lang.startsWith('en-US')) ||
+                        voices.find(v => v.lang.startsWith('en'));
+
+  if (preferredVoice) utterance.voice = preferredVoice;
 
   window.speechSynthesis.speak(utterance);
 }
-// ─── INIT ───
+
+// Ensure voices are loaded (required for some browsers)
+window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();// ─── INIT ───
 let practiceTimerActive = false;
 let practiceTimer = null;
 let timeLeft = 30;
