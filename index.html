@@ -5165,6 +5165,10 @@ function init() {
         e.preventDefault();
         flipCard();
       }
+    } else if ((e.key === 'm' || e.key === 'M') && flashcardMode) {
+      toggleMastered();
+    } else if ((e.key === 'h' || e.key === 'H') && flashcardMode) {
+      toggleHitlist();
     } else if (e.key === ' ' && flashcardMode) {
       e.preventDefault(); // Prevent scrolling
       flipCard();
