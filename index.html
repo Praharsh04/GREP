@@ -1573,7 +1573,7 @@ body::before {
         <div class="bottom-group" id="bottom-group">-</div>
       </div>
       <div class="bottom-btns">
-        <button class="bottom-btn new-sentence" id="new-sentence-btn">New sentence �-</button>
+        <button class="bottom-btn new-sentence" id="new-sentence-btn">New sentence �-</button>
         <button class="bottom-btn" id="prev-btn" onclick="navigate(-1)">← Prev</button>
         <button class="bottom-btn primary" id="next-btn" onclick="navigate(1)">Next →</button>
       </div>
@@ -5649,7 +5649,7 @@ function renderQuiz(w, quiz, ans) {
   }).join('');
 
   const fb = isAnswered
-    ? (ans === quiz.ans ? '✓ Correct - this one is locked in.' : `�- Correct answer: option ${quiz.ans + 1}.`)
+    ? (ans === quiz.ans ? '✓ Correct - this one is locked in.' : `�- Correct answer: option ${quiz.ans + 1}.`)
     : 'Select the best answer.';
 
   return `
@@ -5673,6 +5673,7 @@ function answerQuiz(i) {
   answered[currentIdx] = i;
   if (i === quiz.ans) {
     mastered.add(currentIdx);
+    hitlist.delete(currentIdx); // Cannot be in both
     updateProgress();
     showToast('✓ Correct - marked as mastered', true);
   }
@@ -5686,6 +5687,7 @@ function toggleMastered() {
     showToast('Removed from mastered');
   } else {
     mastered.add(currentIdx);
+    hitlist.delete(currentIdx); // Cannot be in both
     showToast('✓ Added to mastered', true);
   }
   updateProgress();
@@ -5699,8 +5701,10 @@ function toggleHitlist() {
     showToast('Removed from Hitlist');
   } else {
     hitlist.add(currentIdx);
+    mastered.delete(currentIdx); // Cannot be in both
     showToast('★ Added to Hitlist', true);
   }
+  updateProgress(); // Sync progress in case mastered was removed
   saveState();
   renderCard();
   filterWords(); // Refresh the list in case filters are active
