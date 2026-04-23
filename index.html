@@ -1516,6 +1516,78 @@ body::before {
   40% { transform: scale(1); opacity: 1; }
 }
 
+/* ── GEN Z MNEMONIC ── */
+.genz-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border2);
+}
+
+.genz-card {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.08) 0%, rgba(74, 222, 128, 0.03) 100%);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-left: 30px;
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cream);
+  animation: slideInUp 0.4s ease-out;
+}
+
+.genz-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #4ade80;
+}
+
+.genz-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(74, 222, 128, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.genz-btn:hover:not(:disabled) {
+  background: rgba(74, 222, 128, 0.2);
+  transform: translateY(-1px);
+}
+
+.genz-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 .generating-text {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
@@ -5096,6 +5168,10 @@ const ICONS = {
 };
 
 // ─── STATE ───
+const GEMINI_API_KEY = "AIzaSyCaoHLORHngh_FOBOtfQzy48xCX15XPSPU"; // Loaded from .env
+let mnemonics = JSON.parse(localStorage.getItem('grep-mnemonics') || '{}');
+let mnemonicLoading = false;
+
 let theme = localStorage.getItem('grep-theme') || 'dark';
 document.documentElement.setAttribute('data-theme', theme);
 
@@ -5524,6 +5600,23 @@ function showCard() {
   }
 }
 
+function navigate(dir) {
+  stopPracticeTimer();
+  const listToUse = (practiceMode && practiceWords.length > 0) ? practiceWords : filteredWords;
+  const currentInList = listToUse.findIndex(w => w === WORDS[currentIdx]);
+  
+  if (currentInList !== -1) {
+    const nextInList = currentInList + dir;
+    if (nextInList >= 0 && nextInList < listToUse.length) {
+      currentIdx = WORDS.indexOf(listToUse[nextInList]);
+      if (practiceMode) showPractice(); else showCard();
+    }
+  } else if (listToUse.length > 0) {
+    currentIdx = WORDS.indexOf(listToUse[0]);
+    if (practiceMode) showPractice(); else showCard();
+  }
+}
+
 function showPractice() {
   document.getElementById('input-screen').style.display = 'none';
   document.getElementById('card-view').style.display = 'none';
@@ -5631,11 +5724,60 @@ function flipCard() {
   }
 }
 
+async function generateGenZMnemonic() {
+  const w = WORDS[currentIdx];
+  if (mnemonics[w.w] || mnemonicLoading || !GEMINI_API_KEY) return;
+
+  mnemonicLoading = true;
+  const btn = document.getElementById('genz-btn');
+  if (btn) {
+    btn.disabled = true;
+    btn.classList.add('loading');
+    btn.innerHTML = `<span class="btn-icon">◌</span> Generating...`;
+  }
+
+  const prompt = `For the given word "${w.w}" (definition: ${w.def}), generate a mnemonic that:
+- Uses Gen Z humor, memes, or trending cultural references (internet slang, viral formats, absurd humor, etc.)
+- Is genuinely funny, unexpected, and slightly exaggerated
+- Strongly connects the sound or structure of the word to its meaning
+- Feels like something that would go viral or be shared among students
+Guidelines:
+- Prefer short, punchy, visual scenarios over long explanations
+- Use characters, situations, or absurd imagery
+- If possible, break the word into funny phonetic chunks
+- Make it impossible to forget`;
+
+  try {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }]
+      })
+    });
+
+    const data = await response.json();
+    if (data.candidates && data.candidates[0].content.parts[0].text) {
+      mnemonics[w.w] = data.candidates[0].content.parts[0].text.trim();
+      localStorage.setItem('grep-mnemonics', JSON.stringify(mnemonics));
+      renderCard();
+    } else {
+      throw new Error('Invalid response');
+    }
+  } catch (err) {
+    console.error(err);
+    showToast('Failed to generate mnemonic. Check API key.');
+  } finally {
+    mnemonicLoading = false;
+  }
+}
+
 function renderCard() {
   const w = WORDS[currentIdx];
   const isMastered = mastered.has(currentIdx);
   const inHitlist = hitlist.has(currentIdx);
   const ans = answered[currentIdx];
+  const existingMnemonic = mnemonics[w.w];
 
   // Filter context
   const currentInFiltered = filteredWords.findIndex(f => f === w);
@@ -5667,6 +5809,17 @@ function renderCard() {
   const quiz = getQuiz(w);
   const quizHTML = quiz ? renderQuiz(w, quiz, ans) : '';
 
+  const genzMnemonicHTML = existingMnemonic 
+    ? `<div class="genz-section">
+        <div class="genz-card">
+          <div class="genz-header">✨ Gen Z Mnemonic</div>
+          ${existingMnemonic}
+        </div>
+       </div>`
+    : `<button id="genz-btn" class="genz-btn" onclick="event.stopPropagation(); generateGenZMnemonic()">
+        ✨ Generate Gen Z Mnemonic
+       </button>`;
+
   if (flashcardMode) {
     document.getElementById('card-view').innerHTML = `
       <div class="card-view">
@@ -5695,6 +5848,8 @@ function renderCard() {
               
               <div class="section-label"><span class="section-title">Memory Hook</span></div>
               <div class="hook-scene" style="font-size:14px; line-height:1.5">${w.hook}</div>
+
+              ${genzMnemonicHTML}
 
               ${quizHTML ? `<div style="margin-top:20px; width:100%">${quizHTML}</div>` : ''}
               
@@ -5769,6 +5924,15 @@ function renderCard() {
             <div class="hook-card">
               <div class="hook-scene">${w.hook}</div>
             </div>
+          </div>
+
+          <div class="section">
+             <div class="section-label">
+              <span class="section-num">04</span>
+              <span class="section-title">AI Mnemonic</span>
+              <div class="section-bar"></div>
+            </div>
+            ${genzMnemonicHTML}
           </div>
 
           ${quizHTML}
@@ -5868,23 +6032,6 @@ function toggleHitlist() {
   saveState();
   renderCard();
   filterWords(); // Refresh the list in case filters are active
-}
-
-function navigate(dir) {
-  stopPracticeTimer();
-  const listToUse = (practiceMode && practiceWords.length > 0) ? practiceWords : filteredWords;
-  const currentInList = listToUse.findIndex(w => w === WORDS[currentIdx]);
-  
-  if (currentInList !== -1) {
-    const nextInList = currentInList + dir;
-    if (nextInList >= 0 && nextInList < listToUse.length) {
-      currentIdx = WORDS.indexOf(listToUse[nextInList]);
-      if (practiceMode) showPractice(); else showCard();
-    }
-  } else if (listToUse.length > 0) {
-    currentIdx = WORDS.indexOf(listToUse[0]);
-    if (practiceMode) showPractice(); else showCard();
-  }
 }
 
 // ─── INPUT SCREEN ───
