@@ -147,12 +147,78 @@ body::before {
 
 .search-box { position: relative; }
 
-.group-tabs {
+/* ── SIDEBAR NAVIGATION REFACTOR ── */
+.sidebar-nav-container {
   display: flex;
-  gap: 4px;
-  padding: 10px 16px 8px;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  max-height: 40vh; /* Adjust based on preference */
+}
+
+.top-controls {
+  padding: 12px 16px 8px;
+  display: flex;
+  gap: 6px;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  z-index: 5;
+}
+
+.group-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 16px 16px;
+  position: relative;
+}
+
+.group-scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.group-scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.group-scroll-area::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 4px;
+}
+
+.group-scroll-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dim);
+  margin-bottom: 10px;
+  margin-top: 4px;
+}
+
+.group-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  border-bottom: none; /* Removed from refactor */
+  padding: 0;
+}
+
+.sidebar-nav-container {
+  position: relative;
+}
+
+/* Subtle fade effect at the bottom of scroll area */
+.sidebar-nav-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to top, var(--surface), transparent);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .gtab {
@@ -1317,7 +1383,8 @@ body::before {
         <input type="text" class="search-input" id="sidebar-search" placeholder="Search words..." oninput="filterWords()">
       </div>
     </div>
-    <div class="mode-toggle-wrap" style="display:flex; flex-direction:column; gap:8px;">
+    
+    <div class="modes">
       <button class="mode-btn" id="mode-toggle" onclick="toggleFlashcardMode()">
         <span id="mode-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span> <span id="mode-text">Flashcard Mode</span>
       </button>
@@ -1325,7 +1392,15 @@ body::before {
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span> <span id="practice-text">Practice Group</span>
       </button>
     </div>
-    <div class="group-tabs" id="group-tabs"></div>
+
+    <div class="sidebar-nav-container">
+      <div class="top-controls" id="top-controls"></div>
+      <div class="group-scroll-area">
+        <div class="group-scroll-label">Groups</div>
+        <div class="group-tabs" id="group-tabs"></div>
+      </div>
+    </div>
+
     <div class="word-list" id="word-list"></div>
     <div class="sidebar-footer">
       <div style="margin-bottom:8px">
@@ -4971,13 +5046,23 @@ function toggleSidebar() {
 }
 
 function buildGroupTabs() {
-  const container = document.getElementById('group-tabs');
+  const topContainer = document.getElementById('top-controls');
+  const scrollContainer = document.getElementById('group-tabs');
+  
   const uniqueGroups = [...new Set(WORDS.map(w => w.g))].sort((a, b) => a - b);
-  const groups = ['all', 'hitlist', 'synonyms', ...uniqueGroups];
-  container.innerHTML = groups.map(g => {
-    let label = g === 'all' ? 'All' : (g === 'hitlist' ? 'Hitlist' : (g === 'synonyms' ? 'Synonyms' : 'G' + g));
+  
+  // Top Fixed Controls
+  const topGroups = ['all', 'hitlist', 'synonyms'];
+  topContainer.innerHTML = topGroups.map(g => {
+    let label = g === 'all' ? 'All' : (g === 'hitlist' ? 'Hitlist' : 'Synonyms');
     let activeClass = g === activeGroup ? (g === 'hitlist' ? ' hit-active' : ' active') : '';
     return `<button class="gtab${activeClass}" onclick='setGroup(${JSON.stringify(g)})'>${label}</button>`;
+  }).join('');
+
+  // Scrollable Group List
+  scrollContainer.innerHTML = uniqueGroups.map(g => {
+    let activeClass = g === activeGroup ? ' active' : '';
+    return `<button class="gtab${activeClass}" onclick='setGroup(${g})'>G${g}</button>`;
   }).join('');
 }
 
