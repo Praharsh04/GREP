@@ -299,15 +299,17 @@ body::before {
   border-left-color: var(--gold);
 }
 
-.word-item.mastered .wi-name { color: var(--teal-light); }
-.word-item.mastered .wi-dot { background: var(--teal); }
-.word-item.in-hitlist .wi-name { color: #e74c3c; }
+.word-item.mastered .wi-name { color: #00f2ff !important; font-weight: 500; }
+.word-item.mastered .wi-dot { background: #00f2ff !important; box-shadow: 0 0 8px rgba(0,242,255,0.4); }
+
+.word-item.in-hitlist .wi-name { color: #ff4d4d !important; font-weight: 500; }
+.word-item.in-hitlist .wi-dot { background: #ff4d4d !important; box-shadow: 0 0 8px rgba(255,77,77,0.4); }
 
 .wi-name {
   font-size: 13px;
   color: var(--muted);
   font-weight: 400;
-  transition: color 0.15s;
+  transition: all 0.2s;
 }
 
 .word-item.active .wi-name,
@@ -887,23 +889,37 @@ body::before {
 
 .action-btn:hover { border-color: var(--border2); background: rgba(255,255,255,0.04); }
 
-.action-btn.master {
-  background: var(--teal);
-  border-color: var(--teal);
-  color: white;
-}
-
-.action-btn.master:hover { background: var(--teal-light); border-color: var(--teal-light); color: var(--bg); }
-
 .action-btn.hit {
-  background: rgba(231, 76, 60, 0.1);
-  border-color: #e74c3c;
+  background: transparent;
+  border: 1px solid #e74c3c;
   color: #e74c3c;
 }
 
 .action-btn.hit:hover {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.action-btn.hit.hit {
   background: #e74c3c;
   color: white;
+}
+
+.action-btn.master {
+  background: transparent;
+  border: 1px solid var(--teal);
+  color: var(--teal);
+}
+
+.action-btn.master:hover { 
+  background: var(--gold-dim);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.action-btn.master.master {
+  background: var(--teal);
+  color: white;
+  border-color: var(--teal);
 }
 
 /* ── WORD HERO ── */
