@@ -5193,28 +5193,13 @@ function speakWord(word) {
                 voices.find(v => v.lang === 'en-IN') ||
                 voices.find(v => v.lang.startsWith('en'));
 
-  // 1. Pronounce normally once
-  const wordUtterance = new SpeechSynthesisUtterance(word);
-  if (voice) wordUtterance.voice = voice;
-  wordUtterance.rate = 0.85; // Natural pace
-  wordUtterance.pitch = 1.0;
+  const utterance = new SpeechSynthesisUtterance(word);
+  if (voice) utterance.voice = voice;
+  utterance.rate = 0.85; 
+  utterance.pitch = 1.0;
 
-  // 2. Spell it out slowly after the word is spoken
-  wordUtterance.onend = () => {
-    setTimeout(() => {
-      // Split into letters and add spaces/dots for deliberate pacing
-      const spelling = word.split('').join(' . '); 
-      const spellingUtterance = new SpeechSynthesisUtterance(spelling);
-      if (voice) spellingUtterance.voice = voice;
-      spellingUtterance.rate = 0.55; // Slow for spelling
-      spellingUtterance.pitch = 1.0;
-      window.speechSynthesis.speak(spellingUtterance);
-    }, 600); // 600ms breath between word and spelling
-  };
-
-  window.speechSynthesis.speak(wordUtterance);
-}
-// Ensure voices are loaded (required for some browsers)
+  window.speechSynthesis.speak(utterance);
+}// Ensure voices are loaded (required for some browsers)
 window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();// ─── INIT ───
 let practiceTimerActive = false;
 let practiceTimer = null;
