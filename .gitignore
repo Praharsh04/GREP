@@ -1,6 +1,2 @@
 node_modules
 .env
-initialize_mapping.js
-server.js
-package-lock.json
-package.json

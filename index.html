@@ -5190,7 +5190,7 @@ function activatePasteMode(word, el) {
   if (!UPLOAD_ENABLED) return;
   activePastingWord = word;
   activePastingElement = el;
-  document.querySelectorAll('.word-img-box, .card-image-wrap').forEach(box => box.classList.remove('pasting'));
+  document.querySelectorAll('.word-img-box, .word-media-container').forEach(box => box.classList.remove('pasting'));
   el.classList.add('pasting');
   showToast(`Paste mode active for "${word}". Press Ctrl+V`, true);
 }
