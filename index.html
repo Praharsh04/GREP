@@ -1697,6 +1697,7 @@ body::before {
 </div>
 
 <div class="toast" id="toast"></div>
+<input type="file" id="image-file-input" style="display:none" accept="image/*">
 
 <script>
 // ─────────────────────────────────────────────
@@ -5432,6 +5433,15 @@ function init() {
   buildGroupTabs();
   buildSidebar();
   updateProgress();
+
+  // File Input Listener
+  const fileInput = document.getElementById('image-file-input');
+  fileInput.addEventListener('change', async (e) => {
+    if (e.target.files.length > 0 && activePastingWord) {
+      await uploadImage(activePastingWord, e.target.files[0]);
+      e.target.value = ''; // Reset input
+    }
+  });
 
   // Global Paste Listener
   document.addEventListener('paste', handlePaste);
