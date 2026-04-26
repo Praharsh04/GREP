@@ -13,7 +13,7 @@ const files = fs.readdirSync(imagesDir);
 const mapping = {};
 
 files.forEach(file => {
-  if (file.match(/\.(jpg|jpeg|png|webp|svg)$/i)) {
+  if (file.match(/\.(jpg|jpeg|png|webp|svg|gif)$/i)) {
     // Basic heuristic: take the first part before underscore or dot
     const wordName = path.parse(file).name.toLowerCase().split('_')[0].split('.')[0];
     mapping[wordName] = `/Images/${file}`;

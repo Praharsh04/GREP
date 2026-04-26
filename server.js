@@ -32,7 +32,13 @@ const storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     const wordName = req.body.wordName.toLowerCase().replace(/\s+/g, '_');
-    const ext = path.extname(file.originalname) || '.png';
+    let ext = path.extname(file.originalname);
+    if (!ext) {
+      if (file.mimetype === 'image/gif') ext = '.gif';
+      else if (file.mimetype === 'image/jpeg') ext = '.jpg';
+      else if (file.mimetype === 'image/webp') ext = '.webp';
+      else ext = '.png';
+    }
     cb(null, `${wordName}${ext}`);
   }
 });
