@@ -93,11 +93,50 @@ body::before {
   padding: 28px 24px 20px;
   border-bottom: 1px solid var(--border);
 }
-
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* Word Image Styles */
+.word-img-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  position: relative;
+  margin-right: 12px;
+}
+.word-img-box:hover { border-color: var(--gold); background: var(--gold-dim); }
+.word-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.word-img-placeholder { font-size: 14px; color: var(--dim); }
+.word-img-box.pasting { border-color: var(--gold); box-shadow: 0 0 8px var(--gold-glow); }
+
+.card-image-wrap {
+  margin: 24px 0;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  cursor: pointer;
+}
+.card-image-wrap img { width: 100%; height: auto; max-height: 400px; object-fit: contain; display: block; }
+.card-image-placeholder { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--dim); font-size: 12px; }
+
   font-family: 'Playfair Display', serif;
   font-size: 22px;
   font-weight: 900;
@@ -5090,6 +5129,66 @@ const ICONS = {
 let theme = localStorage.getItem('grep-theme') || 'dark';
 document.documentElement.setAttribute('data-theme', theme);
 
+// ─── IMAGE CONFIG ───
+const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+let UPLOAD_ENABLED = isLocal;
+let IMAGE_MAPPING = {};
+let activePastingWord = null;
+let activePastingElement = null;
+
+async function fetchMapping() {
+  try {
+    const url = isLocal ? 'http://localhost:3000/image-mapping' : './image_mapping.json';
+    const res = await fetch(url);
+    IMAGE_MAPPING = await res.json();
+    buildSidebar();
+    showCard();
+  } catch (e) {
+    console.error('Could not fetch image mapping', e);
+  }
+}
+
+function activatePasteMode(word, el) {
+  if (!UPLOAD_ENABLED) return;
+  activePastingWord = word;
+  activePastingElement = el;
+  document.querySelectorAll('.word-img-box, .card-image-wrap').forEach(box => box.classList.remove('pasting'));
+  el.classList.add('pasting');
+  showToast(`Paste mode active for "${word}". Press Ctrl+V`, true);
+}
+
+async function handlePaste(e) {
+  if (!activePastingWord || !UPLOAD_ENABLED) return;
+  const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+  for (let item of items) {
+    if (item.type.indexOf('image') !== -1) {
+      const file = item.getAsFile();
+      await uploadImage(activePastingWord, file);
+      break;
+    }
+  }
+}
+
+async function uploadImage(wordName, file) {
+  const formData = new FormData();
+  formData.append('image', file);
+  formData.append('wordName', wordName);
+  try {
+    showToast(`Uploading image for ${wordName}...`);
+    const res = await fetch('http://localhost:3000/upload-image', { method: 'POST', body: formData });
+    const data = await res.json();
+    IMAGE_MAPPING[wordName.toLowerCase()] = data.url;
+    activePastingWord = null;
+    if (activePastingElement) activePastingElement.classList.remove('pasting');
+    buildSidebar();
+    showCard();
+    showToast(`Image updated for ${wordName}`, true);
+  } catch (e) {
+    console.error('Upload failed', e);
+    showToast('Upload failed. Is the server running?');
+  }
+}
+
 let currentIdx = 0;
 let answered = {};
 let mastered = new Set(JSON.parse(localStorage.getItem('grep-mastered') || '[]'));
@@ -5291,37 +5390,32 @@ function handlePracticeTimeout() {
 
 function init() {
   updateThemeIcon();
+  fetchMapping();
   buildGroupTabs();
   buildSidebar();
   updateProgress();
+
+  // Global Paste Listener
+  document.addEventListener('paste', handlePaste);
   
   // Global Keyboard Shortcuts
   document.addEventListener('keydown', (e) => {
     // Ignore if user is typing in an input
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
 
-    if (e.key === 'ArrowLeft') {
+    const key = e.key.toLowerCase();
+
+    if (key === 'arrowleft' || key === 'a' || key === 'w') {
       navigate(-1);
-    } else if (e.key === 'ArrowRight') {
+    } else if (key === 'arrowright' || key === 'd' || key === 's') {
       navigate(1);
-    } else if (e.key === 'ArrowUp' && flashcardMode) {
-      if (!isFlipped) {
-        e.preventDefault();
-        flipCard();
-      }
-    } else if (e.key === 'ArrowDown' && flashcardMode) {
-      if (isFlipped) {
-        e.preventDefault();
-        flipCard();
-      }
-    } else if ((e.key === 'm' || e.key === 'M') && flashcardMode) {
+    } else if (key === 'f') {
+      if (flashcardMode) flipCard();
+    } else if (key === 'g') {
       toggleMastered();
-    } else if ((e.key === 'h' || e.key === 'H') && flashcardMode) {
+    } else if (key === 'r') {
       toggleHitlist();
-    } else if (e.key === ' ' && flashcardMode) {
-      e.preventDefault(); // Prevent scrolling
-      flipCard();
-    } else if (e.key === 'v' || e.key === 'V' || e.key === 'a' || e.key === 'A') {
+    } else if (key === 'v') {
       const w = filteredWords[currentIdx];
       if (w) speakWord(w.w);
     }
@@ -5497,7 +5591,13 @@ function renderWordItem(w, globalIdx) {
   const isCurrent = globalIdx === currentIdx;
   const isMastered = mastered.has(globalIdx);
   const inHitlist = hitlist.has(globalIdx);
+  const imgUrl = IMAGE_MAPPING[w.w.toLowerCase()];
+  
   return `<div class="word-item${isCurrent ? ' active' : ''}${isMastered ? ' mastered' : ''}${inHitlist ? ' in-hitlist' : ''}" onclick="goToWord(${globalIdx})">
+    <div class="word-img-box${activePastingWord === w.w ? ' pasting' : ''}" 
+         onclick="event.stopPropagation(); activatePasteMode('${w.w}', this)">
+      ${imgUrl ? `<img src="${imgUrl}" alt="${w.w}">` : `<span class="word-img-placeholder">${ICONS.image || '+'}</span>`}
+    </div>
     <span class="wi-name">${w.w}</span>
     <div style="display:flex; gap:4px; align-items:center;">
       ${inHitlist ? '<span style="color:#e74c3c; font-size:10px;">★</span>' : ''}
@@ -5695,6 +5795,18 @@ function renderCard() {
   const quiz = getQuiz(w);
   const quizHTML = quiz ? renderQuiz(w, quiz, ans) : '';
 
+  const imgUrl = IMAGE_MAPPING[w.w.toLowerCase()];
+  const imageHTML = imgUrl ? `
+    <div class="card-image-wrap" onclick="activatePasteMode('${w.w}', this)">
+      <img src="${imgUrl}" alt="${w.w}">
+    </div>` : (UPLOAD_ENABLED ? `
+    <div class="card-image-wrap" onclick="activatePasteMode('${w.w}', this)">
+      <div class="card-image-placeholder">
+        <span style="font-size:24px">${ICONS.image || '+'}</span>
+        <span>Click then Ctrl+V to add image</span>
+      </div>
+    </div>` : '');
+
   if (flashcardMode) {
     document.getElementById('card-view').innerHTML = `
       <div class="card-view">
@@ -5717,6 +5829,7 @@ function renderCard() {
               <div class="flashcard-hint">Click to flip</div>
             </div>
             <div class="flashcard-back">
+              ${imageHTML}
               <div class="word-group-tag" style="margin-bottom:12px">GROUP ${w.g} · ${w.pos}</div>
               
               <div class="definition-text" style="font-size:20px; margin-bottom:24px;">${w.def}</div>
@@ -5775,6 +5888,8 @@ function renderCard() {
             <span class="word-pos">${w.pos}</span>
           </div>
         </div>
+
+        ${imageHTML}
 
         <div class="sections">
           <div class="section">
