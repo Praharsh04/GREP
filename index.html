@@ -5193,7 +5193,11 @@ function activatePasteMode(word, el) {
   activePastingElement = el;
   document.querySelectorAll('.word-img-box, .word-media-container').forEach(box => box.classList.remove('pasting'));
   el.classList.add('pasting');
-  showToast(`Paste mode active for "${word}". Press Ctrl+V`, true);
+  
+  // Open the file directory
+  document.getElementById('image-file-input').click();
+  
+  showToast(`Select a file or press Ctrl+V for "${word}"`, true);
 }
 
 async function handlePaste(e) {
