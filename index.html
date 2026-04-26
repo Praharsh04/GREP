@@ -139,9 +139,8 @@ body::before {
 
 /* New Word Media Container */
 .word-media-container {
-  width: 100px;
-  height: 100px;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 500px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -152,17 +151,21 @@ body::before {
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.2s ease;
+  margin: 16px 0;
 }
 
-.word-media-container:hover {
+.word-media-container.pasting,
+.word-media-container.drag-over {
   border-color: var(--gold);
   background: var(--gold-dim);
+  box-shadow: 0 0 12px var(--gold-glow);
 }
 
 .word-media-container img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
   display: block;
 }
 
@@ -170,9 +173,10 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
+  padding: 40px;
   color: var(--dim);
-  font-size: 10px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -5200,6 +5204,22 @@ function activatePasteMode(word, el) {
   showToast(`Select a file or press Ctrl+V for "${word}"`, true);
 }
 
+async function handleDrop(e, word, el) {
+  e.preventDefault();
+  el.classList.remove('drag-over');
+  if (!UPLOAD_ENABLED) return;
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    const file = files[0];
+    if (file.type.startsWith('image/')) {
+      await uploadImage(word, file);
+    } else {
+      showToast('Please drop an image or GIF file.');
+    }
+  }
+}
+
 async function handlePaste(e) {
   if (!activePastingWord || !UPLOAD_ENABLED) return;
   const items = (e.clipboardData || e.originalEvent.clipboardData).items;
@@ -5849,13 +5869,21 @@ function renderCard() {
 
   const imgUrl = IMAGE_MAPPING[w.w.toLowerCase()];
   const imageHTML = imgUrl ? `
-    <div class="word-media-container" onclick="event.stopPropagation(); activatePasteMode('${w.w}', this)">
+    <div class="word-media-container" 
+         onclick="event.stopPropagation(); activatePasteMode('${w.w}', this)"
+         ondragover="event.preventDefault(); this.classList.add('drag-over')"
+         ondragleave="this.classList.remove('drag-over')"
+         ondrop="handleDrop(event, '${w.w}', this)">
       <img src="${imgUrl}" alt="${w.w}">
     </div>` : (UPLOAD_ENABLED ? `
-    <div class="word-media-container" onclick="event.stopPropagation(); activatePasteMode('${w.w}', this)">
+    <div class="word-media-container" 
+         onclick="event.stopPropagation(); activatePasteMode('${w.w}', this)"
+         ondragover="event.preventDefault(); this.classList.add('drag-over')"
+         ondragleave="this.classList.remove('drag-over')"
+         ondrop="handleDrop(event, '${w.w}', this)">
       <div class="word-media-placeholder">
         ${ICONS.image || '+'}
-        <span>Paste</span>
+        <span>Paste or Drag & Drop</span>
       </div>
     </div>` : '');
 
@@ -5880,11 +5908,11 @@ function renderCard() {
               </button>
               <div class="flashcard-hint">Click to flip</div>
             </div>
-            <div class="flashcard-back">
-              ${imageHTML}
-              <div class="word-group-tag" style="margin-bottom:12px">GROUP ${w.g} · ${w.pos}</div>
-              
-              <div class="definition-text" style="font-size:20px; margin-bottom:24px;">${w.def}</div>
+        <div class="flashcard-back">
+          <div class="word-group-tag" style="margin-bottom:12px">GROUP ${w.g} · ${w.pos}</div>
+          ${imageHTML}
+          
+          <div class="definition-text" style="font-size:20px; margin-bottom:24px; padding-left:0;">${w.def}</div>
               
               <div class="section-label" style="margin-top:0"><span class="section-title">Etymology</span></div>
               <div class="etym-breakdown" style="margin-bottom:8px">${etymHTML}</div>
@@ -5930,19 +5958,18 @@ function renderCard() {
 
         <div class="word-hero">
           <div class="word-group-tag">GROUP ${w.g}</div>
-          <div class="word-main" style="display:flex; align-items:center; gap:24px;">
-            <div style="display:flex; align-items:center; gap:16px;">
-              ${w.w}
-              <button class="nav-btn" onclick="speakWord('${w.w}')" style="width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; background:var(--gold-dim); border:1px solid var(--gold); color:var(--gold);">
-                ${ICONS.audio}
-              </button>
-            </div>
-            ${imageHTML}
+          <div class="word-main" style="display:flex; align-items:center; gap:16px; margin-bottom:8px;">
+            ${w.w}
+            <button class="nav-btn" onclick="speakWord('${w.w}')" style="width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; background:var(--gold-dim); border:1px solid var(--gold); color:var(--gold);">
+              ${ICONS.audio}
+            </button>
           </div>
           <div class="word-pos-row">
             <span class="word-pos">${w.pos}</span>
           </div>
         </div>
+
+        ${imageHTML}
 
         <div class="sections">
           <div class="section">
