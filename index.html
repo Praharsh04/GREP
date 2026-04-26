@@ -1611,7 +1611,7 @@ body::before {
         <div class="bottom-group" id="bottom-group">-</div>
       </div>
       <div class="bottom-btns">
-        <button class="bottom-btn new-sentence" id="new-sentence-btn">New sentence �-</button>
+
         <button class="bottom-btn" id="prev-btn" onclick="navigate(-1)">← Prev</button>
         <button class="bottom-btn primary" id="next-btn" onclick="navigate(1)">Next →</button>
       </div>
@@ -5682,10 +5682,6 @@ function renderCard() {
   document.getElementById('next-btn').textContent = !isLast ? 'Next →' : 'Done ✓';
   document.getElementById('next-btn').disabled = isLast;
   
-  document.getElementById('new-sentence-btn').onclick = () => {
-    if (window.sendPrompt) sendPrompt(`Give me a new sentence using the word "${w.w}" in a context I have not seen before`);
-  };
-
   // Etymology rendering
   const etymHTML = w.etym.map((part, i) => {
     const isPlus = i < w.etym.length - 1;
