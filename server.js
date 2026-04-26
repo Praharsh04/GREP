@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
     cb(null, 'Images/');
   },
   filename: function (req, file, cb) {
-    const wordName = req.body.wordName.toLowerCase().replace(/\s+/g, '_');
+    const wordName = (req.body.wordName || 'unknown').toLowerCase().replace(/\s+/g, '_');
     let ext = path.extname(file.originalname);
     if (!ext) {
       if (file.mimetype === 'image/gif') ext = '.gif';

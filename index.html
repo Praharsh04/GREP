@@ -5214,8 +5214,8 @@ async function handlePaste(e) {
 
 async function uploadImage(wordName, file) {
   const formData = new FormData();
-  formData.append('image', file);
   formData.append('wordName', wordName);
+  formData.append('image', file);
   try {
     showToast(`Uploading image for ${wordName}...`);
     const res = await fetch('http://localhost:3000/upload-image', { method: 'POST', body: formData });
