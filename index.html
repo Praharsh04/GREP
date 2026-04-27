@@ -1598,6 +1598,121 @@ body::before {
   40% { transform: scale(1); opacity: 1; }
 }
 
+/* ── AWA PRACTICE MODE ── */
+.awa-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  animation: fadeUp 0.4s ease forwards;
+}
+
+.awa-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.awa-prompt-type {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.awa-prompt-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+
+.awa-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.awa-section {
+  margin-bottom: 32px;
+  background: var(--surface2);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.awa-section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.awa-item {
+  margin-bottom: 20px;
+}
+
+.awa-item:last-child {
+  margin-bottom: 0;
+}
+
+.awa-item label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.awa-item textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 80px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.awa-item textarea:focus {
+  border-color: var(--gold);
+  background: var(--surface2);
+}
+
+.awa-timer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  color: var(--gold);
+  margin-left: auto;
+  padding: 8px 16px;
+  background: var(--gold-dim);
+  border-radius: 20px;
+  border: 1px solid var(--gold);
+}
+
+.awa-timer.warning {
+  color: #e74c3c;
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+
 </style>
 </head>
 <body>
@@ -1634,8 +1749,10 @@ body::before {
       <button class="mode-btn" id="practice-toggle" onclick="togglePracticeMode()">
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span> <span id="practice-text">Practice Group</span>
       </button>
-    </div>
-
+      <button class="mode-btn" id="awa-toggle" onclick="toggleAWAMode()">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></span> <span id="awa-text">AWA Practice</span>
+      </button>
+      </div>
     <div class="sidebar-nav-container">
       <div class="top-controls" id="top-controls"></div>
       <div class="group-scroll-area">
@@ -1686,6 +1803,127 @@ body::before {
       <!-- Card view injected here -->
       <div id="card-view" style="display:none"></div>
       <div id="practice-view" style="display:none"></div>
+      <div id="awa-view" style="display:none">
+         <div class="awa-container">
+           <div class="awa-header">
+             <div class="awa-prompt-type" id="awa-type">Select a prompt</div>
+             <div class="awa-prompt-text" id="awa-prompt">Click "Next Prompt" to start your practice.</div>
+             <div class="awa-controls">
+               <button class="action-btn" onclick="loadRandomPrompt()">Next Prompt</button>
+               <button class="action-btn" id="awa-timer-btn" onclick="toggleAWATimer()">Start Timer</button>
+               <button class="action-btn" onclick="clearAllAWA()">Clear All</button>
+               <div class="awa-timer" id="awa-timer" style="display:none">30:00</div>
+             </div>
+           </div>
+
+           <div class="awa-sections">
+             <!-- Section 1 -->
+             <div class="awa-section">
+               <div class="awa-section-title">1. INTRODUCTION (3–4 mins)</div>
+               <div class="awa-item">
+                 <label>Hook</label>
+                 <textarea id="awa-intro-hook" placeholder="Engaging start to grab the reader's attention..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>General Statement</label>
+                 <textarea id="awa-intro-general" placeholder="Background info on the topic..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Bridge</label>
+                 <textarea id="awa-intro-bridge" placeholder="Link the hook/general statement to your thesis..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>THESIS</label>
+                 <textarea id="awa-intro-thesis" placeholder="Your clear position on the issue..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Outline</label>
+                 <textarea id="awa-intro-outline" placeholder="Briefly mention the points you will cover..." oninput="autoSaveAWA()"></textarea>
+               </div>
+             </div>
+
+             <!-- Section 2 -->
+             <div class="awa-section">
+               <div class="awa-section-title">2. BODY PARAGRAPH 1 (6 mins)</div>
+               <div class="awa-item">
+                 <label>Transition</label>
+                 <textarea id="awa-body1-trans" placeholder="First of all, To begin with..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Reason #1</label>
+                 <textarea id="awa-body1-reason" placeholder="State your first reason (must include 'because')..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Example(s)</label>
+                 <textarea id="awa-body1-example" placeholder="Specific evidence or hypothetical scenario..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Commentary / Development</label>
+                 <textarea id="awa-body1-comment" placeholder="Explain how the example supports your reason..." oninput="autoSaveAWA()"></textarea>
+               </div>
+             </div>
+
+             <!-- Section 3 -->
+             <div class="awa-section">
+               <div class="awa-section-title">3. BODY PARAGRAPH 2 (6 mins)</div>
+               <div class="awa-item">
+                 <label>Transition</label>
+                 <textarea id="awa-body2-trans" placeholder="Furthermore, In addition..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Reason #2</label>
+                 <textarea id="awa-body2-reason" placeholder="State your second reason..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Example(s)</label>
+                 <textarea id="awa-body2-example" placeholder="Supporting evidence..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Commentary / Development</label>
+                 <textarea id="awa-body2-comment" placeholder="Explain the significance..." oninput="autoSaveAWA()"></textarea>
+               </div>
+             </div>
+
+             <!-- Section 4 -->
+             <div class="awa-section">
+               <div class="awa-section-title">4. CONCESSION PARAGRAPH (5–6 mins)</div>
+               <div class="awa-item">
+                 <label>Contrast Transition</label>
+                 <textarea id="awa-concession-trans" placeholder="Admittedly, However, Some may argue..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Concession Statement</label>
+                 <textarea id="awa-concession-stmt" placeholder="Acknowledge the opposing view..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Example(s)</label>
+                 <textarea id="awa-concession-example" placeholder="Counter-example or limitation..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Commentary</label>
+                 <textarea id="awa-concession-comment" placeholder="Reaffirm your position despite this..." oninput="autoSaveAWA()"></textarea>
+               </div>
+             </div>
+
+             <!-- Section 5 -->
+             <div class="awa-section">
+               <div class="awa-section-title">5. CONCLUSION (1–2 mins)</div>
+               <div class="awa-item">
+                 <label>Closing Transition</label>
+                 <textarea id="awa-outro-trans" placeholder="In conclusion, Ultimately, To sum up..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Restated Thesis</label>
+                 <textarea id="awa-outro-thesis" placeholder="Rephrase your main position..." oninput="autoSaveAWA()"></textarea>
+               </div>
+               <div class="awa-item">
+                 <label>Reference to Outline</label>
+                 <textarea id="awa-outro-ref" placeholder="Final summary of your points..." oninput="autoSaveAWA()"></textarea>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
       </div>
     <div class="bottom-nav" id="bottom-nav" style="display:none">
       <div class="bottom-word-info">
@@ -5263,6 +5501,7 @@ let filteredWords = [...WORDS];
 let practiceWords = [];
 let flashcardMode = false;
 let practiceMode = false;
+let awaMode = false;
 let isFlipped = false;
 let hintRevealed = false;
 
@@ -6187,11 +6426,145 @@ Return this exact JSON structure:
 }
 
 // ─── TOAST ───
-function showToast(msg, success = false) {
+function showToast(msg, success = true) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.className = 'toast show' + (success ? ' success' : '');
   setTimeout(() => t.className = 'toast', 2500);
+}
+
+// ─── AWA PRACTICE LOGIC ───
+let awaPrompts = [];
+let currentAWAPrompt = null;
+let awaTimerInterval = null;
+let awaTimeRemaining = 1800;
+
+async function toggleAWAMode() {
+  if (typeof stopPracticeTimer === 'function') stopPracticeTimer();
+  awaMode = !awaMode;
+  flashcardMode = false;
+  practiceMode = false;
+
+  document.getElementById('mode-toggle').classList.remove('active');
+  document.getElementById('practice-toggle').classList.remove('active');
+  document.getElementById('practice-view').style.display = 'none';
+  document.getElementById('card-view').style.display = 'none';
+  document.getElementById('input-screen').style.display = 'none'; // Added this line
+
+  const btn = document.getElementById('awa-toggle');
+  const awaView = document.getElementById('awa-view');
+
+  if (awaMode) {
+    btn.classList.add('active');
+    awaView.style.display = 'block';
+    if (awaPrompts.length === 0) {
+      await fetchAWAPrompts();
+    }
+    loadAWA();
+    if (!currentAWAPrompt && awaPrompts.length > 0) {
+      loadRandomPrompt();
+    }
+  } else {
+    btn.classList.remove('active');
+    awaView.style.display = 'none';
+    document.getElementById('card-view').style.display = 'block';
+    renderCard();
+  }
+}
+
+async function fetchAWAPrompts() {
+  try {
+    const res = await fetch('prompts.json');
+    awaPrompts = await res.json();
+  } catch (e) {
+    console.error("Failed to load prompts.json", e);
+  }
+}
+
+function loadRandomPrompt() {
+  if (awaPrompts.length === 0) return;
+  const randomIndex = Math.floor(Math.random() * awaPrompts.length);
+  currentAWAPrompt = awaPrompts[randomIndex];
+  document.getElementById('awa-type').textContent = currentAWAPrompt.type;
+  document.getElementById('awa-prompt').textContent = currentAWAPrompt.text;
+  autoSaveAWA();
+}
+
+function toggleAWATimer() {
+  const btn = document.getElementById('awa-timer-btn');
+  const display = document.getElementById('awa-timer');
+  if (awaTimerInterval) {
+    clearInterval(awaTimerInterval);
+    awaTimerInterval = null;
+    btn.textContent = 'Resume Timer';
+  } else {
+    display.style.display = 'block';
+    btn.textContent = 'Pause Timer';
+    awaTimerInterval = setInterval(() => {
+      awaTimeRemaining--;
+      updateAWATimerDisplay();
+      if (awaTimeRemaining <= 0) {
+        clearInterval(awaTimerInterval);
+        showToast("Time is up!", false);
+      }
+    }, 1000);
+  }
+}
+
+function updateAWATimerDisplay() {
+  const display = document.getElementById('awa-timer');
+  const mins = Math.floor(awaTimeRemaining / 60);
+  const secs = awaTimeRemaining % 60;
+  display.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+  if (awaTimeRemaining < 300) display.classList.add('warning');
+  else display.classList.remove('warning');
+}
+
+function clearAllAWA() {
+  if (confirm("Are you sure you want to clear all your writing?")) {
+    const tas = document.querySelectorAll('#awa-view textarea');
+    tas.forEach(t => t.value = '');
+    awaTimeRemaining = 1800;
+    updateAWATimerDisplay();
+    autoSaveAWA();
+    showToast("Cleared all inputs", true);
+  }
+}
+
+function autoSaveAWA() {
+  const data = {
+    prompt: currentAWAPrompt,
+    time: awaTimeRemaining,
+    inputs: {}
+  };
+  document.querySelectorAll('#awa-view textarea').forEach(t => {
+    data.inputs[t.id] = t.value;
+  });
+  localStorage.setItem('awa_data', JSON.stringify(data));
+}
+
+function loadAWA() {
+  const saved = localStorage.getItem('awa_data');
+  if (saved) {
+    try {
+      const data = JSON.parse(saved);
+      if (data.prompt) {
+        currentAWAPrompt = data.prompt;
+        document.getElementById('awa-type').textContent = currentAWAPrompt.type;
+        document.getElementById('awa-prompt').textContent = currentAWAPrompt.text;
+      }
+      if (data.time) {
+        awaTimeRemaining = data.time;
+        updateAWATimerDisplay();
+      }
+      if (data.inputs) {
+        for (const id in data.inputs) {
+          const t = document.getElementById(id);
+          if (t) t.value = data.inputs[id];
+        }
+      }
+    } catch(e) { console.error("Error loading AWA data", e); }
+  }
 }
 
 // ─── RUN ───
