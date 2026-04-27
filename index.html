@@ -1713,6 +1713,152 @@ body::before {
   background: rgba(231, 76, 60, 0.1);
 }
 
+/* ── VERBAL PRACTICE MODE ── */
+.verbal-entry {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.verbal-mode-card {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.verbal-mode-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  background: var(--gold-dim);
+}
+
+.verbal-mode-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.verbal-mode-desc {
+  font-size: 13px;
+  color: var(--dim);
+  line-height: 1.5;
+}
+
+.verbal-quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.verbal-timer-bar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  margin-bottom: 30px;
+}
+
+.verbal-q-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.verbal-q-type {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.verbal-q-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--cream);
+  margin-bottom: 32px;
+}
+
+.verbal-rc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  height: calc(100vh - 250px);
+}
+
+.verbal-rc-passage {
+  overflow-y: auto;
+  padding-right: 20px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+  border-right: 1px solid var(--border);
+}
+
+.verbal-rc-question {
+  overflow-y: auto;
+}
+
+.verbal-option {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  color: var(--cream);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.verbal-option:hover:not(.disabled) {
+  border-color: var(--gold);
+}
+
+.verbal-option.selected {
+  border-color: var(--gold);
+  background: var(--gold-dim);
+}
+
+.verbal-option.correct {
+  border-color: var(--teal);
+  background: rgba(26, 124, 110, 0.15);
+}
+
+.verbal-option.wrong {
+  border-color: var(--red);
+  background: rgba(192, 57, 43, 0.1);
+}
+
+.verbal-explanation {
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--surface2);
+  border-radius: 8px;
+  border-left: 4px solid var(--gold);
+  font-size: 14px;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 </style>
 </head>
 <body>
@@ -1752,8 +1898,10 @@ body::before {
       <button class="mode-btn" id="awa-toggle" onclick="toggleAWAMode()">
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></span> <span id="awa-text">AWA Practice</span>
       </button>
-      </div>
-    <div class="sidebar-nav-container">
+      <button class="mode-btn" id="verbal-toggle" onclick="toggleVerbalMode()">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span> <span id="verbal-text">Verbal Practice</span>
+      </button>
+      </div>    <div class="sidebar-nav-container">
       <div class="top-controls" id="top-controls"></div>
       <div class="group-scroll-area">
         <div class="group-scroll-label">Groups</div>
@@ -1920,6 +2068,56 @@ body::before {
                  <label>Reference to Outline</label>
                  <textarea id="awa-outro-ref" placeholder="Final summary of your points..." oninput="autoSaveAWA()"></textarea>
                </div>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div id="verbal-view" style="display:none">
+         <div class="verbal-quiz-container">
+           <!-- Entry Screen -->
+           <div id="verbal-entry-screen">
+             <div class="word-hero" style="text-align:center; margin-bottom:40px;">
+               <div class="word-group-tag" style="justify-content:center;">Practice Mode</div>
+               <div class="word-main">Verbal Reasoning</div>
+               <div style="color:var(--dim); font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase;">Select your training module</div>
+             </div>
+
+             <div class="verbal-entry">
+               <div class="verbal-mode-card" onclick="startVerbalQuiz('TC')">
+                 <div class="verbal-mode-title">Text Completion</div>
+                 <div class="verbal-mode-desc">Single and multi-blank sentence logic. (2 mins/q)</div>
+               </div>
+               <div class="verbal-mode-card" onclick="startVerbalQuiz('SC')">
+                 <div class="verbal-mode-title">Sentence Equivalence</div>
+                 <div class="verbal-mode-desc">Find synonym pairs to complete the meaning. (2 mins/q)</div>
+               </div>
+               <div class="verbal-mode-card" onclick="startVerbalQuiz('RC')">
+                 <div class="verbal-mode-title">Reading Comp</div>
+                 <div class="verbal-mode-desc">Analyze passages and answer questions. (4 mins/q)</div>
+               </div>
+               <div class="verbal-mode-card" onclick="startVerbalQuiz('Mixed')">
+                 <div class="verbal-mode-title">Mixed Practice</div>
+                 <div class="verbal-mode-desc">Timed mock session with mixed distribution. (30 mins)</div>
+               </div>
+             </div>
+           </div>
+
+           <!-- Quiz Screen -->
+           <div id="verbal-quiz-screen" style="display:none">
+             <div class="verbal-timer-bar">
+               <div id="verbal-progress-text" class="card-counter">Question 1 / 10</div>
+               <div id="verbal-main-timer" class="awa-timer">30:00</div>
+               <button class="action-btn" onclick="exitVerbalQuiz()">Exit</button>
+             </div>
+
+             <div id="verbal-question-area">
+               <!-- Content injected by JS -->
+             </div>
+
+             <div id="verbal-navigation" style="margin-top:40px; display:flex; justify-content:space-between; align-items:center;">
+               <div id="verbal-score-text" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--dim);">Correct: 0 | Incorrect: 0</div>
+               <button id="verbal-next-btn" class="bottom-btn primary" onclick="nextVerbalQuestion()">Next Question →</button>
              </div>
            </div>
          </div>
@@ -6564,6 +6762,293 @@ function loadAWA() {
         }
       }
     } catch(e) { console.error("Error loading AWA data", e); }
+  }
+}
+
+// ─── VERBAL PRACTICE LOGIC ───
+let verbalQuestions = [];
+let filteredVerbalPool = [];
+let currentVerbalIdx = 0;
+let verbalQuizMode = 'Mixed';
+let verbalTimerInterval = null;
+let verbalTimeRemaining = 0;
+let verbalCorrect = 0;
+let verbalIncorrect = 0;
+let verbalAnswered = false;
+
+async function toggleVerbalMode() {
+  if (typeof stopPracticeTimer === 'function') stopPracticeTimer();
+  if (verbalTimerInterval) clearInterval(verbalTimerInterval);
+  
+  awaMode = false;
+  flashcardMode = false;
+  practiceMode = false;
+  
+  document.getElementById('mode-toggle').classList.remove('active');
+  document.getElementById('practice-toggle').classList.remove('active');
+  document.getElementById('awa-toggle').classList.remove('active');
+  document.getElementById('practice-view').style.display = 'none';
+  document.getElementById('card-view').style.display = 'none';
+  document.getElementById('awa-view').style.display = 'none';
+  document.getElementById('input-screen').style.display = 'none';
+
+  const btn = document.getElementById('verbal-toggle');
+  const verbalView = document.getElementById('verbal-view');
+  
+  if (verbalView.style.display === 'none' || !btn.classList.contains('active')) {
+    btn.classList.add('active');
+    verbalView.style.display = 'block';
+    showVerbalEntry();
+    if (verbalQuestions.length === 0) {
+      await fetchVerbalQuestions();
+    }
+  } else {
+    btn.classList.remove('active');
+    verbalView.style.display = 'none';
+    document.getElementById('card-view').style.display = 'block';
+    renderCard();
+  }
+}
+
+async function fetchVerbalQuestions() {
+  try {
+    const res = await fetch('tc_sc_rc.json');
+    const data = await res.json();
+    verbalQuestions = data.questions;
+  } catch (e) {
+    console.error("Failed to load tc_sc_rc.json", e);
+    showToast("Error loading verbal questions", false);
+  }
+}
+
+function showVerbalEntry() {
+  document.getElementById('verbal-entry-screen').style.display = 'block';
+  document.getElementById('verbal-quiz-screen').style.display = 'none';
+  if (verbalTimerInterval) clearInterval(verbalTimerInterval);
+}
+
+function startVerbalQuiz(mode) {
+  verbalQuizMode = mode;
+  verbalCorrect = 0;
+  verbalIncorrect = 0;
+  currentVerbalIdx = 0;
+  updateVerbalScore();
+
+  if (mode === 'Mixed') {
+    filteredVerbalPool = shuffleArray(verbalQuestions).slice(0, 20); // 20 mixed
+    verbalTimeRemaining = 1800; // 30 mins
+  } else {
+    const topicMap = { 'TC': 'Text Completion', 'SC': 'Sentence Equivalence', 'RC': 'Reading Comprehension' };
+    filteredVerbalPool = shuffleArray(verbalQuestions.filter(q => q.topic.includes(topicMap[mode])));
+    // Timers set per question in render
+  }
+
+  if (filteredVerbalPool.length === 0) {
+    showToast("No questions found for this mode", false);
+    return;
+  }
+
+  document.getElementById('verbal-entry-screen').style.display = 'none';
+  document.getElementById('verbal-quiz-screen').style.display = 'block';
+  
+  if (mode === 'Mixed') {
+    startVerbalTimer();
+  }
+  
+  renderVerbalQuestion();
+}
+
+function startVerbalTimer() {
+  if (verbalTimerInterval) clearInterval(verbalTimerInterval);
+  updateVerbalTimerDisplay();
+  verbalTimerInterval = setInterval(() => {
+    verbalTimeRemaining--;
+    updateVerbalTimerDisplay();
+    if (verbalTimeRemaining <= 0) {
+      clearInterval(verbalTimerInterval);
+      handleVerbalTimeout();
+    }
+  }, 1000);
+}
+
+function updateVerbalTimerDisplay() {
+  const display = document.getElementById('verbal-main-timer');
+  const mins = Math.floor(verbalTimeRemaining / 60);
+  const secs = verbalTimeRemaining % 60;
+  display.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+  
+  // Warning color
+  const limit = verbalQuizMode === 'Mixed' ? 300 : 20; 
+  if (verbalTimeRemaining < limit) display.classList.add('warning');
+  else display.classList.remove('warning');
+}
+
+function handleVerbalTimeout() {
+  if (verbalQuizMode === 'Mixed') {
+    showToast("Full test time is up!", false);
+    exitVerbalQuiz();
+  } else {
+    showToast("Question time is up!", false);
+    // Lock and show answer
+    const correctVal = filteredVerbalPool[currentVerbalIdx].correct_answer;
+    processVerbalAnswer(null, correctVal);
+  }
+}
+
+function renderVerbalQuestion() {
+  const q = filteredVerbalPool[currentVerbalIdx];
+  verbalAnswered = false;
+  
+  if (verbalQuizMode !== 'Mixed') {
+    // Per-question timers
+    if (q.topic.includes('Reading')) verbalTimeRemaining = 240; // 4 mins
+    else verbalTimeRemaining = 120; // 2 mins
+    startVerbalTimer();
+  }
+
+  document.getElementById('verbal-progress-text').textContent = `Question ${currentVerbalIdx + 1} / ${filteredVerbalPool.length}`;
+  document.getElementById('verbal-next-btn').style.display = 'none';
+
+  const container = document.getElementById('verbal-question-area');
+  
+  let html = '';
+  
+  if (q.passage) {
+    html += `
+      <div class="verbal-rc-layout">
+        <div class="verbal-rc-passage">${q.passage}</div>
+        <div class="verbal-rc-question">
+          <div class="verbal-q-header">
+            <span class="verbal-q-type">${q.topic}</span>
+            <span style="font-family:JetBrains Mono; font-size:10px; color:var(--dim)">ID: ${q.id}</span>
+          </div>
+          <div class="verbal-q-text">${q.question}</div>
+          <div class="verbal-options">
+            ${renderVerbalOptions(q.options)}
+          </div>
+          <div id="verbal-explanation-box"></div>
+        </div>
+      </div>
+    `;
+  } else {
+    html += `
+      <div class="verbal-q-header">
+        <span class="verbal-q-type">${q.topic}</span>
+        <span style="font-family:JetBrains Mono; font-size:10px; color:var(--dim)">ID: ${q.id}</span>
+      </div>
+      <div class="verbal-q-text">${q.question}</div>
+      <div class="verbal-options" style="max-width:600px;">
+        ${renderVerbalOptions(q.options)}
+      </div>
+      <div id="verbal-explanation-box"></div>
+    `;
+  }
+  
+  container.innerHTML = html;
+}
+
+function renderVerbalOptions(options) {
+  // Handle different option structures (flat A-E or Blank-based)
+  if (options["Blank (i)"]) {
+    // Multi-blank logic (Simplified for now - shows all choices)
+    let html = '';
+    for (const blank in options) {
+      html += `<div style="margin-bottom:15px"><div class="verbal-q-type" style="margin-bottom:8px">${blank}</div>`;
+      for (const key in options[blank]) {
+        const text = options[blank][key];
+        html += `<button class="verbal-option" onclick="processVerbalAnswer('${key}', '${filteredVerbalPool[currentVerbalIdx].correct_answer}')">${text}</button>`;
+      }
+      html += `</div>`;
+    }
+    return html;
+  } else {
+    return Object.keys(options).map(key => {
+      return `<button class="verbal-option" data-key="${key}" onclick="processVerbalAnswer('${key}', '${filteredVerbalPool[currentVerbalIdx].correct_answer}')">
+        <span style="color:var(--gold); font-weight:bold; margin-right:12px;">${key}</span> ${options[key]}
+      </button>`;
+    }).join('');
+  }
+}
+
+function processVerbalAnswer(selected, correct) {
+  if (verbalAnswered) return;
+  verbalAnswered = true;
+  
+  if (verbalQuizMode !== 'Mixed') clearInterval(verbalTimerInterval);
+
+  const q = filteredVerbalPool[currentVerbalIdx];
+  const isCorrect = (selected === correct) || (correct.includes(selected) && selected !== null);
+  
+  if (isCorrect) {
+    verbalCorrect++;
+    showToast("Correct!", true);
+  } else {
+    verbalIncorrect++;
+    showToast("Incorrect", false);
+  }
+  
+  updateVerbalScore();
+
+  // Visual feedback
+  const buttons = document.querySelectorAll('.verbal-option');
+  buttons.forEach(btn => {
+    btn.classList.add('disabled');
+    const key = btn.getAttribute('data-key');
+    if (key === correct || (correct.includes(key) && key !== null)) {
+      btn.classList.add('correct');
+    } else if (key === selected) {
+      btn.classList.add('wrong');
+    }
+  });
+
+  // Show explanation
+  const expBox = document.getElementById('verbal-explanation-box');
+  expBox.innerHTML = `
+    <div class="verbal-explanation">
+      <div class="verbal-q-type" style="margin-bottom:10px">Explanation</div>
+      ${q.explanation}
+    </div>
+  `;
+
+  document.getElementById('verbal-next-btn').style.display = 'block';
+}
+
+function updateVerbalScore() {
+  document.getElementById('verbal-score-text').textContent = `Correct: ${verbalCorrect} | Incorrect: ${verbalIncorrect}`;
+}
+
+function nextVerbalQuestion() {
+  currentVerbalIdx++;
+  if (currentVerbalIdx < filteredVerbalPool.length) {
+    renderVerbalQuestion();
+  } else {
+    showVerbalResults();
+  }
+}
+
+function showVerbalResults() {
+  if (verbalTimerInterval) clearInterval(verbalTimerInterval);
+  const container = document.getElementById('verbal-question-area');
+  const pct = Math.round((verbalCorrect / filteredVerbalPool.length) * 100);
+  
+  container.innerHTML = `
+    <div class="awa-container" style="text-align:center">
+      <div class="word-main" style="font-size:48px">Practice Complete</div>
+      <div class="verbal-mode-desc" style="font-size:18px; margin:20px 0">
+        You answered ${verbalCorrect} out of ${filteredVerbalPool.length} questions correctly.
+      </div>
+      <div class="stat-num" style="font-size:72px; margin-bottom:40px">${pct}%</div>
+      <button class="welcome-btn" onclick="showVerbalEntry()">Return to Menu</button>
+    </div>
+  `;
+  document.getElementById('verbal-next-btn').style.display = 'none';
+  document.getElementById('verbal-progress-text').textContent = 'Results';
+}
+
+function exitVerbalQuiz() {
+  if (confirm("Are you sure you want to exit? Your progress for this session will be lost.")) {
+    if (verbalTimerInterval) clearInterval(verbalTimerInterval);
+    showVerbalEntry();
   }
 }
 
