@@ -26,6 +26,15 @@ app.get('/image-mapping', (req, res) => {
   }
 });
 
+app.get('/strategy-image-mapping', (req, res) => {
+  const mappingPath = path.join(__dirname, 'strategy_image_mapping.json');
+  if (fs.existsSync(mappingPath)) {
+    res.sendFile(mappingPath);
+  } else {
+    res.json({});
+  }
+});
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'Images/');
@@ -49,9 +58,10 @@ app.post('/upload-image', upload.single('image'), (req, res) => {
   if (!req.file) return res.status(400).send('No file uploaded.');
   
   const wordName = req.body.wordName.toLowerCase();
+  const isStrategy = req.body.isStrategy === 'true';
   const filename = req.file.filename;
   
-  const mappingPath = path.join(__dirname, 'image_mapping.json');
+  const mappingPath = path.join(__dirname, isStrategy ? 'strategy_image_mapping.json' : 'image_mapping.json');
   let mapping = {};
   if (fs.existsSync(mappingPath)) {
     mapping = JSON.parse(fs.readFileSync(mappingPath, 'utf8'));

@@ -1,0 +1,415 @@
+[
+  {
+    "strategy_name": "Main Idea (Short + Long)",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "The skill of identifying the central argument or observation of a passage by stripping away decorative details. For short passages, this is done after one read; for long passages, it is built incrementally.",
+    "core_idea": "GRE passages are arguments, not just facts. Every sentence serves a purpose. Understanding the author's primary goal allows you to answer the majority of questions without constant re-reading.",
+    "when_to_use": "Always, before answering any question. Mandatory for 'Primary Purpose' and 'Overall Structure' questions.",
+    "when_not_to_use": "When answering 'Detail' questions that point to a specific line number—go straight to the reference for those.",
+    "step_by_step_process": [
+      "1. Read the first and last sentences of the first paragraph carefully (they contain the thesis).",
+      "2. Short Passages: After reading, state the author's one central point in plain English.",
+      "3. Long Passages: Create a 3-word 'label' for each paragraph to track the logical arc.",
+      "4. Formulate an 'Author Statement': 'The author [X: argues/challenges/examines] [Y: subject] because [Z: reason].'",
+      "5. Use this statement as a filter for 'Primary Purpose' answer choices."
+    ],
+    "mental_checklist": [
+      "What is the author's position (arguing vs. describing)?",
+      "What subject does the author keep returning to?",
+      "Does my Main Idea cover the *entire* passage or just one section?",
+      "If I deleted this sentence, would the central argument collapse?"
+    ],
+    "common_traps": [
+      "Topic Trap: Mistaking the subject (coral reefs) for the argument (reefs are in danger).",
+      "Scope Trap: Choosing an answer that is true but only covers a single paragraph.",
+      "Extreme Trap: Choosing an answer that is broader than what the author actually claims."
+    ],
+    "pro_tips": [
+      "Look for active verbs in choices: 'to challenge', 'to propose', 'to argue'.",
+      "Wrong answers are often 'True but Narrow' or 'True but Broad'.",
+      "Your paragraph labels should connect logically: P1 (Setup) -> P2 (Challenge) -> P3 (Rebuttal)."
+    ],
+    "official_GRE_style_example": {
+      "question": "For decades, economists assumed consumer behavior was driven by rational self-interest. Recent research, however, has revealed systematic deviations from this model. These findings fundamentally undermine the classical premise. \n\nThe primary purpose of this passage is to:",
+      "options": [
+        "A: describe the development of classical theory",
+        "B: argue that behavioral research challenged a foundational assumption",
+        "C: explain why consumers make irrational choices",
+        "D: compare classical and behavioral economics",
+        "E: propose a new model to replace the classical framework"
+      ],
+      "solution_using_strategy": [
+        "1. Analyze Structure: S1 sets up an assumption. S2 uses 'however' to pivot to a challenge. S3 confirms the challenge is fundamental.",
+        "2. Formulate Main Idea: 'Behavioral research has proven the rational self-interest assumption is wrong.'",
+        "3. Evaluate B: Matches the 'challenge to a foundational assumption' logic perfectly.",
+        "4. Filter A/C/D/E: A is too narrow; C is a detail; D overstates (no broad comparison); E goes too far (no new model proposed).",
+        "5. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies the 'pivot' in sentence 2 that defines the author's purpose.",
+        "• It prevents the 'Narrow Trap' (A) and the 'Broad Trap' (E) by sticking strictly to the stated argument."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Sentence Function (1, 2, 3)",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "A structural analysis tool to identify the role a sentence plays: (1) making a CLAIM, (2) providing EVIDENCE, or (3) introducing a COUNTER.",
+    "core_idea": "Sentences are not random; they are tools. Knowing if a sentence is stating a point, backing it up, or attacking it makes answering 'Why does the author mention X?' much easier.",
+    "when_to_use": "Required for 'Highlighted sentence serves to...' and 'Why does the author mention...' questions.",
+    "when_not_to_use": "For simple detail retrieval or vocabulary-in-context questions.",
+    "step_by_step_process": [
+      "1. Locate the highlighted sentence.",
+      "2. Read the sentence immediately *before* it to see what idea it might be reacting to.",
+      "3. Classify the role: Type 1 (Claim), Type 2 (Evidence/Support), or Type 3 (Counter/Pivot).",
+      "4. Match to answer language: Type 2 = 'to illustrate', Type 3 = 'to qualify/complicate'.",
+      "5. Verify that the answer choice describes the *function*, not just the *content*."
+    ],
+    "mental_checklist": [
+      "Is this a new claim or support for an old one?",
+      "Are there signal words? ('For example' = Type 2; 'However' = Type 3).",
+      "Does this sentence agree or disagree with the preceding sentence?"
+    ],
+    "common_traps": [
+      "Content Trap: Picking an answer that accurately summarizes what the sentence says but misses what it *does*.",
+      "Isolation Trap: Trying to determine function without looking at the surrounding sentences.",
+      "Evidence Trap: Misclassifying data/examples as 'claims' (they are always support)."
+    ],
+    "pro_tips": [
+      "If there is no signal word and a new subject is introduced, it is usually a Type 1 (Claim).",
+      "Type 3 (Counter) sentences are the most common source of 'highlight' questions.",
+      "If the sentence starts with 'In fact' or 'Indeed', it is almost always Type 2 (Support)."
+    ],
+    "official_GRE_style_example": {
+      "question": "The theory of punctuated equilibrium proposed rapid bursts of evolution. Paleontologists noted the record showed long stasis. Critics, however, argued discontinuities were artifacts of incomplete fossilization. \n\nThe highlighted sentence ('Critics, however...') serves to:",
+      "options": [
+        "A: provide evidence supporting the theory",
+        "B: introduce an alternative theory",
+        "C: present an objection to the interpretation in the preceding sentences",
+        "D: explain paleontological methodology",
+        "E: concede a weakness in the theory"
+      ],
+      "solution_using_strategy": [
+        "1. Identify the Context: Sentence 2 provides support for the theory mentioned in Sentence 1.",
+        "2. Identify the Signal: 'However' marks a pivot/counter-argument (Type 3).",
+        "3. Analyze Function: Critics are attacking the interpretation given in S2.",
+        "4. Match Options: Option C ('present an objection') is a direct match for Type 3 function.",
+        "5. Final Selection: C."
+      ],
+      "why_this_strategy_works_here": [
+        "• It uses the Word of Zeus ('however') to classify the function instantly.",
+        "• It focuses on the relationship between sentences rather than the complex scientific content."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Paragraph Function",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "The skill of identifying the 'job' each paragraph performs in the context of the overall passage (e.g., Background, Rebuttal, Evidence).",
+    "core_idea": "A passage is a map. If you know the purpose of each paragraph, you know exactly where to find the 'rebuttal' or the 'conclusion' without hunting blindly.",
+    "when_to_use": "Mandatory for passages with 3+ paragraphs. Required for 'Overall Organization' questions.",
+    "when_not_to_use": "Short 1-paragraph passages (use Main Idea instead).",
+    "step_by_step_process": [
+      "1. Pause after each paragraph and give it a 3-word function label (e.g., 'Historical context', 'Author's critique').",
+      "2. Note the logical transition between paragraphs (Agree or Pivot?).",
+      "3. Assemble a passage arc (e.g., P1 Introduce -> P2 Challenge -> P3 Rebut).",
+      "4. Match the arc to the description in the 'Organization' question.",
+      "5. Use the labels to navigate to specific sections for detail questions."
+    ],
+    "mental_checklist": [
+      "Does this paragraph add evidence or challenge a claim?",
+      "Is the author's tone changing between paragraphs?",
+      "If I removed P2, would the transition from P1 to P3 still make sense?"
+    ],
+    "common_traps": [
+      "Topic Labeling: Labeling P2 as 'about money' instead of 'to provide economic evidence'.",
+      "Spending too much time: Labeling should take 5 seconds max per paragraph.",
+      "Ignoring the first and last sentences of the paragraph."
+    ],
+    "pro_tips": [
+      "Transitions often happen in the *first* sentence of the new paragraph.",
+      "P1 is usually 'Background' or 'Thesis'; P2 is often 'Evidence' or 'Complication'.",
+      "Correct answers use structural verbs like 'presents', 'offers', 'addresses', 'qualifies'."
+    ],
+    "official_GRE_style_example": {
+      "question": "P1 introduces Theory X. P2 adoption after WWII. P3 Friedman's critique. P4 Author's qualified defense. \n\nWhich best describes the organization?",
+      "options": [
+        "A: Theory introduced, application described, challenge presented, qualified defense offered",
+        "B: Two theories compared and synthesized",
+        "C: Theory introduced, evidence against presented, theory rejected",
+        "D: Theory development traced chronologically",
+        "E: Theory explained, limitations acknowledged, alternative introduced"
+      ],
+      "solution_using_strategy": [
+        "1. Map Paragraphs: P1: Introduce (Setup); P2: Adopt (Evidence); P3: Critique (Counter); P4: Defense (Rebuttal).",
+        "2. Formulate Arc: Introduce -> Apply -> Challenge -> Defend.",
+        "3. Match to A: 'Introduced, described, challenge, defense' matches the map perfectly.",
+        "4. Reject Others: B (no synthesis); C (not rejected); D (too narrow, ignores argument); E (no alternative framework).",
+        "5. Final Selection: A."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies the specific argumentative moves the author makes in each section.",
+        "• It prevents confusion when multiple choices look 'plausible' by using the pre-built map."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Predicting What's Next",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "A structural logic exercise where you identify the most likely topic of the next paragraph based on the current passage's ending and arc.",
+    "core_idea": "Arguments follow predictable paths. If a passage ends with an unanswered question, the next section must answer it. If it ends with a problem, a solution is next.",
+    "when_to_use": "Required for 'The passage would most likely continue by...' questions.",
+    "when_not_to_use": "Never guess based on your own interests or field knowledge.",
+    "step_by_step_process": [
+      "1. Re-read the final 3 sentences of the passage.",
+      "2. Identify the last move: Was it a claim, a problem, or evidence?",
+      "3. Apply 'Next Step' rules: Problem -> Solution; Claim -> Evidence; Gap -> Explanation.",
+      "4. Formulate a prediction based *only* on the passage's trajectory.",
+      "5. Find the answer choice that addresses the 'missing' logic piece."
+    ],
+    "mental_checklist": [
+      "What was the very last thing the author said?",
+      "Is there a logical gap left open?",
+      "Does my prediction maintain the author's tone and direction?"
+    ],
+    "common_traps": [
+      "The 'Plausible but Unconnected' Trap: Choosing an answer about the topic that doesn't follow from the *endpoint*.",
+      "Outside Knowledge: Predicting what usually comes next in real life rather than this specific text.",
+      "New Direction: Choosing an answer that starts a completely new argument."
+    ],
+    "pro_tips": [
+      "The final signal word (However, Therefore) is the biggest clue to the next move.",
+      "If the passage ends mid-example, the next section will conclude the example's point.",
+      "If the author raises a critique but hasn't answered it, the rebuttal is next."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage ending: '...findings suggest ecosystems are complex. However, the energy mechanisms of organisms at these depths remain poorly understood.' \n\nThe passage most likely continues by:",
+      "options": [
+        "A: describing exploration technology",
+        "B: examining specific biochemical pathways used for energy",
+        "C: comparing shallow and deep ecosystems",
+        "D: arguing for more funding",
+        "E: discussing geological vent formation"
+      ],
+      "solution_using_strategy": [
+        "1. Analyze Endpoint: S1 says 'ecosystems are complex'; S2 says 'energy mechanisms are poorly understood'.",
+        "2. Identify the Gap: The author has flagged 'energy mechanisms' as the missing piece of knowledge.",
+        "3. Predict: The next step should logically be to explain or investigate those energy mechanisms.",
+        "4. Match to B: 'Examining biochemical pathways used for energy' directly fills the gap.",
+        "5. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies the explicit 'unsolved problem' at the very end of the text.",
+        "• It treats the passage as an incomplete logic chain and finds the missing link."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Word of Zeus",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "A focus strategy where you flag 'lightning bolt' words (However, Although, Therefore) that signal the passage's most critical structural shifts.",
+    "core_idea": "ETS uses these signal words to flag where the real answer lives. The sentence containing a 'Word of Zeus' is usually the most important sentence in the paragraph.",
+    "when_to_use": "During every read to find high-value sentences. Critical for 'Author's Attitude' and 'Inference' questions.",
+    "when_not_to_use": "Do not over-flag simple connectors like 'and' or 'also'.",
+    "step_by_step_process": [
+      "1. While reading, mentally highlight every Contrast (However, Yet), Intensifier (Notably, Crucially), and Conclusion (Thus, Therefore) word.",
+      "2. Slow down and read the sentence containing the signal word with 100% focus.",
+      "3. Ask: Is this the author's view or a view they are about to challenge?",
+      "4. Mark these sentences as prime candidates for 'lookup' when answering questions.",
+      "5. If there are multiple pivots, prioritize the *last* one in the passage."
+    ],
+    "mental_checklist": [
+      "Is this word a pivot (changing direction) or an additive (keeping direction)?",
+      "Is the author committing to this point or just mentioning it?",
+      "Does this word introduce a rebuttal?"
+    ],
+    "common_traps": [
+      "The 'Fake Pivot': Misinterpreting a 'however' that introduces someone else's view as the author's view.",
+      "Additive Trap: Treating 'Furthermore' as a pivot when it actually just adds more of the same.",
+      "Over-emphasizing the first pivot when a later pivot actually resolves the argument."
+    ],
+    "pro_tips": [
+      "Contrast words (However, Although) are the most common source of RC answers.",
+      "Conclusion words (Therefore, Thus) are the most reliable indicators of the author's stance.",
+      "The sentence *after* a 'however' is usually 5x more important than the sentence before it."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage: 'Early studies suggested primates couldn't learn language. anatomy was the limit. However, sign language research showed success. Critics argued this was rote imitation. Nevertheless, lexigram studies revealed abstract understanding.' \n\nThe passage primarily argues that:",
+      "options": [
+        "A: chimps are biologically incapable",
+        "B: early researchers underestimated communicative potential",
+        "C: studies proved master of human language",
+        "D: debate remains unresolved",
+        "E: critics were correct to question methodology"
+      ],
+      "solution_using_strategy": [
+        "1. Flag Pivots: 'However' (S3), 'Nevertheless' (S5).",
+        "2. Analyze S3: Research showed success (Challenge to early view).",
+        "3. Analyze S5: 'Nevertheless' introduces the author's final, strongest point: abstract understanding exists.",
+        "4. Formulate Stance: The early view (chimps can't learn) was wrong/limited.",
+        "5. Match to B: 'Researchers underestimated potential' captures the shift from S1 to S5.",
+        "6. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It separates the layers of the argument: Old View -> Challenge -> Critics -> Final Rebuttal.",
+        "• It identifies the final 'Nevertheless' as the author's true north."
+      ]
+    }
+  },
+  {
+    "strategy_name": "More Important Words",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "A mental habit of prioritizing 'load-bearing' words (Nouns, Verbs, Logic Connectors) and ignoring 'decorative' adjectives during complex reading.",
+    "core_idea": "GRE passages are dense, but only 20% of the words drive meaning. Identifying the subject-verb core and the logical signposts allows you to understand complex sentences instantly.",
+    "when_to_use": "During every read, especially for long sentences with academic jargon.",
+    "when_not_to_use": "Do not ignore scope qualifiers (some, only, rarely)—these are 'important words'.",
+    "step_by_step_process": [
+      "1. Read the complex sentence once.",
+      "2. Strip it: Identify the core Subject + Verb + Object.",
+      "3. Add logic: Find the Connector (but, because) and the Qualifier (only, most).",
+      "4. Mental Translation: 'Scholars [S] argued [V] that intent limits [O] though [C] not totally [Q].'",
+      "5. Use this skeletal version to evaluate answer choices."
+    ],
+    "mental_checklist": [
+      "What is actually happening? Who is doing it?",
+      "What is the logical relationship between the clauses?",
+      "Are there 'Killer Words' (only, all, always) I must track?",
+      "Does the claim still work if I delete all these adjectives?"
+    ],
+    "common_traps": [
+      "Ignoring the Verb: Focusing on the complex nouns and missing what the author is actually *claiming* about them.",
+      "Losing Qualifiers: Missing a 'some' and picking an 'all' answer choice.",
+      "Distraction Trap: Getting bogged down in jargon like 'epistemological' and missing the core logic."
+    ],
+    "pro_tips": [
+      "Verbs are the engine of the sentence; always find the verb.",
+      "Qualifiers (most, rarely) are often the reason an answer choice is wrong.",
+      "Strip the sentence until it's simple enough for a teenager to understand."
+    ],
+    "official_GRE_style_example": {
+      "question": "Sentence: 'While some postmodern critics suggested intent is irrelevant, the majority of contemporary scholars maintain that intent, though not determinative, provides an indispensable constraint on readings.' \n\nWhich best captures the second half of the sentence?",
+      "options": [
+        "A: Scholars believe intent fully determines meaning",
+        "B: Most scholars hold that intent legitimately limits possibilities without being the final arbiter",
+        "C: Scholars unanimously reject postmodernism",
+        "D: Scholars believe only intent defines readings",
+        "E: Debate is conclusively resolved"
+      ],
+      "solution_using_strategy": [
+        "1. Identify Core: S: 'Most scholars'; V: 'maintain'; O: 'intent limits readings'.",
+        "2. Add Qualifier: 'though not determinative' (not the final decider).",
+        "3. Skeleton: 'Most scholars: intent limits (but doesn't decide) meaning'.",
+        "4. Match to B: 'legitimately limits... without being the final arbiter' is a perfect mirror.",
+        "5. Reject A/C/D/E: A ('fully determines') and D ('only intent') violate the qualifiers.",
+        "6. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It ignores the 55-word fluff and focuses on the 'limit vs. determine' distinction.",
+        "• It exposes scope violations in wrong answers instantly."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Simplifying Sentences",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "An active translation technique where you rewrite jargon-heavy GRE sentences into plain, simple English using your own words.",
+    "core_idea": "GRE passages use complexity to hide simple ideas. If you can translate a sentence so a 16-year-old could understand it, you have truly mastered its meaning.",
+    "when_to_use": "When you have read a sentence twice and still cannot state its meaning. Also used to decode complex answer choices.",
+    "when_not_to_use": "For every sentence—only use for the 2–3 'brick walls' in a passage.",
+    "step_by_step_process": [
+      "1. Read the 'brick wall' sentence.",
+      "2. Set aside all parentheticals and jargon.",
+      "3. Identify the core action: [Who] [Does What].",
+      "4. Translate into your own vocabulary: Use words like 'good', 'bad', 'wrong', 'right'.",
+      "5. Compare your translation with the answer choices."
+    ],
+    "mental_checklist": [
+      "Can I explain this to a friend in one sentence?",
+      "What is the simplest version of this idea?",
+      "Am I staying in the passage's language (bad) or using my own (good)?"
+    ],
+    "common_traps": [
+      "Pseudo-simplification: Paraphrasing academic words into other academic words.",
+      "Over-stripping: Removing a 'not' or 'only' and reversing the logic.",
+      "Time Sink: Spending more than 20 seconds on a single translation."
+    ],
+    "pro_tips": [
+      "Use 'Author thinks X is wrong' as a standard translation template.",
+      "If you simplify the choices too, the correct one will look exactly like your translation of the passage.",
+      "The simpler the translation, the clearer the logic."
+    ],
+    "official_GRE_style_example": {
+      "question": "Sentence: 'The epistemological implications of underdetermination—that finite evidence is compatible with indefinite inconsistent frameworks—have been variously interpreted as grounds for antirealism, pragmatism, or merely highlighting non-empirical theoretical virtues.' \n\nThe sentence is primarily making the claim that:",
+      "options": [
+        "A: underdetermination is evidence against realism",
+        "B: evidence supporting multiple theories led philosophers to different conclusions",
+        "C: parsimony is the most important criteria",
+        "D: theories cannot be objectively evaluated",
+        "E: debate is resolved via pragmatism"
+      ],
+      "solution_using_strategy": [
+        "1. Identify Jargon: 'epistemological', 'underdetermination', 'antirealism'.",
+        "2. Identify Core: 'The result of [Fact X] has been read in [Different Ways]'.",
+        "3. Translate Fact X: 'The fact that evidence fits many theories'.",
+        "4. Final Translation: 'One fact about evidence has led philosophers to different conclusions'.",
+        "5. Match to B: 'evidence supporting multiple theories... led to different conclusions' is an exact mirror.",
+        "6. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It cuts through the 'philosophy wall' and reveals a very basic logical structure.",
+        "• It makes the wrong answers (which focus on the jargon examples) look obviously incorrect."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Rephrasing Sentences",
+    "category": "Reading Comprehension Core",
+    "what_it_is": "A double-decoding technique where you simplify *both* the passage and the answer choices into plain language to ensure an objective comparison.",
+    "core_idea": "ETS words wrong answers in high-level language to make them sound authoritative. By stripping both the text and the choices to the same plain register, you prevent linguistic bias.",
+    "when_to_use": "When answer choices are difficult to distinguish or use abstract/indirect language.",
+    "when_not_to_use": "For straightforward detail questions.",
+    "step_by_step_process": [
+      "1. Simplify the relevant passage idea (using 'Simplifying Sentences').",
+      "2. Simplify each remaining answer choice into 1-2 lines of plain English.",
+      "3. Compare the simplified versions side-by-side.",
+      "4. Select the choice whose plain-English meaning matches the passage's plain-English meaning.",
+      "5. Re-check the passage for any scope qualifiers that might invalidate the match."
+    ],
+    "mental_checklist": [
+      "Does this choice say EXACTLY what the passage says in plain terms?",
+      "Does my simplified choice add any new facts or opinions?",
+      "Is the author's stance (certain vs. tentative) preserved in my rephrasing?"
+    ],
+    "common_traps": [
+      "Distortion: Rephrasing too loosely and 'interpreting' meaning that isn't there.",
+      "Opinion vs. Fact: Rephrasing a cited opinion as if it's the author's fact.",
+      "Scope Slip: Using 'some' in the passage rephrase and 'most' in the choice rephrase."
+    ],
+    "pro_tips": [
+      "Practice rephrasing 'all' as '100%' and 'some' as '>0%' to keep scope literal.",
+      "If two choices simplify to the same thing, go back to the exact passage wording—look for a tiny scope word that breaks one.",
+      "Rephrasing is the ultimate tool for Inference questions."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage: 'Some historians recently suggested the traditional account of the Renaissance obscures the extent to which northern scholars developed frameworks that prefigured Italian models.' \n\nThe passage suggests:",
+      "options": [
+        "A: traditional account is without merit",
+        "B: certain historians believe the standard account may be incomplete",
+        "C: Northern humanism was more sophisticated",
+        "D: Renaissance should be redated to begin in the north",
+        "E: most historians abandoned the account"
+      ],
+      "solution_using_strategy": [
+        "1. Rephrase Passage: 'Some historians think the usual story might be incomplete because northerners did it too'.",
+        "2. Rephrase Choices: A: 'The old story is trash'. B: 'Some people think the old story is missing pieces'. C: 'North was better'. D: 'Move the start date'. E: 'Most people dropped the story'.",
+        "3. Compare: B matches the passage ('some historians' / 'suggested' / 'obscures') perfectly.",
+        "4. Eliminate Others: A is too extreme; C introduces 'sophistication'; D is too specific; E changes 'some' to 'most'.",
+        "5. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It exposes scope distortions (some vs. most) and intensity distortions (obscures vs. without merit) instantly.",
+        "• it strips the academic tone and reveals B as the only logically defensible option."
+      ]
+    }
+  }
+]

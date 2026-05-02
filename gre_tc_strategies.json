@@ -1,0 +1,553 @@
+[
+  {
+    "strategy_name": "Pairing Strategy",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A method to solve multi-blank sentences by identifying the logical link (harmony or tension) between blanks. You determine the relationship first, then use the easier blank to solve the more difficult one.",
+    "core_idea": "GRE sentences are built around a central logic. Blanks almost always echo (agree) or oppose (contrast) each other. Finding this relationship reduces guesswork by 50%.",
+    "when_to_use": "Two or three blanks where one choice directly constrains the other. Look for structural clues like 'although', 'despite', 'similarly', 'just as', 'not only...but also'.",
+    "when_not_to_use": "When blanks are independent (located in separate, unrelated clauses) or when a blank refers to a specific noun without a conceptual pair.",
+    "step_by_step_process": [
+      "1. Read the full sentence without looking at choices.",
+      "2. Identify the relationship: Do the blanks agree (+/+) or contrast (+/-)?",
+      "3. Label the blanks with relationship tags.",
+      "4. Solve the easier blank using its local clue word.",
+      "5. Use the pairing relationship to solve the second blank.",
+      "6. Match your logical prediction to the provided options."
+    ],
+    "mental_checklist": [
+      "Are these blanks describing the same subject?",
+      "Is there a contrast word (although, yet) connecting them?",
+      "Is there a same-direction word (similarly, and) connecting them?",
+      "Does filling one blank logically force a specific tone for the other?"
+    ],
+    "common_traps": [
+      "Choosing 'academic' words that ignore the logical relationship.",
+      "Treating linked blanks as independent units.",
+      "Pairing based on topic (e.g., both about science) instead of logical direction (e.g., positive vs. negative)."
+    ],
+    "pro_tips": [
+      "Physically label blanks (+/+) or (+/-) on your scratchpad before looking at choices.",
+      "If you don't know a word's meaning, eliminate pairs that break the established relationship.",
+      "In Sentence Equivalence, both correct words must create the exact same relationship with the context."
+    ],
+    "official_GRE_style_example": {
+      "question": "The professor's lectures were so ______ that even students who had always found economics ______ began attending voluntarily.",
+      "options": ["A: tedious / B: riveting", "A: riveting / B: tedious", "A: superficial / B: accessible", "A: dense / B: complex", "A: engaging / B: fascinating"],
+      "solution_using_strategy": [
+        "1. Identify the Pivot: The word 'even' signals a reversal—students who usually avoid the subject are now attending.",
+        "2. Solve Blank 1: For students to attend voluntarily, the lectures must be positive. Prediction: Engaging/Riveting (+).",
+        "3. Determine the Link: Since they now attend, their previous attitude toward economics must have been negative. Prediction: Boring/Tedious (-).",
+        "4. Establish Pairing: We need a Positive/Negative (+/-) pair.",
+        "5. Match Options: Option B (riveting / tedious) is the only pair that satisfies the (+/-) logic."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies the structural contrast forced by the word 'even'.",
+        "• It prevents falling for 'distractor' pairs like A: engaging / B: fascinating (both positive) which ignore the 'even' reversal logic."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Math Strategy (1–6)",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A technique to quantify word tone by assigning a score (1 = extreme negative, 6 = extreme positive). It converts complex vocabulary into a manageable tone-matching problem.",
+    "core_idea": "Every GRE word has a direction (pos/neg) and intensity (mild/extreme). The sentence's clues dictate the required score. Match the sentence's target score to the choices.",
+    "when_to_use": "When you are unsure of exact definitions but can sense the required emotional register. Especially powerful for SE to ensure selected words have matching intensity.",
+    "when_not_to_use": "When a blank requires a precise technical definition that tone alone cannot solve (e.g., 'a word meaning to revoke a law').",
+    "step_by_step_process": [
+      "1. Determine the required direction: Positive, Negative, or Neutral?",
+      "2. Determine the required intensity: Mild (3/4) or Extreme (1/6)?",
+      "3. Assign a 1–6 score to each answer choice.",
+      "4. Select the choice that matches the sentence's target score.",
+      "5. For SE, ensure both chosen words have the exact same score."
+    ],
+    "mental_checklist": [
+      "Is the context clearly positive or negative?",
+      "Is the sentiment moderate or extreme?",
+      "Can I score the choices even if my definition is fuzzy?",
+      "Do my SE selections have identical scores?"
+    ],
+    "common_traps": [
+      "Ignoring intensity (e.g., picking 'sad' when the sentence demands 'devastated').",
+      "Assigning scores based on personal opinion rather than context.",
+      "Mixing directions in SE pairs."
+    ],
+    "pro_tips": [
+      "Categorize words during study: Score 1 (catastrophic) vs. Score 6 (transcendent).",
+      "Use Pairing as a tiebreaker if two choices share the same score.",
+      "Neutral words usually score a 3 or 4; use them for descriptive, non-judgmental blanks."
+    ],
+    "official_GRE_style_example": {
+      "question": "The administration's response to the crisis was so ______ that even longtime supporters began to question its competence.",
+      "options": ["A: measured", "B: inept", "C: cautious", "D: deliberate", "E: maladroit"],
+      "solution_using_strategy": [
+        "1. Identify the Signal: 'Even longtime supporters began to question' implies a very poor performance.",
+        "2. Target Score: We need an extreme negative (Score 1 or 2).",
+        "3. Score the Choices: A: 4 (neutral-pos), B: 2 (neg), C: 4 (neutral), D: 4 (neutral), E: 2 (neg).",
+        "4. Filter: Choices B (inept) and E (maladroit) are the only ones with the correct direction and intensity.",
+        "5. Final Selection: Both words mean 'incompetent/clumsy' and function as the correct SE pair."
+      ],
+      "why_this_strategy_works_here": [
+        "• It filters out 'reasonable' sounding words like 'cautious' that don't match the extreme outcome described.",
+        "• It focuses logic on intensity, which is where ETS usually hides the trap."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Block of 4",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A simplification method for three-blank questions. You find one 'pivot' blank with a binary outcome, which automatically eliminates the majority of answer combinations.",
+    "core_idea": "Three-blank questions offer 27 combinations. Identifying the pivot blank reduces this to a single binary choice (Block A or Block B), making the remaining blanks easier to confirm.",
+    "when_to_use": "Three-blank questions where one blank clearly controls the story's outcome (e.g., success vs. failure).",
+    "when_not_to_use": "When all three blanks are equally vague; use 'Easiest Blank First' in that scenario.",
+    "step_by_step_process": [
+      "1. Identify the pivot blank (the one that determines the sentence's overall tone).",
+      "2. Decide the direction for that pivot (e.g., must be positive).",
+      "3. Eliminate all combinations that don't match that pivot's direction.",
+      "4. Test the remaining 'block' of options.",
+      "5. Use local clues to confirm the secondary blanks.",
+      "6. Verify the entire narrative for coherence."
+    ],
+    "mental_checklist": [
+      "Which blank has the clearest binary outcome?",
+      "Does choosing X for this blank automatically rule out Y for the others?",
+      "Is my narrative consistent across all three blanks?"
+    ],
+    "common_traps": [
+      "Trying to solve all three blanks at once without a pivot.",
+      "Choosing the most difficult blank as your starting point.",
+      "Switching pivots halfway through and losing the narrative thread."
+    ],
+    "pro_tips": [
+      "The pivot is usually the blank that describes the result or the main action.",
+      "Once the pivot is locked, treat the remaining blanks as simple one-blank problems.",
+      "If you find two viable blocks, look for a second binary clue to break the tie."
+    ],
+    "official_GRE_style_example": {
+      "question": "The scientist's findings were so ______ (i) that the journal editors, typically ______ (ii) in their acceptance criteria, decided to ______ (iii) the standard review timeline.",
+      "options": ["B1: groundbreaking / flawed / routine", "B2: lenient / stringent / indifferent", "B3: extend / compress / abandon"],
+      "solution_using_strategy": [
+        "1. Identify the Pivot: Blank (i) is the pivot. If findings are good, editors react one way; if bad, they react another.",
+        "2. Test Block A (Positive): If findings = 'groundbreaking', stringent editors would 'compress' the timeline to publish quickly.",
+        "3. Test Block B (Negative): If findings = 'flawed', editors would 'abandon' or 'extend' the timeline.",
+        "4. Logic Check: Journals want to fast-track major discoveries. The 'groundbreaking' + 'stringent' + 'compress' block creates the most logical story.",
+        "5. Final Selection: Groundbreaking, Stringent, Compress."
+      ],
+      "why_this_strategy_works_here": [
+        "• It forces you to build a logical story rather than guessing three separate words.",
+        "• It links the findings directly to the editors' behavior, ensuring narrative consistency."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Double Possibility",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A strategy for handling sentences that are intentionally ambiguous and could logically go in two different directions. You use the choices themselves to determine which path ETS intended.",
+    "core_idea": "Ambiguity is a trap. When a sentence doesn't force a direction, the answer choices will cluster into two camps. Use a hidden secondary clue to decide between them.",
+    "when_to_use": "When you read a sentence and find that both a positive and a negative word could logically fit the context.",
+    "when_not_to_use": "When a structural pivot word (e.g., 'although') already forces a clear direction.",
+    "step_by_step_process": [
+      "1. Identify the ambiguity: Can the blank be both (+) and (-)?",
+      "2. Look at the choices. Do they cluster into two opposite camps?",
+      "3. Re-scan the sentence for a 'hidden' secondary clue (modifiers, parentheticals).",
+      "4. Eliminate choices that are off-topic or extreme.",
+      "5. Insert the finalists and see which makes the sentence more precise.",
+      "6. Choose the option that accounts for ALL clues, including the hidden ones."
+    ],
+    "mental_checklist": [
+      "Does the sentence work with both a (+) and (-) prediction?",
+      "Did I miss a small modifier or comma-clause that resolves the tension?",
+      "Are the answer choices pointing to two different stories?"
+    ],
+    "common_traps": [
+      "Committing to a direction before checking the alternative.",
+      "Dismissing the sentence as 'badly written' instead of looking for the hidden clue.",
+      "Rushing the re-read and missing the subtle resolution."
+    ],
+    "pro_tips": [
+      "Double Possibility questions are high-difficulty; slow down when you encounter one.",
+      "The resolution is often in a 'hidden' clause like 'where they had hoped for...' or 'unlike previous...'.",
+      "Ask: Which word makes the sentence more specific/precise?"
+    ],
+    "official_GRE_style_example": {
+      "question": "His memoir, long anticipated by critics, was ultimately ______ — filled with vague generalities where readers had hoped for revelation.",
+      "options": ["A: illuminating", "B: disappointing", "C: controversial", "D: provocative", "E: revelatory"],
+      "solution_using_strategy": [
+        "1. Identify Ambiguity: 'Long anticipated' could lead to a masterpiece (+) or a letdown (-).",
+        "2. Check Choices: A/E are positive; B is negative.",
+        "3. Find the Resolver: The clause 'where readers had HOPED for revelation' is the key. 'Hoped for' implies they did not receive it.",
+        "4. Determine Direction: Since they didn't get what they hoped for, the outcome is negative.",
+        "5. Final Selection: B (disappointing)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies the false ambiguity created by the opening clause.",
+        "• It focuses on the subordinate clause ('where readers had hoped') which actually dictates the correct answer."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Infinite Possibility",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A pivot strategy for open-ended blanks where the sentence provides no strong directional clues. You shift from 'predicting' to 'testing' to see which word makes the sentence most precise.",
+    "core_idea": "Sometimes the sentence is a skeleton, and the answer choice is the muscle that makes it move. You cannot predict the word, but you must recognize which word creates the most inevitable logic.",
+    "when_to_use": "When your prediction is too vague (e.g., 'something about change') or when the sentence lacks a strong structural pivot.",
+    "when_not_to_use": "As a first choice—always attempt to find a clue and predict before resorting to testing choices.",
+    "step_by_step_process": [
+      "1. Recognize the lack of a strong clue word.",
+      "2. Admit that the prediction is too vague to be useful.",
+      "3. Insert each choice into the sentence mechanically.",
+      "4. Ask: 'Does this word make the sentence true and logically precise?'",
+      "5. Eliminate choices that 'sort of' work but are imprecise.",
+      "6. Choose the word that makes the sentence feel complete and inevitable."
+    ],
+    "mental_checklist": [
+      "Is my prediction too broad to help (e.g., 'a negative word')?",
+      "Does the sentence lack 'Word of Zeus' signal words?",
+      "Does one choice stand out as significantly more specific than the others?"
+    ],
+    "common_traps": [
+      "Labeling hard questions as Infinite Possibility out of laziness.",
+      "Picking a word that fits the general tone but lacks the required precision.",
+      "Forgetting to verify the choice against the whole sentence's logic."
+    ],
+    "pro_tips": [
+      "These questions are essentially vocabulary tests in disguise; knowing the precise definition is key.",
+      "Read the full sentence with each candidate; if you have to 'explain' why a word works, it's probably wrong.",
+      "Look for the 'best' fit, not just a 'possible' fit."
+    ],
+    "official_GRE_style_example": {
+      "question": "The documentary's ______ approach — blending archival footage with present-day interviews — gave viewers the sense of witnessing history as it unfolded.",
+      "options": ["A: didactic", "B: immersive", "C: polemical", "D: derivative", "E: dispassionate"],
+      "solution_using_strategy": [
+        "1. Evaluate Prediction: 'What kind of approach?' The clue 'blending footage and interviews' is descriptive but not directionally strong.",
+        "2. Switch to Testing: Insert each option.",
+        "3. A (didactic): 'Lecture-like'—contradicts the feeling of 'witnessing' it unfold.",
+        "4. B (immersive): 'Deeply involving'—matches the feeling of 'witnessing history as it unfolded.'",
+        "5. C/D/E: No evidence of argument (polemical), unoriginality (derivative), or coldness (dispassionate).",
+        "6. Final Selection: B (immersive)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies that the definition of the blank is found in the *effect* it has on the viewer ('witnessing history').",
+        "• It avoids forcing a prediction where only recognition will work."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Easiest Blank First",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A workflow strategy for multi-blank questions where you ignore the numerical order (1, 2, 3) and solve the blank with the most obvious clue first.",
+    "core_idea": "Multi-blank questions are chains. Solving the easiest link provides the context needed to unlock the harder ones. Don't let the numbering dictate your path.",
+    "when_to_use": "Any multi-blank question where Blank 1 is vague but Blank 2 or 3 is surrounded by clear clue words.",
+    "when_not_to_use": "When all blanks have equally clear clues—just solve left-to-right in that case.",
+    "step_by_step_process": [
+      "1. Scan the full sentence without stopping to solve.",
+      "2. Identify which blank has the most 'local' context (clues right next to it).",
+      "3. Solve that easiest blank first.",
+      "4. Use the solved blank as a new clue for the remaining blanks.",
+      "5. Solve the remaining blanks in order of difficulty.",
+      "6. Read the completed sentence for a final coherence check."
+    ],
+    "mental_checklist": [
+      "Is Blank 1 the easiest, or is it just the first one?",
+      "Which blank has the most non-blank words around it?",
+      "Does solving Blank X reveal the direction of Blank Y?"
+    ],
+    "common_traps": [
+      "Getting stuck on a vague Blank 1 and wasting time.",
+      "Failing to see how the 'easy' blank's solution constrains the others.",
+      "Ignoring the full sentence logic after solving blanks in isolation."
+    ],
+    "pro_tips": [
+      "The easiest blank is often the one that is a restatement of a nearby phrase.",
+      "Spend 5 seconds 'scoping' the blanks before you start writing.",
+      "Once you solve one blank, the sentence becomes a 2-blank or 1-blank problem, which is psychologically easier."
+    ],
+    "official_GRE_style_example": {
+      "question": "The ______ (i) nature of the negotiations was evident in the delegates' refusal to make any ______ (ii) statements, preferring instead to remain ______ (iii) on all key issues.",
+      "options": ["B1: contentious / productive / secretive", "B2: binding / inflammatory / encouraging", "B3: outspoken / noncommittal / informed"],
+      "solution_using_strategy": [
+        "1. Identify the Entry Point: Blank (iii) is easiest. 'Preferring to remain ______' follows 'refusal to make statements.'",
+        "2. Solve Blank 3: Refusing statements = remaining 'noncommittal' (H).",
+        "3. Move to Blank 2: They refused to make 'binding' (D) statements (since they wanted to stay noncommittal).",
+        "4. Move to Blank 1: Refusing to commit and staying secretive = a 'secretive' (C) nature.",
+        "5. Final Selection: Secretive, Binding, Noncommittal."
+      ],
+      "why_this_strategy_works_here": [
+        "• It prevents guesswork on Blank 1 (which could be anything at first) by providing a logical foundation from Blank 3.",
+        "• It ensures each subsequent decision is backed by a previously solved fact."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Previously Referenced",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A recognition strategy where the blank is simply a synonym or restatement of a phrase already appearing in the sentence.",
+    "core_idea": "GRE sentences often define their own blanks. A complex word is often just the single-word version of a simpler 3-word phrase found elsewhere in the sentence.",
+    "when_to_use": "When the sentence contains colons, dashes, or 'that is' clauses that provide an explanation or example of the blank.",
+    "when_not_to_use": "When the blank introduces genuinely new, unreferenced information.",
+    "step_by_step_process": [
+      "1. Find the descriptive phrase or example that 'explains' the blank.",
+      "2. Paraphrase that explanation into a simple 1-word prediction.",
+      "3. Match your simple prediction to the GRE-level answer choices.",
+      "4. Confirm that the choice means EXACTLY what the reference phrase said.",
+      "5. Verify the full sentence."
+    ],
+    "mental_checklist": [
+      "Is there a colon or dash defining the blank?",
+      "Is there a 'that is' or 'in other words' construction?",
+      "Can I literally swap the blank with a phrase from earlier in the sentence?"
+    ],
+    "common_traps": [
+      "Guessing based on tone while ignoring the explicit definition provided.",
+      "Choosing a word that is related to the topic but doesn't match the specific reference.",
+      "Mistaking a contrast clue for a restatement clue."
+    ],
+    "pro_tips": [
+      "Treat colons as equals signs (=). Whatever is on the right side of the colon is the definition of the blank on the left.",
+      "Your prediction should be a 100% match for the reference phrase.",
+      "This strategy removes the need for 'inference'—the answer is already on the screen."
+    ],
+    "official_GRE_style_example": {
+      "question": "The philosopher's writing style was notably ______ : she would introduce a concept in chapter one, only to circle back to it repeatedly, adding new layers with each pass.",
+      "options": ["A: elliptical", "B: recursive", "C: turgid", "D: aphoristic", "E: didactic"],
+      "solution_using_strategy": [
+        "1. Identify the Signal: The colon (:) means 'what follows defines the blank'.",
+        "2. Identify the Reference: 'circle back to it repeatedly, adding new layers'.",
+        "3. Predict: 'A style that repeats/loops'. Prediction: Recursive.",
+        "4. Match: Option B (recursive) is a direct synonym for 'looping back/repeating'.",
+        "5. Final Selection: B (recursive)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It leverages the fact that ETS has already provided the definition.",
+        "• It prevents distraction from other 'philosophical' sounding words like 'elliptical' or 'didactic'."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Usage Strategy",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A tiebreaker method used when two choices have the same meaning, but only one is idiomatically or conventionally correct in the specific sentence context.",
+    "core_idea": "The GRE tests more than just definitions; it tests 'collocation' (which words naturally sit together). When meaning is identical, usage is the differentiator.",
+    "when_to_use": "When you have narrowed down to two near-synonyms and cannot distinguish them by logic or tone alone.",
+    "when_not_to_use": "As your first strategy—meaning and structure always come before idiomatic 'feel'.",
+    "step_by_step_process": [
+      "1. Use primary strategies to narrow to 2 finalists.",
+      "2. Consider the register: Is this an academic, formal, or social context?",
+      "3. Check prepositions: Does the word require a specific preposition (e.g., 'object to') that isn't present?",
+      "4. Internal Reading: Read the sentence with both finalists. Which one sounds like something in a textbook or formal essay?",
+      "5. Select the choice with the most natural collocation."
+    ],
+    "mental_checklist": [
+      "Do both words mean the same thing?",
+      "Is one word too 'informal' for a GRE sentence?",
+      "Does the sentence provide a preposition that rules one word out?",
+      "Which word would I see in *The Economist* or an academic journal?"
+    ],
+    "common_traps": [
+      "Relying on how words 'sound' in casual conversation.",
+      "Using this as a primary strategy instead of a tiebreaker.",
+      "Confusing 'unfamiliar' with 'incorrect'."
+    ],
+    "pro_tips": [
+      "Learn common synonym traps: Rebuke (formal) vs. Rebuff (social), Spurious (fake evidence) vs. Specious (fake reasoning).",
+      "Read high-level prose to internalize formal usage patterns.",
+      "If you're stuck, the more 'academic' word is usually the correct one."
+    ],
+    "official_GRE_style_example": {
+      "question": "The committee's decision to ______ the junior researcher's proposal without explanation struck many as unnecessarily harsh.",
+      "options": ["A: reject", "B: rebuff", "C: spurn", "D: repudiate", "E: dismiss"],
+      "solution_using_strategy": [
+        "1. Primary Check: All choices mean 'to turn down'. Prediction: Reject/Dismiss.",
+        "2. Filter Finalists: 'Reject' (A) and 'Dismiss' (E) are the strongest candidates.",
+        "3. Usage Distinction: 'Rebuff' is for social advances; 'Spurn' is for romantic ones; 'Repudiate' is for beliefs.",
+        "4. Register Match: 'Dismiss a proposal' is a standard academic/professional collocation. 'Dismiss... without explanation' adds a layer of disregard that matches 'harsh'.",
+        "5. Final Selection: E (dismiss)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies that while all words are synonyms, they belong to different social 'registers'.",
+        "• it matches the professional context of a committee and a proposal."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Time Contrast",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A structural strategy where you use a described 'before' state to predict the opposite 'after' state (or vice versa).",
+    "core_idea": "Change over time is a core ETS pattern. If a subject changed, the blank will represent the opposite of its original state. Spot the time shift, fill in the flip.",
+    "when_to_use": "When the sentence contains time signals: once, formerly, now, recently, has become, historically, no longer.",
+    "when_not_to_use": "When time words are used metaphorically and don't indicate a genuine change in state.",
+    "step_by_step_process": [
+      "1. Spot the time signal (e.g., 'Once', 'Now').",
+      "2. Identify the 'Stated state' (what was it before/after?).",
+      "3. Determine the direction: Did it go from (+) to (-) or (-) to (+)?",
+      "4. Predict the blank as the opposite of the stated state.",
+      "5. Match to the choices."
+    ],
+    "mental_checklist": [
+      "Is there a 'before' and 'after' state?",
+      "Which time-point does the blank belong to?",
+      "Is the change a reversal or just a shift in degree?"
+    ],
+    "common_traps": [
+      "Treating the sentence as a simple description and ignoring the 'then vs. now' logic.",
+      "Getting the direction backwards (predicting the same state instead of the opposite).",
+      "Missing subtle time words like 'increasingly' or 'no longer'."
+    ],
+    "pro_tips": [
+      "Time contrasts are often combined with Math Strategy—look for a Score 6 shifting to a Score 1.",
+      "The change is almost always a total reversal, not a mild shift.",
+      "If the sentence mentions a specific reason for change, use that reason to confirm the blank's direction."
+    ],
+    "official_GRE_style_example": {
+      "question": "Once celebrated as a visionary, the architect has become increasingly ______ — her later projects criticized for recycling the same forms that made her famous.",
+      "options": ["A: innovative", "B: repetitive", "C: productive", "D: celebrated", "E: unconventional"],
+      "solution_using_strategy": [
+        "1. Identify Time Shift: 'Once [state X]' ... 'has become [blank]'.",
+        "2. Analyze State X: 'Visionary' = innovative, creative (+).",
+        "3. Analyze the Reason: 'Criticized for recycling the same forms'. This confirms the new state is negative and lack creativity.",
+        "4. Predict: Opposite of visionary/innovative. Prediction: Unoriginal/Repetitive.",
+        "5. Match: Option B (repetitive)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies the temporal shift which rules out all positive choices (A, C, D, E) instantly.",
+        "• It uses the specific clue ('recycling forms') to confirm the exact nature of the negative state."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Idea Chunks",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A breakdown method for 40+ word sentences. You divide the sentence into self-contained units of meaning and solve the blank within its local unit.",
+    "core_idea": "Complexity is often just length. Every long sentence is really 3 short sentences joined together. Solve the mini-sentence that contains the blank first.",
+    "when_to_use": "Long, overwhelming sentences with multiple clauses, semicolons, or heavy parentheticals.",
+    "when_not_to_use": "Short sentences where the logic is already direct.",
+    "step_by_step_process": [
+      "1. Read once to get the gist.",
+      "2. Identify natural breaks: Semicolons, dashes, and big conjunctions (but, although).",
+      "3. Divide into 2–4 logical chunks.",
+      "4. Locate the blank's chunk.",
+      "5. Find the clue *inside* that specific chunk.",
+      "6. Solve locally and then verify against the full sentence."
+    ],
+    "mental_checklist": [
+      "Can I split this sentence into two independent ideas?",
+      "Does the blank's chunk have enough context to solve on its own?",
+      "Does my local solution conflict with the other chunks?"
+    ],
+    "common_traps": [
+      "Splitting the sentence in a way that separates the blank from its clue.",
+      "Ignoring the overall sentence tone while focusing on a local chunk.",
+      "Over-chunking and creating more confusion."
+    ],
+    "pro_tips": [
+      "Treat semicolons (;) like a full stop—they almost always separate two independent ideas that solve each other.",
+      "If a chunk is a parenthetical set off by dashes, try deleting it mentally to see if the sentence becomes clearer.",
+      "Combine with Easiest Blank First to find your entry point."
+    ],
+    "official_GRE_style_example": {
+      "question": "Although the initial reception of the novel was tepid — critics dismissing it as overly sentimental — subsequent generations of readers, drawn to its unflinching portrayal of grief, came to regard it as ______ of its era.",
+      "options": ["A: a curiosity", "B: a touchstone", "C: an aberration", "D: a parody", "E: a polemic"],
+      "solution_using_strategy": [
+        "1. Chunk the Sentence: C1: 'Initial reception was tepid (bad).' C2: 'Subsequent generations... came to regard it as ______ (good).' ",
+        "2. Identify Link: The word 'Although' signals that C1 and C2 must contrast.",
+        "3. Focus on Blank's Chunk: C2 describes people being 'drawn' to it and regarding it highly. Prediction: Positive/Representative work.",
+        "4. Solve Locally: Prediction = 'a standard/defining work'.",
+        "5. Match: Option B (touchstone) = a standard by which others are judged.",
+        "6. Final Selection: B (touchstone)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It isolates the blank from the 'distraction' of the first half of the sentence.",
+        "• It makes the contrast between 'tepid' and 'touchstone' obvious."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Rephrasing Ideas",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A recognition method where you identify that a blank is just a GRE-level version of a simple phrase already given in the sentence.",
+    "core_idea": "ETS loves redundant sentences. They say the same thing twice—once in plain English and once using a hard word in the blank. The plain phrase is your dictionary definition.",
+    "when_to_use": "When you see colons, dashes, appositives, or parallel structures that restate an idea.",
+    "when_not_to_use": "When the blank adds a new piece of information rather than restating an old one.",
+    "step_by_step_process": [
+      "1. Locate the blank and any nearby 'defining' phrase.",
+      "2. Paraphrase the defining phrase into 1 simple word.",
+      "3. Look for that simple word's 'fancy' equivalent in the choices.",
+      "4. Confirm that the sentence is intentionally redundant.",
+      "5. Select and verify."
+    ],
+    "mental_checklist": [
+      "Is this sentence saying the same thing twice?",
+      "Does the blank match the dictionary definition of the simpler phrase?",
+      "Does the word I chose make the sentence feel 'balanced'?"
+    ],
+    "common_traps": [
+      "Choosing a word that is related but not an exact synonym of the reference phrase.",
+      "Missing the parallel syntax (e.g., 'not only X but also [blank]').",
+      "Confusing a contrast for a restatement."
+    ],
+    "pro_tips": [
+      "This is the fastest way to solve SE—both correct words must be synonyms of the rephrased idea.",
+      "Treat dashes (—) as equals signs.",
+      "The correct word will feel 'correct' because it literally repeats the point already made."
+    ],
+    "official_GRE_style_example": {
+      "question": "Her argumentation was ______ — she never addressed her opponent's strongest points directly, instead choosing to dismantle only the weakest versions of their claims.",
+      "options": ["A: incisive", "B: fallacious", "C: sophistic", "D: circumspect", "E: disingenuous"],
+      "solution_using_strategy": [
+        "1. Identify Restatement: The dash (—) introduces a description of her argumentation.",
+        "2. Analyze Description: 'Dismantle only the weakest versions of claims' = Strawman fallacy / Deceptive reasoning.",
+        "3. Predict: 'Deceptive/misleading'. Prediction: Sophistic.",
+        "4. Match Choices: C (sophistic) means 'using clever but misleading arguments'. B (fallacious) is close but less precise.",
+        "5. Final Selection: C (sophistic)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies that the second half of the sentence is a literal definition of 'sophistic'.",
+        "• It prevents falling for A (incisive) which might sound 'academic' but is the opposite of the behavior described."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Cover the Answers",
+    "category": "Text Completion Core (TC + SE)",
+    "what_it_is": "A foundational habit where you hide the answer choices until you have formed a logical prediction based purely on the sentence context.",
+    "core_idea": "Wrong choices are designed to contaminate your logic. Predicting first keeps your reasoning independent and protects you from ETS distractors.",
+    "when_to_use": "Every single TC and SE question. This is non-negotiable.",
+    "when_not_to_use": "Only when your prediction is impossibly vague (Infinite Possibility); even then, try to predict a direction (+/-) first.",
+    "step_by_step_process": [
+      "1. Physically cover the choices with your hand or paper.",
+      "2. Read the sentence and find the 'Word of Zeus' or clue word.",
+      "3. Form a plain-English prediction (even a simple direction like 'something bad').",
+      "4. Lock in your prediction (write it down or say it mentally).",
+      "5. Uncover the choices and find the 'best match' for your prediction.",
+      "6. If no match exists, re-read the sentence—don't just pick the least-worst choice."
+    ],
+    "mental_checklist": [
+      "Did I look at the choices before forming an idea?",
+      "Is my prediction directionally correct?",
+      "Am I matching or am I choosing? (You should be matching)."
+    ],
+    "common_traps": [
+      "Peeking at the choices halfway through and letting them 'guide' your reading.",
+      "Abandoning a solid prediction because the matching word is unfamiliar.",
+      "Predicting too generally (e.g., 'a word') instead of specifically (e.g., 'a word for greed')."
+    ],
+    "pro_tips": [
+      "The more specific your prediction, the faster you will find the answer.",
+      "If your prediction matches two words, use tiebreaker strategies (Usage, Math) rather than guessing.",
+      "High scorers spend most of their time on the sentence, not the choices."
+    ],
+    "official_GRE_style_example": {
+      "question": "Despite the company's ______ rhetoric about innovation, its actual product pipeline had remained essentially unchanged for nearly a decade.",
+      "options": ["A: candid", "B: visionary", "C: grandiose", "D: measured", "E: pragmatic"],
+      "solution_using_strategy": [
+        "1. Cover Choices: Hiding A-E.",
+        "2. Identify Clue: 'Despite' signals contrast. Fact: Pipeline is 'unchanged' (stagnant).",
+        "3. Predict: Rhetoric must be the opposite of 'unchanged/stagnant'. Prediction: 'Big/Boastful/Exaggerated'.",
+        "4. Match: Option C (grandiose) means 'excessively grand or ambitious'.",
+        "5. Final Selection: C (grandiose)."
+      ],
+      "why_this_strategy_works_here": [
+        "• It prevents you from picking B (visionary), which is a 'trap' word—it sounds good and fits 'innovation', but doesn't capture the 'hollow/exaggerated' tone required by 'despite'."
+      ]
+    }
+  }
+]

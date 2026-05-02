@@ -1859,6 +1859,255 @@ body::before {
   to { opacity: 1; }
 }
 
+/* STRATEGIES STYLES - scoped */
+.strategies-section * { box-sizing: border-box; }
+.strategies-section {
+  animation: fadeIn 0.4s ease forwards;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.strategies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.strategy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.strategy-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  background: var(--surface2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.strategy-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.strategy-card-teaser {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.strategy-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--gold-dim);
+  color: var(--gold);
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+/* Detail Panel Styles */
+.strategy-detail-header {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.strategy-detail-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 900;
+  margin: 12px 0;
+  color: var(--cream);
+  line-height: 1.1;
+}
+
+.strategy-section-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin: 32px 0 16px;
+  border-bottom: 1px solid var(--border2);
+  padding-bottom: 6px;
+  opacity: 0.8;
+}
+
+.strategy-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.strategy-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.strategy-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+}
+
+.strategy-list li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+.strategy-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.strategy-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.strategy-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  position: relative;
+}
+
+.strategy-trap-box {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  border-left: 4px solid var(--red);
+  padding: 24px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.strategy-pro-tip {
+  background: var(--gold-dim);
+  border: 1px solid var(--gold-glow);
+  border-left: 4px solid var(--gold);
+  padding: 24px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.strategy-example-container {
+  margin-top: 20px;
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.strategy-example-toggle {
+  background: var(--surface2);
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.strategy-example-toggle:hover {
+  background: var(--border2);
+}
+
+.strategy-example-content {
+  padding: 30px;
+  background: var(--bg);
+}
+
+.strategy-option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.strategy-option {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .strategy-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .strategy-detail-title {
+    font-size: 28px;
+  }
+}
+
+/* CONNECTOR STYLES */
+.connector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 30px 0;
+}
+.connector-cell {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.connector-cell:hover {
+  transform: translateY(-2px);
+  background: var(--surface);
+  border-color: var(--gold);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.connector-cell.support { border-left: 4px solid var(--teal); }
+.connector-cell.contrast { border-left: 4px solid var(--red); }
+.connector-word {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.connector-hint {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 </style>
 </head>
 <body>
@@ -1900,6 +2149,9 @@ body::before {
       </button>
       <button class="mode-btn" id="verbal-toggle" onclick="toggleVerbalMode()">
         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span> <span id="verbal-text">Verbal Practice</span>
+      </button>
+      <button class="mode-btn" id="strategies-toggle" onclick="toggleStrategiesMode()">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg></span> <span id="strategies-text">Strategies</span>
       </button>
       </div>    <div class="sidebar-nav-container">
       <div class="top-controls" id="top-controls"></div>
@@ -2122,6 +2374,48 @@ body::before {
            </div>
          </div>
        </div>
+      </div>
+
+      <!-- STRATEGIES SECTION -->
+      <div id="strategies-view" style="display:none">
+        <div class="strategies-section">
+          <div id="strategies-list-screen">
+            <div class="word-hero" style="text-align:center; margin-bottom:40px;">
+              <div class="word-group-tag" style="justify-content:center;">Knowledge Base</div>
+              <div class="word-main">GRE Strategies</div>
+              <div style="color:var(--dim); font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase;">Master the Attack Patterns</div>
+            </div>
+
+            <div class="strategies-search-wrap" style="margin-bottom: 30px; display: flex; justify-content: center; padding: 0 20px;">
+              <div class="search-box" style="width: 100%; max-width: 400px; position: relative;">
+                <span class="search-icon" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--dim);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+                <input type="text" class="search-input" id="strategies-search" placeholder="Search strategies..." oninput="filterStrategies()" style="padding-left: 36px; width: 100%;">
+              </div>
+            </div>
+
+            <div class="strategies-tabs" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 30px;">
+              <button class="gtab active" onclick="switchStrategyTab('TC')">Text Completion</button>
+              <button class="gtab" onclick="switchStrategyTab('RC')">Reading Comprehension</button>
+              <button class="gtab" onclick="switchStrategyTab('SYS')">Attack System</button>
+              <button class="gtab" onclick="switchStrategyTab('SURV')">Survival</button>
+              <button class="gtab" onclick="switchStrategyTab('CONN')">Connectors</button>
+            </div>
+
+            <div id="strategies-grid" class="strategies-grid">
+              <!-- Cards injected by JS -->
+            </div>
+          </div>
+
+          <div id="strategy-detail-screen" style="display:none; max-width: 800px; margin: 0 auto;">
+            <button class="action-btn" onclick="showStrategiesList()" style="margin-bottom: 30px; display: flex; align-items: center; gap: 8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+              Back to Strategies
+            </button>
+            <div id="strategy-detail-content">
+              <!-- Content injected by JS -->
+            </div>
+          </div>
+        </div>
       </div>
     <div class="bottom-nav" id="bottom-nav" style="display:none">
       <div class="bottom-word-info">
@@ -5628,20 +5922,23 @@ async function fetchMapping() {
   }
 }
 
-function activatePasteMode(word, el) {
+function activatePasteMode(name, el, isStrategy = false) {
   if (!UPLOAD_ENABLED) return;
-  activePastingWord = word;
+  activePastingWord = name;
   activePastingElement = el;
+  activePastingIsStrategy = isStrategy;
   document.querySelectorAll('.word-img-box, .word-media-container').forEach(box => box.classList.remove('pasting'));
   el.classList.add('pasting');
   
   // Open the file directory
   document.getElementById('image-file-input').click();
   
-  showToast(`Select a file or press Ctrl+V for "${word}"`, true);
+  showToast(`Select a file or press Ctrl+V for "${name}"`, true);
 }
 
-async function handleDrop(e, word, el) {
+let activePastingIsStrategy = false;
+
+async function handleDrop(e, name, el, isStrategy = false) {
   e.preventDefault();
   el.classList.remove('drag-over');
   if (!UPLOAD_ENABLED) return;
@@ -5650,7 +5947,7 @@ async function handleDrop(e, word, el) {
   if (files.length > 0) {
     const file = files[0];
     if (file.type.startsWith('image/')) {
-      await uploadImage(word, file);
+      await uploadImage(name, file, isStrategy);
     } else {
       showToast('Please drop an image or GIF file.');
     }
@@ -5663,26 +5960,34 @@ async function handlePaste(e) {
   for (let item of items) {
     if (item.type.indexOf('image') !== -1) {
       const file = item.getAsFile();
-      await uploadImage(activePastingWord, file);
+      await uploadImage(activePastingWord, file, activePastingIsStrategy);
       break;
     }
   }
 }
 
-async function uploadImage(wordName, file) {
+async function uploadImage(name, file, isStrategy = false) {
   const formData = new FormData();
-  formData.append('wordName', wordName);
+  formData.append('wordName', name);
   formData.append('image', file);
+  formData.append('isStrategy', isStrategy);
   try {
-    showToast(`Uploading image for ${wordName}...`);
+    showToast(`Uploading image for ${name}...`);
     const res = await fetch('http://localhost:3000/upload-image', { method: 'POST', body: formData });
     const data = await res.json();
-    IMAGE_MAPPING[wordName.toLowerCase()] = data.url;
+    
+    if (isStrategy) {
+      STRATEGY_IMAGE_MAPPING[name.toLowerCase()] = data.url;
+      showStrategyDetail(name); // Refresh view
+    } else {
+      IMAGE_MAPPING[name.toLowerCase()] = data.url;
+      buildSidebar();
+      showCard();
+    }
+    
     activePastingWord = null;
     if (activePastingElement) activePastingElement.classList.remove('pasting');
-    buildSidebar();
-    showCard();
-    showToast(`Image updated for ${wordName}`, true);
+    showToast(`Image updated for ${name}`, true);
   } catch (e) {
     console.error('Upload failed', e);
     showToast('Upload failed. Is the server running?');
@@ -7050,6 +7355,315 @@ function exitVerbalQuiz() {
     if (verbalTimerInterval) clearInterval(verbalTimerInterval);
     showVerbalEntry();
   }
+}
+
+// STRATEGIES SCRIPT
+let allStrategies = [];
+let STRATEGY_IMAGE_MAPPING = {};
+let currentStrategyTab = 'TC';
+let strategySearchTerm = '';
+
+async function fetchStrategies() {
+  // Load strategy image mapping if on local server
+  if (isLocal) {
+    try {
+      const imgResp = await fetch('http://localhost:3000/strategy-image-mapping');
+      if (imgResp.ok) STRATEGY_IMAGE_MAPPING = await imgResp.json();
+    } catch(e) { console.warn("Local strategy image mapping server not found."); }
+  }
+
+  const files = [
+    { path: 'gre_tc_strategies.json', cat: 'TC' },
+    { path: 'gre_rc_strategies.json', cat: 'RC' },
+    { path: 'gre_attack_system.json', cat: 'SYS' },
+    { path: 'gre_survival_strategies.json', cat: 'SURV' }
+  ];
+
+  for (const file of files) {
+    try {
+      const resp = await fetch(file.path);
+      if (!resp.ok) continue;
+      const data = await resp.json();
+      if (!Array.isArray(data)) continue;
+      const items = data.map(item => ({ ...item, internal_cat: file.cat }));
+      allStrategies = [...allStrategies, ...items];
+    } catch (e) {
+      console.warn(`Could not load ${file.path} - skipping.`);
+    }
+  }
+
+  // Load Support & Contrast Words
+  try {
+    const connResp = await fetch('support_contrast.json');
+    if (connResp.ok) {
+      const connData = await connResp.json();
+      const connItems = [];
+      
+      const subCats = [
+        { key: 'less_obvious_support_words', name: 'Support Words (Subtle)', type: 'support', desc: 'Hidden signals that indicate ideas are moving in the same logical direction.' },
+        { key: 'support_phrases', name: 'Support Phrases', type: 'support', desc: 'Common multi-word sequences that reinforce or add to a previous claim.' },
+        { key: 'support_punctuation', name: 'Support Punctuation', type: 'support', desc: 'Visual markers that connect related ideas without shifting direction.' },
+        { key: 'extreme_emphasis_words', name: 'Emphasis Words', type: 'support', desc: 'Words used to intensify a claim or mark the ultimate result of a logic chain.' },
+        { key: 'previously_referenced_neutral_words', name: 'Referential Support', type: 'support', desc: 'Neutral pronouns and pointers that maintain logical continuity.' },
+        { key: 'less_obvious_contrast_words', name: 'Contrast Words (Subtle)', type: 'contrast', desc: 'Pivots that signal a shift, reversal, or complication of the previous idea.' },
+        { key: 'contrast_phrases', name: 'Contrast Phrases', type: 'contrast', desc: 'Idiomatic expressions that flag a sharp turn in the argument.' }
+      ];
+
+      subCats.forEach(sc => {
+        let items = [];
+        if (sc.key.includes('contrast')) {
+          items = connData.contrast_words[sc.key];
+        } else {
+          items = connData.support_words[sc.key];
+        }
+
+        if (items && items.length > 0) {
+          connItems.push({
+            strategy_name: sc.name,
+            category: 'Connectors',
+            internal_cat: 'CONN',
+            what_it_is: sc.desc,
+            core_idea: `Master these ${sc.type} signals to track logic flow in TC and RC.`,
+            isConnector: true,
+            connectorType: sc.type,
+            connectorData: items
+          });
+        }
+      });
+      allStrategies = [...allStrategies, ...connItems];
+    }
+  } catch (e) { console.warn("Could not load support_contrast.json"); }
+
+  filterStrategies();
+}
+
+function toggleStrategiesMode() {
+  if (typeof stopPracticeTimer === 'function') stopPracticeTimer();
+  
+  // Reset other states
+  if (typeof flashcardMode !== 'undefined') flashcardMode = false;
+  if (typeof practiceMode !== 'undefined') practiceMode = false;
+  if (typeof awaMode !== 'undefined') awaMode = false;
+  if (typeof verbalTimerInterval !== 'undefined' && verbalTimerInterval) clearInterval(verbalTimerInterval);
+
+  // Update nav buttons
+  const modeBtns = ['mode-toggle', 'practice-toggle', 'awa-toggle', 'verbal-toggle'];
+  modeBtns.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('active');
+  });
+  
+  const strategiesBtn = document.getElementById('strategies-toggle');
+  const strategiesView = document.getElementById('strategies-view');
+  
+  // Hide all views
+  const views = ['card-view', 'practice-view', 'awa-view', 'verbal-view', 'input-screen'];
+  views.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+
+  if (strategiesView.style.display === 'none') {
+    strategiesBtn.classList.add('active');
+    strategiesView.style.display = 'block';
+    showStrategiesList();
+    if (allStrategies.length === 0) fetchStrategies();
+  } else {
+    strategiesBtn.classList.remove('active');
+    strategiesView.style.display = 'none';
+    const cardView = document.getElementById('card-view');
+    if (cardView) cardView.style.display = 'block';
+    if (typeof renderCard === 'function') renderCard();
+  }
+}
+
+function switchStrategyTab(tab) {
+  currentStrategyTab = tab;
+  const tabs = document.querySelectorAll('.strategies-tabs .gtab');
+  tabs.forEach(t => {
+    const isTC = tab === 'TC' && t.textContent.includes('Text');
+    const isRC = tab === 'RC' && t.textContent.includes('Reading');
+    const isSYS = tab === 'SYS' && t.textContent.includes('Attack');
+    const isSURV = tab === 'SURV' && t.textContent.includes('Survival');
+    t.classList.toggle('active', isTC || isRC || isSYS || isSURV);
+  });
+  filterStrategies();
+}
+
+function filterStrategies() {
+  const searchInput = document.getElementById('strategies-search');
+  strategySearchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+  
+  const filtered = allStrategies.filter(s => {
+    const tabMatch = s.internal_cat === currentStrategyTab;
+    const searchMatch = !strategySearchTerm || 
+                        s.strategy_name.toLowerCase().includes(strategySearchTerm) || 
+                        s.what_it_is.toLowerCase().includes(strategySearchTerm) ||
+                        s.core_idea.toLowerCase().includes(strategySearchTerm);
+    return tabMatch && searchMatch;
+  });
+  
+  renderStrategyCards(filtered);
+}
+
+function renderStrategyCards(strategies) {
+  const grid = document.getElementById('strategies-grid');
+  if (!grid) return;
+  
+  if (strategies.length === 0) {
+    grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--dim);">No strategies found matching your search.</div>`;
+    return;
+  }
+
+  grid.innerHTML = strategies.map(s => `
+    <div class="strategy-card" onclick="showStrategyDetail('${s.strategy_name.replace(/'/g, "\\'")}')">
+      <div class="strategy-badge">${s.category}</div>
+      <div class="strategy-card-title">${s.strategy_name}</div>
+      <div class="strategy-card-teaser">${s.what_it_is.split(' ').slice(0, 12).join(' ')}...</div>
+    </div>
+  `).join('');
+}
+
+function showStrategyDetail(name) {
+  const s = allStrategies.find(st => st.strategy_name === name);
+  if (!s) return;
+  
+  const content = document.getElementById('strategy-detail-content');
+  
+  if (s.isConnector) {
+    const typeClass = s.connectorType; // 'support' or 'contrast'
+    const gridHTML = s.connectorData.map(item => `
+      <div class="connector-cell ${typeClass}">
+        <div class="connector-word">${item.word || item.phrase || item.name || (item.symbol ? `${item.name} (${item.symbol})` : '')}</div>
+        <div class="connector-hint">${item.usage_hint}</div>
+      </div>
+    `).join('');
+
+    content.innerHTML = `
+      <div class="strategy-detail-header">
+        <div class="strategy-badge" style="background:${typeClass === 'support' ? 'var(--teal)' : 'var(--red)'}; color:white;">${s.category}</div>
+        <h1 class="strategy-detail-title">${s.strategy_name}</h1>
+        <div class="strategy-text" style="font-style: italic; color: var(--gold); border-left: 2px solid var(--gold); padding-left: 15px; margin-top: 15px;">"${s.core_idea}"</div>
+      </div>
+      
+      <div class="strategy-section-title">${s.strategy_name} List</div>
+      <div class="connector-grid">
+        ${gridHTML}
+      </div>
+      <div style="height: 60px;"></div>
+    `;
+  } else {
+    const imgUrl = STRATEGY_IMAGE_MAPPING[name.toLowerCase()];
+    const imageHTML = imgUrl ? `
+      <div class="word-media-container" 
+           onclick="event.stopPropagation(); activatePasteMode('${s.strategy_name}', this, true)"
+           ondragover="event.preventDefault(); this.classList.add('drag-over')"
+           ondragleave="this.classList.remove('drag-over')"
+           ondrop="handleDrop(event, '${s.strategy_name}', this, true)">
+        <img src="${imgUrl}" alt="${s.strategy_name}">
+      </div>` : (UPLOAD_ENABLED ? `
+      <div class="word-media-container" 
+           onclick="event.stopPropagation(); activatePasteMode('${s.strategy_name}', this, true)"
+           ondragover="event.preventDefault(); this.classList.add('drag-over')"
+           ondragleave="this.classList.remove('drag-over')"
+           ondrop="handleDrop(event, '${s.strategy_name}', this, true)">
+        <div class="word-media-placeholder">
+          ${ICONS.image || '+'}
+          <span>Paste or Drag & Drop Strategy Image</span>
+        </div>
+      </div>` : '');
+
+    content.innerHTML = `
+      <div class="strategy-detail-header">
+        <div class="strategy-badge">${s.category}</div>
+        <h1 class="strategy-detail-title">${s.strategy_name}</h1>
+        <div class="strategy-text" style="font-style: italic; color: var(--gold); border-left: 2px solid var(--gold); padding-left: 15px; margin-top: 15px;">"${s.core_idea}"</div>
+      </div>
+
+      ${imageHTML}
+
+      <div class="strategy-section-title">What it is</div>
+      <div class="strategy-text">${s.what_it_is}</div>
+
+      <div class="strategy-grid-2">
+        <div>
+          <div class="strategy-section-title">When to use</div>
+          <div class="strategy-text" style="font-size: 14px;">${s.when_to_use}</div>
+        </div>
+        <div>
+          <div class="strategy-section-title">When NOT to use</div>
+          <div class="strategy-text" style="font-size: 14px;">${s.when_not_to_use}</div>
+        </div>
+      </div>
+
+      <div class="strategy-section-title">Step-by-Step Process</div>
+      <ul class="strategy-list">
+        ${s.step_by_step_process.map(step => `<li>${step}</li>`).join('')}
+      </ul>
+
+      <div class="strategy-section-title">Mental Checklist</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px;">
+        ${s.mental_checklist.map(item => `
+          <div class="strategy-checklist-item">
+            <div class="strategy-checkbox"></div>
+            <div class="strategy-text" style="font-size: 14px;">${item}</div>
+          </div>
+        `).join('')}
+      </div>
+
+      <div class="strategy-section-title">Common Traps</div>
+      <div class="strategy-trap-box">
+        <ul class="strategy-list" style="margin:0;">
+          ${s.common_traps.map(trap => `<li style="color:var(--cream);">${trap}</li>`).join('')}
+        </ul>
+      </div>
+
+      <div class="strategy-section-title">Pro Tips</div>
+      <div class="strategy-pro-tip">
+        <ul class="strategy-list" style="margin:0;">
+          ${s.pro_tips.map(tip => `<li style="color:var(--cream);">${tip}</li>`).join('')}
+        </ul>
+      </div>
+
+      <div class="strategy-section-title">Example Walkthrough</div>
+      <div class="strategy-example-container">
+        <div class="strategy-example-toggle" onclick="const c = this.nextElementSibling; c.style.display = c.style.display === 'none' ? 'block' : 'none';">
+          <span>View Example Question</span>
+          <span>▼</span>
+        </div>
+        <div class="strategy-example-content" style="display:none;">
+          <div class="strategy-text" style="white-space: pre-wrap; margin-bottom: 25px; padding: 20px; background: var(--surface2); border-radius: 8px; border: 1px solid var(--border);">${s.official_GRE_style_example.question}</div>
+          <div class="strategy-option-grid">
+            ${s.official_GRE_style_example.options.map(opt => `<div class="strategy-option">${opt}</div>`).join('')}
+          </div>
+          <div class="strategy-section-title" style="margin-top:40px; border-color: var(--gold);">Solution & Reasoning</div>
+          <div class="strategy-text" style="color: var(--gold); font-weight: 600; margin-bottom: 15px; background: var(--gold-dim); padding: 15px; border-radius: 6px;">
+            ${Array.isArray(s.official_GRE_style_example.solution_using_strategy) 
+              ? `<ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:8px;">${s.official_GRE_style_example.solution_using_strategy.map(step => `<li>${step}</li>`).join('')}</ul>` 
+              : s.official_GRE_style_example.solution_using_strategy}
+          </div>
+          <div class="strategy-text" style="font-size: 14px; opacity: 0.9; line-height: 1.6;">
+            ${Array.isArray(s.official_GRE_style_example.why_this_strategy_works_here) 
+              ? `<ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:8px;">${s.official_GRE_style_example.why_this_strategy_works_here.map(point => `<li>${point}</li>`).join('')}</ul>` 
+              : s.official_GRE_style_example.why_this_strategy_works_here}
+          </div>
+        </div>
+        </div>
+        <div style="height: 60px;"></div>
+        `;
+        }
+  document.getElementById('strategies-list-screen').style.display = 'none';
+  document.getElementById('strategy-detail-screen').style.display = 'block';
+  const main = document.querySelector('.main');
+  if (main) main.scrollTop = 0;
+}
+
+
+function showStrategiesList() {
+  document.getElementById('strategies-list-screen').style.display = 'block';
+  document.getElementById('strategy-detail-screen').style.display = 'none';
+  const main = document.querySelector('.main');
+  if (main) main.scrollTop = 0;
 }
 
 // ─── RUN ───

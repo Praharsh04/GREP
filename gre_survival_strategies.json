@@ -1,0 +1,272 @@
+[
+  {
+    "strategy_name": "The 30-Second Exit Rule",
+    "category": "Survival Strategy",
+    "what_it_is": "A time-management threshold. If you cannot understand the sentence or question within 30 seconds, you must immediately guess, flag, and exit to save time for more solvable questions.",
+    "core_idea": "The GRE is a point-gathering race, not an intelligence contest. Heroically fighting a 3-minute losing battle on one hard question costs you three easy points later in the section. Prioritize time over ego.",
+    "when_to_use": "On any question that triggers 'looping' (reading without comprehending) or where the vocabulary is 100% unknown.",
+    "when_not_to_use": "If you are halfway through a logical deduction and know the next step—finish it.",
+    "step_by_step_process": [
+      "1. Start your internal clock upon reading the first word.",
+      "2. At the 30-second mark, perform a 'Solvability Check'.",
+      "3. If solvability is <20%, stop immediately.",
+      "4. Pick your 'Letter of the Day' (LOTD).",
+      "5. Click 'Flag' and move to the next question.",
+      "6. Only return if you finish the section with surplus time."
+    ],
+    "mental_checklist": [
+      "Have I read this twice without understanding?",
+      "Do I know at least 50% of the vocabulary in this question?",
+      "Is this question worth the 2 minutes it will likely take to guess?",
+      "Am I staying or am I leaving?"
+    ],
+    "common_traps": [
+      "Sunk Cost Fallacy: Staying because you've already spent 1 minute.",
+      "The 'I Almost Have It' Delusion: Thinking the next read will magically clarify a brick wall.",
+      "Ego Trap: Feeling like skipping means you are 'failing' the test."
+    ],
+    "pro_tips": [
+      "The easiest questions are often clustered at the end of the section.",
+      "Flagging a question 'unloads' it from your working memory, reducing anxiety.",
+      "30 seconds is enough time to know if a question is a 'Time Sink'."
+    ],
+    "official_GRE_style_example": {
+      "question": "A 3-blank TC question filled with obscure jargon ('pulchritudinous', 'recondite', 'eschatological') where the logic is also convoluted.",
+      "options": ["N/A"],
+      "solution_using_strategy": [
+        "1. Start: Read sentence once. High confusion.",
+        "2. 20 Seconds: Check vocabulary. Don't know 2 of the 3 blanks.",
+        "3. 30 Seconds: Solvability is near zero.",
+        "4. Exit: Pick 'C' for all blanks, click 'Flag', and move to the next question.",
+        "5. Result: 2.5 minutes saved for the Reading Comp passage."
+      ],
+      "why_this_strategy_works_here": [
+        "• It prevents 'cognitive exhaustion' caused by fighting impossible battles.",
+        "• It maximizes your 'Points-Per-Minute' (PPM) ratio."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Eliminating 'Extreme' Language",
+    "category": "Survival Strategy",
+    "what_it_is": "A statistical elimination rule for RC. ETS correct answers are rarely absolute. You favor 'moderate' words and eliminate 'extreme' ones when guessing.",
+    "core_idea": "Academic prose is hedged and cautious. Radical claims ('always', 'impossible') are difficult to support with a short passage, making them statistically likely to be wrong answer choices.",
+    "when_to_use": "When you have narrowed a choice to two and one is 'stronger' than the other. When you are guessing with low confidence.",
+    "when_not_to_use": "If the passage itself uses exceptionally strong, polemical language.",
+    "step_by_step_process": [
+      "1. Scan the two remaining choices for qualifiers.",
+      "2. Flag 'Extreme' words: always, never, all, none, impossible, identical, prove.",
+      "3. Flag 'Moderate' words: tend to, some, many, often, suggest, could, might.",
+      "4. If no text evidence supports the extreme claim, eliminate it.",
+      "5. Default to the most 'conservative' remaining claim."
+    ],
+    "mental_checklist": [
+      "Is the verb in this choice too strong?",
+      "Does the choice allow for exceptions?",
+      "Is the tone of the choice more aggressive than the author's tone?"
+    ],
+    "common_traps": [
+      "Choosing the 'Strong' answer because it sounds more authoritative or 'correct'.",
+      "Confusing 'frequent' with 'always'.",
+      "Ignoring 'hedge words' (e.g., 'largely') that actually make an extreme-sounding choice moderate."
+    ],
+    "pro_tips": [
+      "Words like 'unique' or 'unparalleled' are extreme and almost always wrong.",
+      "Words like 'partially' or 'contributed to' are moderate and very safe.",
+      "Correct answers often use 'weak' verbs to remain technically accurate."
+    ],
+    "official_GRE_style_example": {
+      "question": "Which describes the author's view?",
+      "options": [
+        "A: The theory has been completely discredited by recent findings.",
+        "B: Recent findings suggest the theory may be less widely applicable than thought."
+      ],
+      "solution_using_strategy": [
+        "1. Analyze A: Uses 'completely discredited' (Extreme).",
+        "2. Analyze B: Uses 'suggest', 'may', and 'less widely' (Moderate).",
+        "3. Strategy: B is 5x easier to defend with text than A.",
+        "4. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It accounts for the nuance of academic peer-reviewed writing.",
+        "• It exploits the fact that ETS must make the correct answer 100% indisputable."
+      ]
+    }
+  },
+  {
+    "strategy_name": "The 'Bland is Safe' Principle",
+    "category": "Survival Strategy",
+    "what_it_is": "A selection bias for RC. Correct answers are frequently the most boring, conservative, and literal choices, while wrong answers are 'vivid' and 'exciting'.",
+    "core_idea": "Correct answers must be 100% provable. Vivid claims are risky for ETS. Bland claims are safe. If a choice feels like a 'boring restatement', it's likely the winner.",
+    "when_to_use": "When you are tempted by a choice that feels 'insightful' or 'deep' but isn't quite stated in the text.",
+    "when_not_to_use": "If the question explicitly asks for a 'radical' or 'surprising' finding.",
+    "step_by_step_process": [
+      "1. Identify the 'Exciting' choice (adds a deep insight not in text).",
+      "2. Identify the 'Bland' choice (boring restatement of a fact).",
+      "3. Check the text: Is the 'insight' actually stated? (Usually no).",
+      "4. Check the 'Bland' choice: Is it 100% accurate to the text? (Usually yes).",
+      "5. Choose the boring, safe option."
+    ],
+    "mental_checklist": [
+      "Am I picking this because it's interesting or because it's proven?",
+      "Does this choice add *any* new information?",
+      "Is this choice so simple it feels 'obvious'?"
+    ],
+    "common_traps": [
+      "The 'Deeper Meaning' Trap: Assuming the GRE wants you to 'read between the lines' more than you should.",
+      "The 'Common Sense' Trap: Choosing a vivid truth that is true in life but not in the passage.",
+      "Over-thinking: Rejecting a simple choice because 'it can't be that easy'."
+    ],
+    "pro_tips": [
+      "Correct answers often use boring synonyms (e.g., 'increased' -> 'was not diminished').",
+      "If a choice sounds like something from a dictionary, it's a strong candidate.",
+      "Wrong answers often use 'interesting' causal links (X caused Y) where the text only shows a link (X and Y)."
+    ],
+    "official_GRE_style_example": {
+      "question": "The passage implies the new regulation will:",
+      "options": [
+        "A: Revolutionize the industry and lead to unprecedented growth.",
+        "B: Alter the way certain procedures are performed within the industry."
+      ],
+      "solution_using_strategy": [
+        "1. Analyze A: 'Revolutionize', 'unprecedented' (Exciting/Vivid).",
+        "2. Analyze B: 'Alter certain procedures' (Bland/Safe).",
+        "3. Selection: Option B is nearly impossible to be wrong if the passage mentions ANY change.",
+        "4. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It bypasses the 'Marketing Language' of distractors.",
+        "• It aligns with the 'Fact-Checking' nature of the test."
+      ]
+    }
+  },
+  {
+    "strategy_name": "The 'Letter of the Day' (LOTD)",
+    "category": "Survival Strategy",
+    "what_it_is": "A statistical guessing habit. When you have zero time or zero knowledge, you use the same letter for every guess to maximize your probability of hitting a point.",
+    "core_idea": "Randomly alternating letters increases the risk of 'missing' every time. Sticking to one letter guarantees you will catch the statistical average for that letter.",
+    "when_to_use": "Last 30 seconds of the test with 5+ questions remaining. Blind guesses where you haven't eliminated any choices.",
+    "when_not_to_use": "If you have eliminated even one choice—then guess between the survivors.",
+    "step_by_step_process": [
+      "1. Pick a letter (e.g., 'C') before you even enter the test center.",
+      "2. Commit: Never change this letter during the test.",
+      "3. When blind guessing, click your LOTD instantly.",
+      "4. Do not look at the choices. Do not think. Just click.",
+      "5. Move to the next question."
+    ],
+    "mental_checklist": [
+      "Have I eliminated any options? (If no, use LOTD).",
+      "Am I second-guessing my letter? (Don't).",
+      "Am I wasting time picking a 'random' letter?"
+    ],
+    "common_traps": [
+      "The Gambler's Fallacy: 'I've picked C three times, it can't be C again.'",
+      "Pattern-Hunting: Trying to guess based on the previous question's answer.",
+      "Wasting 5 seconds 'choosing' a random letter for each guess."
+    ],
+    "pro_tips": [
+      "LOTD is a time-saver. It turns a 10-second guess into a 1-second guess.",
+      "In SE, your LOTD should be one of the two letters you pick.",
+      "Consistency is the only thing that matters."
+    ],
+    "official_GRE_style_example": {
+      "question": "A massive 500-word passage appears with 15 seconds left on the clock.",
+      "options": ["A", "B", "C", "D", "E"],
+      "solution_using_strategy": [
+        "1. Action: Select 'C' for all remaining questions in the set.",
+        "2. Timing: Done in 3 seconds.",
+        "3. Result: You likely pick up 1 point you would have missed if you ran out of time while 'thinking'."
+      ],
+      "why_this_strategy_works_here": [
+        "• it eliminates 'Decision Fatigue'.",
+        "• It ensures you see the 'Submit' button before the timer hits zero."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Managing the 'Mental Fog'",
+    "category": "Survival Strategy",
+    "what_it_is": "A physiological reset technique used when you lose comprehension or feel panic rising. You take a 5-second tactical break to restore focus.",
+    "core_idea": "Your brain is a processor. When it 'overheats' (Mental Fog), it stops extracting meaning. A 5-second shutdown is more efficient than a 2-minute struggle with a broken processor.",
+    "when_to_use": "When you've read the same line 4 times. When your heart is racing. When you suddenly feel 'stupid'.",
+    "when_not_to_use": "If you are in a high-focus 'flow state'.",
+    "step_by_step_process": [
+      "1. Recognize the 'Stare' (eyes moving, brain not).",
+      "2. Close your eyes immediately.",
+      "3. Take one deep, 4-second inhale; 4-second exhale.",
+      "4. Look at the wall or your hands—*not* the screen.",
+      "5. Re-engage with the text as if you're a fresh reader."
+    ],
+    "mental_checklist": [
+      "Am I actually processing these words?",
+      "Is my breathing shallow?",
+      "Do I feel 'stuck' in a cognitive loop?"
+    ],
+    "common_traps": [
+      "The 'No Time' Panic: Thinking you can't afford 5 seconds (you can't afford the 90 seconds of fog that follow).",
+      "Staring through the fog: Continuing to read when you know you aren't understanding anything."
+    ],
+    "pro_tips": [
+      "Physical movement (rolling shoulders) helps break the fog.",
+      "Drink a sip of water during the reset if possible.",
+      "The reset works because it interrupts the 'panic-failure' feedback loop."
+    ],
+    "official_GRE_style_example": {
+      "question": "Mid-section fatigue during a dense philosophy passage. You've read paragraph 2 twice and still have no idea who is arguing with whom.",
+      "options": ["N/A"],
+      "solution_using_strategy": [
+        "1. STOP: Stop reading immediately.",
+        "2. RESET: Eyes closed, deep breath, 5 seconds of silence.",
+        "3. RESTART: Open eyes, ignore P2 for now, move to the question or re-read P1 summary."
+      ],
+      "why_this_strategy_works_here": [
+        "• It restores 'executive function' to the prefrontal cortex.",
+        "• It prevents a single hard passage from ruining your performance on the entire section."
+      ]
+    }
+  },
+  {
+    "strategy_name": "The 'Second Pass' Strategy",
+    "category": "Survival Strategy",
+    "what_it_is": "A non-linear testing method where you intentionally skip 'Time Sinks' (Hard questions) on your first pass to ensure you see every 'Low-Hanging Fruit' (Easy questions).",
+    "core_idea": "The GRE is not a linear obstacle course. If you get stuck on question 5, you might never reach question 20 (which might be easy). Do the easy ones first to secure the floor of your score.",
+    "when_to_use": "Always. Every section should be approached as Pass 1 (Easy/Medium) and Pass 2 (Hard).",
+    "when_not_to_use": "If you are naturally very fast and always finish with 10+ minutes left.",
+    "step_by_step_process": [
+      "1. Read question. If difficulty is High or time cost is High, Flag and Guess immediately (3 seconds).",
+      "2. Focus only on 1-blank TC, 2-blank TC, and Short RC during Pass 1.",
+      "3. Complete all Pass 1 questions with high confidence.",
+      "4. Go to 'Review' screen.",
+      "5. Pass 2: Spend remaining time on 3-blank TC and Long RC questions in order of preference."
+    ],
+    "mental_checklist": [
+      "Is this question a 'Time Sink'?",
+      "Have I seen every question in this section yet?",
+      "Am I prioritize easy points over hard points?"
+    ],
+    "common_traps": [
+      "Linear Thinking: Feeling like you *must* do the questions in order.",
+      "The 'One More Minute' Trap: Staying on a hard question too long during Pass 1.",
+      "Skipping without guessing: Always leave a guess; you might not have time to come back."
+    ],
+    "pro_tips": [
+      "1-blank TC and Short RC are your 'Safety Points'. Secure them first.",
+      "3-blank TC are the most common Time Sinks; skip them unless they look exceptionally easy.",
+      "The Review screen is your best friend—use it to track your targets for Pass 2."
+    ],
+    "official_GRE_style_example": {
+      "question": "Question 5 is a dense, 3-blank TC. Question 19 is a simple, clear 1-blank TC.",
+      "options": ["N/A"],
+      "solution_using_strategy": [
+        "1. Pass 1: Spend 5 seconds on Q5. Realize it's hard. Guess 'B', Flag, Move on.",
+        "2. Continue: Complete Q6-Q18.",
+        "3. Win: Reach Q19 with 4 minutes left. Secure the easy point.",
+        "4. Pass 2: Return to Q5 with 3 minutes remaining. Solve if possible."
+      ],
+      "why_this_strategy_works_here": [
+        "• It ensures you never 'lose' easy points due to time pressure.",
+        "• It reduces stress because you know you've already 'banked' the easier questions."
+      ]
+    }
+  }
+]

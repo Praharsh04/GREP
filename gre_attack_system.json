@@ -1,0 +1,410 @@
+[
+  {
+    "strategy_name": "Identifying Question Type (1, 2, 3)",
+    "category": "Question Attack System",
+    "what_it_is": "A 5-second classification step performed before solving any Verbal question to determine the required cognitive task: Literal Lookup (Type 1), Mild Inference (Type 2), or Structural Reasoning (Type 3).",
+    "core_idea": "Misidentifying the question type is a primary cause of wasted time. Knowing the type tells your brain whether to hunt for a specific line, take a logical step, or rely on your passage map.",
+    "when_to_use": "On every single RC and TC question. Always classify before touching answer choices.",
+    "when_not_to_use": "Do not spend more than 5 seconds. If stuck, default to Type 2 (Inference) and move on.",
+    "step_by_step_process": [
+      "1. Read the question stem (not choices) carefully.",
+      "2. Look for Type 1 signals: 'states', 'according to', 'mentions'.",
+      "3. Look for Type 2 signals: 'implies', 'suggests', 'inferred', 'most likely'.",
+      "4. Look for Type 3 signals: 'primary purpose', 'function', 'structure', 'attitude'.",
+      "5. Adopt the matching attack mode (e.g., for Type 3, use your Passage Map; for Type 1, use Scanning)."
+    ],
+    "mental_checklist": [
+      "Is the answer literally in the text (Type 1)?",
+      "Do I need to take one logical step beyond the text (Type 2)?",
+      "Is this asking about the author's intent or the text's role (Type 3)?",
+      "Did I classify in under 5 seconds?"
+    ],
+    "common_traps": [
+      "Inferring on Type 1: Wasting time reasoning when the answer is stated verbatim.",
+      "Line Hunting on Type 3: Looking for a specific sentence to answer a 'Primary Purpose' question.",
+      "Misclassifying 'suggests' as Type 3: 'Suggests' is always Type 2 (Mild Inference)."
+    ],
+    "pro_tips": [
+      "Type 1 questions should be your fastest (under 45 seconds).",
+      "Type 3 questions should be answered from memory (your Passage Map) whenever possible.",
+      "In TC, all blanks are either Type 1 or Type 2; Type 3 doesn't exist in TC."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage: 'Although the committee initially endorsed the proposal, citing its innovative approach... subsequent analyses revealed budget overruns that led to rejection.' \n\nQuestion: 'According to the passage, what reason did the committee initially give for endorsing the proposal?'",
+      "options": [
+        "A: Successfully tested elsewhere",
+        "B: Innovative approach to resource allocation",
+        "C: Within budget parameters",
+        "D: Chair personally advocated",
+        "E: Addressed long-standing problem"
+      ],
+      "solution_using_strategy": [
+        "1. Classify Stem: 'According to the passage' is a classic Type 1 (Literal Lookup) signal.",
+        "2. Identify Target: The question asks for the stated reason for initial endorsement.",
+        "3. Locate Text: Passage states: 'citing its innovative approach to resource allocation'.",
+        "4. Match Choice: Option B is a direct, literal match for the text.",
+        "5. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It prevents unnecessary inference. Since it's Type 1, any answer not stated in the text is automatically wrong.",
+        "• It reduces solve time to under 30 seconds by allowing you to stop immediately upon finding the match."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Rephrasing Questions",
+    "category": "Question Attack System",
+    "what_it_is": "The habit of translating convoluted ETS question stems into simple, plain English before attempting to solve them.",
+    "core_idea": "If you don't understand the question, you can't find the answer. A rephrased question acts as a precise search instruction for your brain.",
+    "when_to_use": "Any stem that takes more than one read to understand, especially those involving double negatives or 'EXCEPT/NOT'.",
+    "when_not_to_use": "On crystal-clear Type 1 stems where rephrasing adds no value.",
+    "step_by_step_process": [
+      "1. Read the stem once fully.",
+      "2. Strip academic jargon and double negatives.",
+      "3. Formulate a 'Find' statement: 'This question wants me to find [X].'",
+      "4. Use that statement as your search query in the passage.",
+      "5. Double-check your choice against the *original* stem before submitting."
+    ],
+    "mental_checklist": [
+      "Can I state what this question wants in 5 words or less?",
+      "Is this an 'EXCEPT' question? (If so, convert to 'Find the 4 that ARE there').",
+      "Am I clear on the scope (one line vs. entire passage)?"
+    ],
+    "common_traps": [
+      "Rephrasing too loosely and losing the nuance of the original question.",
+      "Missing a 'not' or 'except' and looking for the opposite of what is required.",
+      "Rephrasing the passage instead of the question."
+    ],
+    "pro_tips": [
+      "Rephrase 'serves primarily to undermine' as 'attacks which belief?'.",
+      "Rephrase 'author's attitude' as 'positive, negative, or neutral?'.",
+      "If the stem is long, find the subject and verb of the *question* itself."
+    ],
+    "official_GRE_style_example": {
+      "question": "The author's discussion of 18th-century grain price fluctuations serves primarily to undermine which of the following assumptions?",
+      "options": [
+        "A: Prices determined by government",
+        "B: Instability caused by politics",
+        "C: Farmers had limited ability to respond to market signals",
+        "D: Price data is unreliable",
+        "E: Markets were isolated"
+      ],
+      "solution_using_strategy": [
+        "1. Read Stem: Convoluted academic phrasing.",
+        "2. Rephrase: 'Which belief does the author use the grain data to prove WRONG?'",
+        "3. Locate Text: Passage uses fluctuating prices to show markets DID respond to signals.",
+        "4. Logical Match: If the author proved they DID respond, she is attacking the belief that they COULD NOT respond.",
+        "5. Match Choice: Option C (limited ability to respond) is the assumption being undermined.",
+        "6. Final Selection: C."
+      ],
+      "why_this_strategy_works_here": [
+        "• It reorients the search from 'what does the data support' to 'what does the data attack'.",
+        "• It prevents falling for B or E, which might be 'true' topics but don't answer the specific 'undermine' prompt."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Scanning Technique",
+    "category": "Question Attack System",
+    "what_it_is": "A targeted retrieval method used to locate specific line references or named concepts without re-reading the entire passage.",
+    "core_idea": "Your eyes should be a search engine. Move quickly in a Z-pattern until you hit your 'anchor' word, then read only the small window (3-5 sentences) around it.",
+    "when_to_use": "Any Type 1 or Type 2 question that mentions a specific term, line number, or paragraph.",
+    "when_not_to_use": "On Type 3 (Structural) questions where the answer requires the 'big picture' Passage Map.",
+    "step_by_step_process": [
+      "1. Identify the 'Anchor': The unique noun, name, or number in the question.",
+      "2. Scan: Move eyes in a Z or S pattern, ignoring content, looking only for the anchor.",
+      "3. Stop: Immediately upon hitting the word.",
+      "4. Read Window: Read 2 sentences before and 2 sentences after the anchor.",
+      "5. Solve: Answer using ONLY the information in that 5-sentence window."
+    ],
+    "mental_checklist": [
+      "What is my specific anchor word?",
+      "Did I scan or did I re-read? (Scanning is faster).",
+      "Is my reading window wide enough to get the context?",
+      "Does the question specify a particular paragraph?"
+    ],
+    "common_traps": [
+      "Scanning for an abstract idea instead of a concrete word.",
+      "Reading only the anchor sentence and missing a 'however' in the sentence immediately following it.",
+      "Drifting away from the window into unrelated parts of the passage."
+    ],
+    "pro_tips": [
+      "Use the paragraph labels from your Passage Map to narrow the scan area first.",
+      "On digital GRE, use the 'highlight' feature as your anchor if provided.",
+      "If the anchor appears multiple times, check the question for a locator (e.g., 'as mentioned in paragraph 2')."
+    ],
+    "official_GRE_style_example": {
+      "question": "Long passage on economic history. \n\nQuestion: 'As used in the third paragraph, the term \"comparative advantage\" most nearly refers to...'",
+      "options": [
+        "A: Absolute superiority",
+        "B: Relative efficiency in producing one good compared to another",
+        "C: Benefit of lower labor costs",
+        "D: Strategic military advantage",
+        "E: Cumulative benefit of specialization"
+      ],
+      "solution_using_strategy": [
+        "1. Identify Anchor: 'comparative advantage' in Paragraph 3.",
+        "2. Scan: Jump directly to P3, look for the term.",
+        "3. Read Window: Sentence says 'nations specialize in goods they produce most efficiently relative to others... this principle, comparative advantage...'",
+        "4. Formulate Meaning: It means relative efficiency.",
+        "5. Match Choice: Option B is a perfect synonym for the window's text.",
+        "6. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It saves ~60 seconds of re-reading time by going straight to the definition.",
+        "• It ensures the answer is based on the passage's specific usage, not your outside economic knowledge."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Answering Before Looking",
+    "category": "Question Attack System",
+    "what_it_is": "The RC version of 'Cover the Answers'. You form a solid prediction based on the text before seeing the choices to avoid being biased by ETS distractors.",
+    "core_idea": "ETS distractors are 'vivid' and 'intuitive'. Correct answers are often 'bland' and 'technically accurate'. Predicting first helps you find the 'bland truth' rather than the 'vivid trap'.",
+    "when_to_use": "On all Type 1 and Type 2 questions where a specific passage location is identified.",
+    "when_not_to_use": "On 'EXCEPT' questions (you can't predict which specific thing *isn't* there) or questions where you have no idea where to look.",
+    "step_by_step_process": [
+      "1. Rephrase the question and locate the relevant window.",
+      "2. Read the window carefully.",
+      "3. Physically cover the choices.",
+      "4. State your own answer: 'The text says X, so the answer must mean Y.'",
+      "5. Uncover and match the choice that mirrors your prediction's *meaning* (not necessarily its words)."
+    ],
+    "mental_checklist": [
+      "Did I look at the choices first? (Stop if yes).",
+      "Is my prediction directionally supported by the text?",
+      "Am I looking for my prediction or just 'the best sounding' option?"
+    ],
+    "common_traps": [
+      "The 'Quick Peek' Trap: Peeking at choices 'to get a hint', which then biases your reading.",
+      "Vague Prediction Trap: Predicting 'something positive' (too broad) instead of 'the author likes the methodology but not the result' (precise).",
+      "Abandoning Prediction: Changing your mind just because a distractor choice sounds 'smarter'."
+    ],
+    "pro_tips": [
+      "Your prediction should be in simple, 5th-grade English.",
+      "If no choice matches your prediction, your prediction was likely wrong—re-read the window, don't just guess.",
+      "This is the single most effective way to beat 'Inference' questions."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage: 'Ellul regarded technology not as a neutral tool but as an autonomous force that restructures human values to serve its own imperatives...' \n\nQuestion: 'The passage suggests Ellul's view differed from her peers in that she:'",
+      "options": [
+        "A: Believed in democratic regulation",
+        "B: Viewed technology as shaping society according to its own logic",
+        "C: Argued progress had slowed",
+        "D: Maintained technology was neutral",
+        "E: Held consequences were unpredictable"
+      ],
+      "solution_using_strategy": [
+        "1. Locate Window: 'Ellul regarded technology... as an autonomous force...'.",
+        "2. Predict: 'Ellul thinks technology controls itself and society; others think it's just a tool.'",
+        "3. Match Choice: Option B ('shaping society according to its own logic') matches 'autonomous force restructures values'.",
+        "4. Eliminate Distractors: D is the exact opposite of Ellul's view (a common ETS trap).",
+        "5. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It identifies the core tension (tool vs. autonomous force).",
+        "• It exposes Option D as a 'Reversal Trap' instantly."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Justifying Answer",
+    "category": "Question Attack System",
+    "what_it_is": "A verification step where you point to the exact sentence or clause in the passage that makes your chosen answer correct.",
+    "core_idea": "GRE RC is an open-book test. There is zero room for 'opinion'. If you cannot justify a choice with text, it is statistically likely to be wrong.",
+    "when_to_use": "As a final check for Type 1 and Type 2 questions, especially when stuck between two finalists.",
+    "when_not_to_use": "On Type 3 (Structural) questions where the justification is the entire passage map, not a single line.",
+    "step_by_step_process": [
+      "1. Select your candidate answer.",
+      "2. Ask: 'Where is the proof?'",
+      "3. Find the specific sentence or phrase in the text.",
+      "4. Verify: Does the text state or logically force this conclusion? (1-step inference max).",
+      "5. If proof is missing or requires 'outside knowledge', reject the choice."
+    ],
+    "mental_checklist": [
+      "Can I put my finger on the proof sentence?",
+      "Does this proof require more than one logical step?",
+      "Is this proof based on the text or my own common sense?"
+    ],
+    "common_traps": [
+      "The 'Sounds True' Trap: Choosing an answer because it's a true fact in the real world, even if it's not in the passage.",
+      "The 'Right Neighborhood' Trap: Using a sentence from the same paragraph that doesn't actually support the specific claim.",
+      "Multi-Step Inference: Taking 3-4 logical leaps to justify a Type 2 answer."
+    ],
+    "pro_tips": [
+      "Correct inferences (Type 2) are always 'boring'—they are just the text stated in different words.",
+      "If you have to 'explain' or 'argue' why a choice is right to yourself, it's wrong.",
+      "In 'EXCEPT' questions, you are justifying the 4 wrong answers to find the 1 leftover."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage: 'Daily feedback improved performance significantly more than weekly feedback. specificity (general vs specific) had no effect.' \n\nQuestion: 'Supports which conclusion?'",
+      "options": [
+        "A: Frequent is better than infrequent regardless of specificity",
+        "B: General is superior to specific",
+        "C: Weekly is sufficient",
+        "D: Failed to control variables",
+        "E: Participants preferred daily"
+      ],
+      "solution_using_strategy": [
+        "1. Candidate: Option A.",
+        "2. Proof Search: S1 says daily (frequent) > weekly (infrequent). S2 says specificity had no effect.",
+        "3. Verification: S1 + S2 directly support 'frequent is better regardless of specificity'. Exact match.",
+        "4. Proof Check: B (contradicts S2), C (contradicts S1), D (no text evidence), E (no text evidence).",
+        "5. Final Selection: A."
+      ],
+      "why_this_strategy_works_here": [
+        "• It eliminates 'skeptical' traps like Option D which sound sophisticated but have zero textual basis.",
+        "• It forces you to rely on data provided rather than assumptions."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Process of Elimination",
+    "category": "Question Attack System",
+    "what_it_is": "A systematic method of finding the correct answer by disqualifying the four incorrect ones based on specific error types.",
+    "core_idea": "It is often easier to see why an answer is *wrong* than why it is subtly *right*. Whatever survives rigorous elimination is your answer.",
+    "when_to_use": "Whenever you are stuck between 2-3 choices or when the correct answer feels 'uninspiring'.",
+    "when_not_to_use": "When your prediction matches one choice perfectly—just confirm and move on.",
+    "step_by_step_process": [
+      "1. Read Choice A: Look for a reason to kill it (Contradicts text? Not mentioned? Too extreme?).",
+      "2. Mark with 'X' (Wrong) or '?' (Possible).",
+      "3. Repeat for B-E.",
+      "4. If only one '?' remains, that's your answer.",
+      "5. If two '?' remain, use 'Justifying Answer' to break the tie."
+    ],
+    "mental_checklist": [
+      "Did this choice mention something NOT in the passage?",
+      "Does this choice reverse a logic relationship from the passage?",
+      "Does it use 'extreme' words (all, never, only) unsupported by text?",
+      "Is it true but answering the WRONG question?"
+    ],
+    "common_traps": [
+      "Killing the 'Boring' Choice: Correct answers are often very plain; don't eliminate them just because they aren't exciting.",
+      "Keeping the 'Smart' Choice: Distractors often use high-level jargon to look attractive.",
+      "Second-Guessing an 'X': Once you find a definitive error, commit to the elimination."
+    ],
+    "pro_tips": [
+      "The 4 wrong answers always fit into these buckets: (1) Opposite, (2) Out of Scope, (3) True but doesn't answer the question, (4) Unsupported Extreme.",
+      "On hard questions, the correct answer is usually the one you *least* want to pick because it is so bland.",
+      "Spend 5-8 seconds max on clear eliminations."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage: 'Most biologists accept dolphin intentionality. Status as full language remains a matter of active debate.' \n\nQuestion: 'Which can be inferred?'",
+      "options": [
+        "A: Dolphins possess complete language",
+        "B: Conclusively proven to use syntax",
+        "C: Shown to involve intentionality, but status as language unresolved",
+        "D: Intentionality still disputed by most",
+        "E: Only marine animal with intentionality"
+      ],
+      "solution_using_strategy": [
+        "1. Eliminate A: 'Complete language' contradicts 'unresolved debate'. (X)",
+        "2. Eliminate B: 'Conclusively proven syntax' contradicts 'active debate'. (X)",
+        "3. Evaluate C: Matches both facts in the passage. Keep. (?)",
+        "4. Eliminate D: 'Most dispute' contradicts passage 'most accept'. (X)",
+        "5. Eliminate E: 'Only' is an unsupported extreme. (X)",
+        "6. Final Selection: C."
+      ],
+      "why_this_strategy_works_here": [
+        "• It exposes Choice C as the 'safe, bland middle' that perfectly mirrors the text.",
+        "• It identifies the 'Extreme' and 'Opposite' traps in A, B, and D."
+      ]
+    }
+  },
+  {
+    "strategy_name": "One Word Elimination",
+    "category": "Question Attack System",
+    "what_it_is": "A precision tool where you disqualify an entire answer choice because a single word (usually a qualifier or verb) is unsupported by the passage.",
+    "core_idea": "ETS builds distractors that are 90% correct but 10% fatal. Training your eyes to find that one 'killer word' makes elimination definitive.",
+    "when_to_use": "As a precision tool when you have 2 survivors. Essential for 'Inference' questions.",
+    "when_not_to_use": "Do not use for TC questions (where context is holistic).",
+    "step_by_step_process": [
+      "1. Read the surviving choices word-by-word.",
+      "2. Circle any qualifier (all, always, most, some) or strong verb (proves, establishes).",
+      "3. Compare that specific word to the passage text.",
+      "4. If the passage says 'some' and the choice says 'all', the choice is 100% wrong. Kill it.",
+      "5. Select the choice where *every* word is supported."
+    ],
+    "mental_checklist": [
+      "Is there a scope word (all, only, never) that is too strong?",
+      "Does the verb overstate the author's certainty (proves vs. suggests)?",
+      "Does the noun expand the category (e.g., 'scientists' vs. 'these two researchers')?"
+    ],
+    "common_traps": [
+      "The 'Halo Effect': Letting the 90% correct part of the sentence blind you to the 10% error.",
+      "Over-Elimination: Killing a choice because of an extreme word that *is* actually supported by the passage (always check!)."
+    ],
+    "pro_tips": [
+      "The most common 'Killer Words' are: all, always, never, only, unique, identical, impossible.",
+      "Causal words (caused by, results in) are frequent elimination triggers—correlation is not causation.",
+      "If you're stuck, pick the choice with 'softer' words (some, tend to, perhaps)."
+    ],
+    "official_GRE_style_example": {
+      "question": "Passage: 'Research suggests sleep deprivation impairs reaction time. Effects appear to be cumulative.' \n\nFinalists:",
+      "options": [
+        "A: Sleep deprivation always results in a complete inability to perform tasks.",
+        "C: Moderate sleep restriction can measurably impair cognitive performance."
+      ],
+      "solution_using_strategy": [
+        "1. Analyze Choice A: 'Always' (Killer Word) + 'Complete Inability' (Killer Word). Passage only said 'impairs' and 'suggests'. A is too extreme. Eliminate.",
+        "2. Analyze Choice C: 'Can' (Soft word) + 'Measurably impair' (Matches 'impairs'). Every word in C is supported or hedged correctly.",
+        "3. Final Selection: C."
+      ],
+      "why_this_strategy_works_here": [
+        "• it identifies that 'always' is an impossible standard for this passage to meet.",
+        "• It highlights how 'can' makes a claim much easier to support than 'always'."
+      ]
+    }
+  },
+  {
+    "strategy_name": "Vertical Verb Scan",
+    "category": "Question Attack System",
+    "what_it_is": "A speed-reading shortcut for 'Primary Purpose' questions where you eliminate choices by looking *only* at the first word (the function verb).",
+    "core_idea": "The first word of a 'Purpose' choice tells you what the author is *doing*. If the author is arguing and the choice starts with 'To describe', the choice is wrong before you even read the second word.",
+    "when_to_use": "Exclusively for 'Primary Purpose', 'Main Concern', and 'Sentence Function' questions.",
+    "when_not_to_use": "Detail, Vocabulary, or Inference questions.",
+    "step_by_step_process": [
+      "1. Classify Stem: Is it a 'Purpose' question?",
+      "2. Passage Map: Recall the author's action (Arguing? Neutral analysis? Attacking?).",
+      "3. Vertical Scan: Read only the first 1-2 words of options A-E.",
+      "4. Kill Mismatches: If author is attacking, kill 'To describe', 'To support', 'To chronicle'.",
+      "5. Solve Finalists: Read the remaining 1-2 choices in full to find the best fit."
+    ],
+    "mental_checklist": [
+      "What is the author's *action*?",
+      "Which verbs match that action?",
+      "Am I reading the whole choice too early? (Wait until after the scan)."
+    ],
+    "common_traps": [
+      "Confusion between 'Analyze' (structured study) and 'Describe' (neutral listing).",
+      "Confusing 'Refute' (to prove wrong) with 'Challenge' (to question).",
+      "Missing that a correct verb might be followed by a wrong object (e.g., 'To challenge [wrong topic]')."
+    ],
+    "pro_tips": [
+      "Active verbs (Argue, Challenge, Propose) = Argumentative passages.",
+      "Neutral verbs (Describe, Chronicle, Analyze) = Descriptive/Exploratory passages.",
+      "If the passage has a 'However' structure, look for 'To challenge' or 'To qualify'."
+    ],
+    "official_GRE_style_example": {
+      "question": "A passage presents a model, uses new evidence to contradict its assumptions, and concludes revision is needed. \n\nQuestion: 'Primary Purpose is to:'",
+      "options": [
+        "A: describe history",
+        "B: challenge the prevailing model",
+        "C: propose a new framework",
+        "D: compare two alternatives",
+        "E: analyze limitations of a tool"
+      ],
+      "solution_using_strategy": [
+        "1. Vertical Scan: A: Describe | B: Challenge | C: Propose | D: Compare | E: Analyze.",
+        "2. Passage Action: Author is attacking/contradicting a model. Action = Challenge.",
+        "3. Filter: Kill A (no argument), C (no new model offered), D (only 1 model discussed), E (tool is not the subject).",
+        "4. Survivor Check: B matches the action and the subject.",
+        "5. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• It saves ~30 seconds by ignoring the detailed content of 4 wrong answers.",
+        "• It focuses logic on structure, which is the only thing Purpose questions test."
+      ]
+    }
+  }
+]
