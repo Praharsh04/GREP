@@ -1,0 +1,776 @@
+{
+  "meta": {
+    "total_questions": 45,
+    "sources": [
+      {
+        "name": "ETS Official Sample Questions (Shorter GRE, Sep 2023)",
+        "url": "https://www.ets.org/pdfs/gre/sample-question-overview.pdf",
+        "question_ids": "1-20"
+      },
+      {
+        "name": "Magoosh (Chris Lele) — Text Completion Challenge",
+        "question_ids": "21-28, 32-45"
+      },
+      {
+        "name": "Manhattan Prep GRE — Sentence Equivalence Practice",
+        "url": "https://www.manhattanprep.com/gre/blog/gre-sentence-equivalence-practice-questions/",
+        "question_ids": "29-31"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select One Answer",
+      "difficulty": "Medium",
+      "passage": "Policymakers must confront the dilemma that fossil fuels continue to be an indispensable source of energy even though burning them produces atmospheric accumulations of carbon dioxide that increase the likelihood of potentially disastrous global climate change. Currently, technology that would capture carbon dioxide emitted by power plants and sequester it harmlessly underground or undersea instead of releasing it into the atmosphere might double the cost of generating electricity. But because sequestration does not affect the cost of electricity transmission and distribution, delivered prices will rise less, by no more than 50 percent. Research into better technologies for capturing carbon dioxide will undoubtedly lead to lowered costs.",
+      "question": "The passage implies which of the following about the current cost of generating electricity?",
+      "options": {
+        "A": "It is higher than it would be if better technologies for capturing carbon dioxide were available.",
+        "B": "It is somewhat less than the cost of electricity transmission and distribution.",
+        "C": "It constitutes at most half of the delivered price of electricity.",
+        "D": "It is dwelt on by policymakers to the exclusion of other costs associated with electricity delivery.",
+        "E": "It is not fully recovered by the prices charged directly to electricity consumers."
+      },
+      "correct_answer": "C",
+      "explanation": "The passage says sequestration 'might double the cost of generating electricity' but delivered prices would rise 'by no more than 50 percent.' If doubling generation cost raises delivered price by at most 50%, then generation currently constitutes at most half of the delivered price. Choice A is unsupported; B, D, E are not addressed."
+    },
+    {
+      "id": 2,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select One or More Answers",
+      "difficulty": "Hard",
+      "passage": "Policymakers must confront the dilemma that fossil fuels continue to be an indispensable source of energy even though burning them produces atmospheric accumulations of carbon dioxide that increase the likelihood of potentially disastrous global climate change. Currently, technology that would capture carbon dioxide emitted by power plants and sequester it harmlessly underground or undersea instead of releasing it into the atmosphere might double the cost of generating electricity. But because sequestration does not affect the cost of electricity transmission and distribution, delivered prices will rise less, by no more than 50 percent. Research into better technologies for capturing carbon dioxide will undoubtedly lead to lowered costs.",
+      "question": "The passage suggests that extensive use of sequestration would, over time, have which of the following consequences? (Select all that apply.)",
+      "options": {
+        "A": "The burning of fossil fuels would eventually cease to produce atmospheric accumulations of carbon dioxide.",
+        "B": "The proportion of the delivered price of electricity due to generation would rise and then decline.",
+        "C": "Power plants would consume progressively lower quantities of fossil fuels."
+      },
+      "correct_answer": "B",
+      "explanation": "B is correct: sequestration doubles generation costs initially (raising generation's share), but research will lower those costs — so the proportion rises then declines. A is wrong: sequestration captures CO2 but does not prevent its production. C is wrong: nothing implies reduced fuel consumption."
+    },
+    {
+      "id": 3,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select in Passage",
+      "difficulty": "Medium",
+      "passage": "Policymakers must confront the dilemma that fossil fuels continue to be an indispensable source of energy even though burning them produces atmospheric accumulations of carbon dioxide that increase the likelihood of potentially disastrous global climate change. Currently, technology that would capture carbon dioxide emitted by power plants and sequester it harmlessly underground or undersea instead of releasing it into the atmosphere might double the cost of generating electricity. But because sequestration does not affect the cost of electricity transmission and distribution, delivered prices will rise less, by no more than 50 percent. Research into better technologies for capturing carbon dioxide will undoubtedly lead to lowered costs.",
+      "question": "Select the sentence that explains why an outcome of sequestration that might have been expected would not occur.",
+      "options": {
+        "A": "Policymakers must confront the dilemma that fossil fuels continue to be an indispensable source of energy...",
+        "B": "Currently, technology that would capture carbon dioxide emitted by power plants... might double the cost of generating electricity.",
+        "C": "But because sequestration does not affect the cost of electricity transmission and distribution, delivered prices will rise less, by no more than 50 percent.",
+        "D": "Research into better technologies for capturing carbon dioxide will undoubtedly lead to lowered costs.",
+        "E": "...burning them produces atmospheric accumulations of carbon dioxide..."
+      },
+      "correct_answer": "C",
+      "explanation": "One might expect doubling generation costs to double delivered prices. The sentence beginning 'But because sequestration does not affect transmission and distribution costs...' explains why the expected price doubling would NOT occur."
+    },
+    {
+      "id": 4,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select One Answer",
+      "difficulty": "Medium",
+      "passage": "Reviving the practice of using elements of popular music in classical composition, an approach that had been in hibernation in the United States during the 1960s, composer Philip Glass (born 1937) embraced the ethos of popular music in his compositions. Glass based two symphonies on music by rock musicians David Bowie and Brian Eno, but the symphonies' sound is distinctively his. Popular elements do not appear out of place in Glass's classical music, which from its early days has shared certain harmonies and rhythms with rock music. Yet this use of popular elements has not made Glass a composer of popular music. His music is not a version of popular music packaged to attract classical listeners; it is high art for listeners steeped in rock rather than the classics.",
+      "question": "The passage addresses which of the following issues related to Glass's use of popular elements in his classical compositions?",
+      "options": {
+        "A": "How it is regarded by listeners who prefer rock to the classics",
+        "B": "How it has affected the commercial success of Glass's music",
+        "C": "Whether it has contributed to a revival of interest among other composers in using popular elements",
+        "D": "Whether it has had a detrimental effect on Glass's reputation as a composer of classical music",
+        "E": "Whether it has caused certain of Glass's works to be derivative in quality"
+      },
+      "correct_answer": "E",
+      "explanation": "The passage directly addresses whether incorporating popular elements makes Glass's work derivative, concluding that the symphonies' sound 'is distinctively his' and popular elements 'do not appear out of place.' B, C, and D are not discussed; A is only mentioned tangentially."
+    },
+    {
+      "id": 5,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select One or More Answers",
+      "difficulty": "Medium",
+      "passage": "Reviving the practice of using elements of popular music in classical composition, an approach that had been in hibernation in the United States during the 1960s, composer Philip Glass (born 1937) embraced the ethos of popular music in his compositions. Glass based two symphonies on music by rock musicians David Bowie and Brian Eno, but the symphonies' sound is distinctively his. Popular elements do not appear out of place in Glass's classical music, which from its early days has shared certain harmonies and rhythms with rock music. Yet this use of popular elements has not made Glass a composer of popular music. His music is not a version of popular music packaged to attract classical listeners; it is high art for listeners steeped in rock rather than the classics.",
+      "question": "The passage suggests that Glass's work displays which of the following qualities? (Select all that apply.)",
+      "options": {
+        "A": "A return to the use of popular music in classical compositions",
+        "B": "An attempt to elevate rock music to an artistic status more closely approximating that of classical music",
+        "C": "A long-standing tendency to incorporate elements from two apparently disparate musical styles"
+      },
+      "correct_answer": "A and C",
+      "explanation": "A: Glass 'revived the practice... that had been in hibernation.' C: 'From its early days' Glass's classical music shared harmonies with rock — a long-standing blend. B is incorrect: the passage does not say rock is being elevated; rather, Glass's high art is accessible to rock listeners."
+    },
+    {
+      "id": 6,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select in Passage",
+      "difficulty": "Easy",
+      "passage": "Reviving the practice of using elements of popular music in classical composition, an approach that had been in hibernation in the United States during the 1960s, composer Philip Glass (born 1937) embraced the ethos of popular music in his compositions. Glass based two symphonies on music by rock musicians David Bowie and Brian Eno, but the symphonies' sound is distinctively his. Popular elements do not appear out of place in Glass's classical music, which from its early days has shared certain harmonies and rhythms with rock music. Yet this use of popular elements has not made Glass a composer of popular music. His music is not a version of popular music packaged to attract classical listeners; it is high art for listeners steeped in rock rather than the classics.",
+      "question": "Select the sentence that distinguishes two ways of integrating rock and classical music.",
+      "options": {
+        "A": "Reviving the practice of using elements of popular music in classical composition...",
+        "B": "Glass based two symphonies on music by rock musicians David Bowie and Brian Eno...",
+        "C": "Popular elements do not appear out of place in Glass's classical music...",
+        "D": "Yet this use of popular elements has not made Glass a composer of popular music.",
+        "E": "His music is not a version of popular music packaged to attract classical listeners; it is high art for listeners steeped in rock rather than the classics."
+      },
+      "correct_answer": "E",
+      "explanation": "The sentence 'His music is not a version of popular music packaged to attract classical listeners; it is high art for listeners steeped in rock' explicitly contrasts two integration approaches using a semicolon to distinguish them."
+    },
+    {
+      "id": 7,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Text Completion – Three Blanks",
+      "difficulty": "Hard",
+      "passage": "It is refreshing to read a book about our planet by an author who does not allow facts to be (i)__________ by politics: well aware of the political disputes about the effects of human activities on climate and biodiversity, this author does not permit them to (ii)__________ his comprehensive description of what we know about our biosphere. He emphasizes the enormous gaps in our knowledge, the sparseness of our observations, and the (iii)__________, calling attention to the many aspects of planetary evolution that must be better understood before we can accurately diagnose the condition of our planet.",
+      "question": "For each blank, select one entry from the corresponding column of choices.",
+      "options": {
+        "Blank (i)": { "A": "overshadowed", "B": "invalidated", "C": "illuminated" },
+        "Blank (ii)": { "D": "enhance", "E": "obscure", "F": "underscore" },
+        "Blank (iii)": { "G": "plausibility of our hypotheses", "H": "certainty of our entitlement", "I": "superficiality of our theories" }
+      },
+      "correct_answer": "A (overshadowed), E (obscure), I (superficiality of our theories)",
+      "explanation": "Blank (i): Politics 'overshadows' facts — not invalidates (too strong) or illuminates (opposite). Blank (ii): Politics must not 'obscure' the description — not enhance (positive) or underscore (emphasize, also positive). Blank (iii): With gaps, sparse observations, the theories are 'superficial' — not plausible or certain."
+    },
+    {
+      "id": 8,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Text Completion – Two Blanks",
+      "difficulty": "Medium",
+      "passage": "The author's (i)__________ style renders a fascinating subject, the role played by luck in everyday life, extraordinarily (ii)__________.",
+      "question": "For each blank, select one entry from the corresponding column of choices.",
+      "options": {
+        "Blank (i)": { "A": "soporific", "B": "lucid", "C": "colloquial" },
+        "Blank (ii)": { "D": "pedantic", "E": "tedious", "F": "opaque" }
+      },
+      "correct_answer": "A (soporific), E (tedious)",
+      "explanation": "The paradox: a 'fascinating subject' is made dull by the author's style. 'Soporific' (sleep-inducing) + 'tedious' (dull) pair correctly. 'Lucid' (clear) would be a good quality, not one that makes things tedious."
+    },
+    {
+      "id": 9,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Text Completion – One Blank",
+      "difficulty": "Hard",
+      "passage": "From the outset, the concept of freedom of the seas from the proprietary claims of nations was challenged by a contrary notion — that of the _______ of the oceans for reasons of national security and profit.",
+      "question": "Select the best answer choice to fill the blank.",
+      "options": {
+        "A": "promotion",
+        "B": "exploration",
+        "C": "surveying",
+        "D": "conservation",
+        "E": "appropriation"
+      },
+      "correct_answer": "E",
+      "explanation": "'Freedom from proprietary claims' vs. the 'contrary notion' = nations claiming ownership. 'Appropriation' (seizing exclusive control) is the direct antonym of freedom from ownership. Promotion, exploration, surveying, and conservation do not imply national ownership claims."
+    },
+    {
+      "id": 10,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Sentence Equivalence",
+      "difficulty": "Medium",
+      "question": "Although it does contain some pioneering ideas, one would hardly characterize the work as __________.",
+      "options": {
+        "A": "orthodox",
+        "B": "eccentric",
+        "C": "original",
+        "D": "trifling",
+        "E": "conventional",
+        "F": "innovative"
+      },
+      "correct_answer": "C and F",
+      "explanation": "'Some pioneering ideas' but 'hardly [blank]' — needs a word meaning truly groundbreaking. 'Original' and 'innovative' are synonyms fitting this meaning and create equivalent sentences. Orthodox/conventional are antonyms; eccentric and trifling are unrelated."
+    },
+    {
+      "id": 11,
+      "source": "ETS Official",
+      "section": "Verbal",
+      "topic": "Sentence Equivalence",
+      "difficulty": "Easy",
+      "question": "The corporation expects only _______ increases in sales next year despite a yearlong effort to revive its retailing business.",
+      "options": {
+        "A": "dynamic",
+        "B": "predictable",
+        "C": "expanding",
+        "D": "modest",
+        "E": "slight",
+        "F": "volatile"
+      },
+      "correct_answer": "D and E",
+      "explanation": "'Only' signals disappointment — growth will be small. 'Modest' and 'slight' both mean small in degree and produce equivalent sentences. Dynamic and expanding indicate large growth; predictable and volatile describe the nature of growth, not its size."
+    },
+    {
+      "id": 12,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Quantitative Comparison – Arithmetic",
+      "difficulty": "Easy",
+      "question": "Quantity A: (2)(6) | Quantity B: 10",
+      "options": {
+        "A": "Quantity A is greater.",
+        "B": "Quantity B is greater.",
+        "C": "The two quantities are equal.",
+        "D": "The relationship cannot be determined from the information given."
+      },
+      "correct_answer": "A",
+      "explanation": "Quantity A = (2)(6) = 12. Quantity B = 10. Since 12 > 10, Quantity A is greater."
+    },
+    {
+      "id": 13,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Quantitative Comparison – Geometry (Parallelogram)",
+      "difficulty": "Medium",
+      "note": "Original question includes a figure of parallelogram RSTU with angle labels x and y.",
+      "question": "RSTU is a parallelogram. Quantity A: x (one interior angle) | Quantity B: y (another interior angle)",
+      "options": {
+        "A": "Quantity A is greater.",
+        "B": "Quantity B is greater.",
+        "C": "The two quantities are equal.",
+        "D": "The relationship cannot be determined from the information given."
+      },
+      "correct_answer": "D",
+      "explanation": "GRE figures are not drawn to scale. Without knowing specific angle values, x and y could be equal (rectangle, both 90°), or one greater than the other. The relationship cannot be determined."
+    },
+    {
+      "id": 14,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Multiple Choice – Statistics / Weighted Average",
+      "difficulty": "Hard",
+      "question": "Each employee of a certain company is in either Department X or Department Y, and there are more than twice as many employees in Department X as in Department Y. The average salary is $25,000 for Department X and $35,000 for Department Y. Which of the following amounts could be the average salary for all employees? (Select all that apply.)",
+      "options": {
+        "A": "$26,000",
+        "B": "$28,000",
+        "C": "$29,000",
+        "D": "$30,000",
+        "E": "$31,000",
+        "F": "$32,000",
+        "G": "$34,000"
+      },
+      "correct_answer": "A and B",
+      "explanation": "With n_x > 2·n_y, the weighted average must be below the 2:1 weighted midpoint = (2×25,000 + 35,000)/3 ≈ $28,333. Only $26,000 and $28,000 are strictly less than $28,333. $29,000+ would require n_x ≤ 2·n_y, violating the constraint."
+    },
+    {
+      "id": 15,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Multiple Choice – Number Theory (Factors)",
+      "difficulty": "Medium",
+      "question": "If f, g, and h are positive integers such that f is a factor of g, and g is a factor of h, which of the following statements must be true? (Select all that apply.)",
+      "options": {
+        "A": "f is a factor of g²",
+        "B": "f is a factor of gh",
+        "C": "f is a factor of h²"
+      },
+      "correct_answer": "A, B, and C",
+      "explanation": "f|g implies g = fk. A) g² = f²k², divisible by f. B) gh = fk·h, divisible by f. C) f|g and g|h implies f|h by transitivity, so h = fm; h² = f²m², divisible by f. All three must be true."
+    },
+    {
+      "id": 16,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Numeric Entry – Sequences",
+      "difficulty": "Medium",
+      "question": "What is the sum of all integers from 1 to 13, inclusive, that are not equal to the sum of two prime numbers?",
+      "options": {},
+      "correct_answer": "101",
+      "explanation": "Per official ETS answer key. Students should test each integer 1-13 against the condition of being expressible as a sum of two primes. The integers that fail this condition sum to 101."
+    },
+    {
+      "id": 17,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Numeric Entry – Probability / Combinations",
+      "difficulty": "Hard",
+      "question": "A university admitted 100 students who transferred from other institutions. Of these, 34 transferred from two-year community colleges, 25 from private four-year institutions, and the rest from public four-year institutions. If two different students are selected at random, what is the probability both transferred from two-year community colleges? Give your answer as a fraction.",
+      "options": {},
+      "correct_answer": "17/150",
+      "explanation": "P(both from community college) = C(34,2) / C(100,2) = (34×33/2) / (100×99/2) = 1122/9900 = 561/4950 = 17/150. Note: 561 = 3×11×17; 4950 = 2×3²×5²×11; GCD = 33; 561/33 = 17; 4950/33 = 150."
+    },
+    {
+      "id": 18,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Data Interpretation – Percent Change",
+      "difficulty": "Medium",
+      "context_table": {
+        "title": "Percent Change in Monthly Value of Inventory",
+        "data": [
+          {"Business": "G", "Apr_to_May_%": 6, "May_to_Jun_%": 8},
+          {"Business": "K", "Apr_to_May_%": 5, "May_to_Jun_%": -5},
+          {"Business": "M", "Apr_to_May_%": 2, "May_to_Jun_%": 12},
+          {"Business": "R", "Apr_to_May_%": -8, "May_to_Jun_%": 15},
+          {"Business": "V", "Apr_to_May_%": 14, "May_to_Jun_%": 0}
+        ]
+      },
+      "question": "If the value of inventory at Business K was $30,000 for April, what was the value for June?",
+      "options": {
+        "A": "$22,500",
+        "B": "$29,925",
+        "C": "$30,000",
+        "D": "$33,000",
+        "E": "$33,075"
+      },
+      "correct_answer": "B",
+      "explanation": "April = $30,000. May = $30,000 × 1.05 = $31,500. June = $31,500 × 0.95 = $29,925. Trap: +5% then -5% ≠ 0% change; it gives a net loss because 1.05 × 0.95 = 0.9975."
+    },
+    {
+      "id": 19,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Data Interpretation – Percent of Percent",
+      "difficulty": "Medium",
+      "context_table": { "title": "Same table as Q18" },
+      "question": "At Business M, the value of the inventory for May was what percent of the value of the inventory for June? Give your answer to the nearest 0.1 percent.",
+      "options": {},
+      "correct_answer": "89.3%",
+      "explanation": "Let April = 100. May = 100 × 1.02 = 102. June = 102 × 1.12 = 114.24. May/June = 102/114.24 = 0.8929... ≈ 89.3%."
+    },
+    {
+      "id": 20,
+      "source": "ETS Official",
+      "section": "Quant",
+      "topic": "Data Interpretation – Greatest Percent Change",
+      "difficulty": "Medium",
+      "context_table": { "title": "Same table as Q18" },
+      "question": "For which business was the percent change in inventory value from April to June greatest?",
+      "options": {
+        "A": "G",
+        "B": "K",
+        "C": "M",
+        "D": "R",
+        "E": "V"
+      },
+      "correct_answer": "A",
+      "explanation": "April-to-June multipliers: G: 1.06×1.08 = 1.1448 (+14.48%). K: 1.05×0.95 = 0.9975 (–0.25%). M: 1.02×1.12 = 1.1424 (+14.24%). R: 0.92×1.15 = 1.058 (+5.8%). V: 1.14×1.00 = 1.14 (+14.0%). Business G is greatest at ~14.48%. G vs M is very close — a common trap."
+    },
+    {
+      "id": 21,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – One Blank",
+      "difficulty": "Easy",
+      "question": "Much of the consumer protection movement is predicated on the notion that routine exposure to seemingly _______ products can actually have long-term deleterious consequences.",
+      "options": {
+        "A": "outdated",
+        "B": "banal",
+        "C": "litigious",
+        "D": "virulent",
+        "E": "benign"
+      },
+      "correct_answer": "E",
+      "explanation": "The key contrast: products that 'seem' one way but have 'long-term deleterious consequences.' The word must mean appearing harmless/safe. 'Benign' (harmless) sets up the paradox that something appearing benign is actually harmful. 'Virulent' already means harmful — no paradox. 'Banal' means ordinary; 'litigious' means prone to lawsuits (applies to people, not products); 'outdated' is irrelevant to the consumer protection argument."
+    },
+    {
+      "id": 22,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – Two Blanks",
+      "difficulty": "Easy",
+      "question": "The flood of innovation that has engendered many of last decade's technological breakthroughs has also claimed some victims in its wake: companies once at the (i)_______ of such innovation have now become (ii)_______.",
+      "options": {
+        "Blank (i)": { "A": "brink", "B": "forefront", "C": "periphery" },
+        "Blank (ii)": { "D": "remarkably pioneering", "E": "mostly obsolete", "F": "increasingly relevant" }
+      },
+      "correct_answer": "B (forefront), E (mostly obsolete)",
+      "explanation": "The sentence sets up a contrast using 'also claimed some victims': companies that were once leaders are now failures. Blank (i): 'forefront' (leading position) — not 'brink' (edge of something negative, like disaster) or 'periphery' (margins). Blank (ii): 'mostly obsolete' (outdated, irrelevant) — not 'remarkably pioneering' or 'increasingly relevant,' both of which would describe success, not victimhood."
+    },
+    {
+      "id": 23,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – One Blank",
+      "difficulty": "Medium",
+      "question": "For a writer with a reputation for both prolixity and inscrutability, Thompson, in this slim collection of short stories, may finally be intent on making his ideas more _______ to a readership looking for quick edification.",
+      "options": {
+        "A": "trying",
+        "B": "prescient",
+        "C": "palatable",
+        "D": "inaccessible",
+        "E": "transcendent"
+      },
+      "correct_answer": "C",
+      "explanation": "Thompson is known for verbosity ('prolixity') and difficulty ('inscrutability'). This new slim, short collection suggests a shift toward accessibility. The blank needs a word meaning easy to take in / accessible. 'Palatable' (acceptable and digestible) fits perfectly. 'Inaccessible' is the opposite. 'Trying' means difficult/annoying. 'Prescient' (far-sighted) and 'transcendent' are off-topic."
+    },
+    {
+      "id": 24,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – Two Blanks",
+      "difficulty": "Medium",
+      "question": "That traditional forms of media — despite considerable variance in the quality of writing — tend to report on a range of issues (i)_______ by the demands of the readership should (ii)_______ those who believe that the demise of each media outlet signals a lamentable reduction in the scope of news reported.",
+      "options": {
+        "Blank (i)": { "A": "unbounded", "B": "circumscribed", "C": "sensationalized" },
+        "Blank (ii)": { "D": "discourage", "E": "reassure", "F": "rile up" }
+      },
+      "correct_answer": "B (circumscribed), E (reassure)",
+      "explanation": "Blank (i): Media reports on issues 'bounded' by what readers demand — 'circumscribed' (limited/constrained). 'Unbounded' would mean the opposite. 'Sensationalized' describes how stories are told, not the scope. Blank (ii): If reporting range is constrained by reader demand anyway, the death of one outlet doesn't really reduce news scope — this should 'reassure' those who fear a reduction. 'Discourage' and 'rile up' would intensify their concern."
+    },
+    {
+      "id": 25,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – One Blank",
+      "difficulty": "Hard",
+      "question": "Rubens, for all his high-flown rhetoric, churns out book reviews that have come to seem _______: from decades of critiquing others' prose, he now relies on a familiar and tired formula.",
+      "options": {
+        "A": "scathing",
+        "B": "perfunctory",
+        "C": "erudite",
+        "D": "mawkish",
+        "E": "draconian"
+      },
+      "correct_answer": "B",
+      "explanation": "The clue is 'familiar and tired formula' from 'decades' of repetition — his reviews are mechanical, going through the motions. 'Perfunctory' (carried out with minimal effort as a routine duty) is the precise word. 'Scathing' (harsh) and 'erudite' (learned) would be positive/neutral qualities. 'Mawkish' (overly sentimental) and 'draconian' (harsh/strict) are irrelevant to routine, formulaic writing."
+    },
+    {
+      "id": 26,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – Three Blanks",
+      "difficulty": "Hard",
+      "question": "Keane argues that the political conditions during the early years of the United States were, if anything, (i)_______ to the formation of a nation united by one document: the Constitution. Rather, had it not been for a few men — Keane invokes the triumvirate of Jefferson, Hamilton, and Madison — to (ii)_______ the Constitution, despite the seemingly implacable opposition of anti-Federalists, the central government would have had to (iii)_______ matters of rule to the individual states.",
+      "options": {
+        "Blank (i)": { "A": "permissive", "B": "conducive", "C": "inimical" },
+        "Blank (ii)": { "D": "challenge", "E": "champion", "F": "undermine" },
+        "Blank (iii)": { "G": "cede", "H": "reintroduce", "I": "deny" }
+      },
+      "correct_answer": "C (inimical), E (champion), G (cede)",
+      "explanation": "Blank (i): 'Rather, had it not been for a few men' signals that the Constitution was nearly not adopted — so political conditions were 'inimical' (hostile/unfavorable). 'Conducive' and 'permissive' would mean conditions were favorable, contradicting 'rather.' Blank (ii): Those men pushed the Constitution through despite opposition — they 'championed' it. 'Challenge' or 'undermine' would mean they opposed it. Blank (iii): Without those men, the central government would have had to 'cede' (yield/give up) rule to individual states — not 'reintroduce' or 'deny.'"
+    },
+    {
+      "id": 27,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – Two Blanks",
+      "difficulty": "Hard",
+      "question": "With numerous exciting public works projects in the offing, residents are understandably (i)_______; yet because such prodigious undertakings are inevitably plagued with numerous setbacks, much of the fervor is likely to be (ii)_______ a heavy dose of reality.",
+      "options": {
+        "Blank (i)": { "A": "vexed", "B": "concerned", "C": "agog" },
+        "Blank (ii)": { "D": "tempered with", "E": "intensified by", "F": "precluded by" }
+      },
+      "correct_answer": "C (agog), D (tempered with)",
+      "explanation": "Blank (i): 'Numerous exciting projects' + 'understandably' = positive excitement. 'Agog' (excited, eager) fits. 'Vexed' (annoyed) and 'concerned' are negative — no context for worry. Blank (ii): 'Yet' signals a contrast — the excitement will be dampened by setbacks. 'Tempered with' (moderated/restrained by) a 'heavy dose of reality' correctly captures this. 'Intensified by' (strengthened) contradicts 'yet'; 'precluded by' (prevented entirely) is too extreme."
+    },
+    {
+      "id": 28,
+      "source": "Magoosh (Chris Lele) — Text Completion Challenge",
+      "section": "Verbal",
+      "topic": "Text Completion – Three Blanks",
+      "difficulty": "Hard",
+      "question": "For an actor who prepares so (i)_______ for each role, the characters he chooses to portray are (ii)_______; nonetheless even the most nebbish persona he depicts on screen always appears on the verge of a(n) (iii)_______, as though the actor's suppressed agitation is ready to burst forth.",
+      "options": {
+        "Blank (i)": { "A": "passively", "B": "carefully", "C": "feverishly" },
+        "Blank (ii)": { "D": "curiously anemic", "E": "totally irresponsible", "F": "somewhat puissant" },
+        "Blank (iii)": { "G": "breakthrough", "H": "meltdown", "I": "epiphany" }
+      },
+      "correct_answer": "C (feverishly), D (curiously anemic), H (meltdown)",
+      "explanation": "Blank (i): The juxtaposition with 'nebbish' (meek/timid) characters and 'suppressed agitation ready to burst forth' suggests intense, passionate preparation — 'feverishly' (intensely). 'Passively' is opposite. 'Carefully' is bland and doesn't set up the irony. Blank (ii): Despite intense preparation, the characters are 'curiously anemic' (oddly weak/lifeless) — the irony of intense prep yielding timid characters. 'Irresponsible' is off-topic; 'puissant' (powerful) contradicts 'nebbish.' Blank (iii): The 'suppressed agitation ready to burst forth' climaxes in an emotional 'meltdown' — not a rational 'breakthrough' or intellectual 'epiphany.'"
+    },
+    {
+      "id": 29,
+      "source": "Manhattan Prep GRE — Sentence Equivalence Practice",
+      "section": "Verbal",
+      "topic": "Sentence Equivalence",
+      "difficulty": "Easy",
+      "question": "A field trip was arranged so that this troupe of _______ dancers could observe the real masters of their art.",
+      "options": {
+        "A": "seasoned",
+        "B": "fledgling",
+        "C": "expert",
+        "D": "torpid",
+        "E": "novice",
+        "F": "lithe"
+      },
+      "correct_answer": "B and E",
+      "explanation": "The clue: the dancers need to 'observe the real masters' — implying they themselves are NOT masters; they are learners. 'Fledgling' and 'novice' are synonyms meaning new/inexperienced. 'Seasoned' and 'expert' are antonyms. 'Torpid' (lethargic) is unrelated. 'Lithe' (graceful/flexible) is a dancer-theme trap but has no synonym in the choices and does not explain why they would need to observe masters."
+    },
+    {
+      "id": 30,
+      "source": "Manhattan Prep GRE — Sentence Equivalence Practice",
+      "section": "Verbal",
+      "topic": "Sentence Equivalence",
+      "difficulty": "Medium",
+      "question": "Many people erroneously believe that humans are naturally _______ to distrust or even fear those outside of their social or cultural group; anthropologists and social scientists, however, have consistently shown that xenophobia is a learned behavior.",
+      "options": {
+        "A": "indoctrinated",
+        "B": "proven",
+        "C": "prone",
+        "D": "disposed",
+        "E": "taught",
+        "F": "compelled"
+      },
+      "correct_answer": "C and D",
+      "explanation": "The contrast 'erroneously believe humans are naturally [blank] to fear outsiders' vs. 'xenophobia is a learned behavior' tells us the blank = naturally inclined. 'Prone to' and 'disposed to' both mean naturally inclined/tending toward — and they create equivalent sentences. 'Indoctrinated,' 'taught,' and 'compelled' all imply external influence (i.e., learned), which contradicts 'naturally.' 'Proven' is grammatically and logically awkward."
+    },
+    {
+      "id": 31,
+      "source": "Manhattan Prep GRE — Sentence Equivalence Practice",
+      "section": "Verbal",
+      "topic": "Sentence Equivalence",
+      "difficulty": "Hard",
+      "question": "By framing the new law as a question of urgent safety rather than of privacy, the government obviated the need to pass through the standard channels of legislation, effectively _______ all formal dissent and relegating any would-be naysayer to a powerless bystander.",
+      "options": {
+        "A": "lobbying",
+        "B": "instigating",
+        "C": "curtailing",
+        "D": "facilitating",
+        "E": "undermining",
+        "F": "targeting"
+      },
+      "correct_answer": "C and E",
+      "explanation": "The government bypassed standard channels, which means it prevented/stopped formal opposition. The blank = stopping/suppressing dissent. 'Curtailing' (reducing/limiting) and 'undermining' (weakening) both mean the government suppressed formal opposition — creating equivalent sentences. 'Lobbying' and 'facilitating' mean promoting, opposite of stopping. 'Instigating' means provoking, and 'targeting' is off-topic."
+    },
+    {
+      "id": 32,
+      "source": "Magoosh GRE — Verbal Practice (Long RC)",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select One Answer (Vocabulary in Context)",
+      "difficulty": "Medium",
+      "passage": "In Don Giovanni, what is perhaps Mozart's best-known opera, there exist two distinct endings... [Da Ponte insisted that forthwith casting Don Giovanni to Hell would leave audiences ambivalent]... In that case the fate of Don Giovanni can best be answered by the fact that Mozart — through debts, ill-health, and the composer's obligation to compose works for his patrons — was unable to return to a work he had tabled.",
+      "question": "In the context in which it is used, 'tabled' most nearly means",
+      "options": {
+        "A": "considered",
+        "B": "discarded",
+        "C": "toiled over",
+        "D": "unintentionally forgotten",
+        "E": "put aside indefinitely"
+      },
+      "correct_answer": "E",
+      "explanation": "Context: Mozart 'hoped to come back to' Don Giovanni to give it a better ending but was prevented by debts and obligations. 'Tabled' here means set aside for later attention. 'Put aside indefinitely' (E) captures this meaning. 'Discarded' is too final (implies he gave up permanently). 'Considered' and 'toiled over' suggest active engagement, the opposite of setting aside. 'Unintentionally forgotten' misses the deliberate aspect of tabling something."
+    },
+    {
+      "id": 33,
+      "source": "Magoosh GRE — Verbal Practice (Long RC)",
+      "section": "Verbal",
+      "topic": "Reading Comprehension – Select One Answer (EXCEPT question)",
+      "difficulty": "Hard",
+      "passage": "In Don Giovanni... A common answer is to treat both these questions as one: Mozart was uncertain as to which ending to provide, so he wrote both endings. Such a reply ignores an important consideration... Libard provides a reasonable answer: The traditional ending... is clearly more palatable for audiences... Libard — trading the sensible for the pat — offers little more than that such an ending reflects the political climate of the day.",
+      "question": "The author of the passage would take exception to all of the following statements regarding Libard's response to the existence of dual endings to Don Giovanni EXCEPT?",
+      "options": {
+        "A": "Libard's explanations of Don Giovanni's multiple endings are not uniform in their usefulness.",
+        "B": "Libard offers little insight into both of the questions posed in the first paragraph.",
+        "C": "Libard's understanding of 18th century audiences is flawed.",
+        "D": "Libard's interpretation of the tragic ending to Don Giovanni has more in common with that of Lucien than with that of Da Ponte.",
+        "E": "Libard's views, while not entirely accurate, are consistently probing."
+      },
+      "correct_answer": "A",
+      "explanation": "EXCEPT = the author AGREES with this statement (or does not take exception). The author calls Libard's traditional-ending explanation 'reasonable' but his tragic-ending explanation inadequate ('trading the sensible for the pat'). So the author AGREES that Libard's explanations are not uniform in quality. The author would REJECT B (the author says Libard does offer insight on the traditional ending), C (no evidence of audience knowledge flaw), D (Libard predates Lucien), and E ('consistently probing' contradicts 'pat')."
+    },
+    {
+      "id": 34,
+      "source": "Magoosh GRE — Verbal Practice (Paragraph Argument)",
+      "section": "Verbal",
+      "topic": "Critical Reasoning – Strengthen the Argument",
+      "difficulty": "Medium",
+      "passage": "Downtown Greensborough is a major financial center, in which many citizens either drive or rely on public transportation to get to work. This setup has led to a spate in the number of pedestrians who have been struck and killed by vehicles. In an effort to curb the number of pedestrian-related fatalities, Greensborough has installed speed reduction signs at the six city intersections in which the highest numbers of fatalities have occurred in the last year. The Greensborough city government predicts that the number of pedestrian fatalities will significantly decrease once the speed reduction signs have been installed.",
+      "question": "Which of the following, if true, most strengthens the validity of the conclusion?",
+      "options": {
+        "A": "Some of those who drive to work in downtown Greensborough have a valid driver's license.",
+        "B": "The number of annual pedestrian fatalities outside the downtown area is far less than in the downtown area.",
+        "C": "The six intersections in which the signs are installed are responsible for a majority of pedestrian deaths in downtown Greensborough.",
+        "D": "The new speed reduction signs will be in neon orange and prominently placed.",
+        "E": "Red light cameras were installed yet the number of pedestrian fatalities did not decrease."
+      },
+      "correct_answer": "C",
+      "explanation": "The argument's gap: signs at only 6 intersections won't reduce overall fatalities unless those 6 account for most fatalities. Choice C closes this gap by confirming those 6 intersections ARE responsible for the majority of deaths — making signs there an effective city-wide solution. A is irrelevant (driver's licenses don't affect safety directly). B establishes context but doesn't strengthen the solution. D (sign visibility) could marginally help but doesn't address the coverage gap. E actually weakens by analogy (previous interventions failed)."
+    },
+    {
+      "id": 35,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Quantitative Comparison – Ratios",
+      "difficulty": "Easy",
+      "question": "The revenue generated by Company X is divided between Doug and Moira in a 6 to 5 ratio respectively. | Quantity A: Moira's share when the revenue is $15,700 | Quantity B: $7,900",
+      "options": {
+        "A": "Quantity A is greater.",
+        "B": "Quantity B is greater.",
+        "C": "The two quantities are equal.",
+        "D": "The relationship cannot be determined from the information given."
+      },
+      "correct_answer": "B",
+      "explanation": "Doug:Moira = 6:5. Total parts = 11. Moira's share = (5/11) × $15,700 = $78,500/11 = $7,136.36. Quantity A ≈ $7,136 < $7,900 = Quantity B. Quantity B is greater."
+    },
+    {
+      "id": 36,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Quantitative Comparison – Number Theory (Prime Factors)",
+      "difficulty": "Hard",
+      "question": "The greatest prime factor of 144 is x. The greatest prime factor of 96 is y. | Quantity A: x | Quantity B: y",
+      "options": {
+        "A": "Quantity A is greater.",
+        "B": "Quantity B is greater.",
+        "C": "The two quantities are equal.",
+        "D": "The relationship cannot be determined from the information given."
+      },
+      "correct_answer": "C",
+      "explanation": "144 = 2⁴ × 3². Greatest prime factor = 3. 96 = 2⁵ × 3. Greatest prime factor = 3. So x = 3 = y. The two quantities are equal. Common trap: students assume larger numbers have larger prime factors. 144 and 96 share the same greatest prime factor (3) despite their size difference."
+    },
+    {
+      "id": 37,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Multiple Choice – Arithmetic (Percent)",
+      "difficulty": "Easy",
+      "question": "The price of a pair of sneakers was $80 for the last six months of last year. On January first, the price increased 20%. After the price increase, an employee bought these sneakers with a 10% employee discount. What price did the employee pay?",
+      "options": {
+        "A": "$70.40",
+        "B": "$82.00",
+        "C": "$83.33",
+        "D": "$86.40",
+        "E": "$88.00"
+      },
+      "correct_answer": "D",
+      "explanation": "Step 1: 20% increase on $80: $80 × 1.20 = $96. Step 2: 10% discount on $96: $96 × 0.90 = $86.40. Common trap: applying 10% of $80 then adding 20% increase, or netting +20% and −10% as +10%. Sequential percent changes must be applied separately."
+    },
+    {
+      "id": 38,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Multiple Choice – Algebra (Quadratic)",
+      "difficulty": "Medium",
+      "question": "If 6k² + k = 2 and k > 0, then k must equal which of the following?",
+      "options": {
+        "A": "1/2",
+        "B": "1",
+        "C": "3/2",
+        "D": "2",
+        "E": "3"
+      },
+      "correct_answer": "A",
+      "explanation": "Rearrange: 6k² + k − 2 = 0. Factor: (2k − 1)(3k + 2) = 0. Solutions: k = 1/2 or k = −2/3. Since k > 0, k = 1/2. Verification: 6(1/4) + 1/2 = 3/2 + 1/2 = 2. ✓"
+    },
+    {
+      "id": 39,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Multiple Choice – Counting / Combinatorics",
+      "difficulty": "Hard",
+      "question": "In how many different ways can 3 identical green shirts and 3 identical red shirts be distributed among 6 children such that each child receives a shirt?",
+      "options": {
+        "A": "20",
+        "B": "40",
+        "C": "216",
+        "D": "720",
+        "E": "729"
+      },
+      "correct_answer": "A",
+      "explanation": "We need to choose which 3 of the 6 children get green shirts (the other 3 automatically get red). Since the shirts of the same color are identical, only the assignment matters, not the order within colors. Ways = C(6,3) = 6!/(3!×3!) = 720/36 = 20. Trap: using 6! = 720 (treats all shirts as distinct) or 3! × 3! = 36 (wrong division)."
+    },
+    {
+      "id": 40,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Numeric Entry – Counting",
+      "difficulty": "Easy",
+      "question": "Dharik lives on a straight street. There are 16 houses to the right of his house and 17 houses to the left. Last year, 5 new houses were built even further to the left. If these are the only houses on the street, how many houses are on the street in total?",
+      "options": {},
+      "correct_answer": "39",
+      "explanation": "Houses to the right: 16. Dharik's house: 1. Original houses to the left: 17. New houses built further left: 5. Total = 16 + 1 + 17 + 5 = 39. Common trap: forgetting to count Dharik's own house."
+    },
+    {
+      "id": 41,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Numeric Entry – Exponents",
+      "difficulty": "Medium",
+      "question": "If (2^(−n) / 3)(3^(−n) / 2) = 1/36, what is the value of n?",
+      "options": {},
+      "correct_answer": "1",
+      "explanation": "Simplify the left side: (2^(−n) × 3^(−n)) / (3 × 2) = (6^(−n)) / 6 = 1/(6 × 6^n) = 1/6^(n+1). Set equal to 1/36 = 1/6²: 6^(n+1) = 6², so n+1 = 2, giving n = 1. Verification: (2⁻¹/3)(3⁻¹/2) = (1/6)(1/6) = 1/36. ✓"
+    },
+    {
+      "id": 42,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Multiple Answer – Standard Deviation",
+      "difficulty": "Easy",
+      "question": "In a population of chickens, the average weight is 6.3 pounds, and the standard deviation is 1.2 pounds. Which of the following weights (in pounds) are within 1.5 standard deviations of the mean? (Select all that apply.)",
+      "options": {
+        "A": "4.4",
+        "B": "4.6",
+        "C": "5.1",
+        "D": "5.2",
+        "E": "6.9",
+        "F": "7.6",
+        "G": "7.7",
+        "H": "8.2"
+      },
+      "correct_answer": "B, C, D, E, F, and G",
+      "explanation": "1.5 standard deviations = 1.5 × 1.2 = 1.8 pounds. Acceptable range: 6.3 − 1.8 = 4.5 to 6.3 + 1.8 = 8.1. All weights in [4.5, 8.1] qualify: 4.6 (B), 5.1 (C), 5.2 (D), 6.9 (E), 7.6 (F), 7.7 (G). Excluded: 4.4 (A, below 4.5) and 8.2 (H, above 8.1)."
+    },
+    {
+      "id": 43,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Multiple Answer – Password Counting / Combinatorics",
+      "difficulty": "Hard",
+      "question": "A popular website requires users to create a password consisting of digits only. If no digit may be repeated and each password must be at least 9 digits long, how many passwords are possible?",
+      "options": {
+        "A": "9! + 10!",
+        "B": "2 × 10!",
+        "C": "9! × 10!",
+        "D": "19!",
+        "E": "20!"
+      },
+      "correct_answer": "B",
+      "explanation": "Digits 0–9 = 10 digits, no repeats. Passwords of exactly 9 digits: P(10,9) = 10!/(10−9)! = 10!/1! = 10!. Passwords of exactly 10 digits: P(10,10) = 10! Total = 10! + 10! = 2 × 10!. Note: A (9! + 10!) is a common trap from forgetting that a 9-digit password drawn from 10 unique digits still has 10! permutations (not 9!), since P(10,9) = 10 × 9 × 8 × ... × 2 = 10!/1! = 10!."
+    },
+    {
+      "id": 44,
+      "source": "Magoosh GRE — 15 Math Practice Questions",
+      "section": "Quant",
+      "topic": "Data Interpretation – Percentage from Table",
+      "difficulty": "Easy",
+      "context_table": {
+        "title": "Animal Distribution in the Zoo",
+        "data": [
+          {"Animal": "Lions", "Percent": "32%"},
+          {"Animal": "Leopards", "Percent": "16%"},
+          {"Animal": "Ocelots", "Percent": "20%"},
+          {"Animal": "Tigers", "Percent": "8%"},
+          {"Animal": "Bobcats", "Percent": "24%"}
+        ]
+      },
+      "question": "If there are 44 leopards at the zoo, what is the zoo's total animal population?",
+      "options": {
+        "A": "225",
+        "B": "275",
+        "C": "325",
+        "D": "350",
+        "E": "375"
+      },
+      "correct_answer": "B",
+      "explanation": "Leopards = 16% of total. Let total = T. 0.16T = 44. T = 44/0.16 = 275. Verification: 16% × 275 = 44. ✓"
+    },
+    {
+      "id": 45,
+      "source": "Magoosh GRE — Verbal Practice (Paragraph Argument)",
+      "section": "Verbal",
+      "topic": "Critical Reasoning – Evaluate the Argument",
+      "difficulty": "Medium",
+      "passage": "The Green Peas Grocery Store in the remote wealthy enclave of Luxville charges more than the Green Peas Grocery Store in Oak City charges for the same items. Clearly, on any given item, the Green Peas grocery franchise is taking advantage of its location in Luxville to reap higher profits on that item.",
+      "question": "In evaluating the argument, it would be most useful to compare",
+      "options": {
+        "A": "the selection of specialty items in Oak City vs. Luxville.",
+        "B": "the cost of transporting merchandise to Oak City vs. Luxville.",
+        "C": "the average cost of comparable items at other grocery stores in Oak City vs. stores in Luxville.",
+        "D": "the prices charged by Green Peas in the previous year vs. the current year.",
+        "E": "the size of the Green Peas store in Oak City vs. the one in Luxville."
+      },
+      "correct_answer": "B",
+      "explanation": "The argument assumes the higher prices in Luxville represent pure profit exploitation. But higher prices could also reflect higher costs (e.g., transportation to a remote location). Comparing transportation costs (B) would directly test whether the price difference is due to higher costs or higher profit margins. Choice C could reveal whether Luxville prices are typical for that area (weakening the 'exploitation' claim), but it doesn't directly address the profit vs. cost question. Choice A (item selection) is irrelevant. Choices D (price history) and E (store size) don't address the profit-vs-cost distinction."
+    }
+  ]
+}

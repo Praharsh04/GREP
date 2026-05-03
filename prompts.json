@@ -1,0 +1,493 @@
+{
+  "metadata": {
+    "exam": "GRE General Test",
+    "section": "Analytical Writing Assessment",
+    "publisher": "ETS",
+    "current_test_format_as_of_2026": {
+      "official_current_task": "Analyze an Issue",
+      "duration_minutes": 30,
+      "argument_task_status": "Legacy / pre-September 22, 2023 GRE format"
+    },
+    "source_documents": [
+      {
+        "type": "official_pool",
+        "task": "Analyze an Issue",
+        "status": "current",
+        "source": "ETS Issue Topic Pool"
+      },
+      {
+        "type": "official_pool",
+        "task": "Analyze an Argument",
+        "status": "legacy_pre_2023",
+        "source": "ETS Argument Topic Pool"
+      }
+    ],
+    "prompt_text_policy": {
+      "format": "paraphrased",
+      "reason": "Derived from the official ETS pools, but not reproduced verbatim."
+    }
+  },
+  "analyze_issue_current": {
+    "description": "Current GRE AWA task. Test taker evaluates a claim or recommendation and develops a position with reasons and examples.",
+    "count": 30,
+    "prompts": [
+      {
+        "id": "ISSUE_001",
+        "category": "government_science",
+        "prompt": "Governments should place very few restrictions on scientific research and development.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Should science be largely unrestricted, or should public interests justify limits?",
+        "keywords": ["science", "government", "ethics", "innovation", "regulation"]
+      },
+      {
+        "id": "ISSUE_002",
+        "category": "education",
+        "prompt": "The best way to teach is to praise positive actions and ignore negative ones.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Does encouragement work better than correction?",
+        "keywords": ["teaching", "discipline", "motivation", "behavior"]
+      },
+      {
+        "id": "ISSUE_003",
+        "category": "higher_education",
+        "prompt": "University education should be free for all students because society benefits from an educated population.",
+        "instruction_type": "policy_evaluation",
+        "core_question": "Should public funding make higher education universally free?",
+        "keywords": ["college", "tuition", "public funding", "equity"]
+      },
+      {
+        "id": "ISSUE_004",
+        "category": "modern_life",
+        "prompt": "Modern comforts and conveniences make people weaker and less self-reliant.",
+        "instruction_type": "extent_analysis",
+        "core_question": "Do conveniences improve life or reduce independence?",
+        "keywords": ["technology", "luxury", "self-reliance", "resilience"]
+      },
+      {
+        "id": "ISSUE_005",
+        "category": "innovation",
+        "prompt": "Major contributions to a field often come from people who are new to that field rather than from long-time experts.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Can outsiders innovate more effectively than experts?",
+        "keywords": ["expertise", "innovation", "outsiders", "creativity"]
+      },
+      {
+        "id": "ISSUE_006",
+        "category": "national_success",
+        "prompt": "A nation’s greatness should be judged by the well-being of its citizens, not by the achievements of a few famous individuals.",
+        "instruction_type": "agree_disagree",
+        "core_question": "What is the best measure of national greatness?",
+        "keywords": ["nation", "welfare", "achievement", "society"]
+      },
+      {
+        "id": "ISSUE_007",
+        "category": "public_discourse",
+        "prompt": "Progress depends on people with opposing views being willing to debate and challenge one another.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Is disagreement necessary for social or intellectual progress?",
+        "keywords": ["debate", "progress", "opposing views", "dialogue"]
+      },
+      {
+        "id": "ISSUE_008",
+        "category": "education_policy",
+        "prompt": "Schools should guide students away from subjects or careers in which they are unlikely to succeed.",
+        "instruction_type": "policy_evaluation",
+        "core_question": "Should schools protect students from likely failure or let them choose freely?",
+        "keywords": ["school", "career", "guidance", "student choice"]
+      },
+      {
+        "id": "ISSUE_009",
+        "category": "research_funding",
+        "prompt": "Government should not fund research unless the possible consequences of that research are clearly understood.",
+        "instruction_type": "policy_evaluation",
+        "core_question": "Should uncertainty prevent public funding for research?",
+        "keywords": ["research", "funding", "risk", "uncertainty"]
+      },
+      {
+        "id": "ISSUE_010",
+        "category": "talent_development",
+        "prompt": "Society should identify children with special talents early and provide them with intensive training.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Is early specialization beneficial or harmful?",
+        "keywords": ["talent", "children", "training", "gifted education"]
+      },
+      {
+        "id": "ISSUE_011",
+        "category": "academic_assessment",
+        "prompt": "The competition for high grades prevents students from getting a truly meaningful education.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Do grades motivate learning or distort it?",
+        "keywords": ["grades", "competition", "education", "learning"]
+      },
+      {
+        "id": "ISSUE_012",
+        "category": "university_curriculum",
+        "prompt": "Students in college should be required to study subjects outside their chosen field.",
+        "instruction_type": "policy_evaluation",
+        "core_question": "Should universities require broad education beyond specialization?",
+        "keywords": ["college", "curriculum", "liberal education", "breadth"]
+      },
+      {
+        "id": "ISSUE_013",
+        "category": "government_leadership",
+        "prompt": "Public officials should rely on their own judgment rather than simply following public opinion.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Should leaders follow voters or exercise independent judgment?",
+        "keywords": ["government", "leadership", "public opinion", "judgment"]
+      },
+      {
+        "id": "ISSUE_014",
+        "category": "youth_and_ambition",
+        "prompt": "Young people should focus on long-term, realistic goals rather than seek immediate fame or recognition.",
+        "instruction_type": "evaluate_recommendation",
+        "core_question": "Should youth prioritize practicality over recognition?",
+        "keywords": ["youth", "goals", "fame", "career"]
+      },
+      {
+        "id": "ISSUE_015",
+        "category": "ethics",
+        "prompt": "If the goal is important enough, almost any method used to achieve it can be justified.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Do noble ends justify questionable means?",
+        "keywords": ["ethics", "means", "ends", "morality"]
+      },
+      {
+        "id": "ISSUE_016",
+        "category": "arts_humanities",
+        "prompt": "Studying imaginative literature is essential for becoming a well-rounded person.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Is literature necessary for intellectual and personal development?",
+        "keywords": ["literature", "humanities", "education", "empathy"]
+      },
+      {
+        "id": "ISSUE_017",
+        "category": "art",
+        "prompt": "A work of art has real value only if most people can understand it.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Does art need to be accessible to be valuable?",
+        "keywords": ["art", "accessibility", "interpretation", "value"]
+      },
+      {
+        "id": "ISSUE_018",
+        "category": "discovery",
+        "prompt": "Many important discoveries occur by accident while people are trying to solve unrelated problems.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "How important is chance in discovery?",
+        "keywords": ["discovery", "serendipity", "science", "creativity"]
+      },
+      {
+        "id": "ISSUE_019",
+        "category": "history",
+        "prompt": "The main value of history is that it shows people today are not very different from people in the past.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Does history mainly reveal continuity in human nature?",
+        "keywords": ["history", "human nature", "past", "society"]
+      },
+      {
+        "id": "ISSUE_020",
+        "category": "learning",
+        "prompt": "Real learning depends mostly on the student’s own discipline, not on the quality of teachers or schools.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Is learning primarily individual or institutional?",
+        "keywords": ["learning", "discipline", "schools", "motivation"]
+      },
+      {
+        "id": "ISSUE_021",
+        "category": "research_priorities",
+        "prompt": "Researchers should focus on projects that are likely to benefit the greatest number of people.",
+        "instruction_type": "policy_evaluation",
+        "core_question": "Should social utility determine research priorities?",
+        "keywords": ["research", "public benefit", "science", "funding"]
+      },
+      {
+        "id": "ISSUE_022",
+        "category": "politics",
+        "prompt": "Political leaders should pursue practical compromise rather than difficult ideals.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Is political pragmatism better than idealism?",
+        "keywords": ["politics", "compromise", "ideals", "leadership"]
+      },
+      {
+        "id": "ISSUE_023",
+        "category": "risk",
+        "prompt": "People should take risks only after carefully considering the possible consequences.",
+        "instruction_type": "evaluate_recommendation",
+        "core_question": "Should risk-taking always be cautious and calculated?",
+        "keywords": ["risk", "decision-making", "consequences", "caution"]
+      },
+      {
+        "id": "ISSUE_024",
+        "category": "leadership",
+        "prompt": "Leaders are shaped mainly by the demands and challenges placed before them.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Are leaders made by circumstances?",
+        "keywords": ["leadership", "crisis", "character", "experience"]
+      },
+      {
+        "id": "ISSUE_025",
+        "category": "environment",
+        "prompt": "Society should not make extreme economic sacrifices to protect endangered species.",
+        "instruction_type": "agree_disagree",
+        "core_question": "How much should society sacrifice for conservation?",
+        "keywords": ["environment", "endangered species", "economics", "conservation"]
+      },
+      {
+        "id": "ISSUE_026",
+        "category": "technology",
+        "prompt": "The human mind will always be superior to machines because machines are tools created by humans.",
+        "instruction_type": "evaluate_claim",
+        "core_question": "Can machines ever surpass human intelligence?",
+        "keywords": ["technology", "AI", "machines", "human mind"]
+      },
+      {
+        "id": "ISSUE_027",
+        "category": "critical_thinking",
+        "prompt": "People who care deeply about an idea or policy are usually the most willing to criticize it.",
+        "instruction_type": "agree_disagree",
+        "core_question": "Does commitment encourage or reduce criticism?",
+        "keywords": ["criticism", "commitment", "ideas", "policy"]
+      },
+      {
+        "id": "ISSUE_028",
+        "category": "education_philosophy",
+        "prompt": "Some believe formal education liberates the mind, while others believe it limits independent thinking.",
+        "instruction_type": "compare_views",
+        "core_question": "Does education free the mind or constrain it?",
+        "keywords": ["education", "freedom", "creativity", "independence"]
+      },
+      {
+        "id": "ISSUE_029",
+        "category": "government_transparency",
+        "prompt": "Some argue that leaders must sometimes hide information from the public, while others believe citizens have a right to full transparency.",
+        "instruction_type": "compare_views",
+        "core_question": "When, if ever, is government secrecy justified?",
+        "keywords": ["government", "transparency", "security", "public trust"]
+      },
+      {
+        "id": "ISSUE_030",
+        "category": "career_and_education",
+        "prompt": "Students should choose college majors mainly based on job availability after graduation.",
+        "instruction_type": "evaluate_recommendation",
+        "core_question": "Should employment prospects determine academic choices?",
+        "keywords": ["college", "career", "jobs", "major choice"]
+      }
+    ]
+  },
+  "analyze_argument_legacy_pre_2023": {
+    "description": "Legacy GRE AWA task. Test taker critiques the logic of a given argument, identifying assumptions, missing evidence, alternative explanations, and weaknesses.",
+    "count": 30,
+    "prompts": [
+      {
+        "id": "ARGUMENT_001",
+        "category": "business",
+        "scenario": "A company claims that because a similar business increased profits after extending store hours, it should also extend hours to increase revenue.",
+        "task_focus": "Evaluate the assumptions behind the recommendation.",
+        "likely_flaws": ["false analogy", "missing cost analysis", "unclear customer demand"]
+      },
+      {
+        "id": "ARGUMENT_002",
+        "category": "education",
+        "scenario": "A school district argues that replacing textbooks with tablets will improve student performance because students enjoy using technology.",
+        "task_focus": "Identify evidence needed to assess the argument.",
+        "likely_flaws": ["confusing engagement with learning", "implementation costs", "lack of achievement data"]
+      },
+      {
+        "id": "ARGUMENT_003",
+        "category": "health_policy",
+        "scenario": "A town concludes that opening a new fitness center will reduce obesity because residents recently reported wanting more exercise options.",
+        "task_focus": "Analyze the reasoning and evidence.",
+        "likely_flaws": ["survey reliability", "behavior versus stated preference", "other causes of obesity"]
+      },
+      {
+        "id": "ARGUMENT_004",
+        "category": "local_government",
+        "scenario": "A city proposes building more parking lots downtown because business owners blame poor sales on lack of parking.",
+        "task_focus": "Evaluate alternative explanations and assumptions.",
+        "likely_flaws": ["biased source", "no traffic data", "online shopping or pricing alternatives"]
+      },
+      {
+        "id": "ARGUMENT_005",
+        "category": "marketing",
+        "scenario": "A restaurant claims that adding vegetarian dishes will attract more customers because a nearby restaurant became popular after doing so.",
+        "task_focus": "Assess the strength of the comparison.",
+        "likely_flaws": ["false analogy", "other causes of popularity", "local customer preferences"]
+      },
+      {
+        "id": "ARGUMENT_006",
+        "category": "medicine",
+        "scenario": "A clinic recommends a new treatment because patients in a small trial reported feeling better after using it.",
+        "task_focus": "Determine what evidence would strengthen or weaken the claim.",
+        "likely_flaws": ["small sample", "placebo effect", "lack of control group"]
+      },
+      {
+        "id": "ARGUMENT_007",
+        "category": "transportation",
+        "scenario": "A city argues that adding bike lanes will reduce traffic because another city saw traffic decrease after building bike lanes.",
+        "task_focus": "Critique the causal reasoning.",
+        "likely_flaws": ["correlation versus causation", "differences between cities", "missing traffic trend data"]
+      },
+      {
+        "id": "ARGUMENT_008",
+        "category": "employment",
+        "scenario": "A company concludes that allowing remote work will increase productivity because employees say they prefer working from home.",
+        "task_focus": "Analyze assumptions and missing evidence.",
+        "likely_flaws": ["preference versus productivity", "job-type differences", "measurement problems"]
+      },
+      {
+        "id": "ARGUMENT_009",
+        "category": "urban_planning",
+        "scenario": "A mayor recommends creating a public park because parks in other towns have increased property values.",
+        "task_focus": "Evaluate evidence and possible consequences.",
+        "likely_flaws": ["unclear comparability", "costs ignored", "property value causation"]
+      },
+      {
+        "id": "ARGUMENT_010",
+        "category": "consumer_products",
+        "scenario": "A manufacturer claims its product is superior because customer complaints dropped after a redesign.",
+        "task_focus": "Assess whether the conclusion follows.",
+        "likely_flaws": ["complaints may not measure quality", "sales volume unknown", "selection bias"]
+      },
+      {
+        "id": "ARGUMENT_011",
+        "category": "media",
+        "scenario": "A newspaper decides to reduce international coverage because recent surveys show readers prefer local news.",
+        "task_focus": "Examine the assumptions behind the decision.",
+        "likely_flaws": ["survey wording", "short-term preference", "advertiser or subscription effects"]
+      },
+      {
+        "id": "ARGUMENT_012",
+        "category": "environment",
+        "scenario": "A town argues that banning plastic bags will significantly reduce pollution because plastic bags are commonly seen as litter.",
+        "task_focus": "Evaluate the evidence needed.",
+        "likely_flaws": ["scope of pollution unclear", "substitution effects", "enforcement issues"]
+      },
+      {
+        "id": "ARGUMENT_013",
+        "category": "retail",
+        "scenario": "A store owner claims that lowering prices will increase profits because customers often complain that prices are high.",
+        "task_focus": "Critique the business logic.",
+        "likely_flaws": ["profit margin ignored", "complaints may not represent customers", "competitor behavior unknown"]
+      },
+      {
+        "id": "ARGUMENT_014",
+        "category": "tourism",
+        "scenario": "A city proposes building a convention center because nearby cities with convention centers attract many visitors.",
+        "task_focus": "Evaluate the assumptions and evidence.",
+        "likely_flaws": ["false analogy", "demand not established", "construction and maintenance costs"]
+      },
+      {
+        "id": "ARGUMENT_015",
+        "category": "education_policy",
+        "scenario": "A university claims that requiring internships will improve employment outcomes because students with internships often get jobs faster.",
+        "task_focus": "Analyze causation and missing evidence.",
+        "likely_flaws": ["self-selection", "quality of internships", "field differences"]
+      },
+      {
+        "id": "ARGUMENT_016",
+        "category": "public_safety",
+        "scenario": "A town concludes that installing more streetlights will reduce crime because one neighborhood saw fewer crimes after lights were installed.",
+        "task_focus": "Examine the causal assumptions.",
+        "likely_flaws": ["other policing changes", "crime displacement", "limited sample"]
+      },
+      {
+        "id": "ARGUMENT_017",
+        "category": "workplace_policy",
+        "scenario": "A company recommends replacing individual offices with open workspaces because collaboration is important for innovation.",
+        "task_focus": "Assess whether the recommendation is justified.",
+        "likely_flaws": ["collaboration not guaranteed", "productivity tradeoffs", "employee role differences"]
+      },
+      {
+        "id": "ARGUMENT_018",
+        "category": "agriculture",
+        "scenario": "Farmers are advised to switch to a new crop because prices for that crop have risen sharply this year.",
+        "task_focus": "Evaluate market and risk assumptions.",
+        "likely_flaws": ["price volatility", "soil and climate suitability", "future demand unknown"]
+      },
+      {
+        "id": "ARGUMENT_019",
+        "category": "public_health",
+        "scenario": "A health official argues that a city should copy another city’s diet campaign because that city’s heart disease rate declined.",
+        "task_focus": "Analyze alternative explanations.",
+        "likely_flaws": ["demographic differences", "other health interventions", "causation not proven"]
+      },
+      {
+        "id": "ARGUMENT_020",
+        "category": "technology",
+        "scenario": "A school claims that using educational software will raise test scores because students using the software scored higher last year.",
+        "task_focus": "Assess the evidence and assumptions.",
+        "likely_flaws": ["student selection bias", "teacher effects", "baseline scores unknown"]
+      },
+      {
+        "id": "ARGUMENT_021",
+        "category": "real_estate",
+        "scenario": "A developer argues that building luxury apartments will succeed because average household income in the city has increased.",
+        "task_focus": "Evaluate market assumptions.",
+        "likely_flaws": ["income distribution ignored", "housing demand unclear", "competition not considered"]
+      },
+      {
+        "id": "ARGUMENT_022",
+        "category": "transportation_policy",
+        "scenario": "A transit agency recommends raising fares because ridership has increased over the past year.",
+        "task_focus": "Analyze financial and behavioral assumptions.",
+        "likely_flaws": ["price sensitivity", "service quality factors", "ridership may decline"]
+      },
+      {
+        "id": "ARGUMENT_023",
+        "category": "library_services",
+        "scenario": "A library proposes reducing print books and expanding digital resources because younger patrons prefer digital media.",
+        "task_focus": "Assess whether the evidence supports the policy.",
+        "likely_flaws": ["age-group bias", "access inequality", "usage data missing"]
+      },
+      {
+        "id": "ARGUMENT_024",
+        "category": "sports_business",
+        "scenario": "A gym predicts that adding expensive new equipment will increase memberships because members requested better equipment.",
+        "task_focus": "Evaluate costs, demand, and assumptions.",
+        "likely_flaws": ["existing members versus new customers", "cost recovery", "other membership factors"]
+      },
+      {
+        "id": "ARGUMENT_025",
+        "category": "municipal_budget",
+        "scenario": "A town proposes cutting arts funding because attendance at recent arts events has declined.",
+        "task_focus": "Analyze the evidence and alternatives.",
+        "likely_flaws": ["temporary decline", "marketing or scheduling issues", "broader public value ignored"]
+      },
+      {
+        "id": "ARGUMENT_026",
+        "category": "advertising",
+        "scenario": "A company concludes that a new advertising campaign caused sales to rise because sales increased after the ads began.",
+        "task_focus": "Critique the causal inference.",
+        "likely_flaws": ["post hoc reasoning", "seasonal demand", "competitor or pricing changes"]
+      },
+      {
+        "id": "ARGUMENT_027",
+        "category": "restaurant_management",
+        "scenario": "A restaurant owner decides to remove less popular menu items because a survey found customers want a simpler menu.",
+        "task_focus": "Evaluate the survey and recommendation.",
+        "likely_flaws": ["survey sample", "profitability of items", "brand identity effects"]
+      },
+      {
+        "id": "ARGUMENT_028",
+        "category": "college_admissions",
+        "scenario": "A college argues that increasing merit scholarships will attract stronger applicants because peer schools offer many such scholarships.",
+        "task_focus": "Assess the comparison and evidence.",
+        "likely_flaws": ["peer-school differences", "applicant priorities", "budget constraints"]
+      },
+      
+      {
+        "id": "ARGUMENT_029",
+        "category": "public_policy",
+        "scenario": "A city concludes that stricter recycling rules will reduce landfill use because residents say they support environmental policies.",
+        "task_focus": "Analyze the gap between support and results.",
+        "likely_flaws": ["stated support versus compliance", "infrastructure limits", "measurement missing"]
+      },
+      {
+        "id": "ARGUMENT_030",
+        "category": "corporate_strategy",
+        "scenario": "A company recommends expanding into a new region because its product sells well in its current region.",
+        "task_focus": "Evaluate whether expansion is justified.",
+        "likely_flaws": ["market differences", "distribution costs", "brand awareness unknown"]
+      }
+    ]
+  }
+}

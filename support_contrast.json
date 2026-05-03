@@ -1,0 +1,670 @@
+{
+  "support_words": {
+    "less_obvious_support_words": [
+      {
+        "word": "since",
+        "usage_hint": "Gives a reason or explanation, same-side support"
+      },
+      {
+        "word": "make/made",
+        "usage_hint": "Gives a reason or explanation, same-side support"
+      },
+      {
+        "word": "or",
+        "usage_hint": "Adds an alternative on same side; A or B both okay"
+      },
+      {
+        "word": "have/has",
+        "usage_hint": "Adds an alternative on same side; A or B both okay"
+      },
+      {
+        "word": "that",
+        "usage_hint": "Connects ideas, often continues same point"
+      },
+      {
+        "word": "to",
+        "usage_hint": "Connects ideas, often continues same point"
+      },
+      {
+        "word": "as",
+        "usage_hint": "Shows cause or condition, often supporting"
+      },
+      {
+        "word": "unfortunately",
+        "usage_hint": "Shows cause or condition, often supporting"
+      },
+      {
+        "word": "by",
+        "usage_hint": "Describes method or way, same-side detail"
+      },
+      {
+        "word": "show/showing",
+        "usage_hint": "Describes method or way, same-side detail"
+      },
+      {
+        "word": "and",
+        "usage_hint": "Adds similar ideas, pure support or continuation"
+      },
+      {
+        "word": "demonstrate/demonstrating",
+        "usage_hint": "Adds similar ideas, pure support or continuation"
+      },
+      {
+        "word": "also",
+        "usage_hint": "Adds extra supporting point"
+      },
+      {
+        "word": "suggest",
+        "usage_hint": "Adds extra supporting point"
+      },
+      {
+        "word": "moreover",
+        "usage_hint": "Strengthens previous idea, escalates support"
+      },
+      {
+        "word": "render/has rendered",
+        "usage_hint": "Strengthens previous idea, escalates support"
+      },
+      {
+        "word": "likewise",
+        "usage_hint": "Shows similarity, same direction"
+      },
+      {
+        "word": "poses",
+        "usage_hint": "Shows similarity, same direction"
+      },
+      {
+        "word": "equally",
+        "usage_hint": "Shows equal support, parallel idea"
+      },
+      {
+        "word": "for",
+        "usage_hint": "Gives reason or purpose, supports prior claim"
+      },
+      {
+        "word": "when",
+        "usage_hint": "Introduces condition or time, usually same side"
+      },
+      {
+        "word": "because",
+        "usage_hint": "Direct reason, strong support"
+      },
+      {
+        "word": "thus",
+        "usage_hint": "Conclusion or result, same-side logical outcome"
+      },
+      {
+        "word": "through",
+        "usage_hint": "Shows mechanism, supports explanation"
+      },
+      {
+        "word": "if",
+        "usage_hint": "Conditional support; if X, then Y"
+      },
+      {
+        "word": "which",
+        "usage_hint": "Adds defining detail, supports noun or idea"
+      },
+      {
+        "word": "given",
+        "usage_hint": "Introduces assumed fact that supports claim"
+      },
+      {
+        "word": "with",
+        "usage_hint": "Adds accompanying detail, same side"
+      },
+      {
+        "word": "whereby",
+        "usage_hint": "Explains how something happens, supportive"
+      },
+      {
+        "word": "therefore",
+        "usage_hint": "Logical result, strong support"
+      },
+      {
+        "word": "indeed",
+        "usage_hint": "Emphasis or confirmation of previous support"
+      },
+      {
+        "word": "then",
+        "usage_hint": "Next step or result, continues same logic"
+      },
+      {
+        "word": "who",
+        "usage_hint": "Adds information about a person, supportive detail"
+      },
+      {
+        "word": "in",
+        "usage_hint": "Often gives context, usually support"
+      },
+      {
+        "word": "so",
+        "usage_hint": "Often means therefore, same-side result"
+      },
+      {
+        "word": "like (similarity)",
+        "usage_hint": "Shows similarity, supports by analogy"
+      },
+      {
+        "word": "like (examples)",
+        "usage_hint": "Introduces examples, supports abstract idea"
+      },
+      {
+        "word": "after",
+        "usage_hint": "Time sequence, often neutral but can support"
+      },
+      {
+        "word": "whose",
+        "usage_hint": "Adds descriptive detail, same-side"
+      },
+      {
+        "word": "where",
+        "usage_hint": "Adds location context, supporting detail"
+      },
+      {
+        "word": "seems",
+        "usage_hint": "Indicates appearance; often soft support"
+      },
+      {
+        "word": "to be words: is, was, are",
+        "usage_hint": "Link subject to description; maintains same idea"
+      }
+    ],
+    "support_phrases": [
+      {
+        "phrase": "not only...but also",
+        "usage_hint": "Strong additive support; second part usually stronger"
+      },
+      {
+        "phrase": "in addition",
+        "usage_hint": "Adds more evidence on same side"
+      },
+      {
+        "phrase": "for this reason",
+        "usage_hint": "Direct explanation of cause or reason"
+      },
+      {
+        "phrase": "the more adjective, the more adjective",
+        "usage_hint": "Shows direct correlation, reinforces trend or idea"
+      },
+      {
+        "phrase": "serves to",
+        "usage_hint": "Explains purpose or function supporting earlier claim"
+      },
+      {
+        "phrase": "as well as",
+        "usage_hint": "Adds similar item, same-side support"
+      },
+      {
+        "phrase": "so...that",
+        "usage_hint": "Cause to effect, supports strength of result"
+      },
+      {
+        "phrase": "if only",
+        "usage_hint": "Expresses condition or wish, soft support nuance"
+      },
+      {
+        "phrase": "only by",
+        "usage_hint": "Emphasizes unique method, strengthens requirement"
+      },
+      {
+        "phrase": "resulting from",
+        "usage_hint": "Explains origin or cause, support"
+      },
+      {
+        "phrase": "in order to",
+        "usage_hint": "Purpose, same-side explanation"
+      },
+      {
+        "phrase": "just as",
+        "usage_hint": "Aligns two similar ideas, parallel support"
+      },
+      {
+        "phrase": "seem like",
+        "usage_hint": "Suggests appearance supporting interpretation"
+      },
+      {
+        "phrase": "no choice but to",
+        "usage_hint": "Emphasizes inevitability, strong support for decision"
+      },
+      {
+        "phrase": "only with",
+        "usage_hint": "Restricts condition, highlights key support factor"
+      },
+      {
+        "phrase": "leads to / leading to / led to",
+        "usage_hint": "Cause to effect, supportive logic"
+      },
+      {
+        "phrase": "from this",
+        "usage_hint": "Draws conclusion from prior information, same-side"
+      },
+      {
+        "phrase": "such as",
+        "usage_hint": "Introduces examples, supporting evidence"
+      },
+      {
+        "phrase": "in light of",
+        "usage_hint": "Reinterprets using evidence, but still same-side"
+      },
+      {
+        "phrase": "have a tendency toward",
+        "usage_hint": "Indicates trend that supports argument"
+      },
+      {
+        "phrase": "tends to",
+        "usage_hint": "Soft generalization, mild support"
+      }
+    ],
+    "support_punctuation": [
+      {
+        "name": "period",
+        "symbol": ".",
+        "usage_hint": "Ends statement; supports by separating clear ideas"
+      },
+      {
+        "name": "semi-colon",
+        "symbol": ";",
+        "usage_hint": "Links closely related, usually same-side ideas"
+      },
+      {
+        "name": "colon",
+        "symbol": ":",
+        "usage_hint": "Introduces explanation, list, or example"
+      },
+      {
+        "name": "comma",
+        "symbol": ",",
+        "usage_hint": "Adds clauses or phrases that usually support or clarify"
+      },
+      {
+        "name": "em dash",
+        "symbol": "—",
+        "usage_hint": "Adds emphasis or explanation, often supportive"
+      },
+      {
+        "name": "parentheses",
+        "symbol": "( )",
+        "usage_hint": "Insert extra supportive or clarifying information"
+      }
+    ],
+    "extreme_emphasis_words": [
+      {
+        "word": "even",
+        "usage_hint": "Emphasizes degree, strengthens point"
+      },
+      {
+        "word": "eventually",
+        "usage_hint": "Shows eventual result, supports narrative"
+      },
+      {
+        "word": "at worst",
+        "usage_hint": "Sets lower bound, often supportive in argument framing"
+      },
+      {
+        "word": "at most",
+        "usage_hint": "Sets upper bound; can support limitation"
+      },
+      {
+        "word": "in the end",
+        "usage_hint": "Final result, supports conclusion"
+      },
+      {
+        "word": "ultimately",
+        "usage_hint": "Ultimate reason or result, strong support"
+      },
+      {
+        "word": "downright",
+        "usage_hint": "Strong emphasis, intensifies claim"
+      }
+    ],
+    "previously_referenced_neutral_words": [
+      {
+        "word": "this",
+        "usage_hint": "Refers back to idea, keeps same side"
+      },
+      {
+        "word": "these",
+        "usage_hint": "Same as this but plural, maintains support chain"
+      },
+      {
+        "word": "that",
+        "usage_hint": "Refers back, keeps logical focus"
+      },
+      {
+        "word": "his/her",
+        "usage_hint": "Reference, supportive detail"
+      },
+      {
+        "word": "its",
+        "usage_hint": "Possessive, supports description"
+      },
+      {
+        "word": "those",
+        "usage_hint": "Refers to earlier group, same-side continuity"
+      },
+      {
+        "word": "their",
+        "usage_hint": "Possessive, keeps reference consistent"
+      },
+      {
+        "word": "such",
+        "usage_hint": "Refers to previously described type, supports continuity"
+      },
+      {
+        "word": "the",
+        "usage_hint": "Specifies known thing, keeps context"
+      },
+      {
+        "word": "equal",
+        "usage_hint": "Indicates sameness, same-side relation"
+      },
+      {
+        "word": "equally",
+        "usage_hint": "Balances support on two sides of same argument"
+      },
+      {
+        "word": "likewise",
+        "usage_hint": "Adds parallel support"
+      },
+      {
+        "word": "or",
+        "usage_hint": "Sometimes neutral; can join alternatives without flip"
+      },
+      {
+        "word": "aforementioned",
+        "usage_hint": "Refers back to earlier idea, maintains same side"
+      },
+      {
+        "word": "similar",
+        "usage_hint": "Shows similarity, supportive analogy"
+      },
+      {
+        "word": "similarly",
+        "usage_hint": "Parallel idea, same direction"
+      },
+      {
+        "word": "of course",
+        "usage_hint": "Emphasizes obvious support"
+      }
+    ]
+  },
+  "contrast_words": {
+    "less_obvious_contrast_words": [
+      {
+        "word": "but",
+        "usage_hint": "Strong contrast; flips or limits prior idea"
+      },
+      {
+        "word": "belie",
+        "usage_hint": "Strong contrast; flips or limits prior idea"
+      },
+      {
+        "word": "despite",
+        "usage_hint": "Introduces opposing fact that does not stop main claim"
+      },
+      {
+        "word": "fight",
+        "usage_hint": "Introduces opposing fact that does not stop main claim"
+      },
+      {
+        "word": "though",
+        "usage_hint": "Soft contrast or concession"
+      },
+      {
+        "word": "balance",
+        "usage_hint": "Soft contrast or concession"
+      },
+      {
+        "word": "yet",
+        "usage_hint": "Signals unexpected twist or contrast"
+      },
+      {
+        "word": "oscillate",
+        "usage_hint": "Signals unexpected twist or contrast"
+      },
+      {
+        "word": "unless",
+        "usage_hint": "Exception that can reverse expectation"
+      },
+      {
+        "word": "ironic/ironically",
+        "usage_hint": "Exception that can reverse expectation"
+      },
+      {
+        "word": "although",
+        "usage_hint": "Concession plus contrast"
+      },
+      {
+        "word": "paradox/paradoxically",
+        "usage_hint": "Concession plus contrast"
+      },
+      {
+        "word": "however",
+        "usage_hint": "Clear shift to opposite or qualifying point"
+      },
+      {
+        "word": "remarkable/remarkably",
+        "usage_hint": "Clear shift to opposite or qualifying point"
+      },
+      {
+        "word": "rather",
+        "usage_hint": "Replaces previous idea with another"
+      },
+      {
+        "word": "puzzling",
+        "usage_hint": "Replaces previous idea with another"
+      },
+      {
+        "word": "instead",
+        "usage_hint": "Substitution, contrast to expectation"
+      },
+      {
+        "word": "surprise/surprising/surprisingly",
+        "usage_hint": "Substitution, contrast to expectation"
+      },
+      {
+        "word": "unlike",
+        "usage_hint": "Direct contrast between two things"
+      },
+      {
+        "word": "fortunately",
+        "usage_hint": "Direct contrast between two things"
+      },
+      {
+        "word": "even with",
+        "usage_hint": "Contrast: factor present but effect still holds"
+      },
+      {
+        "word": "prevent",
+        "usage_hint": "Contrast: factor present but effect still holds"
+      },
+      {
+        "word": "even though",
+        "usage_hint": "Strong concession, contrasts with result"
+      },
+      {
+        "word": "in reality / real",
+        "usage_hint": "Strong concession, contrasts with result"
+      },
+      {
+        "word": "even as",
+        "usage_hint": "Two things happening in tension or contrast"
+      },
+      {
+        "word": "on the flipside",
+        "usage_hint": "Two things happening in tension or contrast"
+      },
+      {
+        "word": "even in",
+        "usage_hint": "Contrast with expected condition"
+      },
+      {
+        "word": "distract from",
+        "usage_hint": "Contrast with expected condition"
+      },
+      {
+        "word": "on the contrary",
+        "usage_hint": "Direct opposition to prior statement"
+      },
+      {
+        "word": "opposition",
+        "usage_hint": "Direct opposition to prior statement"
+      },
+      {
+        "word": "even if",
+        "usage_hint": "Hypothetical concession, maintains contrast"
+      },
+      {
+        "word": "versus",
+        "usage_hint": "Hypothetical concession, maintains contrast"
+      },
+      {
+        "word": "than",
+        "usage_hint": "Comparison; can highlight contrast"
+      },
+      {
+        "word": "pendulum",
+        "usage_hint": "Comparison; can highlight contrast"
+      },
+      {
+        "word": "even when",
+        "usage_hint": "Shows contrast between condition and outcome"
+      },
+      {
+        "word": "force",
+        "usage_hint": "Shows contrast between condition and outcome"
+      },
+      {
+        "word": "whatever",
+        "usage_hint": "Dismisses specific options, often contrastive tone"
+      },
+      {
+        "word": "counter",
+        "usage_hint": "Dismisses specific options, often contrastive tone"
+      },
+      {
+        "word": "regardless of",
+        "usage_hint": "Contrast: outcome does not depend on expected factor"
+      },
+      {
+        "word": "counterintuitive",
+        "usage_hint": "Contrast: outcome does not depend on expected factor"
+      },
+      {
+        "word": "in fact",
+        "usage_hint": "Sometimes strengthens contrast with surprising truth"
+      },
+      {
+        "word": "curious",
+        "usage_hint": "Sometimes strengthens contrast with surprising truth"
+      },
+      {
+        "word": "without",
+        "usage_hint": "Removes something expected, often contrastive"
+      },
+      {
+        "word": "admittedly",
+        "usage_hint": "Removes something expected, often contrastive"
+      },
+      {
+        "word": "notwithstanding",
+        "usage_hint": "Similar to despite, contrast with expectation"
+      },
+      {
+        "word": "unexpectedly",
+        "usage_hint": "Similar to despite, contrast with expectation"
+      },
+      {
+        "word": "nevertheless",
+        "usage_hint": "Concession then return to main opposing point"
+      },
+      {
+        "word": "typically",
+        "usage_hint": "Concession then return to main opposing point"
+      },
+      {
+        "word": "while",
+        "usage_hint": "Can show contrast between two clauses"
+      },
+      {
+        "word": "no matter",
+        "usage_hint": "Contrast between efforts or conditions and unchanged result"
+      }
+    ],
+    "contrast_phrases": [
+      {
+        "phrase": "stark contrast",
+        "usage_hint": "Explicitly highlights strong opposition"
+      },
+      {
+        "phrase": "on the other hand",
+        "usage_hint": "Introduces alternative or opposing viewpoint"
+      },
+      {
+        "phrase": "for all the",
+        "usage_hint": "Concedes positives, then contrasts with a downside"
+      },
+      {
+        "phrase": "taken a turn",
+        "usage_hint": "Indicates shift, often negative contrast"
+      },
+      {
+        "phrase": "by contrast",
+        "usage_hint": "Direct comparison showing difference"
+      },
+      {
+        "phrase": "rather than",
+        "usage_hint": "Preferences or substitutes, contrasting two options"
+      },
+      {
+        "phrase": "only to",
+        "usage_hint": "Unexpected contrasting outcome after effort"
+      },
+      {
+        "phrase": "far from",
+        "usage_hint": "Strongly opposite to what might be expected"
+      },
+      {
+        "phrase": "in spite of",
+        "usage_hint": "Like despite, maintains main idea against obstacles"
+      },
+      {
+        "phrase": "could have",
+        "usage_hint": "Often hypothetical contrast with reality"
+      },
+      {
+        "phrase": "would have",
+        "usage_hint": "Hypothetical past, contrasted with actual outcome"
+      },
+      {
+        "phrase": "might have",
+        "usage_hint": "Soft hypothetical contrast"
+      },
+      {
+        "phrase": "force to",
+        "usage_hint": "Contrast between choice and compulsion"
+      },
+      {
+        "phrase": "turn into",
+        "usage_hint": "Change from one state to another, often contrasting"
+      },
+      {
+        "phrase": "transform",
+        "usage_hint": "Significant change, often contrasting old versus new"
+      },
+      {
+        "phrase": "to be sure",
+        "usage_hint": "Concedes a point before contrasting main claim"
+      },
+      {
+        "phrase": "sharp contrast",
+        "usage_hint": "Emphasizes degree of difference"
+      },
+      {
+        "phrase": "let alone",
+        "usage_hint": "Highlights how much more unlikely or extreme the second item is"
+      }
+    ]
+  }
+}
