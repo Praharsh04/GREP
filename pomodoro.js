@@ -3,191 +3,293 @@
   const style = document.createElement('style');
   style.textContent = `
     :root {
-      --pomo-bg: rgba(15, 15, 15, 0.7);
-      --pomo-border: rgba(255, 255, 255, 0.08);
-      --pomo-shadow: rgba(0, 0, 0, 0.4);
-      --pomo-divider: rgba(255, 255, 255, 0.1);
+      --timer-bg: rgba(15, 15, 15, 0.75);
+      --timer-border: rgba(255, 255, 255, 0.08);
+      --timer-gold: #c9a84c;
+      --timer-cream: #f5f0e8;
+      --timer-muted: rgba(245, 240, 232, 0.45);
+      --timer-glow: rgba(201, 168, 76, 0.2);
     }
 
     [data-theme="light"] {
-      --pomo-bg: rgba(255, 255, 255, 0.8);
-      --pomo-border: rgba(0, 0, 0, 0.1);
-      --pomo-shadow: rgba(0, 0, 0, 0.1);
-      --pomo-divider: rgba(0, 0, 0, 0.1);
+      --timer-bg: rgba(255, 255, 255, 0.85);
+      --timer-border: rgba(0, 0, 0, 0.08);
+      --timer-gold: #9a7b2c;
+      --timer-cream: #1a1918;
+      --timer-muted: rgba(26, 25, 24, 0.6);
+      --timer-glow: rgba(154, 123, 44, 0.15);
     }
 
-    .pomodoro-container {
+    .study-pill {
       position: fixed;
-      top: 12px;
-      right: 12px;
-      z-index: 2100;
+      top: 20px;
+      right: 20px;
+      z-index: 2500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 16px;
+      background: var(--timer-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--timer-border);
+      border-radius: 100px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .study-pill:hover {
+      transform: translateY(-2px);
+      border-color: var(--timer-gold);
+      box-shadow: 0 12px 40px var(--timer-glow);
+    }
+
+    .pill-section {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 5px 12px;
-      background: var(--pomo-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid var(--pomo-border);
-      border-radius: 100px;
-      box-shadow: 0 4px 16px var(--pomo-shadow);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: default;
     }
 
-    .pomodoro-container:hover {
-      transform: scale(1.02);
-      border-color: var(--pomo-border);
-      box-shadow: 0 6px 20px var(--pomo-shadow);
+    .pill-clock {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--timer-muted);
+      letter-spacing: -0.2px;
     }
 
-    .pomodoro-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 8.5px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--muted, rgba(245, 240, 232, 0.45));
-      opacity: 0.8;
-      user-select: none;
-    }
-
-    .pomo-divider {
+    .pill-divider {
       width: 1px;
-      height: 12px;
-      background: var(--pomo-divider);
+      height: 14px;
+      background: var(--timer-border);
     }
 
-    .pomodoro-display {
-      font-family: 'JetBrains Mono', monospace;
+    .pill-timer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .timer-display {
       font-size: 14px;
       font-weight: 700;
-      color: var(--cream, #f5f0e8);
-      min-width: 42px;
+      color: var(--timer-cream);
+      min-width: 44px;
       text-align: center;
-      letter-spacing: -0.5px;
+      cursor: pointer;
+      transition: color 0.2s ease;
     }
 
-    .pomodoro-btns {
+    .timer-display:hover {
+      color: var(--timer-gold);
+    }
+
+    .pill-controls {
       display: flex;
-      gap: 3px;
-      margin-left: 1px;
+      align-items: center;
+      gap: 4px;
     }
 
-    .pomodoro-btns button {
+    .pill-btn {
       background: transparent;
       border: none;
-      color: var(--muted, rgba(245, 240, 232, 0.45));
+      color: var(--timer-muted);
       cursor: pointer;
+      padding: 4px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2px;
       transition: all 0.2s ease;
-      border-radius: 50%;
     }
 
-    .pomodoro-btns button:hover {
-      color: var(--gold, #c9a84c);
+    .pill-btn:hover {
+      color: var(--timer-gold);
       background: rgba(201, 168, 76, 0.1);
     }
 
-    .pomodoro-btns button svg {
-      width: 11px;
-      height: 11px;
+    .pill-btn svg {
+      width: 14px;
+      height: 14px;
     }
 
-    @media (max-width: 900px) {
-      .pomodoro-container {
-        right: 10px;
-        top: 10px;
+    /* Duration Picker Tooltip */
+    .duration-picker {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 8px;
+      background: var(--timer-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--timer-border);
+      border-radius: 12px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.2s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .duration-picker.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .duration-opt {
+      padding: 6px 12px;
+      font-size: 11px;
+      color: var(--timer-muted);
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .duration-opt:hover {
+      background: var(--timer-gold);
+      color: #000;
+    }
+
+    .duration-opt.active {
+      color: var(--timer-gold);
+      background: rgba(201, 168, 76, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .study-pill {
+        top: 12px;
+        right: 12px;
+        padding: 5px 12px;
+        gap: 8px;
       }
+      .pill-clock { display: none; }
+      .pill-divider { display: none; }
     }
   `;
   document.head.appendChild(style);
 
   // ─── HTML ───
-  const container = document.createElement('div');
-  container.className = 'pomodoro-container';
-  container.innerHTML = `
-    <div class="pomodoro-label" id="pomo-label">Focus</div>
-    <div class="pomo-divider"></div>
-    <div class="pomodoro-display" id="pomo-display-text">25:00</div>
-    <div class="pomodoro-btns">
-      <button id="pomo-start-btn" title="Start/Pause">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-      </button>
-      <button id="pomo-reset-btn" title="Reset">
-        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
-      </button>
+  const pill = document.createElement('div');
+  pill.className = 'study-pill';
+  pill.innerHTML = `
+    <div class="pill-section">
+      <div class="pill-clock" id="pill-clock">00:00</div>
+    </div>
+    <div class="pill-divider"></div>
+    <div class="pill-section pill-timer">
+      <div class="timer-display" id="pill-timer-display" title="Click to change duration">25:00</div>
+      <div class="pill-controls">
+        <button class="pill-btn" id="pill-play-pause" title="Start/Pause">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </button>
+        <button class="pill-btn" id="pill-reset" title="Reset">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div class="duration-picker" id="duration-picker">
+      <div class="duration-opt" data-mins="15">15 Minutes</div>
+      <div class="duration-opt active" data-mins="25">25 Minutes</div>
+      <div class="duration-opt" data-mins="45">45 Minutes</div>
+      <div class="duration-opt" data-mins="60">60 Minutes</div>
+      <div class="duration-opt" data-mins="5">Short Break (5m)</div>
     </div>
   `;
-  document.body.appendChild(container);
+  document.body.appendChild(pill);
 
   // ─── LOGIC ───
-  let pomoTime = 1500;
-  let isPomoRunning = false;
-  let pomoMode = 'work';
-  let pomoInterval = null;
+  let timeLeft = 1500;
+  let timerId = null;
+  let isRunning = false;
+  let currentPreset = 25;
 
-  const display = container.querySelector('#pomo-display-text');
-  const label = container.querySelector('#pomo-label');
-  const startBtn = container.querySelector('#pomo-start-btn');
-  const resetBtn = container.querySelector('#pomo-reset-btn');
+  const clockEl = document.getElementById('pill-clock');
+  const timerEl = document.getElementById('pill-timer-display');
+  const playBtn = document.getElementById('pill-play-pause');
+  const resetBtn = document.getElementById('pill-reset');
+  const picker = document.getElementById('duration-picker');
 
-  function updateDisplay() {
-    const mins = Math.floor(pomoTime / 60);
-    const secs = pomoTime % 60;
-    display.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+  // Clock
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const mins = now.getMinutes().toString().padStart(2, '0');
+    clockEl.textContent = `${hours}:${mins}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  // Timer
+  function formatTime(seconds) {
+    const m = Math.floor(seconds / 60);
+    const s = seconds % 60;
+    return `${m}:${s.toString().padStart(2, '0')}`;
   }
 
-  function start() {
-    if (isPomoRunning) return;
-    isPomoRunning = true;
-    startBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>`;
-    pomoInterval = setInterval(() => {
-      pomoTime--;
-      updateDisplay();
-      if (pomoTime <= 0) {
-        clearInterval(pomoInterval);
-        isPomoRunning = false;
-        handleEnd();
+  function updateTimerDisplay() {
+    timerEl.textContent = formatTime(timeLeft);
+  }
+
+  function startTimer() {
+    if (isRunning) return;
+    isRunning = true;
+    playBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>`;
+    timerId = setInterval(() => {
+      timeLeft--;
+      updateTimerDisplay();
+      if (timeLeft <= 0) {
+        clearInterval(timerId);
+        isRunning = false;
+        playBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+        
+        // Sound notification
+        try {
+          new Audio('https://assets.mixkit.co/sfx/preview/mixkit-simple-notification-alert-120.mp3').play();
+        } catch(e) { console.error('Audio play failed', e); }
+        
+        alert('Study session complete!');
       }
     }, 1000);
   }
 
-  function pause() {
-    isPomoRunning = false;
-    clearInterval(pomoInterval);
-    startBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
+  function pauseTimer() {
+    isRunning = false;
+    clearInterval(timerId);
+    playBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
   }
 
-  function reset() {
-    pause();
-    pomoMode = 'work';
-    pomoTime = 1500;
-    label.textContent = 'Focus';
-    updateDisplay();
+  function resetTimer() {
+    pauseTimer();
+    timeLeft = currentPreset * 60;
+    updateTimerDisplay();
   }
 
-  function handleEnd() {
-    try {
-      new Audio('https://assets.mixkit.co/sfx/preview/mixkit-simple-notification-alert-120.mp3').play();
-    } catch(e) {}
+  playBtn.onclick = () => isRunning ? pauseTimer() : startTimer();
+  resetBtn.onclick = resetTimer;
 
-    if (pomoMode === 'work') {
-      pomoMode = 'break';
-      pomoTime = 300;
-      label.textContent = 'Break';
-    } else {
-      pomoMode = 'work';
-      pomoTime = 1500;
-      label.textContent = 'Focus';
-    }
-    updateDisplay();
-    startBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
-  }
+  // Duration Picker
+  timerEl.onclick = (e) => {
+    e.stopPropagation();
+    picker.classList.toggle('show');
+  };
 
-  startBtn.onclick = () => isPomoRunning ? pause() : start();
-  resetBtn.onclick = reset;
+  document.querySelectorAll('.duration-opt').forEach(opt => {
+    opt.onclick = () => {
+      const mins = parseInt(opt.dataset.mins);
+      currentPreset = mins;
+      document.querySelectorAll('.duration-opt').forEach(o => o.classList.remove('active'));
+      opt.classList.add('active');
+      resetTimer();
+      picker.classList.remove('show');
+    };
+  });
+
+  window.onclick = () => picker.classList.remove('show');
 
 })();
