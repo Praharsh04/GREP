@@ -263,24 +263,56 @@ body::before {
   z-index: 5;
 }
 
+.group-collapsible-header {
+  padding: 12px 16px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: var(--surface);
+  user-select: none;
+}
+
+.group-collapsible-header:hover .group-scroll-label {
+  color: var(--gold);
+}
+
+.active-group-indicator {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--gold);
+  background: var(--gold-dim);
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+.active-group-indicator span {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.active-group-indicator span:hover {
+  opacity: 1;
+}
+
 .group-scroll-area {
-  flex: 1;
-  overflow-y: auto;
-  padding: 8px 16px 16px;
-  position: relative;
+  flex: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.2s;
+  max-height: 200px;
 }
 
-.group-scroll-area::-webkit-scrollbar {
-  width: 4px;
-}
-
-.group-scroll-area::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.group-scroll-area::-webkit-scrollbar-thumb {
-  background: var(--border2);
-  border-radius: 4px;
+.group-scroll-area.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .group-scroll-label {
@@ -289,16 +321,40 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--dim);
-  margin-bottom: 10px;
-  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
 }
 
 .group-tabs {
   display: flex;
   gap: 6px;
-  flex-wrap: wrap;
-  border-bottom: none; /* Removed from refactor */
-  padding: 0;
+  overflow-x: auto;
+  padding: 8px 16px 12px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border2) transparent;
+}
+
+.group-tabs::-webkit-scrollbar {
+  height: 3px;
+  display: block;
+}
+
+.group-tabs::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0 16px;
+}
+
+.group-tabs::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 10px;
+}
+
+.group-tabs::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
 }
 
 .sidebar-nav-container {
@@ -2202,8 +2258,11 @@ body::before {
       </button>
       </div>    <div class="sidebar-nav-container">
       <div class="top-controls" id="top-controls"></div>
-      <div class="group-scroll-area">
-        <div class="group-scroll-label">Groups</div>
+      <div class="group-collapsible-header" onclick="toggleGroupsCollapse()">
+        <div class="group-scroll-label">Groups <span id="group-toggle-icon" style="margin-left:4px; font-size:10px;">▾</span></div>
+        <div id="active-group-indicator" class="active-group-indicator"></div>
+      </div>
+      <div class="group-scroll-area" id="group-scroll-area">
         <div class="group-tabs" id="group-tabs"></div>
       </div>
     </div>
@@ -6052,6 +6111,8 @@ async function uploadImage(name, file, isStrategy = false) {
 }
 
 let currentIdx = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 let answered = {};
 let mastered = new Set(JSON.parse(localStorage.getItem('grep-mastered') || '[]'));
 let hitlist = new Set(JSON.parse(localStorage.getItem('grep-hitlist') || '[]'));
@@ -6278,7 +6339,6 @@ function handlePracticeTimeout() {
     hitlist.add(currentIdx);
     mastered.delete(currentIdx);
     updateProgress();
-    saveState();
   }
   
   setTimeout(() => {
@@ -6286,11 +6346,38 @@ function handlePracticeTimeout() {
   }, 2000);
 }
 
+function handleTouchStart(e) {
+  touchStartX = e.changedTouches[0].screenX;
+}
+
+function handleTouchEnd(e) {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+}
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+  if (touchEndX < touchStartX - swipeThreshold) {
+    // Swipe Left -> Next
+    navigate(1);
+  }
+  if (touchEndX > touchStartX + swipeThreshold) {
+    // Swipe Right -> Prev
+    navigate(-1);
+  }
+}
+
 function init() {
   updateThemeIcon();
   fetchMapping();
   buildGroupTabs();
   buildSidebar();
+  
+  // Cleanup: ensure mutual exclusivity between mastered and hitlist
+  mastered.forEach(idx => {
+    if (hitlist.has(idx)) hitlist.delete(idx);
+  });
+  
   updateProgress();
 
   // File Input Listener
@@ -6338,6 +6425,26 @@ function toggleSidebar() {
   }
 }
 
+function toggleGroupsCollapse() {
+  const area = document.getElementById('group-scroll-area');
+  const icon = document.getElementById('group-toggle-icon');
+  const isCollapsed = area.classList.toggle('collapsed');
+  icon.textContent = isCollapsed ? '▸' : '▾';
+}
+
+function updateActiveGroupIndicator() {
+  const indicator = document.getElementById('active-group-indicator');
+  if (!indicator) return;
+  if (activeGroup === 'all') {
+    indicator.style.display = 'none';
+  } else {
+    let label = activeGroup === 'hitlist' ? 'Hitlist' : 
+                activeGroup === 'synonyms' ? 'Synonyms' : `G${activeGroup}`;
+    indicator.innerHTML = `Group: ${label} <span onclick="event.stopPropagation(); setGroup('all')">&times;</span>`;
+    indicator.style.display = 'flex';
+  }
+}
+
 function buildGroupTabs() {
   const topContainer = document.getElementById('top-controls');
   const scrollContainer = document.getElementById('group-tabs');
@@ -6357,13 +6464,26 @@ function buildGroupTabs() {
     let activeClass = g === activeGroup ? ' active' : '';
     return `<button class="gtab${activeClass}" onclick='setGroup(${g})'>G${g}</button>`;
   }).join('');
+
+  updateActiveGroupIndicator();
 }
 
 function setGroup(g) {
   activeGroup = g;
   buildGroupTabs();
   filterWords();
+  updateActiveGroupIndicator();
   
+  // Auto-collapse after selection (except for 'all')
+  if (g !== 'all') {
+    const area = document.getElementById('group-scroll-area');
+    const icon = document.getElementById('group-toggle-icon');
+    if (area && !area.classList.contains('collapsed')) {
+      area.classList.add('collapsed');
+      if (icon) icon.textContent = '▸';
+    }
+  }
+
   if (g === 'synonyms' && !searchTerm) {
     showSynonymClusters();
     return;
@@ -6645,10 +6765,10 @@ function checkPracticeAnswer() {
     feedback.className = "practice-feedback correct";
     input.style.borderBottomColor = "var(--teal)";
     
-    if (!mastered.has(currentIdx)) {
-      mastered.add(currentIdx);
-      updateProgress();
-    }
+    // Mark as mastered and remove from hitlist
+    mastered.add(currentIdx);
+    hitlist.delete(currentIdx);
+    updateProgress();
     
     setTimeout(() => navigate(1), 1500);
   } else {
@@ -6657,6 +6777,11 @@ function checkPracticeAnswer() {
     input.style.borderBottomColor = "#e74c3c";
     input.classList.add('shake');
     setTimeout(() => input.classList.remove('shake'), 500);
+
+    // Mark as hitlist and remove from mastered
+    hitlist.add(currentIdx);
+    mastered.delete(currentIdx);
+    updateProgress();
   }
 }
 
@@ -6734,7 +6859,10 @@ function renderCard() {
           <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--gold); letter-spacing:1px; text-transform:uppercase;">Flashcard Mode</div>
         </div>
 
-        <div class="flashcard-container ${isFlipped ? 'flipped' : ''}" onclick="flipCard()">
+        <div class="flashcard-container ${isFlipped ? 'flipped' : ''}" 
+             onclick="flipCard()"
+             ontouchstart="handleTouchStart(event)"
+             ontouchend="handleTouchEnd(event)">
           <div class="flashcard-inner">
             <div class="flashcard-front">
               <div class="flashcard-word">${w.w}</div>
@@ -6907,6 +7035,11 @@ function answerQuiz(i) {
     hitlist.delete(currentIdx); // Cannot be in both
     updateProgress();
     showToast('✓ Correct - marked as mastered', true);
+  } else {
+    hitlist.add(currentIdx);
+    mastered.delete(currentIdx);
+    updateProgress();
+    showToast('✗ Incorrect - added to Hitlist');
   }
   renderCard();
   buildSidebar();
@@ -6936,7 +7069,6 @@ function toggleHitlist() {
     showToast('★ Added to Hitlist', true);
   }
   updateProgress(); // Sync progress in case mastered was removed
-  saveState();
   renderCard();
   filterWords(); // Refresh the list in case filters are active
 }
