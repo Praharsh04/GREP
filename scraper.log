@@ -1,0 +1,835 @@
+2026-05-13 13:45:15,533 - INFO - Starting scrape for Text Completion. Current count: 11/400
+2026-05-13 13:45:16,224 - INFO - Visiting listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 13:45:20,732 - INFO - Found 53 new questions on page.
+2026-05-13 13:45:20,732 - INFO - Scraping question: https://gre.myprepclub.com/forum/gre-vocab-jam-a-fun-way-to-revise-your-words-daily-37324.html
+2026-05-13 13:45:22,860 - WARNING - Failed to extract valid data from https://gre.myprepclub.com/forum/gre-vocab-jam-a-fun-way-to-revise-your-words-daily-37324.html
+2026-05-13 13:45:23,869 - INFO - Scraping question: https://gre.myprepclub.com/forum/gre-premium-verbal-question-banks-topic-wise-over-500-questions-35983.html
+2026-05-13 13:45:27,350 - INFO - Scraping question: https://gre.myprepclub.com/forum/gre-premium-quant-question-banks-topic-wise-2700-questions-34207.html
+2026-05-13 13:45:31,502 - WARNING - Failed to extract valid data from https://gre.myprepclub.com/forum/gre-premium-quant-question-banks-topic-wise-2700-questions-34207.html
+2026-05-13 13:45:32,517 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-hardest-and-best-text-completion-tc-questions-of-35582.html
+2026-05-13 13:45:36,164 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-the-notion-of-sovereignty-today-often-carries-authoritarian-conn-40372.html
+2026-05-13 13:45:39,313 - INFO - Scraping question: https://gre.myprepclub.com/forum/avant-garde-poetry-is-often-said-to-be-i-conventional-verse-40371.html
+2026-05-13 13:45:42,257 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-industrial-revolution-greatly-improved-physical-living-conditions-36154.html
+2026-05-13 13:45:45,719 - INFO - Scraping question: https://gre.myprepclub.com/forum/telephone-based-public-opinion-polls-are-notoriously-36152.html
+2026-05-13 13:45:48,725 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-strain-of-intellectual-condescension-long-found-in-literary-circle-40373.html
+2026-05-13 13:45:51,839 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-few-thrills-to-be-gleaned-from-kafka-s-writing-fo-12668.html
+2026-05-13 13:45:53,990 - WARNING - Failed to extract valid data from https://gre.myprepclub.com/forum/there-are-few-thrills-to-be-gleaned-from-kafka-s-writing-fo-12668.html
+2026-05-13 13:45:55,000 - INFO - Scraping question: https://gre.myprepclub.com/forum/ambition-is-a-useful-i-that-leads-people-to-great-achievement-but-i-24341.html
+2026-05-13 13:45:58,164 - INFO - Scraping question: https://gre.myprepclub.com/forum/eventually-the-mounted-print-achieved-precisely-the-effect-lin-had-in-40338.html
+2026-05-13 13:46:00,138 - INFO - Saved 54 total questions to tc_sc_rc.json
+2026-05-13 13:46:01,146 - INFO - Scraping question: https://gre.myprepclub.com/forum/unlike-many-peer-reviewed-publications-which-operate-at-a-financial-loss-40341.html
+2026-05-13 13:46:04,131 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-the-chairman-s-new-policies-cut-costs-at-the-time-his-strate-24207.html
+2026-05-13 13:46:07,172 - INFO - Scraping question: https://gre.myprepclub.com/forum/philosophers-of-science-have-long-been-concerned-with-avoiding-any-app-40356.html
+2026-05-13 13:46:10,150 - INFO - Scraping question: https://gre.myprepclub.com/forum/celebrated-scientific-theories-have-long-been-i-popular-40357.html
+2026-05-13 13:46:13,058 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-many-thing-17671.html
+2026-05-13 13:46:14,993 - WARNING - Failed to extract valid data from https://gre.myprepclub.com/forum/there-are-many-thing-17671.html
+2026-05-13 13:46:16,003 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-coloration-strategies-of-certain-invertebrates-are-remarkably-40327.html
+2026-05-13 13:46:18,959 - INFO - Scraping question: https://gre.myprepclub.com/forum/unlike-most-other-serious-journals-which-drain-money-from-their-owners-40337.html
+2026-05-13 13:46:21,931 - INFO - Scraping question: https://gre.myprepclub.com/forum/even-the-most-omnivorous-collectors-of-friends-17648.html
+2026-05-13 13:46:23,831 - WARNING - Failed to extract valid data from https://gre.myprepclub.com/forum/even-the-most-omnivorous-collectors-of-friends-17648.html
+2026-05-13 13:46:24,842 - INFO - Scraping question: https://gre.myprepclub.com/forum/scholars-have-long-observed-that-a-certain-cognitive-leverage-may-be-40329.html
+2026-05-13 13:46:27,838 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-conjecture-regarding-i-water-ice-sublimation-rates-in-th-40328.html
+2026-05-13 13:46:30,748 - INFO - Scraping question: https://gre.myprepclub.com/forum/scant-evidence-suggests-that-by-the-late-medieval-period-the-ability-40330.html
+2026-05-13 13:46:33,686 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-sculptors-of-the-neue-sachlichkeit-movement-approached-their-subje-40305.html
+2026-05-13 13:46:35,581 - INFO - Saved 64 total questions to tc_sc_rc.json
+2026-05-13 13:46:36,582 - INFO - Scraping question: https://gre.myprepclub.com/forum/for-someone-so-unjustifiably-i-success-12675.html
+2026-05-13 13:46:38,515 - WARNING - Failed to extract valid data from https://gre.myprepclub.com/forum/for-someone-so-unjustifiably-i-success-12675.html
+2026-05-13 13:46:39,525 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-different-and-i-versions-about-what-happene-36137.html
+2026-05-13 13:46:42,474 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html
+2026-05-13 13:46:42,478 - ERROR - Error scraping https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html", waiting until "load"
+
+2026-05-13 13:46:43,492 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html
+2026-05-13 13:46:43,494 - ERROR - Error scraping https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html", waiting until "load"
+
+2026-05-13 13:46:44,507 - INFO - Scraping question: https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html
+2026-05-13 13:46:44,511 - ERROR - Error scraping https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html", waiting until "load"
+
+2026-05-13 13:46:45,513 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html
+2026-05-13 13:46:45,515 - ERROR - Error scraping https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html", waiting until "load"
+
+2026-05-13 13:46:46,531 - INFO - Scraping question: https://gre.myprepclub.com/forum/qotd-6-his-theory-purported-that-proper-enjoyment-of-art-2163.html
+2026-05-13 13:46:46,533 - ERROR - Error scraping https://gre.myprepclub.com/forum/qotd-6-his-theory-purported-that-proper-enjoyment-of-art-2163.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/qotd-6-his-theory-purported-that-proper-enjoyment-of-art-2163.html", waiting until "load"
+
+2026-05-13 13:46:47,546 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-can-be-little-doubt-that-by-the-late-medieval-period-the-ability-40287.html
+2026-05-13 13:46:47,547 - ERROR - Error scraping https://gre.myprepclub.com/forum/there-can-be-little-doubt-that-by-the-late-medieval-period-the-ability-40287.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/there-can-be-little-doubt-that-by-the-late-medieval-period-the-ability-40287.html", waiting until "load"
+
+2026-05-13 13:46:48,547 - INFO - Scraping question: https://gre.myprepclub.com/forum/since-parametric-modeling-software-now-affords-architects-the-same-i-40278.html
+2026-05-13 13:46:48,549 - ERROR - Error scraping https://gre.myprepclub.com/forum/since-parametric-modeling-software-now-affords-architects-the-same-i-40278.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/since-parametric-modeling-software-now-affords-architects-the-same-i-40278.html", waiting until "load"
+
+2026-05-13 13:46:49,560 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-modern-science-dismisses-phrenology-as-a-pseudoscience-the-d-40275.html
+2026-05-13 13:46:49,566 - ERROR - Error scraping https://gre.myprepclub.com/forum/although-modern-science-dismisses-phrenology-as-a-pseudoscience-the-d-40275.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/although-modern-science-dismisses-phrenology-as-a-pseudoscience-the-d-40275.html", waiting until "load"
+
+2026-05-13 13:46:50,568 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-aldermoor-s-sweeping-history-of-cartography-the-sections-40277.html
+2026-05-13 13:46:50,570 - ERROR - Error scraping https://gre.myprepclub.com/forum/in-aldermoor-s-sweeping-history-of-cartography-the-sections-40277.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/in-aldermoor-s-sweeping-history-of-cartography-the-sections-40277.html", waiting until "load"
+
+2026-05-13 13:46:51,574 - INFO - Scraping question: https://gre.myprepclub.com/forum/rather-than-inundating-correspondents-with-frequent-briefings-the-adm-40274.html
+2026-05-13 13:46:51,576 - ERROR - Error scraping https://gre.myprepclub.com/forum/rather-than-inundating-correspondents-with-frequent-briefings-the-adm-40274.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/rather-than-inundating-correspondents-with-frequent-briefings-the-adm-40274.html", waiting until "load"
+
+2026-05-13 13:46:52,586 - INFO - Scraping question: https://gre.myprepclub.com/forum/it-is-effortless-to-i-patricia-neal-s-pithy-monograph-on-democracy-40242.html
+2026-05-13 13:46:52,589 - ERROR - Error scraping https://gre.myprepclub.com/forum/it-is-effortless-to-i-patricia-neal-s-pithy-monograph-on-democracy-40242.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/it-is-effortless-to-i-patricia-neal-s-pithy-monograph-on-democracy-40242.html", waiting until "load"
+
+2026-05-13 13:46:53,599 - INFO - Scraping question: https://gre.myprepclub.com/forum/often-the-subject-of-an-engineer-s-or-manager-s-i-the-con-24742.html
+2026-05-13 13:46:53,602 - ERROR - Error scraping https://gre.myprepclub.com/forum/often-the-subject-of-an-engineer-s-or-manager-s-i-the-con-24742.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:46:54,603 - INFO - Scraping question: https://gre.myprepclub.com/forum/professor-emeritus-at-occidental-college-and-the-leader-of-a-15807.html
+2026-05-13 13:46:54,608 - ERROR - Error scraping https://gre.myprepclub.com/forum/professor-emeritus-at-occidental-college-and-the-leader-of-a-15807.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:46:55,617 - INFO - Scraping question: https://gre.myprepclub.com/forum/computational-simulations-mathematical-frameworks-designed-to-mimic-bi-40261.html
+2026-05-13 13:46:55,619 - ERROR - Error scraping https://gre.myprepclub.com/forum/computational-simulations-mathematical-frameworks-designed-to-mimic-bi-40261.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:46:56,630 - INFO - Scraping question: https://gre.myprepclub.com/forum/one-theorist-contends-that-the-insights-gleaned-from-literary-engageme-40260.html
+2026-05-13 13:46:56,633 - ERROR - Error scraping https://gre.myprepclub.com/forum/one-theorist-contends-that-the-insights-gleaned-from-literary-engageme-40260.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:46:57,635 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-rna-viruses-are-widely-acknowledged-as-prevalent-they-are-perha-40258.html
+2026-05-13 13:46:57,637 - ERROR - Error scraping https://gre.myprepclub.com/forum/while-rna-viruses-are-widely-acknowledged-as-prevalent-they-are-perha-40258.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:48:06,556 - INFO - Starting scrape for Text Completion. Current count: 30/400
+2026-05-13 13:48:07,342 - INFO - Visiting listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 13:48:09,500 - INFO - Found 33 new questions on page.
+2026-05-13 13:48:09,500 - INFO - Scraping question: https://gre.myprepclub.com/forum/gre-vocab-jam-a-fun-way-to-revise-your-words-daily-37324.html
+2026-05-13 13:48:12,747 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-few-thrills-to-be-gleaned-from-kafka-s-writing-fo-12668.html
+2026-05-13 13:48:15,943 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-many-thing-17671.html
+2026-05-13 13:48:19,281 - INFO - Scraping question: https://gre.myprepclub.com/forum/even-the-most-omnivorous-collectors-of-friends-17648.html
+2026-05-13 13:48:22,602 - INFO - Scraping question: https://gre.myprepclub.com/forum/for-someone-so-unjustifiably-i-success-12675.html
+2026-05-13 13:48:25,947 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-different-and-i-versions-about-what-happene-36137.html
+2026-05-13 13:48:29,298 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html
+2026-05-13 13:48:32,686 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html
+2026-05-13 13:48:36,027 - INFO - Scraping question: https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html
+2026-05-13 13:48:39,422 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html
+2026-05-13 13:48:41,261 - ERROR - Error scraping https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html: Page.content: Target crashed 
+2026-05-13 13:48:42,765 - INFO - Scraping question: https://gre.myprepclub.com/forum/qotd-6-his-theory-purported-that-proper-enjoyment-of-art-2163.html
+2026-05-13 13:48:42,765 - ERROR - Error scraping https://gre.myprepclub.com/forum/qotd-6-his-theory-purported-that-proper-enjoyment-of-art-2163.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/qotd-6-his-theory-purported-that-proper-enjoyment-of-art-2163.html", waiting until "domcontentloaded"
+
+2026-05-13 13:48:44,266 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-can-be-little-doubt-that-by-the-late-medieval-period-the-ability-40287.html
+2026-05-13 13:48:44,269 - ERROR - Error scraping https://gre.myprepclub.com/forum/there-can-be-little-doubt-that-by-the-late-medieval-period-the-ability-40287.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/there-can-be-little-doubt-that-by-the-late-medieval-period-the-ability-40287.html", waiting until "domcontentloaded"
+
+2026-05-13 13:48:45,780 - INFO - Scraping question: https://gre.myprepclub.com/forum/since-parametric-modeling-software-now-affords-architects-the-same-i-40278.html
+2026-05-13 13:48:45,783 - ERROR - Error scraping https://gre.myprepclub.com/forum/since-parametric-modeling-software-now-affords-architects-the-same-i-40278.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/since-parametric-modeling-software-now-affords-architects-the-same-i-40278.html", waiting until "domcontentloaded"
+
+2026-05-13 13:48:47,286 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-modern-science-dismisses-phrenology-as-a-pseudoscience-the-d-40275.html
+2026-05-13 13:48:47,286 - ERROR - Error scraping https://gre.myprepclub.com/forum/although-modern-science-dismisses-phrenology-as-a-pseudoscience-the-d-40275.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/although-modern-science-dismisses-phrenology-as-a-pseudoscience-the-d-40275.html", waiting until "domcontentloaded"
+
+2026-05-13 13:48:48,799 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-aldermoor-s-sweeping-history-of-cartography-the-sections-40277.html
+2026-05-13 13:48:48,802 - ERROR - Error scraping https://gre.myprepclub.com/forum/in-aldermoor-s-sweeping-history-of-cartography-the-sections-40277.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/in-aldermoor-s-sweeping-history-of-cartography-the-sections-40277.html", waiting until "domcontentloaded"
+
+2026-05-13 13:48:50,316 - INFO - Scraping question: https://gre.myprepclub.com/forum/rather-than-inundating-correspondents-with-frequent-briefings-the-adm-40274.html
+2026-05-13 13:48:50,319 - ERROR - Error scraping https://gre.myprepclub.com/forum/rather-than-inundating-correspondents-with-frequent-briefings-the-adm-40274.html: Page.goto: Page crashed
+Call log:
+  - navigating to "https://gre.myprepclub.com/forum/rather-than-inundating-correspondents-with-frequent-briefings-the-adm-40274.html", waiting until "domcontentloaded"
+
+2026-05-13 13:48:51,825 - INFO - Scraping question: https://gre.myprepclub.com/forum/it-is-effortless-to-i-patricia-neal-s-pithy-monograph-on-democracy-40242.html
+2026-05-13 13:48:51,829 - ERROR - Error scraping https://gre.myprepclub.com/forum/it-is-effortless-to-i-patricia-neal-s-pithy-monograph-on-democracy-40242.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:48:53,335 - INFO - Scraping question: https://gre.myprepclub.com/forum/often-the-subject-of-an-engineer-s-or-manager-s-i-the-con-24742.html
+2026-05-13 13:48:53,338 - ERROR - Error scraping https://gre.myprepclub.com/forum/often-the-subject-of-an-engineer-s-or-manager-s-i-the-con-24742.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:48:54,845 - INFO - Scraping question: https://gre.myprepclub.com/forum/professor-emeritus-at-occidental-college-and-the-leader-of-a-15807.html
+2026-05-13 13:48:54,845 - ERROR - Error scraping https://gre.myprepclub.com/forum/professor-emeritus-at-occidental-college-and-the-leader-of-a-15807.html: Page.goto: Target page, context or browser has been closed
+2026-05-13 13:48:57,451 - INFO - Starting scrape for Text Completion. Current count: 11/400
+2026-05-13 13:48:58,208 - INFO - Visiting listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 13:49:00,492 - INFO - Found 51 new questions on page.
+2026-05-13 13:49:00,492 - INFO - Scraping question: https://gre.myprepclub.com/forum/gre-vocab-jam-a-fun-way-to-revise-your-words-daily-37324.html
+2026-05-13 13:49:04,147 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-hardest-and-best-text-completion-tc-questions-of-35582.html
+2026-05-13 13:49:07,465 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-the-notion-of-sovereignty-today-often-carries-authoritarian-conn-40372.html
+2026-05-13 13:49:10,891 - INFO - Scraping question: https://gre.myprepclub.com/forum/avant-garde-poetry-is-often-said-to-be-i-conventional-verse-40371.html
+2026-05-13 13:49:14,308 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-industrial-revolution-greatly-improved-physical-living-conditions-36154.html
+2026-05-13 13:49:18,061 - INFO - Scraping question: https://gre.myprepclub.com/forum/telephone-based-public-opinion-polls-are-notoriously-36152.html
+2026-05-13 13:49:21,490 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-strain-of-intellectual-condescension-long-found-in-literary-circle-40373.html
+2026-05-13 13:49:24,962 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-few-thrills-to-be-gleaned-from-kafka-s-writing-fo-12668.html
+2026-05-13 13:49:28,382 - INFO - Scraping question: https://gre.myprepclub.com/forum/ambition-is-a-useful-i-that-leads-people-to-great-achievement-but-i-24341.html
+2026-05-13 13:49:30,307 - INFO - Saved 54 total questions to tc_sc_rc.json
+2026-05-13 13:49:31,819 - INFO - Scraping question: https://gre.myprepclub.com/forum/eventually-the-mounted-print-achieved-precisely-the-effect-lin-had-in-40338.html
+2026-05-13 13:49:35,264 - INFO - Scraping question: https://gre.myprepclub.com/forum/unlike-many-peer-reviewed-publications-which-operate-at-a-financial-loss-40341.html
+2026-05-13 13:49:38,650 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-the-chairman-s-new-policies-cut-costs-at-the-time-his-strate-24207.html
+2026-05-13 13:49:42,077 - INFO - Scraping question: https://gre.myprepclub.com/forum/philosophers-of-science-have-long-been-concerned-with-avoiding-any-app-40356.html
+2026-05-13 13:49:45,587 - INFO - Scraping question: https://gre.myprepclub.com/forum/celebrated-scientific-theories-have-long-been-i-popular-40357.html
+2026-05-13 13:49:48,996 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-many-thing-17671.html
+2026-05-13 13:49:50,492 - INFO - Starting scrape for Text Completion. Current count: 20/400
+2026-05-13 13:49:51,274 - INFO - Visiting listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 13:49:52,388 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-coloration-strategies-of-certain-invertebrates-are-remarkably-40327.html
+2026-05-13 13:49:53,569 - INFO - Found 42 new questions on page.
+2026-05-13 13:49:53,569 - INFO - Scraping question: https://gre.myprepclub.com/forum/eventually-the-mounted-print-achieved-precisely-the-effect-lin-had-in-40338.html
+2026-05-13 13:49:55,771 - INFO - Scraping question: https://gre.myprepclub.com/forum/unlike-most-other-serious-journals-which-drain-money-from-their-owners-40337.html
+2026-05-13 13:49:57,212 - INFO - Scraping question: https://gre.myprepclub.com/forum/unlike-many-peer-reviewed-publications-which-operate-at-a-financial-loss-40341.html
+2026-05-13 13:49:59,163 - INFO - Scraping question: https://gre.myprepclub.com/forum/even-the-most-omnivorous-collectors-of-friends-17648.html
+2026-05-13 13:50:00,579 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-the-chairman-s-new-policies-cut-costs-at-the-time-his-strate-24207.html
+2026-05-13 13:50:01,021 - ERROR - Error scraping https://gre.myprepclub.com/forum/even-the-most-omnivorous-collectors-of-friends-17648.html: Page.content: Target crashed 
+2026-05-13 13:50:02,528 - INFO - Scraping question: https://gre.myprepclub.com/forum/scholars-have-long-observed-that-a-certain-cognitive-leverage-may-be-40329.html
+2026-05-13 13:50:02,533 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/scholars-have-long-observed-that-a-certain-cognitive-leverage-may-be-40329.html
+2026-05-13 13:50:02,533 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/scholars-have-long-observed-that-a-certain-cognitive-leverage-may-be-40329.html
+2026-05-13 13:50:03,986 - INFO - Scraping question: https://gre.myprepclub.com/forum/philosophers-of-science-have-long-been-concerned-with-avoiding-any-app-40356.html
+2026-05-13 13:50:04,034 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-conjecture-regarding-i-water-ice-sublimation-rates-in-th-40328.html
+2026-05-13 13:50:04,037 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/the-conjecture-regarding-i-water-ice-sublimation-rates-in-th-40328.html
+2026-05-13 13:50:04,037 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-conjecture-regarding-i-water-ice-sublimation-rates-in-th-40328.html
+2026-05-13 13:50:05,547 - INFO - Scraping question: https://gre.myprepclub.com/forum/scant-evidence-suggests-that-by-the-late-medieval-period-the-ability-40330.html
+2026-05-13 13:50:05,551 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/scant-evidence-suggests-that-by-the-late-medieval-period-the-ability-40330.html
+2026-05-13 13:50:05,551 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/scant-evidence-suggests-that-by-the-late-medieval-period-the-ability-40330.html
+2026-05-13 13:50:07,055 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-sculptors-of-the-neue-sachlichkeit-movement-approached-their-subje-40305.html
+2026-05-13 13:50:07,058 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/the-sculptors-of-the-neue-sachlichkeit-movement-approached-their-subje-40305.html
+2026-05-13 13:50:07,058 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-sculptors-of-the-neue-sachlichkeit-movement-approached-their-subje-40305.html
+2026-05-13 13:50:07,317 - INFO - Scraping question: https://gre.myprepclub.com/forum/celebrated-scientific-theories-have-long-been-i-popular-40357.html
+2026-05-13 13:50:08,560 - INFO - Scraping question: https://gre.myprepclub.com/forum/for-someone-so-unjustifiably-i-success-12675.html
+2026-05-13 13:50:08,563 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/for-someone-so-unjustifiably-i-success-12675.html
+2026-05-13 13:50:08,563 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/for-someone-so-unjustifiably-i-success-12675.html
+2026-05-13 13:50:10,076 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-different-and-i-versions-about-what-happene-36137.html
+2026-05-13 13:50:10,080 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/there-are-different-and-i-versions-about-what-happene-36137.html
+2026-05-13 13:50:10,081 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/there-are-different-and-i-versions-about-what-happene-36137.html
+2026-05-13 13:50:10,724 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-many-thing-17671.html
+2026-05-13 13:50:11,589 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html
+2026-05-13 13:50:11,592 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html
+2026-05-13 13:50:11,592 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html
+2026-05-13 13:50:13,100 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html
+2026-05-13 13:50:13,102 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html
+2026-05-13 13:50:13,103 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html
+2026-05-13 13:50:14,118 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-coloration-strategies-of-certain-invertebrates-are-remarkably-40327.html
+2026-05-13 13:50:14,609 - INFO - Scraping question: https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html
+2026-05-13 13:50:14,613 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html
+2026-05-13 13:50:14,613 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html
+2026-05-13 13:50:16,124 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html
+2026-05-13 13:50:16,126 - WARNING - Timeout on question page: https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html
+2026-05-13 13:50:16,128 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html
+2026-05-13 13:50:17,616 - INFO - Scraping question: https://gre.myprepclub.com/forum/unlike-most-other-serious-journals-which-drain-money-from-their-owners-40337.html
+2026-05-13 13:50:21,018 - INFO - Scraping question: https://gre.myprepclub.com/forum/even-the-most-omnivorous-collectors-of-friends-17648.html
+2026-05-13 13:50:24,449 - INFO - Scraping question: https://gre.myprepclub.com/forum/scholars-have-long-observed-that-a-certain-cognitive-leverage-may-be-40329.html
+2026-05-13 13:50:26,360 - INFO - Saved 64 total questions to tc_sc_rc.json
+2026-05-13 13:50:27,866 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-conjecture-regarding-i-water-ice-sublimation-rates-in-th-40328.html
+2026-05-13 13:50:31,108 - INFO - Scraping question: https://gre.myprepclub.com/forum/scant-evidence-suggests-that-by-the-late-medieval-period-the-ability-40330.html
+2026-05-13 13:50:34,476 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-sculptors-of-the-neue-sachlichkeit-movement-approached-their-subje-40305.html
+2026-05-13 13:50:37,715 - INFO - Scraping question: https://gre.myprepclub.com/forum/for-someone-so-unjustifiably-i-success-12675.html
+2026-05-13 13:50:41,116 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-are-different-and-i-versions-about-what-happene-36137.html
+2026-05-13 13:50:44,374 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-wayfarer-with-no-companion-but-his-staff-paused-to-exchange-a-word-36132.html
+2026-05-13 13:50:47,772 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-composer-s-predicament-analogous-to-that-of-a-novelist-whose-40306.html
+2026-05-13 13:50:51,180 - INFO - Scraping question: https://gre.myprepclub.com/forum/to-serve-as-credible-i-for-rigorous-academic-writing-40307.html
+2026-05-13 13:50:54,570 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-pronounced-seasonal-philopatry-exhibited-by-many-neotropical-migra-40276.html
+2026-05-13 13:50:57,978 - INFO - Scraping question: https://gre.myprepclub.com/forum/qotd-6-his-theory-purported-that-proper-enjoyment-of-art-2163.html
+2026-05-13 13:51:00,039 - INFO - Saved 74 total questions to tc_sc_rc.json
+2026-05-13 13:51:01,540 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-can-be-little-doubt-that-by-the-late-medieval-period-the-ability-40287.html
+2026-05-13 13:51:04,958 - INFO - Scraping question: https://gre.myprepclub.com/forum/since-parametric-modeling-software-now-affords-architects-the-same-i-40278.html
+2026-05-13 13:51:08,382 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-modern-science-dismisses-phrenology-as-a-pseudoscience-the-d-40275.html
+2026-05-13 13:51:11,772 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-aldermoor-s-sweeping-history-of-cartography-the-sections-40277.html
+2026-05-13 13:51:15,182 - INFO - Scraping question: https://gre.myprepclub.com/forum/rather-than-inundating-correspondents-with-frequent-briefings-the-adm-40274.html
+2026-05-13 13:51:18,574 - INFO - Scraping question: https://gre.myprepclub.com/forum/it-is-effortless-to-i-patricia-neal-s-pithy-monograph-on-democracy-40242.html
+2026-05-13 13:51:22,041 - INFO - Scraping question: https://gre.myprepclub.com/forum/often-the-subject-of-an-engineer-s-or-manager-s-i-the-con-24742.html
+2026-05-13 13:51:25,444 - INFO - Scraping question: https://gre.myprepclub.com/forum/professor-emeritus-at-occidental-college-and-the-leader-of-a-15807.html
+2026-05-13 13:51:28,886 - INFO - Scraping question: https://gre.myprepclub.com/forum/computational-simulations-mathematical-frameworks-designed-to-mimic-bi-40261.html
+2026-05-13 13:51:32,287 - INFO - Scraping question: https://gre.myprepclub.com/forum/one-theorist-contends-that-the-insights-gleaned-from-literary-engageme-40260.html
+2026-05-13 13:51:34,187 - INFO - Saved 84 total questions to tc_sc_rc.json
+2026-05-13 13:51:35,689 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-rna-viruses-are-widely-acknowledged-as-prevalent-they-are-perha-40258.html
+2026-05-13 13:51:39,094 - INFO - Scraping question: https://gre.myprepclub.com/forum/despite-its-superficially-rugged-appearance-the-chihuahuan-desert-is-40259.html
+2026-05-13 13:51:42,540 - INFO - Scraping question: https://gre.myprepclub.com/forum/once-the-formerly-nomadic-people-developed-farming-and-12162.html
+2026-05-13 13:51:45,962 - INFO - Scraping question: https://gre.myprepclub.com/forum/for-the-start-up-16142.html
+2026-05-13 13:51:49,372 - INFO - Scraping question: https://gre.myprepclub.com/forum/our-young-people-whose-sensitivities-have-not-yet-become-22153.html
+2026-05-13 13:51:52,780 - INFO - Scraping question: https://gre.myprepclub.com/forum/when-einstein-asserted-that-god-does-not-throw-dice-he-wa-18173.html
+2026-05-13 13:51:56,219 - INFO - Scraping question: https://gre.myprepclub.com/forum/despite-having-engineered-and-overseen-the-return-of-7836.html
+2026-05-13 13:51:59,649 - INFO - Scraping question: https://gre.myprepclub.com/forum/data-from-the-cassini-probe-initially-characterized-the-hydrocarbon-ba-40241.html
+2026-05-13 13:52:03,113 - INFO - Scraping question: https://gre.myprepclub.com/forum/white-s-reputation-for-weakness-is-almost-all-who-have-40240.html
+2026-05-13 13:52:06,510 - INFO - Scraping question: https://gre.myprepclub.com/forum/patients-suffering-from-chronic-fatigue-syndrome-complain-of-debilitat-35975.html
+2026-05-13 13:52:08,445 - INFO - Saved 94 total questions to tc_sc_rc.json
+2026-05-13 13:52:09,952 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-has-been-much-written-on-the-benefits-of-studying-abroad-while-24287.html
+2026-05-13 13:52:13,340 - INFO - Scraping question: https://gre.myprepclub.com/forum/i-congress-pleas-the-stubborn-clique-of-16157.html
+2026-05-13 13:52:16,748 - INFO - Moving to next page: https://gre.myprepclub.com/forum/p135875
+2026-05-13 13:52:16,748 - INFO - Visiting listing: https://gre.myprepclub.com/forum/p135875
+2026-05-13 13:52:32,958 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/p135875: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:52:33,059 - INFO - Found 0 new questions on page.
+2026-05-13 13:52:33,061 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:52:33,061 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:52:49,109 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:52:49,260 - INFO - Found 0 new questions on page.
+2026-05-13 13:52:49,262 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:52:49,262 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:05,308 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:53:05,406 - INFO - Found 0 new questions on page.
+2026-05-13 13:53:05,407 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:05,408 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:21,446 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:53:21,550 - INFO - Found 0 new questions on page.
+2026-05-13 13:53:21,552 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:21,552 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:37,618 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:53:37,718 - INFO - Found 0 new questions on page.
+2026-05-13 13:53:37,721 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:37,722 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:53,773 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:53:53,873 - INFO - Found 0 new questions on page.
+2026-05-13 13:53:53,874 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:53:53,875 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:09,934 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:54:10,144 - INFO - Found 0 new questions on page.
+2026-05-13 13:54:10,146 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:10,147 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:26,319 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:54:26,422 - INFO - Found 0 new questions on page.
+2026-05-13 13:54:26,425 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:26,425 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:42,469 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:54:42,566 - INFO - Found 0 new questions on page.
+2026-05-13 13:54:42,568 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:42,568 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:58,618 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:54:58,717 - INFO - Found 0 new questions on page.
+2026-05-13 13:54:58,719 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:54:58,720 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:55:14,764 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:55:14,873 - INFO - Found 0 new questions on page.
+2026-05-13 13:55:14,875 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:55:14,876 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:55:30,917 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:55:31,082 - INFO - Found 0 new questions on page.
+2026-05-13 13:55:31,084 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:55:31,084 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:55:47,164 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:55:47,268 - INFO - Found 0 new questions on page.
+2026-05-13 13:55:47,271 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:55:47,271 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:03,342 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:56:03,442 - INFO - Found 0 new questions on page.
+2026-05-13 13:56:03,443 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:03,444 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:19,561 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:56:19,662 - INFO - Found 0 new questions on page.
+2026-05-13 13:56:19,664 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:19,664 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:35,712 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:56:35,821 - INFO - Found 0 new questions on page.
+2026-05-13 13:56:35,824 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:35,825 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:51,984 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:56:52,151 - INFO - Found 0 new questions on page.
+2026-05-13 13:56:52,152 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:56:52,153 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:08,273 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:57:08,379 - INFO - Found 0 new questions on page.
+2026-05-13 13:57:08,381 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:08,382 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:24,502 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:57:24,597 - INFO - Found 0 new questions on page.
+2026-05-13 13:57:24,599 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:24,599 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:40,709 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:57:40,806 - INFO - Found 0 new questions on page.
+2026-05-13 13:57:40,809 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:40,809 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:56,854 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:57:56,951 - INFO - Found 0 new questions on page.
+2026-05-13 13:57:56,952 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:57:56,953 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:58:13,001 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:58:13,166 - INFO - Found 0 new questions on page.
+2026-05-13 13:58:13,169 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:58:13,169 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:58:29,214 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:58:29,313 - INFO - Found 0 new questions on page.
+2026-05-13 13:58:29,315 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:58:29,315 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:58:45,366 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:58:45,465 - INFO - Found 0 new questions on page.
+2026-05-13 13:58:45,467 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:58:45,467 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:01,508 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:59:01,606 - INFO - Found 0 new questions on page.
+2026-05-13 13:59:01,609 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:01,609 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:17,651 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:59:17,748 - INFO - Found 0 new questions on page.
+2026-05-13 13:59:17,750 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:17,750 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:33,785 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:59:33,975 - INFO - Found 0 new questions on page.
+2026-05-13 13:59:33,977 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:33,978 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:50,023 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 13:59:50,123 - INFO - Found 0 new questions on page.
+2026-05-13 13:59:50,125 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 13:59:50,126 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 14:00:06,163 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 14:00:06,266 - INFO - Found 0 new questions on page.
+2026-05-13 14:00:06,269 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 14:00:06,269 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 14:00:10,020 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Page crashed
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 14:00:18,029 - INFO - Starting scrape for Text Completion. Current count: 60/400
+2026-05-13 14:00:18,714 - INFO - Visiting listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:00:21,149 - INFO - Found 2 new questions on page.
+2026-05-13 14:00:21,149 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-has-been-much-written-on-the-benefits-of-studying-abroad-while-24287.html
+2026-05-13 14:00:24,422 - INFO - Scraping question: https://gre.myprepclub.com/forum/i-congress-pleas-the-stubborn-clique-of-16157.html
+2026-05-13 14:00:27,916 - INFO - Moving to next page: https://gre.myprepclub.com/forum/p135875
+2026-05-13 14:00:27,917 - INFO - Visiting listing: https://gre.myprepclub.com/forum/p135875
+2026-05-13 14:00:44,031 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/p135875: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 14:00:44,136 - INFO - Found 0 new questions on page.
+2026-05-13 14:00:44,140 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 14:00:44,141 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 14:01:00,278 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 14:01:00,403 - INFO - Found 0 new questions on page.
+2026-05-13 14:01:00,405 - INFO - Moving to next page: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 14:01:00,406 - INFO - Visiting listing: https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html
+2026-05-13 14:01:03,912 - WARNING - Error or timeout on listing https://gre.myprepclub.com/forum/if-x2-y2-16-and-x-y-x-y-then-which-one-of-the-fol-12919.html: Page.wait_for_selector: Page crashed
+Call log:
+  - waiting for locator(".topic-link") to be visible
+
+2026-05-13 14:01:05,660 - INFO - Starting scrape for Text Completion. Current count: 60/400
+2026-05-13 14:01:06,405 - INFO - Visiting listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:01:08,653 - INFO - Found 2 new questions on page.
+2026-05-13 14:01:08,653 - INFO - Scraping question: https://gre.myprepclub.com/forum/there-has-been-much-written-on-the-benefits-of-studying-abroad-while-24287.html
+2026-05-13 14:01:12,185 - INFO - Scraping question: https://gre.myprepclub.com/forum/i-congress-pleas-the-stubborn-clique-of-16157.html
+2026-05-13 14:01:15,450 - INFO - No more pages for Text Completion
+2026-05-13 14:01:16,103 - INFO - Starting scrape for Sentence Equivalence. Current count: 5/400
+2026-05-13 14:01:16,717 - INFO - Visiting listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/
+2026-05-13 14:01:18,700 - INFO - Found 50 new questions on page.
+2026-05-13 14:01:18,700 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-daily-routines-of-field-botanists-cataloguing-specimens-40374.html
+2026-05-13 14:01:22,336 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-critical-climate-following-the-1972-sao-paulo-bienal-appeared-to-e-40377.html
+2026-05-13 14:01:25,785 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-brainstorming-activity-resulted-in-qquad-ideas-for-how-to-impro-35631.html
+2026-05-13 14:01:29,253 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-the-individual-compositions-in-ferneyhough-s-output-40343.html
+2026-05-13 14:01:32,652 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-the-committee-s-findings-were-in-tone-40351.html
+2026-05-13 14:01:34,568 - INFO - Saved 82 total questions to tc_sc_rc.json
+2026-05-13 14:01:36,079 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-early-critical-reception-of-her-novels-suggested-that-lyrical-digr-40352.html
+2026-05-13 14:01:39,508 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-surgeon-s-task-during-routine-procedures-is-delicate-enough-but-40353.html
+2026-05-13 14:01:42,835 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-historian-argues-that-moral-objections-were-the-primary-motivation-40342.html
+2026-05-13 14:01:46,185 - INFO - Scraping question: https://gre.myprepclub.com/forum/spontaneous-acts-of-public-contrition-in-fraught-interpersonal-dispute-40295.html
+2026-05-13 14:01:49,595 - INFO - Scraping question: https://gre.myprepclub.com/forum/okafor-s-opening-remarks-were-measured-even-but-the-delib-40296.html
+2026-05-13 14:01:52,957 - INFO - Scraping question: https://gre.myprepclub.com/forum/public-expressions-of-remorse-in-high-stakes-diplomatic-negotiations-f-40288.html
+2026-05-13 14:01:56,363 - INFO - Scraping question: https://gre.myprepclub.com/forum/sentence-equivalence-21-space-mission-to-deploy-a-probe-443.html
+2026-05-13 14:01:59,769 - INFO - Scraping question: https://gre.myprepclub.com/forum/plank-lauded-ada-lovelace-as-the-most-consequential-female-mathematici-40272.html
+2026-05-13 14:02:03,165 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-apocryphal-tales-regarding-her-life-are-plentiful-verifiable-bi-40271.html
+2026-05-13 14:02:06,608 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-biographer-perhaps-aspires-to-rehabilitate-the-novelist-s-eclipsed-40270.html
+2026-05-13 14:02:08,529 - INFO - Saved 92 total questions to tc_sc_rc.json
+2026-05-13 14:02:10,037 - INFO - Scraping question: https://gre.myprepclub.com/forum/laurent-cantet-s-time-out-tells-the-true-story-of-a-man-7893.html
+2026-05-13 14:02:13,533 - INFO - Scraping question: https://gre.myprepclub.com/forum/notwithstanding-the-pervasive-human-inclination-to-circumvent-nocicept-40238.html
+2026-05-13 14:02:16,932 - INFO - Scraping question: https://gre.myprepclub.com/forum/trapani-posits-that-republicanism-remained-a-n-faction-withi-40239.html
+2026-05-13 14:02:20,364 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-oral-tradition-of-the-folktale-represents-a-remarkably-40220.html
+2026-05-13 14:02:23,777 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-the-renaissance-west-championed-the-plastic-arts-painting-sculp-40222.html
+2026-05-13 14:02:27,154 - INFO - Scraping question: https://gre.myprepclub.com/forum/because-the-specific-heat-capacity-of-oceanic-water-significantly-exce-40221.html
+2026-05-13 14:02:30,590 - INFO - Scraping question: https://gre.myprepclub.com/forum/sentence-equivalence-q11-nature-versus-nurture-debate-257.html
+2026-05-13 14:02:34,083 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-attempting-to-take-a-photograph-miguel-inadvertently-12377.html
+2026-05-13 14:02:37,415 - INFO - Scraping question: https://gre.myprepclub.com/forum/it-is-devastating-to-the-writer-who-has-crafted-hundreds-of-novels-16747.html
+2026-05-13 14:02:40,795 - INFO - Scraping question: https://gre.myprepclub.com/forum/why-bob-always-seemed-to-seek-out-the-for-dates-wa-20599.html
+2026-05-13 14:02:42,657 - INFO - Saved 102 total questions to tc_sc_rc.json
+2026-05-13 14:02:44,171 - INFO - Scraping question: https://gre.myprepclub.com/forum/having-learned-to-read-by-literally-buying-words-douglass-had-an-intense-sense-of-the-power-of-language-of-the-double-meanings-of-individual-words-irony-was-ingrained-in-him-16721.html
+2026-05-13 14:02:47,547 - INFO - Scraping question: https://gre.myprepclub.com/forum/again-he-had-endeavoured-to-15016.html
+2026-05-13 14:02:50,916 - INFO - Scraping question: https://gre.myprepclub.com/forum/scholars-sense-of-the-uniqueness-of-the-central-17123.html
+2026-05-13 14:02:54,278 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-hill-was-marked-with-a-n-that-belied-the-ab-10071.html
+2026-05-13 14:02:57,731 - INFO - Scraping question: https://gre.myprepclub.com/forum/hoping-for-23142.html
+2026-05-13 14:03:01,057 - INFO - Scraping question: https://gre.myprepclub.com/forum/of-the-two-ancient-kingdoms-of-zaris-and-xylia-the-latter-w-16947.html
+2026-05-13 14:03:04,430 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-increased-number-entering-the-labor-force-has-only-serve-16701.html
+2026-05-13 14:03:07,831 - INFO - Scraping question: https://gre.myprepclub.com/forum/despite-their-initial-fears-most-environmentalists-now-6199.html
+2026-05-13 14:03:11,186 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-he-earned-over-two-hundred-million-dollars-during-his-career-the-boxer-s-6249.html
+2026-05-13 14:03:14,551 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-an-era-in-which-mass-media-is-but-a-thrall-of-its-6248.html
+2026-05-13 14:03:16,473 - INFO - Saved 112 total questions to tc_sc_rc.json
+2026-05-13 14:03:17,987 - INFO - Scraping question: https://gre.myprepclub.com/forum/to-most-western-listeners-traditional-japanese-music-may-sound-21159.html
+2026-05-13 14:03:21,392 - INFO - Scraping question: https://gre.myprepclub.com/forum/while-viruses-are-typically-situated-on-the-nonliving-side-of-the-biot-40174.html
+2026-05-13 14:03:24,796 - INFO - Scraping question: https://gre.myprepclub.com/forum/notwithstanding-the-pervasive-human-inclination-to-circumvent-nocicept-40223.html
+2026-05-13 14:03:28,167 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-engraver-meticulously-reconfigured-several-of-his-plates-with-the-40193.html
+2026-05-13 14:03:31,605 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-rise-of-amateur-writers-online-has-brought-with-it-an-interesting-38595.html
+2026-05-13 14:03:35,037 - INFO - Scraping question: https://gre.myprepclub.com/forum/conjecture-should-not-be-confused-with-the-type-of-evidence-up-35086.html
+2026-05-13 14:03:38,450 - INFO - Scraping question: https://gre.myprepclub.com/forum/those-who-actively-resist-the-impulse-to-expatiate-on-self-indulgent-12724.html
+2026-05-13 14:03:41,947 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-academic-impetus-to-recuperate-the-long-occluded-oeuvres-40160.html
+2026-05-13 14:03:45,393 - INFO - Scraping question: https://gre.myprepclub.com/forum/as-contemporary-enterprises-aggregate-ever-expanding-repositories-of-40161.html
+2026-05-13 14:03:48,791 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-response-to-the-school-23185.html
+2026-05-13 14:03:50,699 - INFO - Saved 122 total questions to tc_sc_rc.json
+2026-05-13 14:03:52,215 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-governance-of-the-fort-ancient-cultural-complex-diverged-sharply-f-40142.html
+2026-05-13 14:03:55,605 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-natural-world-it-appears-is-remarkably-regarding-the-dis-40128.html
+2026-05-13 14:03:59,015 - INFO - Scraping question: https://gre.myprepclub.com/forum/although-the-memoirist-was-lauded-for-her-crystalline-prose-her-refusal-40111.html
+2026-05-13 14:04:02,491 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-tenor-of-the-virtual-forum-grew-so-acrimonious-that-several-contri-40099.html
+2026-05-13 14:04:05,968 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-the-view-of-the-neuroscientist-it-is-entirely-permissible-to-advan-40098.html
+2026-05-13 14:04:09,458 - INFO - No more pages for Sentence Equivalence
+2026-05-13 14:04:10,698 - INFO - Starting scrape for Reading Comprehension. Current count: 8/400
+2026-05-13 14:04:11,316 - INFO - Visiting listing: https://gre.myprepclub.com/forum/reading-comprehension-11/
+2026-05-13 14:04:13,040 - INFO - Found 50 new questions on page.
+2026-05-13 14:04:13,040 - INFO - Scraping question: https://gre.myprepclub.com/forum/people-whose-bodies-cannot-produce-the-enzyme-glutathione-peroxidase-40387.html
+2026-05-13 14:04:14,988 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/people-whose-bodies-cannot-produce-the-enzyme-glutathione-peroxidase-40387.html
+2026-05-13 14:04:16,490 - INFO - Scraping question: https://gre.myprepclub.com/forum/our-new-pediatric-supplement-osteokid-is-enriched-with-vitamin-d-40385.html
+2026-05-13 14:04:19,576 - INFO - Scraping question: https://gre.myprepclub.com/forum/examining-early-twentieth-century-women-expedition-writers-scholar-mi-40384.html
+2026-05-13 14:04:21,523 - INFO - Saved 129 total questions to tc_sc_rc.json
+2026-05-13 14:04:23,036 - INFO - Scraping question: https://gre.myprepclub.com/forum/a-growing-number-of-historians-of-science-have-moved-away-from-the-pos-40383.html
+2026-05-13 14:04:26,406 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-most-vertebrate-species-somatic-growth-decelerates-as-reproductive-40382.html
+2026-05-13 14:04:29,729 - INFO - Scraping question: https://gre.myprepclub.com/forum/medicare-has-announced-the-introduction-of-a-computer-system-to-stream-40163.html
+2026-05-13 14:04:31,590 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/medicare-has-announced-the-introduction-of-a-computer-system-to-stream-40163.html
+2026-05-13 14:04:33,097 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-tension-between-functional-and-ornamental-imperatives-has-shaped-b-40344.html
+2026-05-13 14:04:36,439 - INFO - Scraping question: https://gre.myprepclub.com/forum/experts-estimate-that-insurance-companies-tardiness-in-payi-9993.html
+2026-05-13 14:04:38,292 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/experts-estimate-that-insurance-companies-tardiness-in-payi-9993.html
+2026-05-13 14:04:39,805 - INFO - Scraping question: https://gre.myprepclub.com/forum/new-methods-of-math-education-in-this-country-do-a-disservic-9934.html
+2026-05-13 14:04:41,703 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/new-methods-of-math-education-in-this-country-do-a-disservic-9934.html
+2026-05-13 14:04:43,207 - INFO - Scraping question: https://gre.myprepclub.com/forum/many-buyers-of-fashion-clothing-are-inclined-to-contribute-to-charitab-22069.html
+2026-05-13 14:04:45,074 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/many-buyers-of-fashion-clothing-are-inclined-to-contribute-to-charitab-22069.html
+2026-05-13 14:04:46,587 - INFO - Scraping question: https://gre.myprepclub.com/forum/farmers-in-developing-countries-claim-that-the-u-s-governme-9994.html
+2026-05-13 14:04:48,419 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/farmers-in-developing-countries-claim-that-the-u-s-governme-9994.html
+2026-05-13 14:04:49,930 - INFO - Scraping question: https://gre.myprepclub.com/forum/unlike-juvenile-diabetes-which-is-a-genetic-condition-prese-9940.html
+2026-05-13 14:04:51,791 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/unlike-juvenile-diabetes-which-is-a-genetic-condition-prese-9940.html
+2026-05-13 14:04:53,299 - INFO - Scraping question: https://gre.myprepclub.com/forum/universal-preschool-is-a-misguided-use-of-public-funds-20587.html
+2026-05-13 14:04:55,156 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/universal-preschool-is-a-misguided-use-of-public-funds-20587.html
+2026-05-13 14:04:56,672 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-archaeology-as-in-the-physical-sciences-new-discoveries-frequentl-40322.html
+2026-05-13 14:05:00,022 - INFO - Scraping question: https://gre.myprepclub.com/forum/over-the-past-few-years-retailers-in-the-town-of-statesville-have-23968.html
+2026-05-13 14:05:03,708 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-a-certain-university-course-some-of-the-students-took-their-own-ha-23742.html
+2026-05-13 14:05:05,571 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/in-a-certain-university-course-some-of-the-students-took-their-own-ha-23742.html
+2026-05-13 14:05:07,083 - INFO - Scraping question: https://gre.myprepclub.com/forum/qotd-29-the-atrocities-committed-during-the-second-world-w-2488.html
+2026-05-13 14:05:10,510 - INFO - Scraping question: https://gre.myprepclub.com/forum/homer-s-the-odyssey-is-an-epic-poem-that-put-a-popular-oral-myth-35804.html
+2026-05-13 14:05:13,868 - INFO - Scraping question: https://gre.myprepclub.com/forum/for-17th-century-europeans-the-history-of-eastern-monarchies-like-ev-40225.html
+2026-05-13 14:05:15,776 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/for-17th-century-europeans-the-history-of-eastern-monarchies-like-ev-40225.html
+2026-05-13 14:05:17,278 - INFO - Scraping question: https://gre.myprepclub.com/forum/it-is-frequently-assumed-that-the-mechanization-of-work-has-8655.html
+2026-05-13 14:05:20,853 - INFO - Scraping question: https://gre.myprepclub.com/forum/recent-evidence-from-scientists-has-shown-that-eating-fast-food-can-40273.html
+2026-05-13 14:05:24,278 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-lobbyists-argued-that-because-there-is-no-statistical-evidence-tha-27890.html
+2026-05-13 14:05:26,133 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-lobbyists-argued-that-because-there-is-no-statistical-evidence-tha-27890.html
+2026-05-13 14:05:27,647 - INFO - Scraping question: https://gre.myprepclub.com/forum/scientists-are-discussing-ways-to-remove-excess-carbon-dioxide-from-th-29167.html
+2026-05-13 14:05:29,502 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/scientists-are-discussing-ways-to-remove-excess-carbon-dioxide-from-th-29167.html
+2026-05-13 14:05:31,002 - INFO - Scraping question: https://gre.myprepclub.com/forum/for-200-years-until-world-war-i-french-speaking-wallonia-was-a-techni-40262.html
+2026-05-13 14:05:32,945 - INFO - Saved 139 total questions to tc_sc_rc.json
+2026-05-13 14:05:34,454 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-size-of-the-european-union-market-is-exponentially-larger-than-it-40208.html
+2026-05-13 14:05:37,909 - INFO - Scraping question: https://gre.myprepclub.com/forum/qotd-10x-ray-examination-of-a-recently-discovered-painting-2694.html
+2026-05-13 14:05:39,808 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/qotd-10x-ray-examination-of-a-recently-discovered-painting-2694.html
+2026-05-13 14:05:41,316 - INFO - Scraping question: https://gre.myprepclub.com/forum/og-vpr-21-the-painter-peter-brandon-never-dated-his-works-2867.html
+2026-05-13 14:05:43,214 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/og-vpr-21-the-painter-peter-brandon-never-dated-his-works-2867.html
+2026-05-13 14:05:44,725 - INFO - Scraping question: https://gre.myprepclub.com/forum/advertisement-the-adosis-tennis-racket-will-revolutionize-the-entire-40164.html
+2026-05-13 14:05:46,599 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/advertisement-the-adosis-tennis-racket-will-revolutionize-the-entire-40164.html
+2026-05-13 14:05:48,111 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-incessant-monsoon-rains-are-adding-to-the-misery-of-urban-dwellers-40162.html
+2026-05-13 14:05:50,123 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-incessant-monsoon-rains-are-adding-to-the-misery-of-urban-dwellers-40162.html
+2026-05-13 14:05:51,630 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-concept-of-a-true-constructivist-education-as-envisioned-by-piage-40200.html
+2026-05-13 14:05:53,519 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-concept-of-a-true-constructivist-education-as-envisioned-by-piage-40200.html
+2026-05-13 14:05:55,033 - INFO - Scraping question: https://gre.myprepclub.com/forum/critics-maintain-that-the-fiction-of-herman-melville-1819-1891-has-24471.html
+2026-05-13 14:05:58,522 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-cheetah-the-fastest-animal-on-land-uses-its-incredible-maneuveri-40113.html
+2026-05-13 14:06:00,377 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/the-cheetah-the-fastest-animal-on-land-uses-its-incredible-maneuveri-40113.html
+2026-05-13 14:06:01,879 - INFO - Scraping question: https://gre.myprepclub.com/forum/when-you-hear-the-word-swashbuckler-what-image-comes-to-mind-perha-40094.html
+2026-05-13 14:06:05,326 - INFO - Scraping question: https://gre.myprepclub.com/forum/phenomenology-an-early-twentieth-century-humanist-philosophy-inaugura-40095.html
+2026-05-13 14:06:08,746 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-sole-use-and-sole-object-of-existence-is-enjoyment-or-pleasure-wh-40017.html
+2026-05-13 14:06:12,148 - INFO - Scraping question: https://gre.myprepclub.com/forum/nearly-1-000-coronary-patients-at-a-utah-hospital-were-subjects-in-a-t-40071.html
+2026-05-13 14:06:14,111 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/nearly-1-000-coronary-patients-at-a-utah-hospital-were-subjects-in-a-t-40071.html
+2026-05-13 14:06:15,617 - INFO - Scraping question: https://gre.myprepclub.com/forum/despite-many-innovative-features-the-speed-of-the-new-suzuki-like-th-40047.html
+2026-05-13 14:06:17,532 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/despite-many-innovative-features-the-speed-of-the-new-suzuki-like-th-40047.html
+2026-05-13 14:06:19,033 - INFO - Scraping question: https://gre.myprepclub.com/forum/a-commonly-accepted-definition-of-integrity-in-the-modern-world-is-the-39992.html
+2026-05-13 14:06:22,463 - INFO - Scraping question: https://gre.myprepclub.com/forum/the-polish-rider-ostensibly-painted-by-the-legendary-rembrandt-van-40010.html
+2026-05-13 14:06:25,892 - INFO - Scraping question: https://gre.myprepclub.com/forum/cold-weather-clothing-and-equipment-has-evolved-radically-with-the-adv-39975.html
+2026-05-13 14:06:29,325 - INFO - Scraping question: https://gre.myprepclub.com/forum/among-the-men-and-women-prominent-in-the-public-life-of-america-39967.html
+2026-05-13 14:06:32,747 - INFO - Scraping question: https://gre.myprepclub.com/forum/explanationism-is-the-idea-that-prediction-is-in-itself-insufficient-35666.html
+2026-05-13 14:06:34,701 - INFO - Saved 149 total questions to tc_sc_rc.json
+2026-05-13 14:06:36,204 - INFO - Scraping question: https://gre.myprepclub.com/forum/progress-became-a-theme-in-european-thought-in-about-1750-the-thinker-40033.html
+2026-05-13 14:06:39,659 - INFO - Scraping question: https://gre.myprepclub.com/forum/two-different-cages-of-rabbits-were-given-injections-of-mild-toxins-i-39959.html
+2026-05-13 14:06:41,516 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/two-different-cages-of-rabbits-were-given-injections-of-mild-toxins-i-39959.html
+2026-05-13 14:06:43,027 - INFO - Scraping question: https://gre.myprepclub.com/forum/this-year-pollution-levels-particularly-in-downtown-areas-reached-s-39961.html
+2026-05-13 14:06:44,904 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/this-year-pollution-levels-particularly-in-downtown-areas-reached-s-39961.html
+2026-05-13 14:06:46,420 - INFO - Scraping question: https://gre.myprepclub.com/forum/now-that-the-babies-of-the-post-war-baby-boom-have-reached-retirement-39960.html
+2026-05-13 14:06:48,281 - INFO - Skipping malformed or incomplete question: https://gre.myprepclub.com/forum/now-that-the-babies-of-the-post-war-baby-boom-have-reached-retirement-39960.html
+2026-05-13 14:06:49,785 - INFO - Scraping question: https://gre.myprepclub.com/forum/in-1990-a-harvard-medical-practice-study-came-to-the-conclusion-that-39886.html
+2026-05-13 14:06:53,231 - INFO - Scraping question: https://gre.myprepclub.com/forum/montaigne-s-pursuit-of-the-character-he-called-myself-bashful-insol-39742.html
+2026-05-13 14:06:56,656 - INFO - Scraping question: https://gre.myprepclub.com/forum/whistleblower-laws-as-the-moniker-might-imply-are-pieces-of-legislat-39937.html
+2026-05-13 14:07:00,101 - INFO - Scraping question: https://gre.myprepclub.com/forum/topic10769.html
+2026-05-13 14:07:03,615 - INFO - No more pages for Reading Comprehension
+2026-05-13 14:07:04,962 - INFO - Saved 154 total questions to tc_sc_rc.json
+2026-05-13 14:30:08,402 - INFO - Starting FAST scrape for Text Completion. Current: 62/400
+2026-05-13 14:30:09,101 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:30:19,416 - INFO - Starting FAST scrape for Sentence Equivalence. Current: 55/400
+2026-05-13 14:30:20,037 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/
+2026-05-13 14:30:22,840 - INFO - Starting FAST scrape for Reading Comprehension. Current: 35/400
+2026-05-13 14:30:23,428 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/
+2026-05-13 14:30:47,798 - INFO - Progress: TC 62, SE 55, RC 35
+2026-05-13 14:40:55,218 - INFO - Starting SUPER FAST scrape for Text Completion. Target: 400
+2026-05-13 14:40:56,061 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:41:08,995 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-50.html
+2026-05-13 14:41:08,995 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-50.html
+2026-05-13 14:41:18,777 - INFO - Starting SUPER FAST scrape for Text Completion. Target: 400
+2026-05-13 14:41:19,481 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:41:21,034 - INFO - Progress: TC 80, SE 55, RC 35
+2026-05-13 14:41:21,666 - INFO - Found 54 links on listing.
+2026-05-13 14:41:21,666 - INFO - New URLs: 2, Skipped (already seen): 51
+2026-05-13 14:41:24,340 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-50.html
+2026-05-13 14:41:24,341 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-50.html
+2026-05-13 14:41:28,810 - INFO - Found 54 links on listing.
+2026-05-13 14:41:28,811 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:41:32,506 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:41:32,506 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:41:32,508 - WARNING - Timeout on https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:41:41,006 - INFO - Progress: TC 80, SE 55, RC 35
+2026-05-13 14:41:50,160 - INFO - Starting SUPER FAST scrape for Text Completion. Target: 400
+2026-05-13 14:41:51,289 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:41:53,572 - INFO - Found 54 links on listing.
+2026-05-13 14:41:53,573 - INFO - New URLs: 0, Skipped (already seen): 53
+2026-05-13 14:41:53,574 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-50.html
+2026-05-13 14:41:53,575 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-50.html
+2026-05-13 14:41:54,322 - INFO - Found 54 links on listing.
+2026-05-13 14:41:54,322 - INFO - New URLs: 34, Skipped (already seen): 19
+2026-05-13 14:41:55,477 - INFO - Progress: TC 100, SE 55, RC 35
+2026-05-13 14:42:01,288 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:42:01,289 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:42:01,291 - WARNING - Timeout on https://gre.myprepclub.com/forum/text-completion-16/
+2026-05-13 14:42:12,665 - INFO - Progress: TC 100, SE 55, RC 35
+2026-05-13 14:42:24,747 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-100.html
+2026-05-13 14:42:24,748 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-100.html
+2026-05-13 14:42:25,572 - INFO - Found 54 links on listing.
+2026-05-13 14:42:25,573 - INFO - New URLs: 49, Skipped (already seen): 4
+2026-05-13 14:42:30,983 - INFO - Progress: TC 120, SE 55, RC 35
+2026-05-13 14:42:49,664 - INFO - Progress: TC 140, SE 55, RC 35
+2026-05-13 14:43:08,083 - INFO - Progress: TC 160, SE 55, RC 35
+2026-05-13 14:43:11,063 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-150.html
+2026-05-13 14:43:11,064 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-150.html
+2026-05-13 14:43:12,130 - INFO - Found 54 links on listing.
+2026-05-13 14:43:12,130 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:43:28,412 - INFO - Progress: TC 180, SE 55, RC 35
+2026-05-13 14:43:48,043 - INFO - Progress: TC 200, SE 55, RC 35
+2026-05-13 14:44:01,372 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-200.html
+2026-05-13 14:44:01,372 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-200.html
+2026-05-13 14:44:02,398 - INFO - Found 54 links on listing.
+2026-05-13 14:44:02,399 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:44:09,347 - INFO - Progress: TC 220, SE 55, RC 35
+2026-05-13 14:44:30,212 - INFO - Progress: TC 240, SE 55, RC 35
+2026-05-13 14:44:50,994 - INFO - Progress: TC 260, SE 55, RC 35
+2026-05-13 14:44:54,086 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-250.html
+2026-05-13 14:44:54,086 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-250.html
+2026-05-13 14:44:55,097 - INFO - Found 54 links on listing.
+2026-05-13 14:44:55,098 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:45:12,338 - INFO - Progress: TC 280, SE 55, RC 35
+2026-05-13 14:45:32,517 - INFO - Progress: TC 300, SE 55, RC 35
+2026-05-13 14:45:46,076 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-300.html
+2026-05-13 14:45:46,077 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-300.html
+2026-05-13 14:45:47,002 - INFO - Found 54 links on listing.
+2026-05-13 14:45:47,003 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:45:54,270 - INFO - Progress: TC 320, SE 55, RC 35
+2026-05-13 14:46:15,214 - INFO - Progress: TC 340, SE 55, RC 35
+2026-05-13 14:46:36,224 - INFO - Progress: TC 360, SE 55, RC 35
+2026-05-13 14:46:39,446 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-350.html
+2026-05-13 14:46:39,447 - INFO - Listing: https://gre.myprepclub.com/forum/text-completion-16/index-350.html
+2026-05-13 14:46:40,372 - INFO - Found 54 links on listing.
+2026-05-13 14:46:40,373 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:47:00,341 - INFO - Progress: TC 380, SE 55, RC 35
+2026-05-13 14:47:28,008 - INFO - Progress: TC 400, SE 55, RC 35
+2026-05-13 14:47:28,117 - INFO - Next page: https://gre.myprepclub.com/forum/text-completion-16/index-400.html
+2026-05-13 14:47:29,471 - INFO - Starting SUPER FAST scrape for Sentence Equivalence. Target: 400
+2026-05-13 14:47:30,151 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/
+2026-05-13 14:47:33,130 - INFO - Found 54 links on listing.
+2026-05-13 14:47:33,130 - INFO - New URLs: 0, Skipped (already seen): 53
+2026-05-13 14:47:33,131 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-50.html
+2026-05-13 14:47:33,132 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-50.html
+2026-05-13 14:47:34,134 - INFO - Found 54 links on listing.
+2026-05-13 14:47:34,135 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:47:38,595 - INFO - Progress: TC 400, SE 60, RC 35
+2026-05-13 14:47:55,617 - INFO - Progress: TC 400, SE 80, RC 35
+2026-05-13 14:48:12,301 - INFO - Progress: TC 400, SE 100, RC 35
+2026-05-13 14:48:16,546 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-100.html
+2026-05-13 14:48:16,547 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-100.html
+2026-05-13 14:48:17,441 - INFO - Found 54 links on listing.
+2026-05-13 14:48:17,442 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:48:29,972 - INFO - Progress: TC 400, SE 120, RC 35
+2026-05-13 14:48:45,235 - INFO - Progress: TC 400, SE 140, RC 35
+2026-05-13 14:48:57,010 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-150.html
+2026-05-13 14:48:57,010 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-150.html
+2026-05-13 14:48:57,806 - INFO - Found 54 links on listing.
+2026-05-13 14:48:57,807 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:49:01,908 - INFO - Progress: TC 400, SE 160, RC 35
+2026-05-13 14:49:18,781 - INFO - Progress: TC 400, SE 180, RC 35
+2026-05-13 14:49:35,342 - INFO - Progress: TC 400, SE 200, RC 35
+2026-05-13 14:49:39,446 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-200.html
+2026-05-13 14:49:39,446 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-200.html
+2026-05-13 14:49:40,487 - INFO - Found 54 links on listing.
+2026-05-13 14:49:40,488 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:49:52,847 - INFO - Progress: TC 400, SE 220, RC 35
+2026-05-13 14:50:09,919 - INFO - Progress: TC 400, SE 240, RC 35
+2026-05-13 14:50:23,064 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-250.html
+2026-05-13 14:50:23,065 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-250.html
+2026-05-13 14:50:23,902 - INFO - Found 54 links on listing.
+2026-05-13 14:50:23,904 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:50:27,853 - INFO - Progress: TC 400, SE 260, RC 35
+2026-05-13 14:50:45,102 - INFO - Progress: TC 400, SE 280, RC 35
+2026-05-13 14:51:03,218 - INFO - Progress: TC 400, SE 300, RC 35
+2026-05-13 14:51:07,667 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-300.html
+2026-05-13 14:51:07,668 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-300.html
+2026-05-13 14:51:08,591 - INFO - Found 54 links on listing.
+2026-05-13 14:51:08,591 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:51:21,334 - INFO - Progress: TC 400, SE 320, RC 35
+2026-05-13 14:51:38,715 - INFO - Progress: TC 400, SE 340, RC 35
+2026-05-13 14:51:52,077 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-350.html
+2026-05-13 14:51:52,077 - INFO - Listing: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-350.html
+2026-05-13 14:51:52,916 - INFO - Found 54 links on listing.
+2026-05-13 14:51:52,917 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:51:57,083 - INFO - Progress: TC 400, SE 360, RC 35
+2026-05-13 14:52:14,512 - INFO - Progress: TC 400, SE 380, RC 35
+2026-05-13 14:52:30,664 - INFO - Progress: TC 400, SE 400, RC 35
+2026-05-13 14:52:30,769 - INFO - Next page: https://gre.myprepclub.com/forum/sentence-equivalence-12/index-400.html
+2026-05-13 14:52:32,067 - INFO - Starting SUPER FAST scrape for Reading Comprehension. Target: 400
+2026-05-13 14:52:32,798 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/
+2026-05-13 14:52:35,341 - INFO - Found 55 links on listing.
+2026-05-13 14:52:35,342 - INFO - New URLs: 23, Skipped (already seen): 30
+2026-05-13 14:52:56,788 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-50.html
+2026-05-13 14:52:56,789 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-50.html
+2026-05-13 14:52:57,613 - INFO - Found 55 links on listing.
+2026-05-13 14:52:57,614 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:53:02,687 - INFO - Progress: TC 400, SE 400, RC 40
+2026-05-13 14:53:33,618 - INFO - Progress: TC 400, SE 400, RC 60
+2026-05-13 14:53:46,826 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-100.html
+2026-05-13 14:53:46,826 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-100.html
+2026-05-13 14:53:47,950 - INFO - Found 55 links on listing.
+2026-05-13 14:53:47,951 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:54:09,594 - INFO - Progress: TC 400, SE 400, RC 80
+2026-05-13 14:54:37,450 - INFO - Progress: TC 400, SE 400, RC 100
+2026-05-13 14:54:43,356 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-150.html
+2026-05-13 14:54:43,356 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-150.html
+2026-05-13 14:54:44,347 - INFO - Found 55 links on listing.
+2026-05-13 14:54:44,350 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:55:01,651 - INFO - Progress: TC 400, SE 400, RC 120
+2026-05-13 14:55:30,502 - INFO - Progress: TC 400, SE 400, RC 140
+2026-05-13 14:55:38,380 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-200.html
+2026-05-13 14:55:38,380 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-200.html
+2026-05-13 14:55:39,506 - INFO - Found 55 links on listing.
+2026-05-13 14:55:39,510 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:56:02,874 - INFO - Progress: TC 400, SE 400, RC 160
+2026-05-13 14:56:35,182 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-250.html
+2026-05-13 14:56:35,182 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-250.html
+2026-05-13 14:56:36,374 - INFO - Found 55 links on listing.
+2026-05-13 14:56:36,380 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:56:53,744 - INFO - Progress: TC 400, SE 400, RC 180
+2026-05-13 14:57:26,693 - INFO - Progress: TC 400, SE 400, RC 200
+2026-05-13 14:57:31,100 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-300.html
+2026-05-13 14:57:31,100 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-300.html
+2026-05-13 14:57:32,260 - INFO - Found 55 links on listing.
+2026-05-13 14:57:32,260 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:58:02,256 - INFO - Progress: TC 400, SE 400, RC 220
+2026-05-13 14:58:34,084 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-350.html
+2026-05-13 14:58:34,084 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-350.html
+2026-05-13 14:58:35,440 - INFO - Found 55 links on listing.
+2026-05-13 14:58:35,440 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 14:58:38,680 - INFO - Progress: TC 400, SE 400, RC 240
+2026-05-13 14:59:09,703 - INFO - Progress: TC 400, SE 400, RC 260
+2026-05-13 14:59:34,864 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-400.html
+2026-05-13 14:59:34,869 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-400.html
+2026-05-13 14:59:36,081 - INFO - Found 55 links on listing.
+2026-05-13 14:59:36,081 - INFO - New URLs: 49, Skipped (already seen): 3
+2026-05-13 14:59:48,228 - INFO - Progress: TC 400, SE 400, RC 280
+2026-05-13 15:00:21,917 - INFO - Progress: TC 400, SE 400, RC 300
+2026-05-13 15:00:36,554 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-450.html
+2026-05-13 15:00:36,554 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-450.html
+2026-05-13 15:00:37,933 - INFO - Found 55 links on listing.
+2026-05-13 15:00:37,935 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 15:01:14,478 - INFO - Progress: TC 400, SE 400, RC 320
+2026-05-13 15:01:39,006 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-500.html
+2026-05-13 15:01:39,009 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-500.html
+2026-05-13 15:01:40,114 - INFO - Found 55 links on listing.
+2026-05-13 15:01:40,114 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 15:01:58,650 - INFO - Progress: TC 400, SE 400, RC 340
+2026-05-13 15:02:33,178 - INFO - Progress: TC 400, SE 400, RC 360
+2026-05-13 15:02:33,282 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-550.html
+2026-05-13 15:02:33,282 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-550.html
+2026-05-13 15:02:34,653 - INFO - Found 55 links on listing.
+2026-05-13 15:02:34,654 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 15:03:18,901 - INFO - Progress: TC 400, SE 400, RC 380
+2026-05-13 15:03:24,510 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-600.html
+2026-05-13 15:03:24,510 - INFO - Listing: https://gre.myprepclub.com/forum/reading-comprehension-11/index-600.html
+2026-05-13 15:03:25,745 - INFO - Found 55 links on listing.
+2026-05-13 15:03:25,745 - INFO - New URLs: 50, Skipped (already seen): 3
+2026-05-13 15:04:05,510 - INFO - Progress: TC 400, SE 400, RC 400
+2026-05-13 15:04:05,614 - INFO - Next page: https://gre.myprepclub.com/forum/reading-comprehension-11/index-650.html
+2026-05-13 15:04:07,342 - INFO - Progress: TC 400, SE 400, RC 400
