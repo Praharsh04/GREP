@@ -2429,6 +2429,111 @@ body::before {
   }
 }
 
+/* VERB CARDS & BADGES STYLES */
+.rc-strength-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.rc-strength-badge.strength-general {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.rc-strength-badge.strength-weak {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+.rc-strength-badge.strength-moderate {
+  background: rgba(201, 168, 76, 0.1);
+  color: var(--gold);
+  border: 1px solid var(--gold-glow);
+}
+.rc-strength-badge.strength-strong {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+.rc-strength-badge.strength-verystrong {
+  background: rgba(231, 76, 60, 0.1);
+  color: var(--red);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.rc-verb-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.rc-verb-card:hover {
+  transform: translateY(-2px);
+  background: var(--surface2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.rc-verb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+.rc-verb-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+.rc-verb-actions {
+  display: flex;
+  gap: 8px;
+}
+.rc-verb-action-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rc-verb-action-btn:hover {
+  color: var(--cream);
+  background: rgba(255,255,255,0.05);
+}
+.rc-verb-detail {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.rc-verb-example {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  background: var(--bg);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 2px solid var(--border);
+}
+.rc-verb-memory {
+  font-size: 12px;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 </style>
 </head>
 <body>
@@ -8134,6 +8239,15 @@ function showStrategyDetail(name) {
       setupRCKeyboardNavigation();
       const isBookmarked = localStorage.getItem('gre_rc_bookmarked') === 'true';
       updateRCBookmarkUI(isBookmarked);
+      
+      // Initialize all verb bookmark states
+      const verbCards = document.querySelectorAll('.rc-verb-card');
+      verbCards.forEach(card => {
+        const verbName = card.getAttribute('data-verb');
+        const key = `gre_rc_verb_bookmarked_${verbName}`;
+        const isVerbBookmarked = localStorage.getItem(key) === 'true';
+        updateVerbBookmarkUI(verbName, isVerbBookmarked);
+      });
     }, 100);
   } else {
     const imgUrl = STRATEGY_IMAGE_MAPPING[name.toLowerCase()];
@@ -8444,6 +8558,59 @@ function toggleVerbCategory(index) {
   }
 }
 
+function toggleVerbBookmark(verbName, event) {
+  if (event) event.stopPropagation();
+  const key = `gre_rc_verb_bookmarked_${verbName}`;
+  const isBookmarked = localStorage.getItem(key) === 'true';
+  const newStatus = !isBookmarked;
+  localStorage.setItem(key, newStatus ? 'true' : 'false');
+  updateVerbBookmarkUI(newStatus);
+  showRCToast(newStatus ? `Verb "${verbName}" bookmarked!` : `Bookmark removed for "${verbName}"`);
+}
+
+function updateVerbBookmarkUI(verbName, isBookmarked) {
+  const icon = document.getElementById(`verb-bookmark-icon-${verbName}`);
+  if (icon) {
+    if (isBookmarked) {
+      icon.style.fill = 'var(--gold)';
+      icon.style.stroke = 'var(--gold)';
+    } else {
+      icon.style.fill = 'none';
+      icon.style.stroke = 'currentColor';
+    }
+  }
+}
+
+function copyVerbNotes(verbName, def, strength, example, memory, event) {
+  if (event) event.stopPropagation();
+  const notesText = `${verbName} (Strength: ${strength})
+Category: Function Verbs
+Layman's Meaning: ${def}
+GRE Example: "${example}"
+Memory Tip: ${memory}`;
+
+  navigator.clipboard.writeText(notesText).then(() => {
+    showRCToast(`Copied "${verbName}" notes to clipboard!`);
+  }).catch(() => {
+    showRCToast(`Failed to copy notes.`);
+  });
+}
+
+function getVerbIconSVG(iconName) {
+  const icons = {
+    'speech': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>`,
+    'shield-check': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 11 2 2 4-4"></path></svg>`,
+    'shield-alert': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>`,
+    'search': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`,
+    'scale': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"></line><line x1="5" y1="7" x2="19" y2="7"></line><path d="M5 7c0 4 2 8 7 8m0-8c0 4-2 8-7 8m7-8c0 4 2 8 7 8m0-8c0 4-2 8-7 8"></path></svg>`,
+    'flag': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>`,
+    'lightbulb': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .5 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>`,
+    'brain': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-3.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-3.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2z"></path></svg>`,
+    'folder': `<svg style="width:16px; height:16px; stroke:currentColor; fill:none;" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>`
+  };
+  return icons[iconName] || '';
+}
+
 function toggleAllRCAccordions(expand) {
   const items = document.querySelectorAll('.rc-accordion-item');
   items.forEach(item => {
@@ -8529,18 +8696,67 @@ function searchWithinRCPage(query) {
     items.forEach(item => {
       item.classList.remove('active');
     });
+    const verbCats = document.querySelectorAll('[id^="verb-cat-content-"]');
+    verbCats.forEach(el => el.style.display = 'none');
+    const verbArrows = document.querySelectorAll('[id^="verb-cat-arrow-"]');
+    verbArrows.forEach(el => {
+      el.style.transform = 'rotate(0deg)';
+      el.style.color = 'var(--dim)';
+    });
+    const verbCards = document.querySelectorAll('.rc-verb-card');
+    verbCards.forEach(c => c.style.borderColor = 'var(--border)');
     return;
   }
 
   items.forEach(item => {
+    const isVerbsSection = item.id === 'sec-function-verbs';
     const content = item.querySelector('.rc-accordion-content');
-    const text = content.textContent.toLowerCase();
     
-    if (text.includes(q)) {
-      item.classList.add('active');
-      highlightTextNode(content, q);
+    if (isVerbsSection) {
+      let sectionMatches = false;
+      const verbCards = content.querySelectorAll('.rc-verb-card');
+      verbCards.forEach(card => {
+        const verb = card.getAttribute('data-verb').toLowerCase();
+        const meaning = card.getAttribute('data-meaning').toLowerCase();
+        const cat = card.getAttribute('data-category').toLowerCase();
+        const strength = card.getAttribute('data-strength').toLowerCase();
+        const keywords = card.getAttribute('data-keywords').toLowerCase();
+        
+        const cardMatches = verb.includes(q) || meaning.includes(q) || cat.includes(q) || strength.includes(q) || keywords.includes(q);
+        if (cardMatches) {
+          card.style.borderColor = 'var(--gold)';
+          sectionMatches = true;
+          
+          // Open the category container if collapsed
+          const catContainer = card.closest('[id^="verb-cat-content-"]');
+          if (catContainer) {
+            catContainer.style.display = 'block';
+            const cidx = catContainer.id.replace('verb-cat-content-', '');
+            const arrow = document.getElementById(`verb-cat-arrow-${cidx}`);
+            if (arrow) {
+              arrow.style.transform = 'rotate(180deg)';
+              arrow.style.color = 'var(--gold)';
+            }
+          }
+        } else {
+          card.style.borderColor = 'var(--border)';
+        }
+      });
+      
+      if (sectionMatches) {
+        item.classList.add('active');
+        highlightTextNode(content, q);
+      } else {
+        item.classList.remove('active');
+      }
     } else {
-      item.classList.remove('active');
+      const text = content.textContent.toLowerCase();
+      if (text.includes(q)) {
+        item.classList.add('active');
+        highlightTextNode(content, q);
+      } else {
+        item.classList.remove('active');
+      }
     }
   });
 }
@@ -8733,26 +8949,64 @@ function renderRCStrategiesHTML(s) {
         <div class="strategy-text" style="margin-bottom:20px;">${sec.explanation}</div>
         <div style="display:flex; flex-direction:column; gap:20px;">
           ${sec.categories.map((cat, cidx) => {
-            const isOpp = !!cat.isOpposition;
-            const themeColor = isOpp ? 'var(--red)' : 'var(--gold)';
-            const borderTheme = isOpp ? 'rgba(192, 57, 43, 0.2)' : 'var(--border)';
-            const titleStyle = isOpp ? 'color: var(--red); border-left: 3px solid var(--red); padding-left: 10px; margin-left: -20px;' : 'color: var(--gold);';
+            const themeColor = cat.color || 'var(--gold)';
+            const titleStyle = `color: ${themeColor}; border-left: 3px solid ${themeColor}; padding-left: 10px; margin-left: -20px;`;
+            const catIcon = getVerbIconSVG(cat.icon);
             return `
-              <div style="border: 1px solid var(--border); border-radius: 8px; background: var(--surface2); overflow: hidden; ${isOpp ? 'border-left: 4px solid var(--red);' : ''}">
-                <div onclick="toggleVerbCategory(${cidx})" style="padding:12px 20px; background:var(--surface); cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none;">
-                  <span style="font-weight:bold; font-size:16px; font-family:'Playfair Display',serif; ${titleStyle}">${cat.name}</span>
-                  <span id="verb-cat-arrow-${cidx}" style="font-size:11px; color:var(--dim); transition: transform 0.2s;">▼</span>
+              <div style="border: 1px solid var(--border); border-radius: 8px; background: var(--surface2); overflow: hidden; border-left: 4px solid ${themeColor}; margin-bottom: 12px;">
+                <div onclick="toggleVerbCategory(${cidx})" style="padding:16px 20px; background:var(--surface); cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none;">
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span style="display:flex; align-items:center; color:${themeColor};">${catIcon}</span>
+                    <span style="font-weight:bold; font-size:16px; font-family:'Playfair Display',serif; ${titleStyle}">${cat.name}</span>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace;">${cat.verbs.length} verbs</span>
+                    <span id="verb-cat-arrow-${cidx}" style="font-size:11px; color:var(--dim); transition: transform 0.2s;">▼</span>
+                  </div>
+                </div>
+                <div style="padding: 10px 20px 0; background: var(--surface); border-top: 1px solid var(--border);">
+                  <div style="font-size:13px; color:var(--muted); font-style:italic;">${cat.description}</div>
                 </div>
                 <div id="verb-cat-content-${cidx}" style="display:none; padding:20px; border-top:1px solid var(--border); background:var(--bg);">
                   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:15px;">
-                    ${cat.verbs.map(v => `
-                      <div style="background:var(--surface); border: 1px solid var(--border); padding:16px; border-radius:6px; display:flex; flex-direction:column; gap:8px; text-align:left; transition: border-color 0.2s;" onmouseover="this.style.borderColor='${themeColor}'" onmouseout="this.style.borderColor='var(--border)'">
-                        <div style="font-weight:bold; color:${themeColor}; font-family:'JetBrains Mono',monospace; font-size:16px; border-bottom:1px solid ${borderTheme}; padding-bottom:4px;">${v.verb}</div>
-                        <div style="font-size:13px; color:var(--cream);"><strong>Definition:</strong> ${v.def}</div>
-                        <div style="font-size:13px; color:var(--muted); font-style:italic; background:var(--surface2); padding:6px 10px; border-radius:4px;">"${v.example}"</div>
-                        <div style="font-size:12px; color:${themeColor}; opacity:0.9;"><strong>Memory Tip:</strong> ${v.memory}</div>
-                      </div>
-                    `).join('')}
+                    ${cat.verbs.map(v => {
+                      const strengthClass = v.strength.toLowerCase().replace(/\s+/g, '');
+                      return `
+                        <div class="rc-verb-card" 
+                             data-verb="${v.verb}" 
+                             data-meaning="${v.def}" 
+                             data-category="${cat.name}" 
+                             data-strength="${v.strength}" 
+                             data-keywords="${v.keywords}" 
+                             onmouseover="this.style.borderColor='${themeColor}'" 
+                             onmouseout="this.style.borderColor='var(--border)'">
+                          <div class="rc-verb-header">
+                            <div style="display:flex; align-items:center; gap:8px;">
+                              <span class="rc-verb-title" style="color:${themeColor};">${v.verb}</span>
+                              <span class="rc-strength-badge strength-${strengthClass}">${v.strength}</span>
+                            </div>
+                            <div class="rc-verb-actions">
+                              <button class="rc-verb-action-btn" title="Bookmark Verb" onclick="toggleVerbBookmark('${v.verb.replace(/'/g, "\\'")}', event)">
+                                <svg id="verb-bookmark-icon-${v.verb}" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="transition: fill 0.2s, stroke 0.2s;"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                              </button>
+                              <button class="rc-verb-action-btn" title="Copy Card Notes" onclick="copyVerbNotes('${v.verb.replace(/'/g, "\\'")}', '${v.def.replace(/'/g, "\\'")}', '${v.strength}', '${v.example.replace(/'/g, "\\'")}', '${v.memory.replace(/'/g, "\\'")}', event)">
+                                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="rc-verb-detail">
+                            <strong style="color:var(--gold);">Meaning:</strong> ${v.def}
+                          </div>
+                          <div class="rc-verb-example">
+                            "${v.example}"
+                          </div>
+                          <div class="rc-verb-memory">
+                            <svg width="12" height="12" fill="none" stroke="${themeColor}" stroke-width="2" viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-3.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2z"></path></svg>
+                            <span style="font-weight:600; color:var(--cream);">Memory Tip:</span> <span style="color:${themeColor};">${v.memory}</span>
+                          </div>
+                        </div>
+                      `;
+                    }).join('')}
                   </div>
                 </div>
               </div>

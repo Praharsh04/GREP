@@ -99,7 +99,7 @@
         "title": "2. Finding the Hammer",
         "explanation": "The 'Hammer' is the author's real point. GRE passages often start by presenting a common consensus or historical assumption, and then the author introduces their own view. The Hammer is that corrective thesis.",
         "signal_words": [
-          "Horizontal",
+          "However",
           "Yet",
           "But",
           "Nevertheless",
@@ -293,275 +293,928 @@
         "categories": [
           {
             "name": "General Verbs",
+            "description": "Basic verbs used to introduce ideas, start a discussion, or present basic information without strong stance.",
+            "color": "var(--muted)",
+            "icon": "speech",
             "verbs": [
               {
                 "verb": "Present",
                 "def": "Show or introduce something.",
                 "example": "The author presents evidence.",
-                "memory": "Simply introduces information."
+                "memory": "Simply introduces information.",
+                "strength": "General",
+                "category": "General Verbs",
+                "keywords": "show introduce present offer display state"
               },
               {
                 "verb": "Give",
                 "def": "Provide something.",
                 "example": "The author gives several reasons.",
-                "memory": "Hands information to the reader."
+                "memory": "Hands information to the reader.",
+                "strength": "General",
+                "category": "General Verbs",
+                "keywords": "give provide offer hand state"
               },
               {
                 "verb": "Discuss",
                 "def": "Talk about a topic.",
                 "example": "The article discusses climate change.",
-                "memory": "Just talks about it."
-              },
-              {
-                "verb": "Provide",
-                "def": "Supply information.",
-                "example": "The author provides background.",
-                "memory": "Offers information."
+                "memory": "Just talks about it.",
+                "strength": "General",
+                "category": "General Verbs",
+                "keywords": "discuss talk write debate converse outline"
               },
               {
                 "verb": "Make",
                 "def": "Create or state something.",
                 "example": "The author makes an argument.",
-                "memory": "Produces an idea."
+                "memory": "Produces an idea.",
+                "strength": "General",
+                "category": "General Verbs",
+                "keywords": "make construct state assert formulate create"
+              },
+              {
+                "verb": "Provide",
+                "def": "Supply information.",
+                "example": "The author provides background.",
+                "memory": "Offers information.",
+                "strength": "General",
+                "category": "General Verbs",
+                "keywords": "provide supply give offer present source"
+              },
+              {
+                "verb": "Offer",
+                "def": "Give or suggest something.",
+                "example": "The study offers a new hypothesis.",
+                "memory": "Presents for consideration.",
+                "strength": "Moderate",
+                "category": "General Verbs",
+                "keywords": "offer give suggest present propose supply"
+              },
+              {
+                "verb": "Put forth",
+                "def": "Present an idea.",
+                "example": "The paper puts forth a novel interpretation.",
+                "memory": "Sends out.",
+                "strength": "Strong",
+                "category": "General Verbs",
+                "keywords": "put forth present propose advocate advance state"
+              },
+              {
+                "verb": "Insinuate",
+                "def": "Hint without saying it directly.",
+                "example": "The passage insinuates that prior research was biased.",
+                "memory": "Sneaky hint.",
+                "strength": "Moderate",
+                "category": "General Verbs",
+                "keywords": "insinuate hint imply suggest intimate"
               }
             ]
           },
           {
-            "name": "Support Verbs",
+            "name": "Support / Agreement",
+            "description": "Verbs indicating agreement, validation, backing up, or approval of a thesis or study.",
+            "color": "var(--teal)",
+            "icon": "shield-check",
             "verbs": [
               {
+                "verb": "Concede",
+                "def": "Say, 'Okay, you're right about this part.'",
+                "example": "The scientist concedes that the data is limited.",
+                "memory": "Yields a point.",
+                "strength": "Moderate",
+                "category": "Support / Agreement",
+                "keywords": "concede admit yield grant accept compromise"
+              },
+              {
+                "verb": "Acknowledge",
+                "def": "Admit it's true.",
+                "example": "The author acknowledges the critic's validity.",
+                "memory": "Nods head in agreement.",
+                "strength": "Moderate",
+                "category": "Support / Agreement",
+                "keywords": "acknowledge admit recognize accept nod yield"
+              },
+              {
+                "verb": "Admit",
+                "def": "Accept you were right/wrong.",
+                "example": "He admits the possibility of error.",
+                "memory": "Lets the truth in.",
+                "strength": "Moderate",
+                "category": "Support / Agreement",
+                "keywords": "admit confess concede acknowledge grant"
+              },
+              {
                 "verb": "Support",
-                "def": "Agree with or back up an idea.",
+                "def": "Agree with or back up.",
                 "example": "Evidence supports the claim.",
-                "memory": "Stand behind."
+                "memory": "Stand behind.",
+                "strength": "Strong",
+                "category": "Support / Agreement",
+                "keywords": "support back bolster strengthen assist endorse"
               },
               {
                 "verb": "Advocate",
                 "def": "Strongly support.",
                 "example": "The author advocates stricter laws.",
-                "memory": "Like a lawyer defending an idea."
+                "memory": "Like a lawyer defending an idea.",
+                "strength": "Strong",
+                "category": "Support / Agreement",
+                "keywords": "advocate champion support push defend recommend"
               },
               {
                 "verb": "Promote",
-                "def": "Encourage people to accept.",
+                "def": "Encourage people to use or like something.",
                 "example": "The article promotes recycling.",
-                "memory": "Pushes forward."
+                "memory": "Pushes forward.",
+                "strength": "Strong",
+                "category": "Support / Agreement",
+                "keywords": "promote encourage advertise push help advance"
               },
               {
                 "verb": "Confirm",
-                "def": "Prove true.",
+                "def": "Prove it's true.",
                 "example": "The experiment confirms earlier findings.",
-                "memory": "Yes, it's true."
+                "memory": "Yes, it's true.",
+                "strength": "Very Strong",
+                "category": "Support / Agreement",
+                "keywords": "confirm verify prove substantiate validate back"
               },
               {
                 "verb": "Establish",
-                "def": "Show definitely true.",
+                "def": "Show something is definitely true.",
                 "example": "The study establishes a relationship.",
-                "memory": "Makes solid."
+                "memory": "Makes solid.",
+                "strength": "Very Strong",
+                "category": "Support / Agreement",
+                "keywords": "establish prove build secure demonstrate settle"
               },
               {
-                "verb": "Demonstrate",
-                "def": "Clearly show.",
-                "example": "The graph demonstrates growth.",
-                "memory": "Shows clearly."
+                "verb": "Prove",
+                "def": "Show it's true.",
+                "example": "New findings prove the hypothesis.",
+                "memory": "100% true.",
+                "strength": "Very Strong",
+                "category": "Support / Agreement",
+                "keywords": "prove verify confirm establish demonstrate show"
               },
               {
-                "verb": "Recognize",
-                "def": "Accept as true.",
-                "example": "The author recognizes limitations.",
-                "memory": "Acknowledges reality."
+                "verb": "Assert",
+                "def": "Say something confidently.",
+                "example": "The author asserts her independence.",
+                "memory": "Declares firmly.",
+                "strength": "Very Strong",
+                "category": "Support / Agreement",
+                "keywords": "assert declare state insist maintain announce"
               },
               {
-                "verb": "Account for",
-                "def": "Explain why.",
-                "example": "The theory accounts for the results.",
-                "memory": "Answers WHY."
+                "verb": "Insist",
+                "def": "Keep saying, 'I'm right.'",
+                "example": "He insists that the model is correct.",
+                "memory": "Doesn't back down.",
+                "strength": "Very Strong",
+                "category": "Support / Agreement",
+                "keywords": "insist assert repeat maintain declare hold"
               },
               {
-                "verb": "Point Out",
-                "def": "Direct attention.",
-                "example": "The author points out an error.",
-                "memory": "Look here."
-              },
-              {
-                "verb": "Illustrate",
-                "def": "Give an example.",
-                "example": "The author illustrates the idea.",
-                "memory": "Examples teach."
-              },
-              {
-                "verb": "Clarify",
-                "def": "Make easier.",
-                "example": "The conclusion clarifies the argument.",
-                "memory": "Removes confusion."
+                "verb": "Declare",
+                "def": "Say something loudly and clearly.",
+                "example": "The manifesto declares a new era.",
+                "memory": "Makes a public statement.",
+                "strength": "Strong",
+                "category": "Support / Agreement",
+                "keywords": "declare state announce proclaim assert"
               }
             ]
           },
           {
-            "name": "Opposition Verbs",
-            "isOpposition": true,
+            "name": "Opposition / Criticism",
+            "description": "Verbs used to challenge, contradict, reject, or point out weaknesses in an argument.",
+            "color": "var(--red)",
+            "icon": "shield-alert",
             "verbs": [
               {
-                "verb": "Challenge",
-                "def": "Question an idea.",
-                "example": "The author challenges the established consensus.",
-                "memory": "Calls into question."
+                "verb": "Downplay",
+                "def": "Say it's not a big deal.",
+                "example": "The report downplays the negative risks.",
+                "memory": "Plays down importance.",
+                "strength": "Moderate",
+                "category": "Opposition / Criticism",
+                "keywords": "downplay minimize deemphasize dismiss soft-pedal"
               },
               {
-                "verb": "Counter",
-                "def": "Fight back with another idea.",
-                "example": "The rebuttal counters the critic's argument.",
-                "memory": "Strikes back."
+                "verb": "Deemphasize",
+                "def": "Say, 'This isn't that important.'",
+                "example": "The curriculum deemphasizes rote memorization.",
+                "memory": "Shifts focus away.",
+                "strength": "Moderate",
+                "category": "Opposition / Criticism",
+                "keywords": "deemphasize downplay minimize obscure neglect"
+              },
+              {
+                "verb": "Disapprove",
+                "def": "Think something is bad.",
+                "example": "The author disapproves of the practice.",
+                "memory": "Thumbs down.",
+                "strength": "Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "disapprove reject condemn dislike object censure"
               },
               {
                 "verb": "Contradict",
                 "def": "Say the opposite.",
                 "example": "The findings contradict the initial hypothesis.",
-                "memory": "Direct conflict."
+                "memory": "Direct conflict.",
+                "strength": "Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "contradict oppose deny conflict refute conflict"
+              },
+              {
+                "verb": "Challenge",
+                "def": "Question whether something is true.",
+                "example": "The author challenges the established consensus.",
+                "memory": "Calls into question.",
+                "strength": "Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "challenge question doubt dispute confront attack"
+              },
+              {
+                "verb": "Counter",
+                "def": "Fight back with another idea.",
+                "example": "The rebuttal counters the critic's argument.",
+                "memory": "Strikes back.",
+                "strength": "Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "counter retaliate oppose rebuff offset resist"
               },
               {
                 "verb": "Criticize",
-                "def": "Point out weaknesses.",
+                "def": "Point out what's wrong.",
                 "example": "The essay criticizes the methodology.",
-                "memory": "Finds flaws."
-              },
-              {
-                "verb": "Reject",
-                "def": "Completely disagree.",
-                "example": "The committee rejects the proposal.",
-                "memory": "Throws away."
-              },
-              {
-                "verb": "Refute",
-                "def": "Completely prove wrong.",
-                "example": "The author refutes the claim with logic.",
-                "memory": "Proves wrong."
-              },
-              {
-                "verb": "Disprove",
-                "def": "Show false.",
-                "example": "New data disproves the theorem.",
-                "memory": "Shows untrue."
-              },
-              {
-                "verb": "Overturn",
-                "def": "Replace old idea by proving it wrong.",
-                "example": "The paradigm shift overturns classical physics.",
-                "memory": "Replaces old."
+                "memory": "Finds flaws.",
+                "strength": "Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "criticize blame fault condemn analyze review"
               },
               {
                 "verb": "Object",
-                "def": "Express disagreement.",
+                "def": "Say 'I don't agree.'",
                 "example": "Scholars object to the interpretation.",
-                "memory": "Says NO."
+                "memory": "Says NO.",
+                "strength": "Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "object protest disagree oppose mind refuse"
+              },
+              {
+                "verb": "Disprove",
+                "def": "Show it's false.",
+                "example": "New data disproves the theorem.",
+                "memory": "Shows untrue.",
+                "strength": "Very Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "disprove refute invalidate nullify explode expose"
+              },
+              {
+                "verb": "Refute",
+                "def": "Completely prove someone is wrong.",
+                "example": "The author refutes the claim with logic.",
+                "memory": "Proves wrong.",
+                "strength": "Very Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "refute disprove defeat debunk rebut contest"
+              },
+              {
+                "verb": "Reject",
+                "def": "Say 'No' completely.",
+                "example": "The committee rejects the proposal.",
+                "memory": "Throws away.",
+                "strength": "Very Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "reject refuse deny decline dismiss discard veto"
+              },
+              {
+                "verb": "Deplore",
+                "def": "Really hate or strongly disapprove.",
+                "example": "Environmentalists deplore the destruction.",
+                "memory": "Hates strongly.",
+                "strength": "Very Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "deplore condemn hate lament regret mourn"
               },
               {
                 "verb": "Deny",
-                "def": "Say not true.",
+                "def": "Say it isn't true.",
                 "example": "The company denies allegations.",
-                "memory": "Refuses truth."
+                "memory": "Refuses truth.",
+                "strength": "Very Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "deny refute reject gainsay disavow contradict"
+              },
+              {
+                "verb": "Overturn",
+                "def": "Prove an old idea was wrong.",
+                "example": "The paradigm shift overturns classical physics.",
+                "memory": "Replaces old.",
+                "strength": "Strong",
+                "category": "Opposition / Criticism",
+                "keywords": "overturn reverse defeat cancel replace refute"
               }
             ]
           },
           {
-            "name": "Neutral / Analytical Verbs",
-            "isNeutral": true,
+            "name": "Neutral / Analytical",
+            "description": "Objective verbs for analyzing details, investigating findings, or describing scenarios without active bias.",
+            "color": "var(--gold)",
+            "icon": "search",
             "verbs": [
               {
                 "verb": "Suggest",
-                "def": "Propose an idea gently without 100% proof.",
-                "example": "The author suggests that alternative energy is viable.",
-                "memory": "Hints rather than declares."
+                "def": "Give a hint or idea.",
+                "example": "The data suggests a trend.",
+                "memory": "Hints gently.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "suggest hint imply propose indicate mention"
               },
               {
-                "verb": "Offer",
-                "def": "Put forward an explanation or solution.",
-                "example": "The study offers a new hypothesis.",
-                "memory": "Presents for consideration."
-              },
-              {
-                "verb": "Propose",
-                "def": "Put forward a plan or theory for consideration.",
-                "example": "The writer proposes a restructuring of the department.",
-                "memory": "Presents a formal recommendation."
-              },
-              {
-                "verb": "Speculate",
-                "def": "Form a theory without firm evidence.",
-                "example": "Biologists speculate about the origin of the species.",
-                "memory": "Educated guess."
-              },
-              {
-                "verb": "Theorize",
-                "def": "Form a scientific explanation for something.",
-                "example": "Physicists theorize about parallel universes.",
-                "memory": "Builds a model."
+                "verb": "Indicate",
+                "def": "Point toward something.",
+                "example": "Arrow indicators indicate direction.",
+                "memory": "Points out.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "indicate show point point-out reveal signal"
               },
               {
                 "verb": "Analyze",
-                "def": "Examine details carefully to understand structure.",
-                "example": "The paper analyzes economic data from the recession.",
-                "memory": "Breaks down to study."
-              },
-              {
-                "verb": "Assess",
-                "def": "Evaluate the quality, value, or significance of.",
-                "example": "The report assesses the damage caused by the storm.",
-                "memory": "Rates or measures."
-              },
-              {
-                "verb": "Compare",
-                "def": "Look at similarities and differences.",
-                "example": "The essay compares classical and modern literature.",
-                "memory": "Finds likeness/difference."
-              },
-              {
-                "verb": "Contrast",
-                "def": "Highlight differences between things.",
-                "example": "The study contrasts two distinct species.",
-                "memory": "Looks only at differences."
+                "def": "Break it down and study it.",
+                "example": "The paper analyzes economic data.",
+                "memory": "Breaks down to study.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "analyze inspect study examine unpack deconstruct"
               },
               {
                 "verb": "Examine",
-                "def": "Inspect closely and investigate.",
+                "def": "Look at carefully.",
                 "example": "The scientist examines the tissue samples.",
-                "memory": "Looks under a microscope."
+                "memory": "Looks under microscope.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "examine inspect view analyze check investigate"
               },
               {
                 "verb": "Explore",
-                "def": "Inquire into or discuss systematically.",
-                "example": "The chapter explores social movements in the 19th century.",
-                "memory": "Tours the topic."
+                "def": "Look into something.",
+                "example": "The chapter explores social movements.",
+                "memory": "Tours the topic.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "explore investigate survey examine discuss tour"
               },
               {
-                "verb": "Develop",
-                "def": "Elaborate or expand an idea over time.",
-                "example": "The author develops the thesis across three paragraphs.",
-                "memory": "Grows the idea."
+                "verb": "Investigate",
+                "def": "Dig deeper to find answers.",
+                "example": "The detective investigates the case.",
+                "memory": "Search for clues.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "investigate research probe inspect dig study"
+              },
+              {
+                "verb": "Speculate",
+                "def": "Guess without knowing for sure.",
+                "example": "Biologists speculate about the origin.",
+                "memory": "Educated guess.",
+                "strength": "Moderate",
+                "category": "Neutral / Analytical",
+                "keywords": "speculate guess theorize venture suppose muse"
+              },
+              {
+                "verb": "Theorize",
+                "def": "Come up with a possible explanation.",
+                "example": "Physicists theorize about parallel universes.",
+                "memory": "Builds a model.",
+                "strength": "Strong",
+                "category": "Neutral / Analytical",
+                "keywords": "theorize hypothesize model explain conceptualize"
+              },
+              {
+                "verb": "Delineate",
+                "def": "Explain clearly.",
+                "example": "The guide delineates the boundaries.",
+                "memory": "Draws the lines.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "delineate describe define draw outline map trace"
               },
               {
                 "verb": "Describe",
-                "def": "Give a detailed account of something's features.",
-                "example": "The book describes the architecture of ancient Rome.",
-                "memory": "Paints a word picture."
+                "def": "Tell what it's like.",
+                "example": "The book describes the architecture.",
+                "memory": "Paints a word picture.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "describe portray depict tell detail outline"
               },
               {
-                "verb": "Outline",
-                "def": "Give a summary of the main points.",
-                "example": "The introduction outlines the upcoming chapters.",
-                "memory": "Skeletal summary."
+                "verb": "Explicate",
+                "def": "Explain step by step.",
+                "example": "The scholar explicates the poem.",
+                "memory": "Unpacks details.",
+                "strength": "Weak",
+                "category": "Neutral / Analytical",
+                "keywords": "explicate explain clarify interpret detail analyze"
+              }
+            ]
+          },
+          {
+            "name": "Comparison",
+            "description": "Verbs used to weigh parallel cases, resolve discrepancies, or identify similarities and differences.",
+            "color": "var(--orange)",
+            "icon": "scale",
+            "verbs": [
+              {
+                "verb": "Contrast",
+                "def": "Show how two things are different.",
+                "example": "The study contrasts two distinct species.",
+                "memory": "Looks at differences.",
+                "strength": "Moderate",
+                "category": "Comparison",
+                "keywords": "contrast differentiate distinguish vary oppose"
+              },
+              {
+                "verb": "Compare",
+                "def": "Show how things are alike (and sometimes different).",
+                "example": "The essay compares classical and modern literature.",
+                "memory": "Finds similarities.",
+                "strength": "Weak",
+                "category": "Comparison",
+                "keywords": "compare match relate liken parallel group"
+              },
+              {
+                "verb": "Juxtapose",
+                "def": "Put two things side by side to compare.",
+                "example": "The artist juxtaposes light and shadow.",
+                "memory": "Places side-by-side.",
+                "strength": "Weak",
+                "category": "Comparison",
+                "keywords": "juxtapose align place compare pair contrast"
+              },
+              {
+                "verb": "Weigh",
+                "def": "Think carefully before deciding.",
+                "example": "The judge weighs the evidence.",
+                "memory": "Balancing scale.",
+                "strength": "Weak",
+                "category": "Comparison",
+                "keywords": "weigh judge balance evaluate scale ponder"
+              },
+              {
+                "verb": "Reconcile",
+                "def": "Make two opposite ideas work together.",
+                "example": "The theory reconciles relativity and quantum mechanics.",
+                "memory": "Brings peace.",
+                "strength": "Strong",
+                "category": "Comparison",
+                "keywords": "reconcile resolve square adapt harmonise coordinate"
+              }
+            ]
+          },
+          {
+            "name": "Conclusion",
+            "description": "Verbs that signal finality, logical deduction, ending disputes, or recap summaries.",
+            "color": "var(--purple)",
+            "icon": "flag",
+            "verbs": [
+              {
+                "verb": "Conclude",
+                "def": "Decide after thinking.",
+                "example": "She concludes that the test failed.",
+                "memory": "Final decision.",
+                "strength": "Strong",
+                "category": "Conclusion",
+                "keywords": "conclude end finalize decide draw infer settle"
+              },
+              {
+                "verb": "Draw (a conclusion)",
+                "def": "Figure something out.",
+                "example": "We draw a conclusion from the patterns.",
+                "memory": "Extracts truth.",
+                "strength": "Strong",
+                "category": "Conclusion",
+                "keywords": "draw conclude infer figure-out extrapolate"
+              },
+              {
+                "verb": "Resolve",
+                "def": "Fix the problem.",
+                "example": "The intervention resolves the crisis.",
+                "memory": "Finds the solution.",
+                "strength": "Strong",
+                "category": "Conclusion",
+                "keywords": "resolve settle solve cure fix decide reconcile"
+              },
+              {
+                "verb": "Settle",
+                "def": "End the disagreement.",
+                "example": "They settle the dispute out of court.",
+                "memory": "Puts to rest.",
+                "strength": "Strong",
+                "category": "Conclusion",
+                "keywords": "settle end resolve clear reconcile decide"
+              },
+              {
+                "verb": "Sum up",
+                "def": "Say the main point quickly.",
+                "example": "To sum up, the system works.",
+                "memory": "Quick recap.",
+                "strength": "Weak",
+                "category": "Conclusion",
+                "keywords": "sum up summarize recap outline close finish"
               },
               {
                 "verb": "Summarize",
-                "def": "Give a brief statement of the main points.",
+                "def": "Give the short version.",
                 "example": "The conclusion summarizes the main findings.",
-                "memory": "Short version."
-              },
+                "memory": "Short version.",
+                "strength": "Weak",
+                "category": "Conclusion",
+                "keywords": "summarize sum recap outline wrap-up compress"
+              }
+            ]
+          },
+          {
+            "name": "Explanation",
+            "description": "Verbs focusing on translating ideas, providing support, clarifying concepts, or tracing historical context.",
+            "color": "var(--blue)",
+            "icon": "lightbulb",
+            "verbs": [
               {
                 "verb": "Explain",
-                "def": "Make an idea clear by describing it in detail.",
-                "example": "The professor explains how photosynthesis occurs.",
-                "memory": "Makes clear."
+                "def": "Tell why or how.",
+                "example": "The professor explains photosynthesis.",
+                "memory": "Makes clear.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "explain describe clarify explicate define account"
+              },
+              {
+                "verb": "Account for",
+                "def": "Explain why something happened.",
+                "example": "The theory accounts for the anomalies.",
+                "memory": "Answers WHY.",
+                "strength": "Moderate",
+                "category": "Explanation",
+                "keywords": "account explain justify credit attribute source"
+              },
+              {
+                "verb": "Illustrate",
+                "def": "Give an example.",
+                "example": "The diagram illustrates the flow.",
+                "memory": "Pictures teach.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "illustrate show picture describe draw example exemplify"
+              },
+              {
+                "verb": "Exemplify",
+                "def": "Be a good example of something.",
+                "example": "The work exemplifies modern art.",
+                "memory": "Perfect example.",
+                "strength": "Moderate",
+                "category": "Explanation",
+                "keywords": "exemplify show illustrate symbolise embody represent"
+              },
+              {
+                "verb": "Clarify",
+                "def": "Make easier to understand.",
+                "example": "The edit clarifies the sentence.",
+                "memory": "Removes confusion.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "clarify explain simplify clear refine solve"
+              },
+              {
+                "verb": "Trace",
+                "def": "Follow how something changed over time.",
+                "example": "The historian traces the lineage.",
+                "memory": "Follows paths.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "trace follow track path record map search"
+              },
+              {
+                "verb": "Give an account",
+                "def": "Tell the story.",
+                "example": "Witnesses give an account of the event.",
+                "memory": "Tells story.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "give an account recount report relate describe tell"
+              },
+              {
+                "verb": "Recount",
+                "def": "Tell what happened.",
+                "example": "She recounts her travels.",
+                "memory": "Re-tells.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "recount tell narrate describe report relate"
+              },
+              {
+                "verb": "Report on",
+                "def": "Tell the facts.",
+                "example": "Journalists report on the war.",
+                "memory": "Shares facts.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "report state publish declare relate recount inform"
+              },
+              {
+                "verb": "Document",
+                "def": "Write down as proof.",
+                "example": "We document the process.",
+                "memory": "Writes down.",
+                "strength": "Weak",
+                "category": "Explanation",
+                "keywords": "document record write file prove track note"
+              }
+            ]
+          },
+          {
+            "name": "Thinking / Evaluation",
+            "description": "Verbs representing judgment, cognitive recognition, qualifying limitations, or contemplating hypotheses.",
+            "color": "var(--pink)",
+            "icon": "brain",
+            "verbs": [
+              {
+                "verb": "Recognize",
+                "def": "Notice and accept it's true.",
+                "example": "The author recognizes limitations.",
+                "memory": "Acknowledges reality.",
+                "strength": "Moderate",
+                "category": "Thinking / Evaluation",
+                "keywords": "recognize accept acknowledge notice identify spot"
+              },
+              {
+                "verb": "Assess",
+                "def": "Judge after looking carefully.",
+                "example": "The report assesses the impact.",
+                "memory": "Rates or measures.",
+                "strength": "Weak",
+                "category": "Thinking / Evaluation",
+                "keywords": "assess evaluate judge measure rate weigh check"
+              },
+              {
+                "verb": "Qualify",
+                "def": "Add a 'but...' or make the statement less strong.",
+                "example": "She qualifies her endorsement.",
+                "memory": "Limits statement.",
+                "strength": "Moderate",
+                "category": "Thinking / Evaluation",
+                "keywords": "qualify limit modify restrict temper conditional"
+              },
+              {
+                "verb": "Contemplate",
+                "def": "Think deeply.",
+                "example": "He contemplates the options.",
+                "memory": "Stares at thought.",
+                "strength": "Weak",
+                "category": "Thinking / Evaluation",
+                "keywords": "contemplate think ponder consider muse study reflect"
+              },
+              {
+                "verb": "Entertain (an idea)",
+                "def": "Think about it without accepting it.",
+                "example": "She entertains the hypothesis.",
+                "memory": "Plays host to thought.",
+                "strength": "Weak",
+                "category": "Thinking / Evaluation",
+                "keywords": "entertain consider think-about ponder harbor weigh"
+              },
+              {
+                "verb": "Adapt",
+                "def": "Change to fit a new situation.",
+                "example": "The species adapts to cold.",
+                "memory": "Changes to fit.",
+                "strength": "Weak",
+                "category": "Thinking / Evaluation",
+                "keywords": "adapt adjust modify change fit conform match"
+              },
+              {
+                "verb": "Sort out",
+                "def": "Figure it out.",
+                "example": "They sort out the schedule.",
+                "memory": "Untangles mess.",
+                "strength": "Weak",
+                "category": "Thinking / Evaluation",
+                "keywords": "sort out resolve solve separate order arrange fix"
+              },
+              {
+                "verb": "Broaden",
+                "def": "Make bigger or wider.",
+                "example": "The class broadens their view.",
+                "memory": "Widens scope.",
+                "strength": "Weak",
+                "category": "Thinking / Evaluation",
+                "keywords": "broaden expand widen increase spread grow"
+              }
+            ]
+          },
+          {
+            "name": "Organization",
+            "description": "Verbs relating to structuring material, outlining plans, highlighting key details, simplifying complexity, or compiling rules.",
+            "color": "var(--indigo)",
+            "icon": "folder",
+            "verbs": [
+              {
+                "verb": "Generalize",
+                "def": "Say something broad about many things.",
+                "example": "We cannot generalize from one sample.",
+                "memory": "Makes broad claim.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "generalize simplify extend broaden abstract unify"
+              },
+              {
+                "verb": "Apply",
+                "def": "Use something.",
+                "example": "We apply the formula.",
+                "memory": "Puts to use.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "apply use exert spend employ execute operate"
+              },
+              {
+                "verb": "Develop",
+                "def": "Build an idea little by little.",
+                "example": "He develops the project.",
+                "memory": "Grows idea.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "develop build grow expand elaborate detail create"
+              },
+              {
+                "verb": "Simplify",
+                "def": "Make easier.",
+                "example": "We simplify the equation.",
+                "memory": "Makes simple.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "simplify reduce clarify summarize condense translate"
+              },
+              {
+                "verb": "Formulate",
+                "def": "Create an idea or plan.",
+                "example": "They formulate a response.",
+                "memory": "Mixes ingredients.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "formulate design draft construct plan make define"
+              },
+              {
+                "verb": "Codify",
+                "def": "Organize into rules.",
+                "example": "The state codifies the laws.",
+                "memory": "Creates code.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "codify systematize classify organize index rule law"
+              },
+              {
+                "verb": "Survey",
+                "def": "Look at many ideas quickly.",
+                "example": "The review surveys the literature.",
+                "memory": "Birds-eye view.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "survey review look inspect study explore check"
+              },
+              {
+                "verb": "Cite",
+                "def": "Mention someone else's work.",
+                "example": "Always cite your sources.",
+                "memory": "Refers to.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "cite source credit refer name mention quote"
+              },
+              {
+                "verb": "Outline",
+                "def": "Give the important points.",
+                "example": "The syllabus outlines the course.",
+                "memory": "Skeletal view.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "outline summarize sketch draft block define chart"
+              },
+              {
+                "verb": "Reconstruct",
+                "def": "Put the pieces back together.",
+                "example": "Archaeologists reconstruct the vase.",
+                "memory": "Builds again.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "reconstruct rebuild restore trace copy remake"
+              },
+              {
+                "verb": "Unify",
+                "def": "Bring together.",
+                "example": "The goal unifies the team.",
+                "memory": "Makes one.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "unify combine link merge bond connect join align"
+              },
+              {
+                "verb": "Synthesize",
+                "def": "Combine different ideas into one.",
+                "example": "We synthesize the arguments.",
+                "memory": "Combines parts.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "synthesize combine blend unify link mix integrate"
+              },
+              {
+                "verb": "Map",
+                "def": "Show how things are connected.",
+                "example": "The chart maps out relations.",
+                "memory": "Draws connections.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "map relate trace trace chart outline trace connect"
+              },
+              {
+                "verb": "Point out",
+                "def": "Tell people to notice something.",
+                "example": "She points out the typo.",
+                "memory": "Directs finger.",
+                "strength": "Moderate",
+                "category": "Organization",
+                "keywords": "point out note remark draw notice show highlight"
+              },
+              {
+                "verb": "Emphasize",
+                "def": "Say, 'This is really important.'",
+                "example": "The speaker emphasizes safety.",
+                "memory": "Draws attention.",
+                "strength": "Moderate",
+                "category": "Organization",
+                "keywords": "emphasize stress highlight underscore accent mark press"
+              },
+              {
+                "verb": "Show",
+                "def": "Make it clear.",
+                "example": "The charts show progress.",
+                "memory": "Demonstrates.",
+                "strength": "Strong",
+                "category": "Organization",
+                "keywords": "show demonstrate reveal prove display state present"
+              },
+              {
+                "verb": "Advance",
+                "def": "Put forward a new idea.",
+                "example": "He advances a fresh theory.",
+                "memory": "Moves forward.",
+                "strength": "Strong",
+                "category": "Organization",
+                "keywords": "advance propose state push forward advocate"
+              },
+              {
+                "verb": "Stipulate",
+                "def": "Clearly say a rule or condition.",
+                "example": "The contract stipulates terms.",
+                "memory": "Sets rules.",
+                "strength": "Strong",
+                "category": "Organization",
+                "keywords": "stipulate demand specify condition rule dictate state"
+              },
+              {
+                "verb": "Maintain",
+                "def": "Keep saying the same thing because you believe it's true.",
+                "example": "She maintains her innocence.",
+                "memory": "Keeps stance.",
+                "strength": "Strong",
+                "category": "Organization",
+                "keywords": "maintain assert claim hold argue defend repeat keep"
+              },
+              {
+                "verb": "Propose",
+                "def": "Come up with an idea.",
+                "example": "We propose a plan.",
+                "memory": "Suggests formally.",
+                "strength": "Moderate",
+                "category": "Organization",
+                "keywords": "propose suggest offer advocate present state design"
+              },
+              {
+                "verb": "Inform",
+                "def": "Tell someone.",
+                "example": "Letters inform the citizens.",
+                "memory": "Gives news.",
+                "strength": "Weak",
+                "category": "Organization",
+                "keywords": "inform tell alert warn update write notify share"
               }
             ]
           }
