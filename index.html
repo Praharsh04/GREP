@@ -2671,6 +2671,733 @@ body::before {
   gap: 6px;
 }
 
+/* ── NEW READING COMPREHENSION MODULE INTEGRATION ── */
+#verbal-rc-quiz-screen {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg);
+  color: var(--cream);
+}
+
+#verbal-rc-quiz-screen .rc-controls-bar {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+#verbal-rc-quiz-screen .controls-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#verbal-rc-quiz-screen .selector-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+#verbal-rc-quiz-screen select {
+  background: transparent;
+  color: var(--cream);
+  border: none;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 1.75rem 0.25rem 0.5rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.25rem center;
+  background-size: 1rem;
+}
+
+#verbal-rc-quiz-screen .btn-nav-header {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+#verbal-rc-quiz-screen .btn-nav-header:hover {
+  color: var(--cream);
+  background-color: var(--surface);
+}
+
+#verbal-rc-quiz-screen .passage-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background-color: var(--surface2);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+#verbal-rc-quiz-screen .tab-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#verbal-rc-quiz-screen .tab-btn.active {
+  background-color: var(--surface);
+  color: var(--gold);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#verbal-rc-quiz-screen .timer-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.75rem;
+}
+
+#verbal-rc-quiz-screen .timer-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--cream);
+  min-width: 4rem;
+  text-align: center;
+}
+
+#verbal-rc-quiz-screen .timer-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+#verbal-rc-quiz-screen .timer-btn:hover {
+  color: var(--cream);
+  background-color: var(--surface);
+}
+
+#verbal-rc-quiz-screen .timer-settings-btn {
+  color: var(--dim);
+}
+
+#verbal-rc-quiz-screen .rc-workspace-container {
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+#verbal-rc-quiz-screen .rc-pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+#verbal-rc-quiz-screen .rc-left-pane {
+  flex: 1.15;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+#verbal-rc-quiz-screen .rc-right-pane {
+  flex: 0.85;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+#verbal-rc-quiz-screen .rc-panel-header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  min-height: 2.5rem;
+}
+
+#verbal-rc-quiz-screen .rc-panel-title {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+#verbal-rc-quiz-screen .annotation-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  padding: 0.15rem;
+}
+
+#verbal-rc-quiz-screen .tool-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+#verbal-rc-quiz-screen .tool-btn:hover {
+  color: var(--cream);
+  background-color: var(--surface);
+}
+
+#verbal-rc-quiz-screen .tool-btn.active {
+  color: var(--gold);
+  background-color: var(--surface);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#verbal-rc-quiz-screen .tool-divider {
+  width: 1px;
+  height: 1rem;
+  background-color: var(--border);
+  margin: 0 0.15rem;
+}
+
+#verbal-rc-quiz-screen .passage-outer-container {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#verbal-rc-quiz-screen .passage-content-wrapper {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1.75rem 2rem;
+  position: relative;
+}
+
+#verbal-rc-quiz-screen .passage-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--cream);
+  text-align: justify;
+  white-space: pre-line;
+  position: relative;
+  z-index: 2;
+}
+
+#verbal-rc-quiz-screen .line-numbered-container {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+#verbal-rc-quiz-screen .line-numbers-col {
+  width: 3.5rem;
+  text-align: right;
+  color: var(--dim);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.85;
+  padding-top: 0.1rem;
+  user-select: none;
+}
+
+#verbal-rc-quiz-screen .passage-text-col {
+  flex-grow: 1;
+}
+
+#verbal-rc-quiz-screen .drawing-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  cursor: crosshair;
+}
+
+#verbal-rc-quiz-screen .drawing-canvas.active {
+  pointer-events: auto;
+}
+
+#verbal-rc-quiz-screen .passage-highlight {
+  background-color: rgba(201, 168, 76, 0.35);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+#verbal-rc-quiz-screen .passage-highlight:hover {
+  background-color: rgba(201, 168, 76, 0.6);
+}
+
+#verbal-rc-quiz-screen .notes-container {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+  height: 11rem;
+}
+
+#verbal-rc-quiz-screen .note-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+#verbal-rc-quiz-screen .note-label {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+#verbal-rc-quiz-screen .note-textarea {
+  flex-grow: 1;
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  color: var(--cream);
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#verbal-rc-quiz-screen .note-textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold-dim);
+}
+
+#verbal-rc-quiz-screen .question-pane-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#verbal-rc-quiz-screen .progress-indicator-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  flex-shrink: 0;
+}
+
+#verbal-rc-quiz-screen .progress-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+#verbal-rc-quiz-screen .progress-bar-bg {
+  width: 10rem;
+  height: 0.375rem;
+  background-color: var(--surface2);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+#verbal-rc-quiz-screen .progress-bar-fill {
+  height: 100%;
+  background-color: var(--gold);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+#verbal-rc-quiz-screen .question-text-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+#verbal-rc-quiz-screen .question-number-badge {
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+#verbal-rc-quiz-screen .question-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--cream);
+  white-space: pre-wrap;
+}
+
+#verbal-rc-quiz-screen .choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#verbal-rc-quiz-screen .choice-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+#verbal-rc-quiz-screen .choice-card:hover {
+  background-color: var(--surface2);
+  border-color: var(--muted);
+}
+
+#verbal-rc-quiz-screen .choice-card.selected {
+  border-color: var(--gold);
+  background-color: var(--gold-dim);
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+#verbal-rc-quiz-screen .choice-card.correct {
+  border-color: var(--teal) !important;
+  background-color: rgba(16, 185, 129, 0.15) !important;
+}
+
+#verbal-rc-quiz-screen .choice-card.incorrect {
+  border-color: var(--red) !important;
+  background-color: rgba(192, 57, 43, 0.1) !important;
+}
+
+#verbal-rc-quiz-screen .choice-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+#verbal-rc-quiz-screen .choice-card:hover .choice-letter {
+  color: var(--cream);
+  border-color: var(--muted);
+}
+
+#verbal-rc-quiz-screen .choice-card.selected .choice-letter {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: #ffffff;
+}
+
+#verbal-rc-quiz-screen .choice-card.correct .choice-letter {
+  background-color: var(--teal) !important;
+  border-color: var(--teal) !important;
+  color: #ffffff !important;
+}
+
+#verbal-rc-quiz-screen .choice-card.incorrect .choice-letter {
+  background-color: var(--red) !important;
+  border-color: var(--red) !important;
+  color: #ffffff !important;
+}
+
+#verbal-rc-quiz-screen .choice-content {
+  font-size: 0.95rem;
+  color: var(--cream);
+  line-height: 1.5;
+}
+
+#verbal-rc-quiz-screen .action-nav-bar {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+#verbal-rc-quiz-screen .action-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#verbal-rc-quiz-screen .btn-secondary {
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--cream);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+#verbal-rc-quiz-screen .btn-secondary:hover {
+  background-color: var(--surface);
+  border-color: var(--muted);
+}
+
+#verbal-rc-quiz-screen .btn-primary {
+  background-color: var(--gold);
+  border: 1px solid var(--gold);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(201, 168, 76, 0.2);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#verbal-rc-quiz-screen .btn-primary:hover {
+  opacity: 0.9;
+}
+
+#verbal-rc-quiz-screen .btn-primary:active {
+  transform: scale(0.98);
+}
+
+#verbal-rc-quiz-screen .btn-primary:disabled, #verbal-rc-quiz-screen .btn-secondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Modals */
+#modal-timer.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+#modal-timer.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#modal-timer .modal-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  width: 90%;
+  max-width: 25rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transform: scale(0.9);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#modal-timer.modal-overlay.active .modal-card {
+  transform: scale(1);
+}
+
+#modal-timer .modal-title {
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cream);
+}
+
+#modal-timer .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#modal-timer .form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+#modal-timer .time-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#modal-timer .input-num {
+  background-color: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  color: var(--cream);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 4.5rem;
+  text-align: center;
+  outline: none;
+}
+
+#modal-timer .input-num:focus {
+  border-color: var(--gold);
+}
+
+#modal-timer .radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+#modal-timer .radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--cream);
+}
+
+#modal-timer .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+#modal-timer .svg-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+#verbal-rc-quiz-screen .svg-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  #verbal-rc-quiz-screen {
+    overflow: auto;
+    height: auto;
+  }
+  #verbal-rc-quiz-screen .rc-controls-bar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+  #verbal-rc-quiz-screen .rc-workspace-container {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+  #verbal-rc-quiz-screen .rc-left-pane, #verbal-rc-quiz-screen .rc-right-pane {
+    flex: none;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    border-right: none;
+  }
+  #verbal-rc-quiz-screen .passage-content-wrapper {
+    max-height: 25rem;
+  }
+  #verbal-rc-quiz-screen .notes-container {
+    height: auto;
+    flex-direction: column;
+  }
+  #verbal-rc-quiz-screen .question-pane-content {
+    overflow-y: visible;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2951,8 +3678,6 @@ body::before {
                <button id="verbal-next-btn" class="bottom-btn primary" onclick="nextVerbalQuestion()">Next Question →</button>
              </div>
            </div>
-         </div>
-       </div>
       </div>
 
       <!-- STRATEGIES SECTION -->
@@ -6835,6 +7560,7 @@ function init() {
   fetchMapping();
   buildGroupTabs();
   buildSidebar();
+  loadRCFromLocalStorage();
   
   // Cleanup: ensure mutual exclusivity between mastered and hitlist
   mastered.forEach(idx => {
@@ -6859,6 +7585,7 @@ function init() {
   document.addEventListener('keydown', (e) => {
     // Ignore if user is typing in an input
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (verbalMode) return;
 
     const key = e.key.toLowerCase();
 
@@ -7883,6 +8610,32 @@ function loadAWA() {
 // ─── VERBAL PRACTICE LOGIC ───
 let verbalQuestions = [];
 let filteredVerbalPool = [];
+
+// ─── NEW READING COMPREHENSION MODULE INTEGRATION ───
+let rcState = {
+  testsData: null,
+  currentTestIndex: 0,
+  currentPassageIndex: 0,
+  currentQuestionIndex: 0,
+  selectedAnswers: {}, // key: "test_pass_qNum" -> value: "A"|"B"|...
+  notes: {}, // key: "test_pass" -> value: { simplification: "", function: "" }
+  highlights: {}, // key: "test_pass" -> value: html content of passage-content
+  canvasDrawing: {}, // key: "test_pass" -> value: array of drawing paths
+  timerMode: "countdown",
+  timerDuration: 600,
+  timerTime: 600,
+  timerIsRunning: false,
+  showAnswerState: false
+};
+
+let rcCanvas, rcCtx;
+let rcIsDrawing = false;
+let rcCurrentPath = [];
+let rcDrawingPaths = [];
+let rcCurrentTool = "select";
+let rcUndoStack = [];
+let rcRedoStack = [];
+let rcTimerInterval = null;
 let currentVerbalIdx = 0;
 let verbalQuizMode = 'Mixed';
 let verbalTimerInterval = null;
@@ -7936,7 +8689,7 @@ async function fetchVerbalQuestions() {
   try {
     const res = await fetch('tc_sc_rc.json');
     const data = await res.json();
-    verbalQuestions = data.questions;
+    verbalQuestions = data.questions.filter(q => !q.topic.includes('Reading') && !q.topic.includes('Critical'));
   } catch (e) {
     console.error("Failed to load tc_sc_rc.json", e);
     showToast("Error loading verbal questions", false);
@@ -7946,6 +8699,8 @@ async function fetchVerbalQuestions() {
 function showVerbalEntry() {
   document.getElementById('verbal-entry-screen').style.display = 'block';
   document.getElementById('verbal-quiz-screen').style.display = 'none';
+  const rcScreen = document.getElementById('verbal-rc-quiz-screen');
+  if (rcScreen) rcScreen.style.display = 'none';
   if (verbalTimerInterval) clearInterval(verbalTimerInterval);
 }
 
@@ -7956,11 +8711,22 @@ function startVerbalQuiz(mode) {
   currentVerbalIdx = 0;
   updateVerbalScore();
 
+  if (mode === 'RC') {
+    document.getElementById('verbal-entry-screen').style.display = 'none';
+    document.getElementById('verbal-rc-quiz-screen').style.display = 'block';
+    if (!rcState.testsData) {
+      fetchRCQuestions();
+    } else {
+      initRCApp();
+    }
+    return;
+  }
+
   if (mode === 'Mixed') {
-    filteredVerbalPool = shuffleArray(verbalQuestions).slice(0, 20); // 20 mixed
+    filteredVerbalPool = shuffleArray(verbalQuestions.filter(q => !q.topic.includes('Reading') && !q.topic.includes('Critical'))).slice(0, 20); // 20 mixed
     verbalTimeRemaining = 1800; // 30 mins
   } else {
-    const topicMap = { 'TC': 'Text Completion', 'SC': 'Sentence Equivalence', 'RC': 'Reading Comprehension' };
+    const topicMap = { 'TC': 'Text Completion', 'SC': 'Sentence Equivalence' };
     filteredVerbalPool = shuffleArray(verbalQuestions.filter(q => q.topic.includes(topicMap[mode])));
     // Timers set per question in render
   }
@@ -8172,6 +8938,762 @@ function exitVerbalQuiz() {
     if (verbalTimerInterval) clearInterval(verbalTimerInterval);
     showVerbalEntry();
   }
+}
+
+// ─── NEW READING COMPREHENSION JS FUNCTIONS ───
+function playRCTimerAlert() {
+  try {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    let osc = audioCtx.createOscillator();
+    let gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.type = "sine";
+    osc.frequency.value = 880;
+    gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.15);
+    
+    setTimeout(() => {
+      let osc2 = audioCtx.createOscillator();
+      let gain2 = audioCtx.createGain();
+      osc2.connect(gain2);
+      gain2.connect(audioCtx.destination);
+      osc2.type = "sine";
+      osc2.frequency.value = 880;
+      gain2.gain.setValueAtTime(0.1, audioCtx.currentTime);
+      osc2.start();
+      osc2.stop(audioCtx.currentTime + 0.3);
+    }, 200);
+  } catch (e) {
+    console.log("AudioContext blocked or not supported:", e);
+  }
+}
+
+function loadRCFromLocalStorage() {
+  const savedState = localStorage.getItem("gre_rc_prep_state");
+  if (savedState) {
+    try {
+      const parsed = JSON.parse(savedState);
+      rcState.currentTestIndex = parsed.currentTestIndex ?? 0;
+      rcState.currentPassageIndex = parsed.currentPassageIndex ?? 0;
+      rcState.currentQuestionIndex = parsed.currentQuestionIndex ?? 0;
+      rcState.selectedAnswers = parsed.selectedAnswers ?? {};
+      rcState.notes = parsed.notes ?? {};
+      rcState.highlights = parsed.highlights ?? {};
+      rcState.canvasDrawing = parsed.canvasDrawing ?? {};
+      rcState.timerMode = parsed.timerMode ?? "countdown";
+      rcState.timerDuration = parsed.timerDuration ?? 600;
+      rcState.timerTime = rcState.timerMode === "countdown" ? rcState.timerDuration : 0;
+    } catch (e) {
+      console.error("Error loading local storage state:", e);
+    }
+  }
+}
+
+function saveRCToLocalStorage() {
+  const toSave = {
+    currentTestIndex: rcState.currentTestIndex,
+    currentPassageIndex: rcState.currentPassageIndex,
+    currentQuestionIndex: rcState.currentQuestionIndex,
+    selectedAnswers: rcState.selectedAnswers,
+    notes: rcState.notes,
+    highlights: rcState.highlights,
+    canvasDrawing: rcState.canvasDrawing,
+    timerMode: rcState.timerMode,
+    timerDuration: rcState.timerDuration
+  };
+  localStorage.setItem("gre_rc_prep_state", JSON.stringify(toSave));
+}
+
+async function fetchRCQuestions() {
+  try {
+    const response = await fetch("extracted_questions.json");
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    rcState.testsData = await response.json();
+    initRCApp();
+  } catch (error) {
+    console.error("Failed to load RC questions data:", error);
+    showToast("Error loading RC questions", false);
+    document.getElementById("passage-content").innerHTML = `
+      <span style="color:var(--red); font-weight:700">Failed to load RC data source.</span><br><br>
+      Details: ${error.message}
+    `;
+  }
+}
+
+function initRCApp() {
+  const testSelect = document.getElementById("select-test");
+  testSelect.innerHTML = "";
+  rcState.testsData.forEach((test, idx) => {
+    const opt = document.createElement("option");
+    opt.value = idx;
+    opt.textContent = `Test ${test.test_number}`;
+    testSelect.appendChild(opt);
+  });
+  testSelect.value = rcState.currentTestIndex;
+  
+  initRCCanvas();
+  loadRCTestAndPassage();
+  setupRCEventListeners();
+  updateRCTimerDisplay();
+}
+
+let rcListenersRegistered = false;
+function setupRCEventListeners() {
+  if (rcListenersRegistered) return;
+  rcListenersRegistered = true;
+
+  document.getElementById("select-test").addEventListener("change", (e) => {
+    rcState.currentTestIndex = parseInt(e.target.value);
+    rcState.currentPassageIndex = 0;
+    rcState.currentQuestionIndex = 0;
+    rcState.showAnswerState = false;
+    loadRCTestAndPassage();
+    saveRCToLocalStorage();
+  });
+  
+  document.getElementById("btn-prev-test").addEventListener("click", () => {
+    if (rcState.currentTestIndex > 0) {
+      rcState.currentTestIndex--;
+      rcState.currentPassageIndex = 0;
+      rcState.currentQuestionIndex = 0;
+      rcState.showAnswerState = false;
+      document.getElementById("select-test").value = rcState.currentTestIndex;
+      loadRCTestAndPassage();
+      saveRCToLocalStorage();
+    } else {
+      showToast("First test reached");
+    }
+  });
+  
+  document.getElementById("btn-next-test").addEventListener("click", () => {
+    if (rcState.currentTestIndex < rcState.testsData.length - 1) {
+      rcState.currentTestIndex++;
+      rcState.currentPassageIndex = 0;
+      rcState.currentQuestionIndex = 0;
+      rcState.showAnswerState = false;
+      document.getElementById("select-test").value = rcState.currentTestIndex;
+      loadRCTestAndPassage();
+      saveRCToLocalStorage();
+    } else {
+      showToast("Last test reached");
+    }
+  });
+
+  document.getElementById("tab-passage-1").addEventListener("click", () => {
+    setRCPassageTab(0);
+  });
+  document.getElementById("tab-passage-2").addEventListener("click", () => {
+    setRCPassageTab(1);
+  });
+
+  document.getElementById("btn-timer-toggle").addEventListener("click", toggleRCTimer);
+  document.getElementById("btn-timer-reset").addEventListener("click", resetRCTimer);
+  document.getElementById("btn-timer-settings").addEventListener("click", openRCTimerSettings);
+  
+  document.getElementById("btn-modal-cancel").addEventListener("click", closeRCTimerSettings);
+  document.getElementById("btn-modal-save").addEventListener("click", saveRCTimerSettings);
+
+  document.getElementById("tool-select").addEventListener("click", () => setRCTool("select"));
+  document.getElementById("tool-pen").addEventListener("click", () => setRCTool("pen"));
+  document.getElementById("tool-highlight").addEventListener("click", highlightRCTextSelection);
+  document.getElementById("tool-undo").addEventListener("click", undoRCDrawing);
+  document.getElementById("tool-redo").addEventListener("click", redoRCDrawing);
+  document.getElementById("tool-clear").addEventListener("click", clearRCAnnotations);
+
+  document.getElementById("btn-prev-question").addEventListener("click", () => {
+    if (rcState.currentQuestionIndex > 0) {
+      rcState.currentQuestionIndex--;
+      rcState.showAnswerState = false;
+      renderRCQuestion();
+      saveRCToLocalStorage();
+    }
+  });
+
+  document.getElementById("btn-next-question").addEventListener("click", () => {
+    const passage = rcState.testsData[rcState.currentTestIndex].passages[rcState.currentPassageIndex];
+    if (rcState.currentQuestionIndex < passage.questions.length - 1) {
+      rcState.currentQuestionIndex++;
+      rcState.showAnswerState = false;
+      renderRCQuestion();
+      saveRCToLocalStorage();
+    } else {
+      if (rcState.currentPassageIndex === 0) {
+        showToast("End of questions. Navigating to Passage 2.");
+        setRCPassageTab(1);
+      } else {
+        showToast("End of this test set. You can select the next test.");
+      }
+    }
+  });
+
+  document.getElementById("btn-show-answer").addEventListener("click", toggleRCShowAnswer);
+
+  document.getElementById("note-simplification").addEventListener("input", (e) => {
+    const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}`;
+    if (!rcState.notes[key]) rcState.notes[key] = { simplification: "", function: "" };
+    rcState.notes[key].simplification = e.target.value;
+    saveRCToLocalStorage();
+  });
+
+  document.getElementById("note-function").addEventListener("input", (e) => {
+    const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}`;
+    if (!rcState.notes[key]) rcState.notes[key] = { simplification: "", function: "" };
+    rcState.notes[key].function = e.target.value;
+    saveRCToLocalStorage();
+  });
+
+  window.addEventListener("resize", () => {
+    resizeRCCanvas();
+    updateRCLineNumbers();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    const rcScreen = document.getElementById("verbal-rc-quiz-screen");
+    if (!rcScreen || rcScreen.style.display !== "block") return;
+    if (document.activeElement.tagName === "TEXTAREA" || document.activeElement.tagName === "INPUT") {
+      return;
+    }
+    
+    if (e.code === "Space") {
+      e.preventDefault();
+      toggleRCTimer();
+    }
+    if (e.code === "ArrowLeft") {
+      document.getElementById("btn-prev-question").click();
+    }
+    if (e.code === "ArrowRight") {
+      document.getElementById("btn-next-question").click();
+    }
+    
+    const key = e.key.toUpperCase();
+    if (["A", "B", "C", "D", "E"].includes(key)) {
+      const choiceCard = document.querySelector(`.choice-card[data-choice="${key}"]`);
+      if (choiceCard) choiceCard.click();
+    }
+    if (["1", "2", "3", "4", "5"].includes(e.key)) {
+      const letters = ["A", "B", "C", "D", "E"];
+      const targetLetter = letters[parseInt(e.key) - 1];
+      const choiceCard = document.querySelector(`.choice-card[data-choice="${targetLetter}"]`);
+      if (choiceCard) choiceCard.click();
+    }
+  });
+}
+
+function setRCPassageTab(index) {
+  rcState.currentPassageIndex = index;
+  rcState.currentQuestionIndex = 0;
+  rcState.showAnswerState = false;
+  
+  document.getElementById("tab-passage-1").classList.toggle("active", index === 0);
+  document.getElementById("tab-passage-2").classList.toggle("active", index === 1);
+  
+  loadRCTestAndPassage();
+  saveRCToLocalStorage();
+}
+
+function loadRCTestAndPassage() {
+  if (!rcState.testsData) return;
+  
+  const test = rcState.testsData[rcState.currentTestIndex];
+  const passage = test.passages[rcState.currentPassageIndex];
+  
+  document.getElementById("tab-passage-1").classList.toggle("active", rcState.currentPassageIndex === 0);
+  document.getElementById("tab-passage-2").classList.toggle("active", rcState.currentPassageIndex === 1);
+  
+  const pContentEl = document.getElementById("passage-content");
+  const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}`;
+  
+  if (rcState.highlights[key]) {
+    pContentEl.innerHTML = rcState.highlights[key];
+  } else {
+    pContentEl.textContent = passage.passage;
+  }
+  
+  setTimeout(() => {
+    updateRCLineNumbers();
+    resizeRCCanvas();
+    loadRCDrawing();
+  }, 50);
+  
+  const notes = rcState.notes[key] || { simplification: "", function: "" };
+  document.getElementById("note-simplification").value = notes.simplification || "";
+  document.getElementById("note-function").value = notes.function || "";
+  
+  rcUndoStack = [];
+  rcRedoStack = [];
+  
+  renderRCQuestion();
+}
+
+function updateRCLineNumbers() {
+  const textEl = document.getElementById("passage-content");
+  const numbersContainer = document.getElementById("line-numbers-container");
+  if (!textEl || !numbersContainer) return;
+  
+  numbersContainer.innerHTML = "";
+  
+  const span = document.createElement("span");
+  span.textContent = "Test Line";
+  textEl.appendChild(span);
+  const lineHeight = span.offsetHeight;
+  textEl.removeChild(span);
+  
+  const totalHeight = textEl.offsetHeight;
+  const lineCount = Math.round(totalHeight / lineHeight);
+  
+  for (let i = 1; i <= lineCount; i++) {
+    const numDiv = document.createElement("div");
+    numDiv.style.height = `${lineHeight}px`;
+    numDiv.style.display = "flex";
+    numDiv.style.alignItems = "center";
+    numDiv.style.justifyContent = "flex-end";
+    
+    if (i % 5 === 0) {
+      numDiv.textContent = i === 5 ? "Line 5" : i;
+    } else {
+      numDiv.textContent = "";
+    }
+    numbersContainer.appendChild(numDiv);
+  }
+}
+
+function renderRCQuestion() {
+  const test = rcState.testsData[rcState.currentTestIndex];
+  const passage = test.passages[rcState.currentPassageIndex];
+  const q = passage.questions[rcState.currentQuestionIndex];
+  
+  document.getElementById("progress-text").textContent = `Question ${rcState.currentQuestionIndex + 1} of ${passage.questions.length}`;
+  const barPercent = ((rcState.currentQuestionIndex + 1) / passage.questions.length) * 100;
+  document.getElementById("progress-bar-fill").style.width = `${barPercent}%`;
+  
+  document.getElementById("question-badge").textContent = `Question ${q.question_number}`;
+  document.getElementById("question-text").textContent = q.question;
+  
+  const choicesContainer = document.getElementById("choices-container");
+  choicesContainer.innerHTML = "";
+  
+  const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}_${q.question_number}`;
+  const savedAnswer = rcState.selectedAnswers[key];
+  
+  Object.keys(q.options).forEach((letter) => {
+    const text = q.options[letter];
+    const card = document.createElement("div");
+    card.className = "choice-card";
+    card.setAttribute("data-choice", letter);
+    if (savedAnswer === letter) {
+      card.classList.add("selected");
+    }
+    
+    card.innerHTML = `
+      <div class="choice-letter">${letter}</div>
+      <div class="choice-content">${text}</div>
+    `;
+    
+    card.addEventListener("click", () => {
+      if (rcState.selectedAnswers[key] === letter) {
+        delete rcState.selectedAnswers[key];
+        card.classList.remove("selected");
+      } else {
+        rcState.selectedAnswers[key] = letter;
+        Array.from(choicesContainer.children).forEach(child => child.classList.remove("selected"));
+        card.classList.add("selected");
+      }
+      
+      if (rcState.showAnswerState) {
+        rcState.showAnswerState = false;
+        document.getElementById("btn-show-answer").innerHTML = `
+          <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+          Show Answer
+        `;
+        renderRCAnswerOverlay(false);
+      }
+      
+      saveRCToLocalStorage();
+    });
+    
+    choicesContainer.appendChild(card);
+  });
+  
+  document.getElementById("btn-prev-question").disabled = (rcState.currentQuestionIndex === 0);
+  
+  const nextBtn = document.getElementById("btn-next-question");
+  if (rcState.currentQuestionIndex === passage.questions.length - 1) {
+    if (rcState.currentPassageIndex === 0) {
+      nextBtn.innerHTML = `
+        Next Passage
+        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      `;
+    } else {
+      nextBtn.innerHTML = `
+        Test Finished
+        <svg class="svg-icon" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+      `;
+    }
+  } else {
+    nextBtn.innerHTML = `
+      Next
+      <svg class="svg-icon" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+    `;
+  }
+  
+  if (rcState.showAnswerState) {
+    renderRCAnswerOverlay(true);
+  }
+}
+
+function toggleRCShowAnswer() {
+  if (!rcState.testsData) return;
+  rcState.showAnswerState = !rcState.showAnswerState;
+  
+  const showBtn = document.getElementById("btn-show-answer");
+  if (rcState.showAnswerState) {
+    showBtn.innerHTML = `
+      <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2v-6h2v6z"/></svg>
+      Hide Answer
+    `;
+    renderRCAnswerOverlay(true);
+  } else {
+    showBtn.innerHTML = `
+      <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+      Show Answer
+    `;
+    renderRCAnswerOverlay(false);
+  }
+}
+
+function renderRCAnswerOverlay(show) {
+  const test = rcState.testsData[rcState.currentTestIndex];
+  const passage = test.passages[rcState.currentPassageIndex];
+  const q = passage.questions[rcState.currentQuestionIndex];
+  
+  const choicesContainer = document.getElementById("choices-container");
+  const cards = choicesContainer.getElementsByClassName("choice-card");
+  
+  const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}_${q.question_number}`;
+  const correctLetter = q.correct_answer;
+  const userLetter = rcState.selectedAnswers[key];
+  
+  Array.from(cards).forEach((card) => {
+    card.classList.remove("correct", "incorrect");
+    
+    if (show) {
+      const choiceLetter = card.getAttribute("data-choice");
+      if (choiceLetter === correctLetter) {
+        card.classList.add("correct");
+      }
+      if (userLetter === choiceLetter && userLetter !== correctLetter) {
+        card.classList.add("incorrect");
+      }
+    }
+  });
+}
+
+function highlightRCTextSelection() {
+  const selection = window.getSelection();
+  if (!selection.rangeCount || selection.isCollapsed) {
+    showToast("Please select some text first!", false);
+    return;
+  }
+  
+  const range = selection.getRangeAt(0);
+  const passageEl = document.getElementById("passage-content");
+  
+  if (!passageEl.contains(range.commonAncestorContainer)) {
+    showToast("Selection must be inside the passage!", false);
+    return;
+  }
+  
+  const span = document.createElement("span");
+  span.className = "passage-highlight";
+  
+  try {
+    range.surroundContents(span);
+    selection.removeAllRanges();
+    
+    const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}`;
+    rcState.highlights[key] = passageEl.innerHTML;
+    saveRCToLocalStorage();
+    showToast("Text highlighted!", true);
+  } catch (e) {
+    console.error("Text highlight error:", e);
+    showToast("Cannot highlight selection spanning multiple paragraphs.", false);
+  }
+}
+
+function initRCCanvas() {
+  rcCanvas = document.getElementById("drawing-canvas");
+  rcCtx = rcCanvas.getContext("2d");
+  
+  rcCanvas.addEventListener("mousedown", startRCDrawing);
+  rcCanvas.addEventListener("mousemove", drawRC);
+  rcCanvas.addEventListener("mouseup", stopRCDrawing);
+  rcCanvas.addEventListener("mouseout", stopRCDrawing);
+  
+  rcCanvas.addEventListener("touchstart", (e) => {
+    const touch = e.touches[0];
+    const mouseEvent = new MouseEvent("mousedown", {
+      clientX: touch.clientX,
+      clientY: touch.clientY
+    });
+    rcCanvas.dispatchEvent(mouseEvent);
+  }, { passive: true });
+  
+  rcCanvas.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0];
+    const mouseEvent = new MouseEvent("mousemove", {
+      clientX: touch.clientX,
+      clientY: touch.clientY
+    });
+    rcCanvas.dispatchEvent(mouseEvent);
+  }, { passive: true });
+  
+  rcCanvas.addEventListener("touchend", () => {
+    const mouseEvent = new MouseEvent("mouseup", {});
+    rcCanvas.dispatchEvent(mouseEvent);
+  });
+}
+
+function resizeRCCanvas() {
+  if (!rcCanvas) return;
+  const wrapper = document.getElementById("passage-wrapper");
+  rcCanvas.width = wrapper.scrollWidth;
+  rcCanvas.height = wrapper.scrollHeight;
+  redrawRCCanvas();
+}
+
+function startRCDrawing(e) {
+  if (rcCurrentTool !== "pen") return;
+  rcIsDrawing = true;
+  const rect = rcCanvas.getBoundingClientRect();
+  const wrapper = document.getElementById("passage-wrapper");
+  const x = e.clientX - rect.left + wrapper.scrollLeft;
+  const y = e.clientY - rect.top + wrapper.scrollTop;
+  
+  rcCurrentPath = [{ x, y }];
+  rcRedoStack = [];
+}
+
+function drawRC(e) {
+  if (!rcIsDrawing || rcCurrentTool !== "pen") return;
+  const rect = rcCanvas.getBoundingClientRect();
+  const wrapper = document.getElementById("passage-wrapper");
+  const x = e.clientX - rect.left + wrapper.scrollLeft;
+  const y = e.clientY - rect.top + wrapper.scrollTop;
+  
+  rcCurrentPath.push({ x, y });
+  
+  rcCtx.strokeStyle = "#ef4444";
+  rcCtx.lineWidth = 2;
+  rcCtx.lineCap = "round";
+  rcCtx.lineJoin = "round";
+  
+  rcCtx.beginPath();
+  rcCtx.moveTo(rcCurrentPath[rcCurrentPath.length - 2].x, rcCurrentPath[rcCurrentPath.length - 2].y);
+  rcCtx.lineTo(x, y);
+  rcCtx.stroke();
+}
+
+function stopRCDrawing() {
+  if (!rcIsDrawing) return;
+  rcIsDrawing = false;
+  
+  if (rcCurrentPath.length > 1) {
+    const pathObj = {
+      points: rcCurrentPath,
+      color: "#ef4444",
+      width: 2
+    };
+    rcDrawingPaths.push(pathObj);
+    rcUndoStack.push({ type: "draw", path: pathObj });
+    saveRCDrawing();
+  }
+  rcCurrentPath = [];
+}
+
+function redrawRCCanvas() {
+  rcCtx.clearRect(0, 0, rcCanvas.width, rcCanvas.height);
+  rcDrawingPaths.forEach((path) => {
+    rcCtx.strokeStyle = path.color;
+    rcCtx.lineWidth = path.width;
+    rcCtx.lineCap = "round";
+    rcCtx.lineJoin = "round";
+    rcCtx.beginPath();
+    rcCtx.moveTo(path.points[0].x, path.points[0].y);
+    for (let i = 1; i < path.points.length; i++) {
+      rcCtx.lineTo(path.points[i].x, path.points[i].y);
+    }
+    rcCtx.stroke();
+  });
+}
+
+function loadRCDrawing() {
+  const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}`;
+  rcDrawingPaths = rcState.canvasDrawing[key] || [];
+  redrawRCCanvas();
+}
+
+function saveRCDrawing() {
+  const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}`;
+  rcState.canvasDrawing[key] = rcDrawingPaths;
+  saveRCToLocalStorage();
+}
+
+function undoRCDrawing() {
+  if (rcUndoStack.length === 0) return;
+  const action = rcUndoStack.pop();
+  rcRedoStack.push(action);
+  
+  if (action.type === "draw") {
+    rcDrawingPaths.pop();
+    redrawRCCanvas();
+    saveRCDrawing();
+  }
+}
+
+function redoRCDrawing() {
+  if (rcRedoStack.length === 0) return;
+  const action = rcRedoStack.pop();
+  rcUndoStack.push(action);
+  
+  if (action.type === "draw") {
+    rcDrawingPaths.push(action.path);
+    redrawRCCanvas();
+    saveRCDrawing();
+  }
+}
+
+function clearRCAnnotations() {
+  const key = `${rcState.currentTestIndex}_${rcState.currentPassageIndex}`;
+  
+  rcDrawingPaths = [];
+  rcState.canvasDrawing[key] = [];
+  redrawRCCanvas();
+  
+  const test = rcState.testsData[rcState.currentTestIndex];
+  const passage = test.passages[rcState.currentPassageIndex];
+  document.getElementById("passage-content").textContent = passage.passage;
+  delete rcState.highlights[key];
+  
+  saveRCToLocalStorage();
+  setTimeout(updateRCLineNumbers, 50);
+  showToast("Annotations cleared.", true);
+}
+
+function setRCTool(tool) {
+  rcCurrentTool = tool;
+  document.getElementById("tool-select").classList.toggle("active", tool === "select");
+  document.getElementById("tool-pen").classList.toggle("active", tool === "pen");
+  
+  const canvasEl = document.getElementById("drawing-canvas");
+  if (tool === "pen") {
+    canvasEl.classList.add("active");
+  } else {
+    canvasEl.classList.remove("active");
+  }
+}
+
+function toggleRCTimer() {
+  if (rcState.timerIsRunning) {
+    pauseRCTimer();
+  } else {
+    startRCTimer();
+  }
+}
+
+function startRCTimer() {
+  if (rcState.timerIsRunning) return;
+  rcState.timerIsRunning = true;
+  document.getElementById("timer-toggle-icon").innerHTML = `<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>`;
+  
+  rcTimerInterval = setInterval(() => {
+    if (rcState.timerMode === "countdown") {
+      if (rcState.timerTime > 0) {
+        rcState.timerTime--;
+      } else {
+        pauseRCTimer();
+        playRCTimerAlert();
+        showToast("Time's up!", false);
+      }
+    } else {
+      rcState.timerTime++;
+    }
+    updateRCTimerDisplay();
+  }, 1000);
+}
+
+function pauseRCTimer() {
+  if (!rcState.timerIsRunning) return;
+  rcState.timerIsRunning = false;
+  clearInterval(rcTimerInterval);
+  document.getElementById("timer-toggle-icon").innerHTML = `<path d="M8 5v14l11-7z"/>`;
+}
+
+function resetRCTimer() {
+  pauseRCTimer();
+  rcState.timerTime = rcState.timerMode === "countdown" ? rcState.timerDuration : 0;
+  updateRCTimerDisplay();
+}
+
+function updateRCTimerDisplay() {
+  const mins = Math.floor(rcState.timerTime / 60);
+  const secs = rcState.timerTime % 60;
+  document.getElementById("timer-display").textContent = `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+}
+
+function openRCTimerSettings() {
+  pauseRCTimer();
+  document.getElementById("modal-timer").classList.add("active");
+  
+  document.querySelector(`input[name="timer-mode"][value="${rcState.timerMode}"]`).checked = true;
+  document.getElementById("input-minutes").value = Math.floor(rcState.timerDuration / 60);
+  document.getElementById("input-seconds").value = rcState.timerDuration % 60;
+  
+  toggleRCDurationInputs();
+  
+  document.querySelectorAll('input[name="timer-mode"]').forEach(radio => {
+    radio.addEventListener("change", toggleRCDurationInputs);
+  });
+}
+
+function toggleRCDurationInputs() {
+  const mode = document.querySelector('input[name="timer-mode"]:checked').value;
+  const durationGroup = document.getElementById("group-duration-inputs");
+  if (mode === "countdown") {
+    durationGroup.style.display = "flex";
+  } else {
+    durationGroup.style.display = "none";
+  }
+}
+
+function closeRCTimerSettings() {
+  document.getElementById("modal-timer").classList.remove("active");
+}
+
+function saveRCTimerSettings() {
+  const mode = document.querySelector('input[name="timer-mode"]:checked').value;
+  rcState.timerMode = mode;
+  
+  if (mode === "countdown") {
+    const mins = parseInt(document.getElementById("input-minutes").value) || 0;
+    const secs = parseInt(document.getElementById("input-seconds").value) || 0;
+    rcState.timerDuration = (mins * 60) + secs;
+    rcState.timerTime = rcState.timerDuration;
+  } else {
+    rcState.timerTime = 0;
+  }
+  
+  closeRCTimerSettings();
+  updateRCTimerDisplay();
+  saveRCToLocalStorage();
+  showToast("Timer configuration saved.", true);
+}
+
+function exitRCQuiz() {
+  pauseRCTimer();
+  document.getElementById('verbal-rc-quiz-screen').style.display = 'none';
+  showVerbalEntry();
 }
 
 // STRATEGIES SCRIPT

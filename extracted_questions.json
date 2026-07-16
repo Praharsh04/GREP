@@ -1,0 +1,1209 @@
+[
+  {
+    "test_number": 1,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "The common belief of some linguists that each language is a perfect vehicle for the thoughts of the nation speaking it is in some ways the exact counterpart of the conviction of the Manchester school of economics that supply and demand will regulate everything for the best. Just as economists were blind to the numerous cases in which the law of supply and demand left actual wants unsatisfied, so also many linguists are deaf to those instances in which the very nature of a language calls forth misunderstandings in everyday conversation, and in which, consequently, a word has to be modified or defined in order to present the idea intended by the speaker: \"He took his stick—no, not John's, but his own.\" No language is perfect, and if we admit this truth, we must also admit that it is not unreasonable to investigate the relative merits of different languages or of different details in languages.",
+        "questions": [
+          {
+            "question_number": 24,
+            "question": "The primary purpose of the passage is to",
+            "options": {
+              "A": "analyze an interesting feature of the English language",
+              "B": "refute a belief held by some linguists",
+              "C": "show that economic theory is relevant to linguistic study",
+              "D": "illustrate the confusion that can result from the improper use of language",
+              "E": "suggest a way in which languages can be made more nearly perfect"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 25,
+            "question": "The misunderstanding presented by the author in lines 13-14 is similar to which of the following?\n\nI. X uses the word \"you\" to refer to a group, but Y thinks that X is referring to one person only.\nII. X mistakenly uses the word \"anomaly\" to refer to a typical example, but Y knows that \"anomaly\" means \"exception.\"\nIII. X uses the word \"bachelor\" to mean \"unmarried man,\" but Y mistakenly thinks that bachelor means \"unmarried woman.\"",
+            "options": {
+              "A": "I only",
+              "B": "II only",
+              "C": "III only",
+              "D": "I and II only",
+              "E": "II and III only"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 26,
+            "question": "In presenting the argument, the author does all of the following EXCEPT",
+            "options": {
+              "A": "give an example",
+              "B": "draw a conclusion",
+              "C": "make a generalization",
+              "D": "make a comparison",
+              "E": "present a paradox"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 27,
+            "question": "Which of the following contributes to the misunderstanding described by the author in lines 13-14 ?",
+            "options": {
+              "A": "It is unclear whom the speaker of the sentence is addressing.",
+              "B": "It is unclear to whom the word \"his\" refers the first time it is used.",
+              "C": "It is unclear to whom the word \"his\" refers the second time it is used.",
+              "D": "The meaning of \"took\" is ambiguous.",
+              "E": "It is unclear to whom \"He\" refers."
+            },
+            "correct_answer": "B"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "(This passage is excerpted from an article that was published in 1982.)\n\nWarm-blooded animals have elaborate physiological controls to maintain constant body temperature (in humans, 37° C). Why then during sickness should temperature rise, apparently increasing stress on the infected organism? It has long been known that the level of serum iron in animals falls during infection. Garibaldi first suggested a relationship between fever and iron. He found that microbial synthesis of siderophores—substances that bind iron—in bacteria of the genus Salmonella declined at environmental temperatures above 37° C and stopped at 40.3° C. Thus, fever would make it more difficult for an infecting bacterium to acquire iron and thus to multiply. Cold-blooded animals were used to test this hypothesis because their body temperature can be controlled in the laboratory. Kluger reported that of iguanas infected with the potentially lethal bacterium A. hydrophilia, more survived at temperatures of 42° C than at 37° C, even though healthy animals prefer the lower temperature. When animals at 42° C were injected with an iron solution, however, mortality rates increased significantly. Research to determine whether similar phenomena occur in warm-blooded animals is sorely needed.",
+        "questions": [
+          {
+            "question_number": 24,
+            "question": "The passage is primarily concerned with attempts to determine",
+            "options": {
+              "A": "the role of siderophores in the synthesis of serum iron",
+              "B": "new treatments for infections that are caused by A. hydrophilia",
+              "C": "the function of fever in warm-blooded animals",
+              "D": "the mechanisms that ensure constant body temperature",
+              "E": "iron utilization in cold-blooded animals"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 25,
+            "question": "According to the passage, Garibaldi determined which of the following?",
+            "options": {
+              "A": "That serum iron is produced through microbial synthesis",
+              "B": "That microbial synthesis of siderophores in warm-blooded animals is more efficient at higher temperatures",
+              "C": "That only iron bound to other substances can be used by bacteria",
+              "D": "That there is a relationship between the synthesis of siderophores in bacteria of the genus Salmonella and environmental temperature",
+              "E": "That bacteria of the genus Salmonella require iron as a nutrient"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 26,
+            "question": "Which of the following can be inferred about warm-blooded animals solely on the basis of information in the passage?",
+            "options": {
+              "A": "The body temperatures of warm-blooded animals cannot be easily controlled in the laboratory.",
+              "B": "Warm-blooded animals require more iron in periods of stress than they do at other times.",
+              "C": "Warm-blooded animals are more comfortable at an environmental temperature of 37° C than they are at a temperature of 42° C.",
+              "D": "In warm-blooded animals, bacteria are responsible for the production of siderophores, which, in turn, make iron available to the animal.",
+              "E": "In warm-blooded animals, infections that lead to fever are usually traceable to bacteria."
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 27,
+            "question": "If it were to be determined that \"similar phenomena occur in warm-blooded animals\" (lines 21-22), which of the following, assuming each is possible, is likely to be the most effective treatment for warm-blooded animals with bacterial infections?",
+            "options": {
+              "A": "Administering a medication that lowers the animals' body temperature",
+              "B": "Injecting the animals with an iron solution",
+              "C": "Administering a medication that makes serum iron unavailable to bacteria",
+              "D": "Providing the animals with reduced-iron diets",
+              "E": "Keeping the animals in an environment with temperatures higher than 37° C"
+            },
+            "correct_answer": "C"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 2,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "(This passage is from an article published in 1973)\n\nThe recent change to all-volunteer armed forces in the United States will eventually produce a gradual increase in the proportion of women in the armed forces and in the variety of women's assignments, but probably not the dramatic gains for women that might have been expected. This is so even though the armed forces operate in an ethos of institutional change oriented toward occupational equality and under the federal sanction of equal pay for equal work. The difficulty is that women are unlikely to be trained for any direct combat operations. A significant portion of the larger society remains uncomfortable as yet with extending equality in this direction. Therefore, for women in the military, the search for equality will still be based on functional equivalence, not identity or even similarity of task. Opportunities seem certain to arise. The growing emphasis on deterrence is bound to offer increasing scope for women to become involved in novel types of noncombat military assignments.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The primary purpose of the passage is to",
+            "options": {
+              "A": "present an overview of the different types of assignments available to women in the new United States all-volunteer armed forces",
+              "B": "present a reasoned prognosis of the status of women in the new United States all-volunteer armed forces",
+              "C": "present the new United States all-volunteer armed forces as a model case of equal employment policies in action",
+              "D": "analyze reforms in the new United States all-volunteer armed forces necessitated by the increasing number of women in the military",
+              "E": "analyze the use of functional equivalence as a substitute for occupational equality in the new United States all-volunteer armed forces"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 18,
+            "question": "According to the passage, despite the United States armed forces' commitment to occupational equality for women in the military, certain other factors preclude women's",
+            "options": {
+              "A": "receiving equal pay for equal work",
+              "B": "having access to positions of responsibility at most levels",
+              "C": "drawing assignments from a wider range of assignments than before",
+              "D": "benefiting from opportunities arising from new noncombat functions",
+              "E": "being assigned all of the military tasks that are assigned to men"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 19,
+            "question": "The passage implies that which of the following is a factor conducive to a more equitable representation of women in the United States armed forces than has existed in the past?",
+            "options": {
+              "A": "The all-volunteer character of the present armed forces",
+              "B": "The past service records of women who had assignments functionally equivalent to men's assignments",
+              "C": "The level of awareness on the part of the larger society of military issues",
+              "D": "A decline in the proportion of deterrence-oriented noncombat assignments",
+              "E": "Restrictive past policies governing the military assignments open to women"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 20,
+            "question": "The \"dramatic gains for women\" (line 5) and the attitude, as described in lines 11-12, of a \"significant portion of the larger society\" are logically related to each other inasmuch as the author puts forward the latter as",
+            "options": {
+              "A": "a public response to achievement of the former",
+              "B": "the major reason for absence of the former",
+              "C": "a precondition for any prospect of achieving the former",
+              "D": "a catalyst for a further extension of the former",
+              "E": "a reason for some of the former being lost again"
+            },
+            "correct_answer": "B"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "The transplantation of organs from one individual to another normally involves two major problems: (1) organ rejection is likely unless the transplantation antigens of both individuals are nearly identical, and (2) the introduction of any unmatched transplantation antigens induces the development by the recipient of donor-specific lymphocytes that will produce violent rejection of further transplantations from that donor. However, we have found that among many strains of rats these \"normal\" rules of transplantation are not obeyed by liver transplants. Not only are liver transplants never rejected, but they even induce a state of donor-specific unresponsiveness in which subsequent transplants of other organs, such as skin, from that donor are accepted permanently. Our hypothesis is that (1) many strains of rats simply cannot mount a sufficiently vigorous destructive immune-response (using lymphocytes) to outstrip the liver's relatively great capacity to protect itself from immune-response damage and that (2) the systemic unresponsiveness observed is due to concentration of the recipient's donor-specific lymphocytes at the site of the liver transplant.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The primary purpose of the passage is to treat the accepted generalizations about organ transplantation in which of the following ways?",
+            "options": {
+              "A": "Explicate their main features",
+              "B": "Suggest an alternative to them",
+              "C": "Examine their virtues and limitations",
+              "D": "Criticize the major evidence used to support them",
+              "E": "Present findings that qualify them"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 18,
+            "question": "It can be inferred from the passage that the author believes that an important difference among strains of rats is the",
+            "options": {
+              "A": "size of their livers",
+              "B": "constitution of their skin",
+              "C": "strength of their immune-response reactions",
+              "D": "sensitivity of their antigens",
+              "E": "adaptability of their lymphocytes"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 19,
+            "question": "According to the hypothesis of the author, after a successful liver transplant, the reason that rats do not reject further transplants of other organs from the same donor is that the",
+            "options": {
+              "A": "transplantation antigens of the donor and the recipient become matched",
+              "B": "lymphocytes of the recipient are weakened by the activity of the transplanted liver",
+              "C": "subsequently transplanted organ is able to repair the damage caused by the recipient's immune-response reaction",
+              "D": "transplanted liver continues to be the primary locus for the recipient's immune-response reaction",
+              "E": "recipient is unable to manufacture the lymphocytes necessary for the immune-response reaction"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 20,
+            "question": "Which of the following new findings about strains of rats that do not normally reject liver transplants, if true, would support the authors' hypothesis?\n\nI. Stomach transplants are accepted by the recipients in all cases.\nII. Increasing the strength of the recipient's immune-response reaction can induce liver-transplant rejection.\nIII. Organs from any other donor can be transplanted without rejection after liver transplantation.\nIV. Preventing lymphocytes from being concentrated at the liver transplant produces acceptance of skin transplants.",
+            "options": {
+              "A": "II only",
+              "B": "I and III only",
+              "C": "II and IV only",
+              "D": "I, II, and III only",
+              "E": "I, III, and IV only"
+            },
+            "correct_answer": "A"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 3,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "Throughout human history there have been many stringent taboos concerning watching other people eat or eating in the presence of others. There have been attempts to explain these taboos in terms of inappropriate social relationships either between those who are involved and those who are not simultaneously involved in the satisfaction of a bodily need, or between those already satiated and those who appear to be shamelessly gorging. Undoubtedly such elements exist in the taboos, but there is an additional element with a much more fundamental importance. In prehistoric times, when food was so precious and the on-lookers so hungry, not to offer half of the little food one had was unthinkable, since every glance was a plea for life. Further, during those times, people existed in nuclear or extended family groups, and the sharing of food was quite literally supporting one's family or, by extension, preserving one's self.",
+        "questions": [
+          {
+            "question_number": 23,
+            "question": "If the argument in the passage is valid, taboos against eating in the presence of others who are not also eating would be LEAST likely in a society that",
+            "options": {
+              "A": "had always had a plentiful supply of food",
+              "B": "emphasized the need to share worldly goods",
+              "C": "had a nomadic rather than an agricultural way of life",
+              "D": "emphasized the value of privacy",
+              "E": "discouraged overindulgence"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 24,
+            "question": "The author's hypothesis concerning the origin of taboos against watching other people eat emphasizes the",
+            "options": {
+              "A": "general palatability of food",
+              "B": "religious significance of food",
+              "C": "limited availability of food",
+              "D": "various sources of food",
+              "E": "nutritional value of food"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 25,
+            "question": "According to the passage, the author believes that past attempts to explain some taboos concerning eating are",
+            "options": {
+              "A": "unimaginative",
+              "B": "implausible",
+              "C": "inelegant",
+              "D": "incomplete",
+              "E": "unclear"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 26,
+            "question": "In developing the main idea of the passage, the author does which of the following?",
+            "options": {
+              "A": "Downplays earlier attempts to explain the origins of a social prohibition.",
+              "B": "Adapts a scientific theory and applies it to a spiritual relationship.",
+              "C": "Simplifies a complex biological phenomenon by explaining it in terms of social needs.",
+              "D": "Reorganizes a system designed to guide personal behavior.",
+              "E": "Codifies earlier, unsystematized conjectures about family life."
+            },
+            "correct_answer": "A"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "Volcanic rock that forms as fluid lava chills rapidly is called pillow lava. This rapid chilling occurs when lava erupts directly into water (or beneath ice) or when it flows across a shoreline and into a body of water. While the term \"pillow lava\" suggests a definite shape, in fact geologists disagree. Some geologists argue that pillow lava is characterized by discrete, ellipsoidal masses. Others describe pillow lava as a tangled mass of cylindrical, interconnected flow lobes. Much of this controversy probably results from unwarranted extrapolations of the original configuration of pillow flows from two-dimensional cross sections of eroded pillows in land outcroppings. Virtually any cross section cut through a tangled mass of interconnected flow lobes would give the appearance of a pile of discrete ellipsoidal masses. Adequate three-dimensional images of intact pillows are essential for defining the true geometry of pillowed flows and thus ascertaining their mode of origin. Indeed, the term \"pillow,\" itself suggestive of discrete masses, is probably a misnomer.",
+        "questions": [
+          {
+            "question_number": 24,
+            "question": "Which of the following is a fact presented in the passage?",
+            "options": {
+              "A": "The shape of the connections between the separate, sacklike masses in pillow lava is unknown.",
+              "B": "More accurate cross sections of pillow lava would reveal the mode of origin.",
+              "C": "Water or ice is necessary for the formation of pillow lava.",
+              "D": "No three-dimensional examples of intact pillows currently exist.",
+              "E": "The origin of pillow lava is not yet known."
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 25,
+            "question": "In the passage, the author is primarily interested in",
+            "options": {
+              "A": "analyzing the source of a scientific controversy",
+              "B": "criticizing some geologists' methodology",
+              "C": "pointing out the flaws in a geological study",
+              "D": "proposing a new theory to explain existing scientific evidence",
+              "E": "describing a physical phenomenon"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 26,
+            "question": "The author of the passage would most probably agree that the geologists mentioned in line 6 (\"Some geologists\") have made which of the following errors in reasoning?\n\nI. Generalized unjustifiably from available evidence.\nII. Deliberately ignored existing counterevidence.\nIII. Repeatedly failed to take new evidence into account.",
+            "options": {
+              "A": "I only",
+              "B": "II only",
+              "C": "III only",
+              "D": "I and II only",
+              "E": "II and III only"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 27,
+            "question": "The author implies that the \"controversy\" (line 9) might be resolved if",
+            "options": {
+              "A": "geologists did not persist in using the term \"pillow\"",
+              "B": "geologists did not rely on potentially misleading information",
+              "C": "geologists were more willing to confer directly with one another",
+              "D": "two-dimensional cross sections of eroded pillows were available",
+              "E": "existing pillows in land outcroppings were not so badly eroded"
+            },
+            "correct_answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 4,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "Of Homer's two epic poems, the Odyssey has always been more popular than the Iliad, perhaps because it includes more features of mythology that are accessible to readers. Its subject (to use Maynard Mack's categories) is \"life-as-spectacle,\" for readers, diverted by its various incidents, observe its hero Odysseus primarily from without; the tragic Iliad, however, presents \"life-as-experience\": readers are asked to identify with the mind of Achilles, whose motivations render him a not particularly likable hero. In addition, the Iliad, more than the Odyssey, suggests the complexity of the gods' involvement in human actions, and to the extent that modern readers find this complexity a needless complication, the Iliad is less satisfying than the Odyssey, with its simpler scheme of divine justice. Finally, since the Iliad presents a historically verifiable action, Troy's siege, the poem raises historical questions that are absent from the Odyssey's blithely imaginative world.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The author uses Mack's \"categories\" (lines 4-5) most probably in order to",
+            "options": {
+              "A": "argue that the Iliad should replace the Odyssey as the more popular poem",
+              "B": "indicate Mack's importance as a commentator on the Iliad and the Odyssey",
+              "C": "suggest one way in which the Iliad and the Odyssey can be distinguished",
+              "D": "point out some of the difficulties faced by readers of the Iliad and the Odyssey",
+              "E": "demonstrate that the Iliad and the Odyssey can best be distinguished by comparing their respective heroes"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 18,
+            "question": "The author suggests that the variety of incidents in the Odyssey is likely to deter the reader from",
+            "options": {
+              "A": "concentrating on the poem's mythological features",
+              "B": "concentrating on the psychological states of the poem's central character",
+              "C": "accepting the explanations that have been offered for the poem's popularity",
+              "D": "accepting the poem's scheme of divine justice",
+              "E": "accepting Maynard Mack's theory that the poem's subject is \"life-as-spectacle\""
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 19,
+            "question": "The passage is primarily concerned with",
+            "options": {
+              "A": "distinguishing arguments",
+              "B": "applying classifications",
+              "C": "initiating a debate",
+              "D": "resolving a dispute",
+              "E": "developing a contrast"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 20,
+            "question": "It can be inferred from the passage that a reader of the Iliad is likely to have trouble identifying with the poem's hero for which of the following reasons?",
+            "options": {
+              "A": "The hero is eventually revealed to be unheroic.",
+              "B": "The hero can be observed by the reader only from without.",
+              "C": "The hero's psychology is not historically verifiable.",
+              "D": "The hero's emotions often do not seem appealing to the reader.",
+              "E": "The hero's emotions are not sufficiently various to engage the reader's attention."
+            },
+            "correct_answer": "D"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "If a supernova (the explosion of a massive star) triggered star formation from dense clouds of gas and dust, and if the most massive star to be formed from the cloud evolved into a supernova and triggered a new round of star formation, and so on, then a chain of star-forming regions would result. If many such chains were created in a differentially rotating galaxy, the distribution of stars would resemble the observed distribution in a spiral galaxy.\nThis line of reasoning underlies an exciting new theory of spiral-galaxy structure. A computer simulation based on this theory has reproduced the appearance of many spiral galaxies without assuming an underlying density wave, the hallmark of the most widely accepted theory of the large-scale structure of spiral galaxies. That theory maintains that a density wave of spiral form sweeps through the central plane of a galaxy, compressing clouds of gas and dust, which collapse into stars that form a spiral pattern.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The primary purpose of the passage is to",
+            "options": {
+              "A": "describe what results when a supernova triggers the creation of chains of star-forming regions",
+              "B": "propose a modification in the most widely accepted theory of spiral-galaxy structure",
+              "C": "compare and contrast the roles of clouds of gas and dust in two theories of spiral-galaxy structure",
+              "D": "describe a new theory of spiral-galaxy structure and contrast it with the most widely accepted theory",
+              "E": "describe a new theory of spiral-galaxy structure and discuss a reason why it is inferior to the most widely accepted theory"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 18,
+            "question": "The passage implies that, according to the new theory of spiral-galaxy structure, a spiral galaxy can be created by supernovas when the supernovas are",
+            "options": {
+              "A": "producing an underlying density wave",
+              "B": "affected by a density wave of spiral form",
+              "C": "distributed in a spiral pattern",
+              "D": "located in the central plane of a galaxy",
+              "E": "located in a differentially rotating galaxy"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 19,
+            "question": "Which of the following, if true, would most discredit the new theory as described in the passage?",
+            "options": {
+              "A": "The exact mechanism by which a star becomes a supernova is not yet completely known and may even differ for different stars.",
+              "B": "Chains of star-forming regions like those postulated in the new theory have been observed in the vicinity of dense clouds of gas and dust.",
+              "C": "The most massive stars formed from supernova explosions are unlikely to evolve into supernovas.",
+              "D": "Computer simulations of supernovas provide a poor picture of what occurs just before a supernova explosion.",
+              "E": "A density wave cannot compress clouds of gas and dust to a density high enough to create a star."
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 20,
+            "question": "The author's attitude toward the new theory of spiral-galaxy structure can best be described as",
+            "options": {
+              "A": "euphoric",
+              "B": "enthusiastic",
+              "C": "concerned",
+              "D": "critical",
+              "E": "disputatious"
+            },
+            "correct_answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 5,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "All of Françoise Duparc's surviving paintings blend portraiture and genre. Her subjects appear to be acquaintances whom she has asked to pose; she has captured both their self-consciousness and the spontaneity of their everyday activities, the depiction of which characterizes genre painting. But genre painting, especially when it portrayed members of the humblest classes, was never popular in eighteenth-century France. The Le Nain brothers and Georges de La Tour, who also chose such themes, were largely ignored. Their present high standing is due to a different, more democratic political climate and to different aesthetic values: we no longer require artists to provide ideal images of humanity for our moral edification but rather regard such idealization as a falsification of the truth. Duparc gives no improving message and discreetly refrains from judging her subjects. In brief, her works neither elevate nor instruct. This restraint largely explains her lack of popular success during her lifetime, even if her talent did not go completely unrecognized by her eighteenth-century French contemporaries.",
+        "questions": [
+          {
+            "question_number": 24,
+            "question": "According to the passage, modern viewers are not likely to value which of the following qualities in a painting?",
+            "options": {
+              "A": "The technical elements of the painting",
+              "B": "The spontaneity of the painting",
+              "C": "The moral lesson imparted by the painting",
+              "D": "The degree to which the painting realistically depicts its subject",
+              "E": "The degree to which the artist's personality is revealed in the painting"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 25,
+            "question": "If the history of Duparc's artistic reputation were to follow that of the Le Nain brothers and Georges de La Tour, present-day assessments of her work would be likely to contain which of the following?",
+            "options": {
+              "A": "An evaluation that accords high status to her work",
+              "B": "Acknowledgement of her technical expertise but dismissal of her subject matter as trivial",
+              "C": "Agreement with assessments made in her own time but acknowledgements of the exceptional quality of a few of her paintings",
+              "D": "Placement of her among the foremost artists of her century",
+              "E": "A reclassification of her work as portraiture rather than genre painting"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 26,
+            "question": "It can be inferred from the passage that the term \"genre painting\" would most likely apply to which of the following?",
+            "options": {
+              "A": "A painting depicting a glorious moment of victory following a battle",
+              "B": "A painting illustrating a narrative from the Bible",
+              "C": "A portrayal of a mythological Greek goddess",
+              "D": "A portrayal of a servant engaged in his work",
+              "E": "A formal portrait of an eighteenth-century king"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 27,
+            "question": "The argument of the passage best supports which of the following contentions concerning judgments of artistic work?",
+            "options": {
+              "A": "Aesthetic judgments can be influenced by the political beliefs of those making the judgment.",
+              "B": "Judgments of the value of an artist's work made by his or her contemporaries must be discounted before a true judgment can be made.",
+              "C": "Modern aesthetic taste is once again moving in the direction of regarding idealistic painting as the most desirable form of painting.",
+              "D": "In order to be highly regarded, an artist cannot be solely identified with one particular kind of painting.",
+              "E": "Spontaneity is the most valuable quality a portrait painter can have."
+            },
+            "correct_answer": "A"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "Mycorrhizal fungi infect more plants than do any other fungi and are necessary for many plants to thrive, but they have escaped widespread investigation until recently for two reasons. First, the symbiotic association is so well-balanced that the roots of host plants show no damage even when densely infected. Second, the fungi cannot as yet be cultivated in the absence of a living root. Despite these difficulties, there has been important new work that suggests that this symbiotic association can be harnessed to achieve more economical use of costly superphosphate fertilizer and to permit better exploitation of cheaper, less soluble rock phosphate. Mycorrhizal benefits are not limited to improved phosphate uptake in host plants. In legumes, mycorrhizal inoculation has increased nitrogen fixation beyond levels achieved by adding phosphate fertilizer alone. Certain symbiotic associations also increase the host plant's resistance to harmful root fungi. Whether this resistance results from exclusion of harmful fungi through competition for sites, from metabolic change involving antibiotic production, or from increased vigor is undetermined.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "Which of the following most accurately describes the passage?",
+            "options": {
+              "A": "A description of a replicable experiment",
+              "B": "A summary report of new findings",
+              "C": "A recommendation for abandoning a difficult area of research",
+              "D": "A refutation of an earlier hypothesis",
+              "E": "A confirmation of earlier research"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 18,
+            "question": "The level of information in the passage above is suited to the needs of all of the following people EXCEPT",
+            "options": {
+              "A": "a researcher whose job is to identify potentially profitable areas for research and product development",
+              "B": "a state official whose position requires her to alert farmers about possible innovations in farming",
+              "C": "an official of a research foundation who identifies research projects for potential funding",
+              "D": "a biologist attempting to keep up with scientific developments in an area outside of his immediate area of specialization",
+              "E": "a botanist conducting experiments to determine the relationship between degree of mycorrhizal infection and expected uptake of phosphate"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 19,
+            "question": "It can be inferred from the passage that which of the following has been a factor influencing the extent to which research on mycorrhizal fungi has progressed?",
+            "options": {
+              "A": "Lack of funding for such research",
+              "B": "Lack of immediate application of such research",
+              "C": "Lack of a method for identifying mycorrhizal fungi",
+              "D": "Difficulties surrounding laboratory production of specimens for study",
+              "E": "Difficulties ensuing from the high cost and scarcity of superphosphate fertilizers"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 20,
+            "question": "The passage suggests which of the following about the increased resistance to harmful root fungi that some plants infected with mycorrhizal fungi seem to exhibit?",
+            "options": {
+              "A": "There are at least three hypotheses that might account for the increase.",
+              "B": "An explanation lies in the fact that mycorrhizal fungi increase more rapidly in number than harmful root fungi do.",
+              "C": "The plants that show increased resistance also exhibit improved nitrogen fixation.",
+              "D": "Such increases may be independent of mycorrhizal infection.",
+              "E": "It is unlikely that a satisfactory explanation can be found to account for the increase."
+            },
+            "correct_answer": "A"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 6,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "The belief that art originates in intuitive rather than rational faculties was worked out historically and philosophically in the somewhat wearisome volumes of Benedetto Croce, who is usually considered the originator of a new aesthetic. Croce was, in fact, expressing a very old idea. Long before the Romantics stressed intuition and self-expression, the frenzy of inspiration was regarded as fundamental to art, but philosophers had always assumed it must be controlled by law and by the intellectual power of putting things into harmonious order. This general philosophic concept of art was supported by technical necessities. It was necessary to master certain laws and to use intellect in order to build Gothic cathedrals, or set up the stained glass windows of Chartres. When this bracing element of craftsmanship ceased to dominate artists' outlook, new technical elements had to be adopted to maintain the intellectual element in art. Such were linear perspective and anatomy.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "Which of the following would most likely have occurred if linear perspective and anatomy had not come to influence artistic endeavor?",
+            "options": {
+              "A": "The craftsmanship that shaped Gothic architecture would have continued to dominate artists' outlooks.",
+              "B": "Some other technical elements would have been adopted to discipline artistic inspiration.",
+              "C": "Intellectual control over artistic inspiration would not have influenced painting as it did architecture.",
+              "D": "The role of intuitive inspiration would not have remained fundamental to theories of artistic creation.",
+              "E": "The assumptions of aesthetic philosophers before Croce would have been invalidated."
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 18,
+            "question": "The passage supplies information for answering which of the following questions?",
+            "options": {
+              "A": "Does Romantic art exhibit the triumph of intuition over intellect?",
+              "B": "Did an emphasis on linear perspective and anatomy dominate Romantic art?",
+              "C": "Are the intellectual and intuitive faculties harmoniously balanced in post-Romantic art?",
+              "D": "Are the effects of the rational control of artistic inspiration evident in the great works of pre-Romantic eras?",
+              "E": "Was the artistic craftsmanship displayed in Gothic cathedrals also an element in paintings of this period?"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 19,
+            "question": "The passage implies that which of the following was a traditional assumption of aesthetic philosophers?",
+            "options": {
+              "A": "Intellectual elements in art exert a necessary control over artistic inspiration.",
+              "B": "Architecture has never again reached the artistic greatness of the Gothic cathedrals.",
+              "C": "Aesthetic philosophy is determined by the technical necessities of art.",
+              "D": "Artistic craftsmanship is more important in architectural art than in pictorial art.",
+              "E": "Paintings lacked the intellectual element before the invention of linear perspective and anatomy."
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 20,
+            "question": "The author mentions \"linear perspective and anatomy\" in the last sentence in order to do which of the following?",
+            "options": {
+              "A": "Expand his argument to include painting as well as architecture",
+              "B": "Indicate his disagreement with Croce's theory of the origins of art",
+              "C": "Support his point that rational order of some kind has often seemed to discipline artistic inspiration",
+              "D": "Explain the rational elements in Gothic painting that corresponded to craftsmanship in Gothic architecture",
+              "E": "Show the increasing sophistication of artists after the Gothic period"
+            },
+            "correct_answer": "C"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "When the same parameters and quantitative theory are used to analyze both termite colonies and troops of rhesus macaques, we will have a unified science of sociobiology. Can this ever really happen? As my own studies have advanced, I have been increasingly impressed with the functional similarities between insect and vertebrate societies and less so with the structural differences that seem, at first glance, to constitute such an immense gulf between them. Consider for a moment termites and macaques. Both form cooperative groups that occupy territories. In both kinds of society there is a well-marked division of labor. Both communicate to each other hunger, alarm, hostility, caste status or rank, and reproductive status. From the specialist's point of view, this comparison may at first seem facile—or worse. But it is out of such deliberate oversimplification that the beginnings of a general theory are made.",
+        "questions": [
+          {
+            "question_number": 25,
+            "question": "Which of the following best summarizes the author's main point?",
+            "options": {
+              "A": "Oversimplified comparisons of animal societies could diminish the likelihood of developing a unified science of sociobiology.",
+              "B": "Understanding the ways in which animals as different as termites and rhesus macaques resemble each other requires training in both biology and sociology.",
+              "C": "Most animals organize themselves into societies that exhibit patterns of group behavior similar to those of human societies.",
+              "D": "Animals as different as termites and rhesus macaques follow certain similar and predictable patterns of behavior.",
+              "E": "A study of the similarities between insect and vertebrate societies could provide the basis for a unified science of sociobiology."
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 26,
+            "question": "The author's attitude toward the possibility of a unified theory in sociobiology is best described as which of the following?",
+            "options": {
+              "A": "Guarded optimism",
+              "B": "Unqualified enthusiasm",
+              "C": "Objective indifference",
+              "D": "Resignation",
+              "E": "Dissatisfaction"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 27,
+            "question": "In discussing insect and vertebrate societies, the author suggests which of the following?",
+            "options": {
+              "A": "A distinguishing characteristic of most insect and vertebrate societies is a well-marked division of labor.",
+              "B": "The caste structure of insect societies is similar to that of vertebrate societies.",
+              "C": "Most insect and vertebrate societies form cooperative groups in order to occupy territory.",
+              "D": "The means of communication among members of insect societies is similar to that among members of vertebrate societies.",
+              "E": "There are significant structural differences between insect and vertebrate societies."
+            },
+            "correct_answer": "E"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 7,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "Great comic art is never otherworldly, it does not seek to mystify us, and it does not deny ambiguity by branding as evil whatever differs from good. Great comic artists assume that truth may bear all lights, and thus they seek to accentuate contradictions in social action, not gloss over or transcend them by appeals to extrasocial symbols of divine ends, cosmic purpose, or laws of nature. The moment of transcendence in great comic art is a social moment, born out of the conviction that we are human, even though we try to be gods. The comic community to which artists address themselves is a community of reasoning, loving, joyful, compassionate beings, who are willing to assume the human risks of acting rationally. Without invoking gods or demons, great comic art arouses courage in reason, courage which grows out of trust in what human beings can do as humans.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The passage suggests that great comic art can be characterized as optimistic about the ability of humans to",
+            "options": {
+              "A": "rid themselves of pride",
+              "B": "transcend the human condition",
+              "C": "differentiate clearly between good and evil",
+              "D": "avoid social conflicts",
+              "E": "act rationally"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 18,
+            "question": "It can be inferred from the passage that the author admires great comic artists primarily for their",
+            "options": {
+              "A": "ability to understand the frequently subtle differences between good and evil",
+              "B": "ability to reconcile the contradictions in human behavior",
+              "C": "ability to distinguish between rational and irrational behavior",
+              "D": "insistence on confronting the truth about the human condition",
+              "E": "insistence on condemning human faults and weaknesses"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 19,
+            "question": "Which of the following is the most accurate description of the organization of the passage?",
+            "options": {
+              "A": "A sequence of observations leading to a prediction",
+              "B": "A list of inferences drawn from facts stated at the beginning of the passage",
+              "C": "A series of assertions related to one general subject",
+              "D": "A statement of the major idea, followed by specific examples",
+              "E": "A succession of ideas moving from specific to general"
+            },
+            "correct_answer": "C"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "The dark regions in the starry night sky are not pockets in the universe that are devoid of stars as had long been thought. Rather, they are dark because of interstellar dust that hides the stars behind it. Although its visual effect is so pronounced, dust is only a minor constituent of the material, extremely low in density, that lies between the stars. Dust accounts for about one percent of the total mass of interstellar matter. The rest is hydrogen and helium gas, with small amounts of other elements. The interstellar material, rather like terrestrial clouds, comes in all shapes and sizes. The average density of interstellar material in the vicinity of our Sun is 1,000 to 10,000 times less than the best terrestrial laboratory vacuum. It is only because of the enormous interstellar distances that so little material per unit of volume becomes so significant. Optical astronomy is most directly affected, for although interstellar gas is perfectly transparent, the dust is not.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "According to the passage, which of the following is a direct perceptual consequence of interstellar dust?",
+            "options": {
+              "A": "Some stars are rendered invisible to observers on Earth.",
+              "B": "Many visible stars are made to seem brighter than they really are.",
+              "C": "The presence of hydrogen and helium gas is revealed.",
+              "D": "The night sky appears dusty at all times to observers on Earth.",
+              "E": "The dust is conspicuously visible against a background of bright stars."
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 18,
+            "question": "It can be inferred from the passage that the density of interstellar material is",
+            "options": {
+              "A": "higher where distances between the stars are shorter",
+              "B": "equal to that of interstellar dust",
+              "C": "unusually low in the vicinity of our Sun",
+              "D": "independent of the incidence of gaseous components",
+              "E": "not homogeneous throughout interstellar space"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 19,
+            "question": "It can be inferred from the passage that it is because space is so vast that",
+            "options": {
+              "A": "little of the interstellar material in it seems substantial",
+              "B": "normal units of volume seem futile for measurements of density",
+              "C": "stars can be far enough from Earth to be obscured even by very sparsely distributed matter",
+              "D": "interstellar gases can, for all practical purposes, be regarded as transparent",
+              "E": "optical astronomy would be of little use even if no interstellar dust existed"
+            },
+            "correct_answer": "C"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 8,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "Because of its accuracy in outlining the Earth's subsurface, the seismic-reflection method remains the most important tool in the search for petroleum reserves. In field practice, a subsurface is mapped by arranging a series of wave-train sources, such as small dynamite explosions, in a grid pattern. As each source is activated, it generates a wave train that moves downward at a speed determined uniquely by the rock's elastic characteristics. As rock interfaces are crossed, the elastic characteristics encountered generally change abruptly, which causes part of the energy to be reflected back to the surface, where it is recorded by seismic instruments. The seismic records must be processed to correct for positional differences between the source and the receiver, for unrelated wave trains, and for multiple reflections from the rock interfaces. Then the data acquired at each of the specific source locations are combined to generate a physical profile of the subsurface, which can eventually be used to select targets for drilling.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The passage is primarily concerned with",
+            "options": {
+              "A": "describing an important technique",
+              "B": "discussing a new method",
+              "C": "investigating a controversial procedure",
+              "D": "announcing a significant discovery",
+              "E": "promoting a novel application"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 18,
+            "question": "According to the passage, in the seismic-reflection method all of the following have a significant effect on the signal detected by the seismic instruments EXCEPT the",
+            "options": {
+              "A": "presence of unrelated wave trains",
+              "B": "placement of the seismic instruments",
+              "C": "number of sources in the grid pattern",
+              "D": "nature of the reflectivity of the rock interfaces",
+              "E": "properties of rocks through which the wave train has traveled"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 19,
+            "question": "It can be inferred from the passage that the seismic-reflection method would be likely to yield an inaccurate physical profile of the subsurface in which of the following circumstances?",
+            "options": {
+              "A": "If the speed at which the wave train moved downward changed",
+              "B": "If the receiver were not positioned directly at the wave-train source",
+              "C": "If the rock on one side of a rock interface had similar elastic characteristics to those of the rock on the other side",
+              "D": "If the seismic records obtained for the different sources in a grid were highly similar to each other",
+              "E": "If there were no petroleum deposits beneath the area defined by the grid of wave-train sources"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 20,
+            "question": "Which of the following best describes the organization of the passage?",
+            "options": {
+              "A": "A method is criticized, and an alternative is suggested.",
+              "B": "An illustration is examined, and some errors are exposed.",
+              "C": "An assertion is made, and a procedure is outlined.",
+              "D": "A series of examples is presented, and a conclusion is drawn.",
+              "E": "A hypothesis is advanced, and supporting evidence is supplied."
+            },
+            "correct_answer": "C"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "Scholars often fail to see that music played an important role in the preservation of African culture in the United States. They correctly note that slavery stripped some cultural elements from Black people—their political and economic systems—but they underestimate the significance of music in sustaining other African cultural values. African music, unlike the music of some other cultures, was based on a total vision of life in which music was not an isolated social domain. In African culture music was pervasive, serving not only religion, but all phases of life, including birth, death, work, and play. The methods that a community devises to perpetuate itself come into being to preserve aspects of the cultural legacy that that community perceives as essential. Music, like art in general, was so inextricably a part of African culture that it became a crucial means of preserving the culture during and after the dislocations of slavery.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The primary purpose of the passage is to",
+            "options": {
+              "A": "analyze the impact that slavery had on African political and economic systems",
+              "B": "review the attempt of recent scholarship to study the influence of African music on other music",
+              "C": "correct the failure of some scholars to appreciate the significance of music in African culture",
+              "D": "survey the ways by which people attempt to preserve their culture against the effects of oppression",
+              "E": "compare the relative importance of music with that of other art forms in culture"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 18,
+            "question": "In line 9, the phrase \"isolated social domain\" refers to",
+            "options": {
+              "A": "African music in relation to contemporary culture as a whole",
+              "B": "music as it may be perceived in non-African cultures",
+              "C": "a feature of African music that aided in transmitting African cultural values",
+              "D": "an aspect of the African cultural legacy",
+              "E": "the influence of music on contemporary culture"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 19,
+            "question": "Which of the following statements concerning the function of African music can be inferred from the passage?",
+            "options": {
+              "A": "It preserved cultural values because it was thoroughly integrated into the lives of the people.",
+              "B": "It was more important in the development of African religious life than in other areas of culture.",
+              "C": "It was developed in response to the loss of political and economic systems.",
+              "D": "Its pervasiveness in African culture hindered its effectiveness in minimizing the impact of slavery.",
+              "E": "Its isolation from the economic domains of life enabled it to survive the destructive impact of slavery."
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 20,
+            "question": "According to the author, scholars would err in drawing which of the following conclusions?\n\nI. Slavery stripped the slaves of their political and economic systems.\nII. African music was similar to all other traditions of music in that it originated in a total vision of life.\nIII. Music was a crucial part of the African cultural legacy.",
+            "options": {
+              "A": "I only",
+              "B": "II only",
+              "C": "I and II only",
+              "D": "II and III only",
+              "E": "I, II, and III"
+            },
+            "correct_answer": "B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 9,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "Zooplankton, tiny animals adapted to an existence in the ocean, have evolved clever mechanisms for obtaining their food, miniscule phytoplankton (plant plankton). A very specialized feeding adaptation in zooplankton is that of the tadpolelike appendicularian who lives in a walnut-sized (or smaller) balloon of mucus equipped with filters that capture and concentrate phytoplankton. The balloon, a transparent structure that varies in design according to the type of appendicularian inhabiting it, also protects the animal and helps to keep it afloat. Water containing phytoplankton is pumped by the appendicularian's muscular tail into the balloon's incurrent filters, passes through the feeding filter where the appendicularian sucks the food into its mouth, and then goes through an exit passage. Found in all the oceans of the world, including the Arctic Ocean, appendicularians tend to remain near the water's surface where the density of phytoplankton is greatest.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "It can be inferred from the passage that which of the following is true of appendicularians?",
+            "options": {
+              "A": "They are exclusively carnivorous.",
+              "B": "They have more than one method of obtaining food.",
+              "C": "They can tolerate frigid water.",
+              "D": "They can disguise themselves by secreting mucus.",
+              "E": "They are more sensitive to light than are other zooplankton."
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 18,
+            "question": "The author is primarily concerned with",
+            "options": {
+              "A": "explaining how appendicularians obtain food",
+              "B": "examining the flotation methods of appendicularians",
+              "C": "mapping the distribution of appendicularians around the world",
+              "D": "describing how appendicularians differ from other zooplankton",
+              "E": "comparing the various types of balloons formed by appendicularians"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 19,
+            "question": "According to the passage, all of the following are descriptive of appendicularians EXCEPT",
+            "options": {
+              "A": "tailed",
+              "B": "vegetarian",
+              "C": "small-sized",
+              "D": "single-celled",
+              "E": "ocean-dwelling"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 20,
+            "question": "The passage suggests that appendicularians tend to remain in surface waters because they",
+            "options": {
+              "A": "prefer the warmer water near the surface",
+              "B": "are unable to secrete mucus at the lower levels of the ocean",
+              "C": "use the contrast of light and shadow at the surface to hide from predators",
+              "D": "live in balloons that cannot withstand the water pressure deeper in the ocean",
+              "E": "eat food that grows more profusely near the surface"
+            },
+            "correct_answer": "E"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "Historically, a cornerstone of classical empiricism has been the notion that every true generalization must be confirmable by specific observations. In classical empiricism, the truth of \"All balls are red,\" for example, is assessed by inspecting balls; any observation of a nonred ball refutes unequivocally the proposed generalization. For W.V.O. Quine, however, this constitutes an overly \"narrow\" conception of empiricism. \"All balls are red,\" he maintains, forms one strand within an entire web of statements (our knowledge); individual observations can be referred only to this web as a whole. As new observations are collected, he explains, they must be integrated into the web. Problems occur only if a contradiction develops between a new observation, say, \"That ball is blue,\" and the preexisting statements. In that case, he argues, any statement or combination of statements (not merely the \"offending\" generalization, as in classical empiricism) can be altered to achieve the fundamental requirement, a system free of contradictions, even if, in some cases, the alteration consists of labeling the new observation a \"hallucination.\"",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The author of the passage is primarily concerned with presenting",
+            "options": {
+              "A": "criticisms of Quine's views on the proper conceptualization of empiricism",
+              "B": "evidence to support Quine's claims about the problems inherent in classical empiricism",
+              "C": "an account of Quine's counterproposal to one of the traditional assumptions of classical empiricism",
+              "D": "an overview of classical empiricism and its contributions to Quine's alternate understanding of empiricism",
+              "E": "a history of classical empiricism and Quine's reservations about it"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 18,
+            "question": "According to Quine's conception of empiricism, if a new observation were to contradict some statement already within our system of knowledge, which of the following would be true?",
+            "options": {
+              "A": "The new observation would be rejected as untrue.",
+              "B": "Both the observation and the statement in our system that it contradicted would be discarded.",
+              "C": "New observations would be added to our web of statements in order to expand our system of knowledge.",
+              "D": "The observation or some part of our web of statements would need to be adjusted to resolve the contradiction.",
+              "E": "An entirely new field of knowledge would be created."
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 19,
+            "question": "As described in the passage, Quine's specific argument against classical empiricism would be most strengthened if he did which of the following?",
+            "options": {
+              "A": "Provided evidence that many observations are actually hallucinations.",
+              "B": "Explained why new observations often invalidate preexisting generalizations.",
+              "C": "Challenged the mechanism by which specific generalizations are derived from collections of particular observations.",
+              "D": "Mentioned other critics of classical empiricism and the substance of their approaches.",
+              "E": "Gave an example of a specific generalization that has not been invalidated despite a contrary observation."
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 20,
+            "question": "It can be inferred from the passage that Quine considers classical empiricism to be \"overly 'narrow' \" (lines 7-8) for which of the following reasons?\n\nI. Classical empiricism requires that our system of generalizations be free of contradictions.\nII. Classical empiricism demands that in the case of a contradiction between an individual observation and a generalization, the generalization must be abandoned.\nIII. Classical empiricism asserts that every observation will either confirm an existing generalization or initiate a new generalization.",
+            "options": {
+              "A": "II only",
+              "B": "I and II only",
+              "C": "I and III only",
+              "D": "II and III only",
+              "E": "I, II, and III"
+            },
+            "correct_answer": "A"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 10,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "The 1960's witnessed two profound social movements: the civil rights movement and the movement protesting the war in Vietnam. Although they overlapped in time, they were largely distinct. For a brief moment in 1967, however, it appeared that the two movements might unite under the leadership of Martin Luther King, Jr.\nKing's role in the antiwar movement appears to require little explanation, since he was the foremost advocate of nonviolence of his time. But King's stance on the Vietnam War cannot be explained in terms of pacifism alone. After all, he was something of a latecomer to the antiwar movement, even though by 1965 he was convinced that the role of the United States in the war was indefensible. Why then the two years that passed before he translated his private misgivings into public dissent? Perhaps he believed that he could not criticize American foreign policy without endangering the support for civil rights that he had won from the federal government.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "According to the passage, the delay referred to in lines 12-15 is perhaps attributable to which of the following?",
+            "options": {
+              "A": "King's ambivalence concerning the role of the United States in the war in Vietnam",
+              "B": "King's attempts to consolidate support for his leadership within the civil rights movement",
+              "C": "King's desire to keep the leadership of the civil rights rights movement distinct from that of the antiwar movement",
+              "D": "King's desire to draw support for the civil rights movement from the leadership of the antiwar movement",
+              "E": "King's reluctance to jeopardize federal support for the civil rights movement"
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 18,
+            "question": "The author supports the claim that \"King's stance on the Vietnam War cannot be explained in terms of pacifism alone\" (lines 10-12) by implying which of the following?",
+            "options": {
+              "A": "There is little evidence that King was ever a student of pacifist doctrine.",
+              "B": "King, despite pacifist sympathies, was not convinced that the policy of the federal government in Vietnam was wrong.",
+              "C": "King's belief in nonviolence was formulated in terms of domestic policy rather than in terms of international issues.",
+              "D": "Had King's actions been based on pacifism alone, he would have joined the antiwar movement earlier than he actually did.",
+              "E": "Opponents of United States foreign policy within the federal government convinced King of their need for support."
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 19,
+            "question": "Which of the following can be inferred from the passage about the movement opposing the war in Vietnam?",
+            "options": {
+              "A": "It preceded the civil rights movement.",
+              "B": "It began in 1965.",
+              "C": "It was supported by many who otherwise opposed public dissent.",
+              "D": "It drew support from most civil rights leaders.",
+              "E": "It was well underway by 1967."
+            },
+            "correct_answer": "E"
+          },
+          {
+            "question_number": 20,
+            "question": "Which of the following best describes the passage?",
+            "options": {
+              "A": "It discusses an apparent inconsistency and suggests a reason for it.",
+              "B": "It outlines a sequence of historical events.",
+              "C": "It shows why a commonly held view is inaccurate.",
+              "D": "It evaluates an explanation and finally accepts that explanation.",
+              "E": "It contrasts two views of an issue."
+            },
+            "correct_answer": "A"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "Recently some scientists have concluded that meteorites found on Earth and long believed to have a Martian origin might actually have been blasted free of Mars's gravity by the impact on Mars of other meteorites. This conclusion has led to another question: whether meteorite impacts on Earth have similarly driven rocks from this planet to Mars.\nAccording to astronomer S.A. Phinney, kicking a rock hard enough to free it from Earth's gravity would require a meteorite capable of making a crater more than 60 miles across. Moreover, even if Earth rocks were freed by meteorite impact, Mars's orbit is much larger than Earth's, so Phinney estimates that the probability of these rocks hitting Mars is about one-tenth as great as that of Mars's rocks hitting Earth. To demonstrate this estimate, Phinney used a computer to calculate where 1,000 hypothetical particles would go if ejected from Earth in random directions. He found that 17 of the 1,000 particles would hit Mars.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The passage is primarily concerned with",
+            "options": {
+              "A": "presenting an argument to support a particular hypothesis",
+              "B": "suggesting an answer to a theoretical question",
+              "C": "questioning the assumptions of a research project",
+              "D": "criticizing experimental results",
+              "E": "explaining the origin of certain scientific data"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 18,
+            "question": "According to the passage, which of the following events may have initiated the process that led to the presence on Earth of meteorites from Mars?",
+            "options": {
+              "A": "A meteorite struck the Earth with tremendous velocity.",
+              "B": "A meteorite collided with Mars.",
+              "C": "Approximately 1,000 rocks were ejected from Mars.",
+              "D": "The orbits of Earth and Mars brought the planets to their closest points.",
+              "E": "Rocks from a meteorite impact broke free of Earth's gravity."
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 19,
+            "question": "The passage suggests that which of the following is true concerning the probability that a rock, if ejected from Mars, will hit the Earth?",
+            "options": {
+              "A": "The probability is increased when particles are ejected from Mars in random directions.",
+              "B": "The probability is increased by the presence of large craters on the surface of Mars.",
+              "C": "The probability is decreased when Mars's orbit brings the planet close to Earth.",
+              "D": "The probability is greater than the probability that a rock from Earth will hit Mars.",
+              "E": "The probability is less than the probability that a rock from Earth will escape Earth's gravity."
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 20,
+            "question": "Which of the following, if true, would cast most doubt on Phinney's estimate of the probability of Earth rocks hitting Mars?",
+            "options": {
+              "A": "Rather than going in random directions, about 25 percent of all particles ejected from Earth go in the same direction into space.",
+              "B": "Approximately 100 meteorites large enough to make a noticeable crater hit the Earth each year.",
+              "C": "No rocks of Earth origin have been detected on Mars.",
+              "D": "The velocity of rocks escaping from Earth's gravity is lower than the velocity of meteorites hitting the Earth.",
+              "E": "No craters more than 60 miles across have been found on Mars."
+            },
+            "correct_answer": "A"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "test_number": 11,
+    "passages": [
+      {
+        "passage_number": 1,
+        "passage": "(The article from which the passage was taken appeared in 1982.)\n\nTheorists are divided concerning the origin of the Moon. Some hypothesize that the Moon was formed in the same way as were the planets in the inner solar system (Mercury, Venus, Mars, and Earth)—from planet-forming materials in the presolar nebula. But, unlike the cores of the inner planets, the Moon's core contains little or no iron, while the typical planet-forming materials were quite rich in iron. Other theorists propose that the Moon was ripped out of the Earth's rocky mantle by the Earth's collison with another large celestial body after much of the Earth's iron fell to its core. One problem with the collision hypothesis is the question of how a satellite formed in this way could have settled into the nearly circular orbit that the Moon has today. Fortunately, the collision hypothesis is testable. If it is true, the mantlerocks of the Moon and the Earth should be the same geochemically.",
+        "questions": [
+          {
+            "question_number": 17,
+            "question": "The primary purpose of the passage is to",
+            "options": {
+              "A": "present two hypotheses concerning the origin of the Moon",
+              "B": "discuss the strengths and weaknesses of the collision hypothesis concerning the origin of the Moon",
+              "C": "propose that hypotheses concerning the Moon's origin be tested",
+              "D": "argue that the Moon could not have been formed out of the typical planet-forming materials of the presolar nebula",
+              "E": "describe one reason why the Moon's geochemical makeup should resemble that of the Earth"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 18,
+            "question": "According to the passage, Mars and the Earth are similar in which of the following ways?\n\nI. Their satellites were formed by collisions with other celestial bodies.\nII. Their cores contain iron.\nIII. They were formed from the presolar nebula.",
+            "options": {
+              "A": "III only",
+              "B": "I and II only",
+              "C": "I and III only",
+              "D": "II and III only",
+              "E": "I, II, and III"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 19,
+            "question": "The author implies that a nearly circular orbit is unlikely for a satellite that",
+            "options": {
+              "A": "circles one of the inner planets",
+              "B": "is deficient in iron",
+              "C": "is different from its planet geochemically",
+              "D": "was formed by a collision between two celestial bodies",
+              "E": "was formed out of the planet-forming materials in the presolar nebula"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 20,
+            "question": "Which of the following, if true, would be most likely to make it difficult to verify the collision hypothesis in the manner suggested by the author?",
+            "options": {
+              "A": "The Moon's core and mantlerock are almost inactive geologically.",
+              "B": "The mantlerock of the Earth has changed in composition since the formation of the Moon, while the mantlerock of the Moon has remained chemically inert.",
+              "C": "Much of the Earth's iron fell to the Earth's core long before the formation of the Moon, after which the Earth's mantlerock remained unchanged.",
+              "D": "Certain of the Earth's elements, such as platinum, gold, and iridium, followed iron to the Earth's core.",
+              "E": "The mantlerock of the Moon contains elements such as platinum, gold, and iridium."
+            },
+            "correct_answer": "B"
+          }
+        ]
+      },
+      {
+        "passage_number": 2,
+        "passage": "(The article from which this passage was taken appeared in 1981.)\n\nWhen speaking of Romare Bearden, one is tempted to say, \"A great Black American artist.\" The subject matter of Bearden's collages is certainly Black. Portrayals of the folk of Mecklenburg County, North Carolina, whom he remembers from early childhood, of the jazz musicians and tenement roofs of his Harlem days, of Pittsburgh steelworkers, and his reconstruction of classical Greek myths in the guise of the ancient Black kingdom of Benin, attest to this. In natural harmony with this choice of subject matter are the social sensibilities of the artist, who remains active today with the Cinque Gallery in Manhattan, which he helped found and which is devoted to showing the work of minority artists.\nThen why not call Bearden a Black American artist? Because ultimately this categorization is too narrow. \"What stands up in the end is structure,\" Bearden says. \"What I try to do is amplify. If I were just creating a picture of a farm woman from back home, it would have meaning to her and people there. But art amplifies itself to something universal.\"",
+        "questions": [
+          {
+            "question_number": 24,
+            "question": "According to the passage, all of the following are depicted in Bearden's collages EXCEPT",
+            "options": {
+              "A": "workers in Pittsburgh's steel mills",
+              "B": "scenes set in the ancient kingdom of Benin",
+              "C": "people Bearden knew as a child",
+              "D": "traditional representations of the classical heroes of Greek mythology",
+              "E": "the jazz musicians of the Harlem Bearden used to know"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 25,
+            "question": "The author suggests that Bearden should not be called a Black American artist because",
+            "options": {
+              "A": "there are many collages by Bearden in which the subject matter is not Black",
+              "B": "Bearden's work reflects the Black American experience in a highly individual style",
+              "C": "through the structure of Bearden's art his Black subjects come to represent all of humankind",
+              "D": "Bearden's true significance lies not so much in his own work as in his efforts to help other minority artists",
+              "E": "much of Bearden's work uses the ancient Black kingdom of Benin for its setting"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 26,
+            "question": "Bearden's social sensibilities and the subject matter of his collages are mentioned by the author in order to explain",
+            "options": {
+              "A": "why one might be tempted to call Bearden a Black American artist",
+              "B": "why Bearden cannot be readily categorized",
+              "C": "why Bearden's appeal is thought by many to be ultimately universal",
+              "D": "how deeply an artist's artistic creations are influenced by the artist's social conscience",
+              "E": "what makes Bearden unique among contemporary Black American artists"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 27,
+            "question": "The author of the passage is chiefly concerned with",
+            "options": {
+              "A": "discussing Bearden's philosophy of art",
+              "B": "assessing the significance of the ethnic element in Bearden's work",
+              "C": "acknowledging Bearden's success in giving artistic expression to the Black American experience",
+              "D": "pointing out Bearden's helpfulness to other minority artists",
+              "E": "tracing Bearden's progress toward artistic maturity"
+            },
+            "correct_answer": "B"
+          }
+        ]
+      }
+    ]
+  }
+]
