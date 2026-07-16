@@ -2208,6 +2208,227 @@ body::before {
   line-height: 1.4;
 }
 
+/* RC STRATEGY ACCORDION & LAYOUT STYLES */
+.rc-meta-bar {
+  display: flex;
+  gap: 20px;
+  margin: -20px 0 30px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--gold);
+}
+.rc-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rc-meta-item svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--gold);
+}
+.rc-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.rc-search-box {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+.rc-search-box input {
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  color: var(--cream);
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s;
+}
+.rc-search-box input:focus {
+  border-color: var(--gold);
+}
+.rc-action-btns {
+  display: flex;
+  gap: 8px;
+}
+.rc-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+.rc-toc-container {
+  position: sticky;
+  top: 80px;
+}
+.rc-toc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 1px solid var(--border);
+  padding-left: 15px;
+}
+.rc-toc-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.rc-toc-link {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.2s;
+  padding: 4px 0;
+  text-align: left;
+}
+.rc-toc-link:hover {
+  color: var(--cream);
+}
+.rc-toc-link.active {
+  color: var(--gold);
+  font-weight: 600;
+  border-left: 2px solid var(--gold);
+  padding-left: 8px;
+  margin-left: -16px;
+}
+.rc-accordions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.rc-accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.rc-accordion-item.active {
+  border-color: var(--gold);
+}
+.rc-accordion-header {
+  padding: 16px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface2);
+  user-select: none;
+  transition: background 0.2s;
+}
+.rc-accordion-header:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+.rc-accordion-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.rc-accordion-arrow {
+  font-size: 11px;
+  color: var(--dim);
+  transition: transform 0.2s;
+}
+.rc-accordion-item.active .rc-accordion-arrow {
+  transform: rotate(180deg);
+  color: var(--gold);
+}
+.rc-accordion-content {
+  display: none;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--cream);
+  text-align: left;
+}
+.rc-accordion-item.active .rc-accordion-content {
+  display: block;
+}
+.rc-nav-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  gap: 20px;
+}
+.rc-nav-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.rc-nav-btn.prev {
+  text-align: left;
+}
+.rc-nav-btn.next {
+  text-align: right;
+  margin-left: auto;
+}
+.rc-nav-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.rc-nav-name {
+  font-size: 14px;
+  color: var(--cream);
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.rc-nav-btn:hover .rc-nav-name {
+  color: var(--gold);
+}
+.rc-highlight {
+  background: rgba(201,168,76,0.3);
+  color: var(--cream);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+.rc-progress-container {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  margin-top: -30px;
+  margin-bottom: 25px;
+}
+.rc-progress-bar {
+  height: 100%;
+  background: var(--gold);
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+@media (max-width: 768px) {
+  .rc-layout {
+    grid-template-columns: 1fr;
+  }
+  .rc-toc-container {
+    display: none;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -7906,6 +8127,14 @@ function showStrategyDetail(name) {
       </div>
       <div style="height: 60px;"></div>
     `;
+  } else if (s.isRCStrategies) {
+    content.innerHTML = renderRCStrategiesHTML(s);
+    setTimeout(() => {
+      setupRCScrollSpy();
+      setupRCKeyboardNavigation();
+      const isBookmarked = localStorage.getItem('gre_rc_bookmarked') === 'true';
+      updateRCBookmarkUI(isBookmarked);
+    }, 100);
   } else {
     const imgUrl = STRATEGY_IMAGE_MAPPING[name.toLowerCase()];
     const imageHTML = imgUrl ? `
@@ -8018,6 +8247,630 @@ function showStrategiesList() {
   document.getElementById('strategy-detail-screen').style.display = 'none';
   const main = document.querySelector('.main');
   if (main) main.scrollTop = 0;
+  if (main && mainScrollListener) {
+    main.removeEventListener('scroll', mainScrollListener);
+    mainScrollListener = null;
+  }
+  if (rcKeydownListener) {
+    window.removeEventListener('keydown', rcKeydownListener);
+    rcKeydownListener = null;
+  }
+}
+
+// ─────────────────────────────────────────────
+// RC STRATEGIES COMPONENT HELPERS
+// ─────────────────────────────────────────────
+let mainScrollListener = null;
+let rcKeydownListener = null;
+
+function showRCToast(message) {
+  let toast = document.getElementById('rc-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'rc-toast';
+    toast.style.position = 'fixed';
+    toast.style.bottom = '30px';
+    toast.style.right = '30px';
+    toast.style.background = 'var(--surface)';
+    toast.style.border = '1px solid var(--gold)';
+    toast.style.color = 'var(--cream)';
+    toast.style.padding = '12px 24px';
+    toast.style.borderRadius = '8px';
+    toast.style.boxShadow = '0 4px 12px rgba(0,0,0,0.5)';
+    toast.style.fontFamily = 'sans-serif';
+    toast.style.fontSize = '14px';
+    toast.style.zIndex = '9999';
+    toast.style.transition = 'all 0.3s ease';
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(20px)';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateY(0)';
+  
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(20px)';
+  }, 2500);
+}
+
+function toggleRCBookmark() {
+  const isBookmarked = localStorage.getItem('gre_rc_bookmarked') === 'true';
+  const newStatus = !isBookmarked;
+  localStorage.setItem('gre_rc_bookmarked', newStatus ? 'true' : 'false');
+  updateRCBookmarkUI(newStatus);
+  showRCToast(newStatus ? 'Strategy Bookmarked!' : 'Bookmark Removed!');
+}
+
+function updateRCBookmarkUI(isBookmarked) {
+  const icon = document.getElementById('rc-bookmark-icon');
+  const text = document.getElementById('rc-bookmark-text');
+  if (icon && text) {
+    if (isBookmarked) {
+      icon.style.fill = 'var(--gold)';
+      icon.style.stroke = 'var(--gold)';
+      text.textContent = 'Bookmarked';
+    } else {
+      icon.style.fill = 'none';
+      icon.style.stroke = 'currentColor';
+      text.textContent = 'Bookmark';
+    }
+  }
+}
+
+function copyRCNotes() {
+  const notesText = `GRE Reading Comprehension Strategies:
+1. Core Philosophy:
+   - Don't read every word; don't skim randomly. Read for the argument.
+   - Four skills: Finding the Hammer, Simplification, Sentence Function, Gold vs Rocks.
+2. Finding the Hammer (Author's core point):
+   - Look after contrast pivots (However, Yet, But, Nevertheless, Still, Although).
+   - Apply the Collapse Test: "If I removed this sentence, would the passage collapse?"
+3. Simplification:
+   - Compress long GRE sentences into simple, conversational ideas in your own words.
+4. Sentence Function:
+   - Identify roles: Background, Evidence, Example, Counterargument, Qualification, Hammer, Transition, Conclusion.
+5. Gold vs Rocks:
+   - Gold (Read slowly at 100 WPM): Claims, opinions, contrasts, tone.
+   - Rocks (Scan quickly at 300 WPM): Examples, statistics, history, descriptions.
+6. Reading Workflow:
+   - Read -> Find Hammer -> Identify Function -> Simplify -> Gold vs Rocks -> Answer Questions.
+7. Question Mapping:
+   - Main Idea -> Hammer
+   - Purpose -> Function
+   - Inference -> Hammer + Function
+   - Detail -> Gold vs Rocks
+   - Tone -> Hammer
+   - Vocabulary -> Simplification
+8. Function Verbs:
+   - General (Present, Give, Discuss, Provide, Make)
+   - Support (Support, Advocate, Promote, Confirm, Establish, Demonstrate, Recognize, Account for, Point Out, Illustrate, Clarify)
+   - Opposition (Challenge, Counter, Contradict, Criticize, Reject, Refute, Disprove, Overturn, Object, Deny)
+   - Neutral (Suggest, Offer, Propose, Speculate, Theorize, Analyze, Assess, Compare, Contrast, Examine, Explore, Develop, Describe, Outline, Summarize, Explain)`;
+
+  navigator.clipboard.writeText(notesText).then(() => {
+    showRCToast('RC Strategy Notes copied to clipboard!');
+  }).catch(() => {
+    showRCToast('Failed to copy notes.');
+  });
+}
+
+function setupRCKeyboardNavigation() {
+  if (rcKeydownListener) {
+    window.removeEventListener('keydown', rcKeydownListener);
+  }
+  
+  rcKeydownListener = (event) => {
+    const detailScreen = document.getElementById('strategy-detail-screen');
+    if (!detailScreen || detailScreen.style.display !== 'block') return;
+    if (!document.querySelector('.rc-strategy-container')) return;
+    
+    // Ignore keydown if user is typing in a search input
+    if (document.activeElement && (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) {
+      if (event.key === 'Escape') {
+        document.activeElement.blur();
+      }
+      return;
+    }
+    
+    const key = event.key.toLowerCase();
+    
+    // 1-8 keys to jump to sections
+    if (key >= '1' && key <= '8') {
+      event.preventDefault();
+      const sections = ['core-philosophy', 'finding-the-hammer', 'simplification', 'sentence-function', 'gold-vs-rocks', 'reading-workflow', 'question-mapping', 'function-verbs'];
+      const targetId = sections[parseInt(key) - 1];
+      if (targetId) {
+        scrollToSection(targetId);
+      }
+    }
+    
+    // Arrow keys for scrolling inside .main
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      const main = document.querySelector('.main');
+      if (main) main.scrollBy({ top: -100, behavior: 'smooth' });
+    }
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      const main = document.querySelector('.main');
+      if (main) main.scrollBy({ top: 100, behavior: 'smooth' });
+    }
+    
+    // E for expand all
+    if (key === 'e') {
+      event.preventDefault();
+      toggleAllRCAccordions(true);
+      showRCToast('Expanded all sections');
+    }
+    
+    // C for collapse all
+    if (key === 'c') {
+      event.preventDefault();
+      toggleAllRCAccordions(false);
+      showRCToast('Collapsed all sections');
+    }
+    
+    // F or / for search focus
+    if (key === 'f' || event.key === '/') {
+      event.preventDefault();
+      const searchInput = document.getElementById('rc-inner-search');
+      if (searchInput) {
+        searchInput.focus();
+        searchInput.select();
+      }
+    }
+  };
+  
+  window.addEventListener('keydown', rcKeydownListener);
+}
+
+function toggleRCAccordion(id) {
+  const item = document.getElementById(`sec-${id}`);
+  if (item) {
+    item.classList.toggle('active');
+  }
+}
+
+function toggleVerbCategory(index) {
+  const content = document.getElementById(`verb-cat-content-${index}`);
+  const arrow = document.getElementById(`verb-cat-arrow-${index}`);
+  if (content && arrow) {
+    const isHidden = content.style.display === 'none';
+    content.style.display = isHidden ? 'block' : 'none';
+    arrow.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+    arrow.style.color = isHidden ? 'var(--gold)' : 'var(--dim)';
+  }
+}
+
+function toggleAllRCAccordions(expand) {
+  const items = document.querySelectorAll('.rc-accordion-item');
+  items.forEach(item => {
+    if (expand) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
+
+function scrollToSection(id, event) {
+  if (event) event.preventDefault();
+  const item = document.getElementById(`sec-${id}`);
+  if (item) {
+    item.classList.add('active');
+    item.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const links = document.querySelectorAll('.rc-toc-link');
+    links.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+  }
+}
+
+function setupRCScrollSpy() {
+  const main = document.querySelector('.main');
+  if (!main) return;
+  
+  if (mainScrollListener) {
+    main.removeEventListener('scroll', mainScrollListener);
+  }
+  
+  const sections = ['core-philosophy', 'finding-the-hammer', 'simplification', 'sentence-function', 'gold-vs-rocks', 'reading-workflow', 'question-mapping', 'function-verbs'];
+  const progressBar = document.getElementById('rc-reading-progress');
+  
+  mainScrollListener = () => {
+    const mainRect = main.getBoundingClientRect();
+    let activeSec = null;
+    
+    for (const secId of sections) {
+      const el = document.getElementById(`sec-${secId}`);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top - mainRect.top < 150) {
+          activeSec = secId;
+        }
+      }
+    }
+    
+    if (activeSec) {
+      const links = document.querySelectorAll('.rc-toc-link');
+      links.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${activeSec}`);
+      });
+    }
+
+    // Progress bar update
+    const scrollHeight = main.scrollHeight - main.clientHeight;
+    if (scrollHeight > 0) {
+      const scrollPct = (main.scrollTop / scrollHeight) * 100;
+      if (progressBar) progressBar.style.width = `${scrollPct}%`;
+    }
+  };
+  
+  main.addEventListener('scroll', mainScrollListener);
+}
+
+function searchWithinRCPage(query) {
+  const q = query.trim().toLowerCase();
+  const items = document.querySelectorAll('.rc-accordion-item');
+  
+  // Clear existing highlights
+  const highlighted = document.querySelectorAll('.rc-highlight');
+  highlighted.forEach(el => {
+    const parent = el.parentNode;
+    if (parent) {
+      parent.replaceChild(document.createTextNode(el.textContent), el);
+      parent.normalize();
+    }
+  });
+
+  if (!q) {
+    items.forEach(item => {
+      item.classList.remove('active');
+    });
+    return;
+  }
+
+  items.forEach(item => {
+    const content = item.querySelector('.rc-accordion-content');
+    const text = content.textContent.toLowerCase();
+    
+    if (text.includes(q)) {
+      item.classList.add('active');
+      highlightTextNode(content, q);
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
+
+function highlightTextNode(node, word) {
+  if (node.nodeType === 3) { // Text node
+    const pos = node.data.toLowerCase().indexOf(word);
+    if (pos >= 0) {
+      const spannode = document.createElement('span');
+      spannode.className = 'rc-highlight';
+      const middle = node.splitText(pos);
+      middle.splitText(word.length);
+      const middleClone = middle.cloneNode(true);
+      spannode.appendChild(middleClone);
+      middle.parentNode.replaceChild(spannode, middle);
+      return 1;
+    }
+  } else if (node.nodeType === 1 && node.childNodes && !/(style|script)/i.test(node.tagName) && node.className !== 'rc-highlight') {
+    for (let i = 0; i < node.childNodes.length; i++) {
+      i += highlightTextNode(node.childNodes[i], word);
+    }
+  }
+  return 0;
+}
+
+function renderRCStrategiesHTML(s) {
+  const currentIndex = allStrategies.findIndex(st => st.strategy_name === s.strategy_name);
+  const prevStrat = currentIndex > 0 ? allStrategies[currentIndex - 1] : null;
+  const nextStrat = currentIndex < allStrategies.length - 1 ? allStrategies[currentIndex + 1] : null;
+
+  const sectionsHTML = s.custom_sections.map((sec, idx) => {
+    let innerHTML = '';
+    if (sec.id === 'core-philosophy') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div style="margin-bottom:20px;">
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Core Rules:</div>
+          <ul class="strategy-list">
+            ${sec.points.map(p => `<li>${p}</li>`).join('')}
+          </ul>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">The Four Skills:</div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
+            ${sec.four_skills.map(skill => `
+              <div style="background:var(--surface2); border:1px solid var(--border); padding:12px; border-radius:6px;">
+                <div style="font-weight:bold; color:var(--gold); font-size:14px; margin-bottom:4px;">${skill.name}</div>
+                <div style="font-size:12px; color:var(--muted);">${skill.desc}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Example:</div>
+          <div class="strategy-pro-tip" style="margin:5px 0;">${sec.examples[0]}</div>
+        </div>
+        <div class="strategy-trap-box" style="margin:15px 0 0 0;">
+          <div style="font-weight:bold; color:var(--red); margin-bottom:6px;">Common Mistakes:</div>
+          <ul class="strategy-list" style="margin:0;">
+            ${sec.common_mistakes.map(m => `<li style="color:var(--cream);">${m}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="strategy-pro-tip" style="margin:15px 0 0 0;">
+          <div style="font-weight:bold; color:var(--gold); margin-bottom:6px;">Memory Tip:</div>
+          <div style="color:var(--cream);">${sec.memory_tips[0]}</div>
+        </div>
+      `;
+    } else if (sec.id === 'finding-the-hammer') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div style="margin-bottom:20px;">
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Common Signal Words:</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            ${sec.signal_words.map(w => `<span style="background:var(--gold-dim); border:1px solid var(--gold-glow); color:var(--gold); padding:4px 10px; border-radius:15px; font-family:'JetBrains Mono',monospace; font-size:12px;">${w}</span>`).join('')}
+          </div>
+        </div>
+        <div style="margin-bottom:20px;">
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">The Collapse Test:</div>
+          <div style="background:rgba(201,168,76,0.05); border:1px dashed var(--gold); padding:15px; border-radius:6px;">
+            <div style="font-weight:bold; color:var(--gold); font-size:14px; margin-bottom:4px;">"${sec.collapse_test.question}"</div>
+            <div style="font-size:13px; color:var(--muted);">${sec.collapse_test.desc}</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Example Passage:</div>
+          <div style="background:var(--surface2); border:1px solid var(--border); padding:15px; border-radius:6px; font-size:14px; color:var(--cream); line-height:1.6;">
+            ${sec.examples[0]}
+          </div>
+        </div>
+      `;
+    } else if (sec.id === 'simplification') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div style="margin-bottom:20px;">
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Simplification Rules:</div>
+          <ul class="strategy-list">
+            ${sec.rules.map(r => `<li>${r}</li>`).join('')}
+          </ul>
+        </div>
+        <div>
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Before / After Examples:</div>
+          <div style="display:flex; flex-direction:column; gap:15px;">
+            ${sec.examples.map(ex => `
+              <div style="border:1px solid var(--border); border-radius:6px; overflow:hidden;">
+                <div style="background:var(--surface2); padding:10px 15px; font-size:13px; border-bottom:1px solid var(--border); font-family:'JetBrains Mono',monospace; color:var(--red);">BEFORE (GRE Style):</div>
+                <div style="padding:15px; font-size:14px; color:var(--cream); background:var(--bg); font-style:italic;">"${ex.before}"</div>
+                <div style="background:var(--gold-dim); padding:10px 15px; font-size:13px; border-top:1px solid var(--border); font-family:'JetBrains Mono',monospace; color:var(--gold);">AFTER (Simplified):</div>
+                <div style="padding:15px; font-size:14px; color:var(--gold); background:var(--surface2); font-weight:600;">"${ex.after}"</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    } else if (sec.id === 'sentence-function') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div>
+          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Core Sentence Roles:</div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            ${sec.functions.map(f => `
+              <div style="background:var(--surface2); border:1px solid var(--border); border-left:4px solid var(--gold); padding:15px; border-radius:6px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <span style="font-weight:bold; color:var(--gold); font-size:15px;">${f.name}</span>
+                  <span style="font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--muted); text-transform:uppercase; background:var(--surface); padding:2px 6px; border-radius:4px;">Role</span>
+                </div>
+                <div style="font-size:13px; color:var(--cream); margin-bottom:8px;"><strong>Definition:</strong> ${f.def}</div>
+                <div style="font-size:13px; color:var(--gold); font-style:italic; background:var(--bg); padding:8px 12px; border-radius:4px; margin-bottom:6px;">"${f.example}"</div>
+                <div style="font-size:12px; color:var(--muted);"><strong>Purpose:</strong> ${f.purpose}</div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    } else if (sec.id === 'gold-vs-rocks') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px;">
+          ${sec.categories.map(c => `
+            <div style="background:var(--surface2); border:1px solid var(--border); border-top:4px solid ${c.type === 'Gold' ? 'var(--gold)' : 'var(--muted)'}; padding:15px; border-radius:6px;">
+              <div style="font-weight:bold; color:${c.type === 'Gold' ? 'var(--gold)' : 'var(--cream)'}; font-size:16px; margin-bottom:4px;">${c.type}</div>
+              <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--gold); margin-bottom:12px;">${c.speed}</div>
+              <ul class="strategy-list" style="gap:8px;">
+                ${c.items.map(item => `<li style="font-size:13px; color:var(--cream);">${item}</li>`).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </div>
+        <div class="strategy-pro-tip" style="margin:0;">
+          <div style="font-weight:bold; color:var(--gold); margin-bottom:6px;">Pro Reading Speed Rule:</div>
+          <div style="color:var(--cream);">${sec.pro_tip}</div>
+        </div>
+      `;
+    } else if (sec.id === 'reading-workflow') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div style="display:flex; flex-direction:column; gap:10px; position:relative; padding-left:20px; border-left:1px dashed var(--gold); margin-left:10px;">
+          ${sec.steps.map((st, sidx) => `
+            <div style="position:relative; margin-bottom:15px;">
+              <div style="position:absolute; left:-30px; top:0; width:20px; height:20px; border-radius:50%; background:var(--gold); color:var(--bg); display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px;">${sidx + 1}</div>
+              <div style="font-weight:bold; color:var(--gold); font-size:16px; margin-bottom:4px; padding-left:10px;">${st.step}</div>
+              <div style="font-size:13px; color:var(--muted); padding-left:10px;">${st.desc}</div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    } else if (sec.id === 'question-mapping') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div style="overflow-x:auto;">
+          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border2); color:var(--gold); font-family:'JetBrains Mono',monospace;">
+                <th style="padding:10px;">GRE QUESTION TYPE</th>
+                <th style="padding:10px;">FRAMEWORK TARGET & TASK</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${sec.mapping.map(m => `
+                <tr style="border-bottom:1px solid var(--border); background:rgba(255,255,255,0.01);">
+                  <td style="padding:12px; font-weight:bold; color:var(--cream); width:40%;">${m.qtype}</td>
+                  <td style="padding:12px; color:var(--muted);">${m.task}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
+    } else if (sec.id === 'function-verbs') {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:20px;">${sec.explanation}</div>
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          ${sec.categories.map((cat, cidx) => {
+            const isOpp = !!cat.isOpposition;
+            const themeColor = isOpp ? 'var(--red)' : 'var(--gold)';
+            const borderTheme = isOpp ? 'rgba(192, 57, 43, 0.2)' : 'var(--border)';
+            const titleStyle = isOpp ? 'color: var(--red); border-left: 3px solid var(--red); padding-left: 10px; margin-left: -20px;' : 'color: var(--gold);';
+            return `
+              <div style="border: 1px solid var(--border); border-radius: 8px; background: var(--surface2); overflow: hidden; ${isOpp ? 'border-left: 4px solid var(--red);' : ''}">
+                <div onclick="toggleVerbCategory(${cidx})" style="padding:12px 20px; background:var(--surface); cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none;">
+                  <span style="font-weight:bold; font-size:16px; font-family:'Playfair Display',serif; ${titleStyle}">${cat.name}</span>
+                  <span id="verb-cat-arrow-${cidx}" style="font-size:11px; color:var(--dim); transition: transform 0.2s;">▼</span>
+                </div>
+                <div id="verb-cat-content-${cidx}" style="display:none; padding:20px; border-top:1px solid var(--border); background:var(--bg);">
+                  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:15px;">
+                    ${cat.verbs.map(v => `
+                      <div style="background:var(--surface); border: 1px solid var(--border); padding:16px; border-radius:6px; display:flex; flex-direction:column; gap:8px; text-align:left; transition: border-color 0.2s;" onmouseover="this.style.borderColor='${themeColor}'" onmouseout="this.style.borderColor='var(--border)'">
+                        <div style="font-weight:bold; color:${themeColor}; font-family:'JetBrains Mono',monospace; font-size:16px; border-bottom:1px solid ${borderTheme}; padding-bottom:4px;">${v.verb}</div>
+                        <div style="font-size:13px; color:var(--cream);"><strong>Definition:</strong> ${v.def}</div>
+                        <div style="font-size:13px; color:var(--muted); font-style:italic; background:var(--surface2); padding:6px 10px; border-radius:4px;">"${v.example}"</div>
+                        <div style="font-size:12px; color:${themeColor}; opacity:0.9;"><strong>Memory Tip:</strong> ${v.memory}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    } else {
+      innerHTML = `
+        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
+        <div style="background:var(--surface2); border:1px dashed var(--border2); padding:30px; border-radius:8px; text-align:center; color:var(--dim); font-style:italic;">
+          ${sec.placeholder}
+        </div>
+      `;
+    }
+
+    return `
+      <div class="rc-accordion-item" id="sec-${sec.id}">
+        <div class="rc-accordion-header" onclick="toggleRCAccordion('${sec.id}')">
+          <span class="rc-accordion-title">${sec.title}</span>
+          <span class="rc-accordion-arrow">▼</span>
+        </div>
+        <div class="rc-accordion-content" id="content-${sec.id}">
+          ${innerHTML}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    <div class="rc-strategy-container">
+      <!-- Reading Progress Bar Container -->
+      <div class="rc-progress-container">
+        <div id="rc-reading-progress" class="rc-progress-bar"></div>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="strategy-detail-header" style="margin-bottom: 20px;">
+        <div class="strategy-badge" style="background:var(--gold-dim); color:var(--gold); border: 1px solid var(--gold-glow); font-family:'JetBrains Mono',monospace; padding: 3px 8px; border-radius: 4px; font-size: 11px;">READING COMPREHENSION</div>
+        <h1 class="strategy-detail-title" style="font-size: 38px; font-weight: 900; font-family:'Playfair Display',serif; color:var(--cream); margin-top: 10px;">RC Strategies</h1>
+        <div class="strategy-text" style="font-size: 15px; color: var(--muted); margin-top: 10px; line-height: 1.6;">
+          Master GregMat's Reading Comprehension framework including Hammer Identification, Function Analysis, Simplification, Gold vs Rocks, and Function Verbs.
+        </div>
+      </div>
+
+      <!-- Metadata Bar -->
+      <div class="rc-meta-bar">
+        <div class="rc-meta-item">
+          <svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>12 min read</span>
+        </div>
+        <div class="rc-meta-item">
+          <svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span>Difficulty: Medium-Hard</span>
+        </div>
+      </div>
+
+      <!-- Search & Controls -->
+      <div class="rc-controls-bar">
+        <div class="rc-search-box">
+          <input type="text" id="rc-inner-search" placeholder="Search within page..." oninput="searchWithinRCPage(this.value)">
+        </div>
+        <div class="rc-action-btns">
+          <button class="gtab" id="rc-bookmark-btn" onclick="toggleRCBookmark()" style="background:var(--surface2); border:1px solid var(--border2); padding: 6px 12px; border-radius: 6px; font-size:12px; color:var(--cream); cursor:pointer; display:flex; align-items:center; gap:6px;">
+            <svg id="rc-bookmark-icon" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="transition: fill 0.2s, stroke 0.2s;"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+            <span id="rc-bookmark-text">Bookmark</span>
+          </button>
+          <button class="gtab" onclick="copyRCNotes()" style="background:var(--surface2); border:1px solid var(--border2); padding: 6px 12px; border-radius: 6px; font-size:12px; color:var(--cream); cursor:pointer; display:flex; align-items:center; gap:6px;">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Notes</span>
+          </button>
+          <button class="gtab" onclick="toggleAllRCAccordions(true)" style="background:var(--surface2); border:1px solid var(--border2); padding: 6px 12px; border-radius: 6px; font-size:12px; color:var(--cream); cursor:pointer;">Expand All</button>
+          <button class="gtab" onclick="toggleAllRCAccordions(false)" style="background:var(--surface2); border:1px solid var(--border2); padding: 6px 12px; border-radius: 6px; font-size:12px; color:var(--cream); cursor:pointer;">Collapse All</button>
+        </div>
+      </div>
+
+      <!-- Layout with Sidebar and Content -->
+      <div class="rc-layout">
+        <!-- Sticky Table of Contents -->
+        <div class="rc-toc-container">
+          <div class="rc-toc">
+            <div class="rc-toc-header">Table of Contents</div>
+            <a href="#core-philosophy" class="rc-toc-link active" onclick="scrollToSection('core-philosophy', event)">1. Core Philosophy</a>
+            <a href="#finding-the-hammer" class="rc-toc-link" onclick="scrollToSection('finding-the-hammer', event)">2. Finding the Hammer</a>
+            <a href="#simplification" class="rc-toc-link" onclick="scrollToSection('simplification', event)">3. Simplification</a>
+            <a href="#sentence-function" class="rc-toc-link" onclick="scrollToSection('sentence-function', event)">4. Sentence Function</a>
+            <a href="#gold-vs-rocks" class="rc-toc-link" onclick="scrollToSection('gold-vs-rocks', event)">5. Gold vs Rocks</a>
+            <a href="#reading-workflow" class="rc-toc-link" onclick="scrollToSection('reading-workflow', event)">6. Reading Workflow</a>
+            <a href="#question-mapping" class="rc-toc-link" onclick="scrollToSection('question-mapping', event)">7. Question Mapping</a>
+            <a href="#function-verbs" class="rc-toc-link" onclick="scrollToSection('function-verbs', event)">8. Function Verbs</a>
+          </div>
+        </div>
+
+        <!-- Accordions List -->
+        <div class="rc-accordions-list">
+          ${sectionsHTML}
+        </div>
+      </div>
+
+      <!-- Previous / Next Navigation -->
+      ${prevStrat || nextStrat ? `
+        <div class="rc-nav-footer">
+          ${prevStrat ? `
+            <a class="rc-nav-btn prev" onclick="showStrategyDetail('${prevStrat.strategy_name.replace(/'/g, "\\'")}')">
+              <span class="rc-nav-label">← Previous Strategy</span>
+              <span class="rc-nav-name">${prevStrat.strategy_name}</span>
+            </a>
+          ` : ''}
+          ${nextStrat ? `
+            <a class="rc-nav-btn next" onclick="showStrategyDetail('${nextStrat.strategy_name.replace(/'/g, "\\'")}')">
+              <span class="rc-nav-label">Next Strategy →</span>
+              <span class="rc-nav-name">${nextStrat.strategy_name}</span>
+            </a>
+          ` : ''}
+        </div>
+      ` : ''}
+    </div>
+  `;
 }
 
 // ─── RUN ───

@@ -1,5 +1,575 @@
 [
   {
+    "strategy_name": "RC Strategies",
+    "category": "Reading Comprehension",
+    "what_it_is": "Master GregMat's Reading Comprehension framework including Hammer Identification, Function Analysis, Simplification, Gold vs Rocks, and Function Verbs.",
+    "core_idea": "Read for the argument, identify the Hammer, analyze sentence functions, compress complex text, and separate Gold from Rocks.",
+    "isRCStrategies": true,
+    "when_to_use": "On all Reading Comprehension passages (short, medium, long, and critical reasoning).",
+    "when_not_to_use": "Do not use when doing direct vocabulary questions, or Text Completion.",
+    "step_by_step_process": [
+      "1. Core Philosophy: Don't read every word, don't skim randomly, read for the argument.",
+      "2. Finding the Hammer: Look for the author's real point, often after contrast indicators like 'however' or 'but'.",
+      "3. Simplification: Compress long sentences, focusing on the core ideas in your own words.",
+      "4. Sentence Function: Identify what job each sentence is doing (Background, Claim, Evidence, Counter, etc.).",
+      "5. Gold vs Rocks: Separate the key arguments (Gold) from decorative details and examples (Rocks).",
+      "6. Reading Workflow: Read -> Find Hammer -> Identify Function -> Simplify -> Gold vs Rocks -> Answer Questions.",
+      "7. Question Type Mapping: Translate question types directly (e.g. Main Idea -> Hammer, Purpose -> Function)."
+    ],
+    "mental_checklist": [
+      "Am I reading for the argument rather than details?",
+      "Have I located the author's Hammer?",
+      "Am I simplifying complex structures?",
+      "Have I mapped out sentence functions?",
+      "Am I separating Gold from Rocks?"
+    ],
+    "common_traps": [
+      "Skimming randomly without tracking the logical hierarchy.",
+      "Reading every single word of Rocks at the same speed.",
+      "Treating contrast words as Hammer signals without asking the collapse question."
+    ],
+    "pro_tips": [
+      "Always ask: 'If I removed this sentence, would the passage collapse?' to find the Hammer.",
+      "Read Gold slowly and Rocks quickly.",
+      "Map out functions using standard active verbs: illustrates, qualifies, refutes, supports."
+    ],
+    "official_GRE_style_example": {
+      "question": "For decades, historians assumed that the transition from agrarian economies was uniform. Recent archaeological findings, however, reveal highly localized paths. These findings suggest that regional ecology played a far greater role than previously hypothesized.\n\nWhich of the following best describes the function of the second sentence ('Recent archaeological...')?",
+      "options": [
+        "A: It introduces an example supporting the historical consensus.",
+        "B: It presents a counterargument that undermines the classical assumption.",
+        "C: It refutes a methodological flaw in recent studies.",
+        "D: It defines a new ecological model proposed by the author.",
+        "E: It reconciles two conflicting interpretations of localized paths."
+      ],
+      "solution_using_strategy": [
+        "1. Identify the Hammer: S2 begins with 'however', pivoting from the agrarian consensus to localized paths. S3 reinforces this as the main point.",
+        "2. Check function: S2 acts as the pivot/counterargument to the historical assumption (S1).",
+        "3. Match to option B: 'presents a counterargument that undermines the classical assumption' perfectly mirrors the pivot function.",
+        "4. Final Selection: B."
+      ],
+      "why_this_strategy_works_here": [
+        "• The pivot word 'however' immediately alerts you to a shift in argument direction.",
+        "• Recognizing the sentence function prevents choosing A (which is opposite) or D (which is too broad)."
+      ]
+    },
+    "custom_sections": [
+      {
+        "id": "core-philosophy",
+        "title": "1. Core Philosophy",
+        "summary": "GregMat's Reading Comprehension framework focuses on active, argument-focused reading, rather than word-by-word reading or mindless skimming.",
+        "explanation": "GRE Reading Comprehension is not a test of memory or general knowledge. Passages are highly structured arguments, where every sentence serves a purpose. Your goal is to map the author's logical moves and identify the main argument.",
+        "points": [
+          "<strong>Don't read every word</strong>: Do not get bogged down in technical jargon or decorative details.",
+          "<strong>Don't skim randomly</strong>: Random skimming leads to missing crucial logical connections.",
+          "<strong>Read for the argument</strong>: Focus on what the author is trying to prove, and how they back it up."
+        ],
+        "four_skills": [
+          {
+            "name": "Finding the Hammer",
+            "desc": "Identifying the author's real point or primary thesis."
+          },
+          {
+            "name": "Simplification",
+            "desc": "Translating complex, jargon-heavy sentences into plain English."
+          },
+          {
+            "name": "Sentence Function",
+            "desc": "Understanding the precise role of each sentence (evidence, claim, pivot, etc.)."
+          },
+          {
+            "name": "Gold vs Rocks",
+            "desc": "Separating high-value claims (Gold) from decorative support details (Rocks)."
+          }
+        ],
+        "examples": [
+          "Instead of trying to memorize the details of carbon dating of soil layers, simplify the section to: 'The author is citing a study [Evidence] to show that previous timelines are incorrect [Claim].'"
+        ],
+        "common_mistakes": [
+          "Reading the entire passage at a uniform, slow speed.",
+          "Assuming that a passage is simply a collection of facts rather than an argument.",
+          "Trying to answer questions based on your own outside knowledge instead of the text."
+        ],
+        "memory_tips": [
+          "Think of the passage as a court case. The author is the lawyer presenting a case (the Hammer) and using key arguments (Gold) backed by raw exhibits (Rocks). Track the argument, not the exhibits."
+        ]
+      },
+      {
+        "id": "finding-the-hammer",
+        "title": "2. Finding the Hammer",
+        "explanation": "The 'Hammer' is the author's real point. GRE passages often start by presenting a common consensus or historical assumption, and then the author introduces their own view. The Hammer is that corrective thesis.",
+        "signal_words": [
+          "Horizontal",
+          "Yet",
+          "But",
+          "Nevertheless",
+          "Still",
+          "Although"
+        ],
+        "warning": "Do not assume every single contrast word introduces the Hammer. Look for the main contrast that sets the direction of the passage.",
+        "collapse_test": {
+          "question": "If I removed this sentence, would the entire passage collapse?",
+          "desc": "If yes, it is the Hammer. The other sentences (examples, evidence) depend on the Hammer to make sense. If they are removed, the passage loses its meaning."
+        },
+        "examples": [
+          "<strong>Passage Setup</strong>: 'Historically, astronomers assumed comet tails were purely dust.' [Consensus]<br><strong>The Hammer Pivot</strong>: 'Recent space probes, <strong>however</strong>, have shown that solar wind ionization plays a critical role.' [Hammer]<br><strong>Supporting Rock</strong>: 'For instance, probe telemetry recorded X-ray emissions...' [Evidence/Rock]<br><em>If you remove the Hammer, the telemetry example has nothing to support and the passage collapses.</em>"
+        ]
+      },
+      {
+        "id": "simplification",
+        "title": "3. Simplification",
+        "explanation": "GRE passages use convoluted syntax, double negatives, and dense academic vocabulary to hide simple ideas. Simplification is the art of actively translating these 'brick walls' into plain, straightforward English.",
+        "rules": [
+          "Focus strictly on the core ideas, not the exact wording.",
+          "Use simple, conversational language (e.g., 'good', 'bad', 'wrong', 'right', 'agree', 'disagree').",
+          "Strip away parentheticals, adjectives, and specialized jargon to find the subject-verb core."
+        ],
+        "examples": [
+          {
+            "before": "The ostensible purpose of the regulatory mandate was to mitigate systemic risk; yet, the actual consequence was the consolidation of market share among incumbents.",
+            "after": "The law was supposed to make things safer, but it actually just helped the big companies."
+          },
+          {
+            "before": "While critics contend that his prose is marred by a pedantic insistence on stylistic orthodoxy, defenders point to his classical lucidity.",
+            "after": "Critics say he writes too old-school; fans say he writes clearly."
+          },
+          {
+            "before": "His conclusions cannot be characterized as entirely devoid of merit, although they are heavily qualified by subsequent developments.",
+            "after": "His ideas aren't completely wrong, but they're mostly outdated now."
+          }
+        ]
+      },
+      {
+        "id": "sentence-function",
+        "title": "4. Sentence Function",
+        "explanation": "Sentences do not exist in isolation. Every sentence has a specific job in the author's logic map. Recognizing sentence functions makes answering 'Why does the author mention X?' questions incredibly easy.",
+        "functions": [
+          {
+            "name": "Background",
+            "def": "Provides context, setup, or historical facts.",
+            "example": "In 1912, Alfred Wegener proposed the continental drift theory.",
+            "purpose": "To set the stage before introducing the main argument or controversy."
+          },
+          {
+            "name": "Evidence",
+            "def": "Provides factual data, study results, or research findings.",
+            "example": "Satellite radar mapping revealed parallel ridges along the seafloor.",
+            "purpose": "To support or validate a claim made by the author or another researcher."
+          },
+          {
+            "name": "Example",
+            "def": "Illustrates a claim with a specific case or instance.",
+            "example": "The fossil distribution of Mesosaurus across both continents supports Wegener.",
+            "purpose": "To make an abstract claim concrete and easier to understand."
+          },
+          {
+            "name": "Counterargument",
+            "def": "Challenges, refutes, or pivots from a stated claim.",
+            "example": "Critics, however, argued that land bridges once connected the landmasses.",
+            "purpose": "To present a conflicting view or set up a debate that the author will resolve."
+          },
+          {
+            "name": "Qualification",
+            "def": "Limits the scope or intensity of a claim.",
+            "example": "This drift mechanism, of course, was initially speculative and unproven.",
+            "purpose": "To ensure the argument remains scientifically or logically defensible without overstating."
+          },
+          {
+            "name": "Hammer",
+            "def": "States the primary thesis or main point of the passage.",
+            "example": "Thus, plate tectonics is the only model that explains these patterns.",
+            "purpose": "To establish the author's core position."
+          },
+          {
+            "name": "Transition",
+            "def": "Moves the logical flow to a new aspect of the topic.",
+            "example": "This debate had profound implications for paleontologists as well.",
+            "purpose": "To connect different stages of the argument smoothly."
+          },
+          {
+            "name": "Conclusion",
+            "def": "Summarizes the final takeaway or implications.",
+            "example": "Ultimately, Wegener's model revolutionized our understanding of the earth.",
+            "purpose": "To state the ultimate significance of the argument."
+          }
+        ]
+      },
+      {
+        "id": "gold-vs-rocks",
+        "title": "5. Gold vs Rocks",
+        "explanation": "You should not read every sentence at the same speed. Adjust your reading speed dynamically based on the value of the content. Separate 'Gold' from 'Rocks'.",
+        "categories": [
+          {
+            "type": "Gold",
+            "speed": "Read SLOWLY (100 WPM) - Digest the logic fully",
+            "items": [
+              "Main claims and theses",
+              "Author's direct opinions and stances",
+              "Contrast pivots (however, yet, but)",
+              "The Hammer",
+              "Tone indicators and shifts",
+              "Logical transitions between paragraphs"
+            ]
+          },
+          {
+            "type": "Rocks",
+            "speed": "Read QUICKLY (300 WPM) - Scan and note the location",
+            "items": [
+              "Lists of examples or names",
+              "Specific statistics, percentages, and dates",
+              "Historical descriptions and background detail",
+              "Complex scientific processes and jargon details"
+            ]
+          }
+        ],
+        "pro_tip": "When encountering Rocks, speed up your eyes. Do not try to understand the details; just map where they are so you can look them up if a detail question asks for them. Read Gold like it's worth points, because it is."
+      },
+      {
+        "id": "reading-workflow",
+        "title": "6. Reading Workflow",
+        "explanation": "Follow this step-by-step active reading system on every Reading Comprehension passage to stay focused and solve questions systematically.",
+        "steps": [
+          {
+            "step": "Read",
+            "desc": "Read the passage, looking for structural signals and adjusting your speed dynamically."
+          },
+          {
+            "step": "Find Hammer",
+            "desc": "Locate the main pivot and write down or mentally flag the author's primary corrective point."
+          },
+          {
+            "step": "Identify Function",
+            "desc": "As you read each paragraph, note its function (e.g., P1 introduces theory, P2 challenges it)."
+          },
+          {
+            "step": "Simplify",
+            "desc": "If you hit a 'brick wall' sentence, pause and translate it into simple, everyday terms."
+          },
+          {
+            "step": "Gold vs Rocks",
+            "desc": "Ensure you are spending time on main claims (Gold) and skimming over support details (Rocks)."
+          },
+          {
+            "step": "Answer Questions",
+            "desc": "Read the question stem, classify the question type, predict the answer from the text, and eliminate wrong choices."
+          }
+        ]
+      },
+      {
+        "id": "question-mapping",
+        "title": "7. Question Type Mapping",
+        "explanation": "Every GRE Reading Comprehension question type maps directly to a specific part of the active reading framework. Translate the question into the required task.",
+        "mapping": [
+          {
+            "qtype": "Main Idea / Primary Purpose",
+            "task": "Focus on the <strong>Hammer</strong>. Choose the option that summarizes the corrective thesis."
+          },
+          {
+            "qtype": "Sentence Function / Role",
+            "task": "Focus on <strong>Sentence Function</strong>. Look at the surrounding sentences to see what job it does."
+          },
+          {
+            "qtype": "Inference",
+            "task": "Combine <strong>Hammer + Sentence Functions</strong>. Select the choice that must be 100% true based on the text."
+          },
+          {
+            "qtype": "Detail / Specific Lookup",
+            "task": "Navigate directly to the <strong>Rocks</strong>. Go to the paragraph you mapped and check the details."
+          },
+          {
+            "qtype": "Tone / Attitude",
+            "task": "Look at the <strong>Hammer</strong> and the author's evaluation words (positive, critical, skeptical)."
+          },
+          {
+            "qtype": "Vocabulary-in-Context",
+            "task": "Apply <strong>Simplification</strong>. Predict your own word for the blank and match it to options."
+          }
+        ]
+      },
+      {
+        "id": "function-verbs",
+        "title": "8. Function Verbs",
+        "explanation": "Mastering the verbs ETS uses in Reading Comprehension answer choices is critical for correctly identifying the author's intent and structural moves.",
+        "categories": [
+          {
+            "name": "General Verbs",
+            "verbs": [
+              {
+                "verb": "Present",
+                "def": "Show or introduce something.",
+                "example": "The author presents evidence.",
+                "memory": "Simply introduces information."
+              },
+              {
+                "verb": "Give",
+                "def": "Provide something.",
+                "example": "The author gives several reasons.",
+                "memory": "Hands information to the reader."
+              },
+              {
+                "verb": "Discuss",
+                "def": "Talk about a topic.",
+                "example": "The article discusses climate change.",
+                "memory": "Just talks about it."
+              },
+              {
+                "verb": "Provide",
+                "def": "Supply information.",
+                "example": "The author provides background.",
+                "memory": "Offers information."
+              },
+              {
+                "verb": "Make",
+                "def": "Create or state something.",
+                "example": "The author makes an argument.",
+                "memory": "Produces an idea."
+              }
+            ]
+          },
+          {
+            "name": "Support Verbs",
+            "verbs": [
+              {
+                "verb": "Support",
+                "def": "Agree with or back up an idea.",
+                "example": "Evidence supports the claim.",
+                "memory": "Stand behind."
+              },
+              {
+                "verb": "Advocate",
+                "def": "Strongly support.",
+                "example": "The author advocates stricter laws.",
+                "memory": "Like a lawyer defending an idea."
+              },
+              {
+                "verb": "Promote",
+                "def": "Encourage people to accept.",
+                "example": "The article promotes recycling.",
+                "memory": "Pushes forward."
+              },
+              {
+                "verb": "Confirm",
+                "def": "Prove true.",
+                "example": "The experiment confirms earlier findings.",
+                "memory": "Yes, it's true."
+              },
+              {
+                "verb": "Establish",
+                "def": "Show definitely true.",
+                "example": "The study establishes a relationship.",
+                "memory": "Makes solid."
+              },
+              {
+                "verb": "Demonstrate",
+                "def": "Clearly show.",
+                "example": "The graph demonstrates growth.",
+                "memory": "Shows clearly."
+              },
+              {
+                "verb": "Recognize",
+                "def": "Accept as true.",
+                "example": "The author recognizes limitations.",
+                "memory": "Acknowledges reality."
+              },
+              {
+                "verb": "Account for",
+                "def": "Explain why.",
+                "example": "The theory accounts for the results.",
+                "memory": "Answers WHY."
+              },
+              {
+                "verb": "Point Out",
+                "def": "Direct attention.",
+                "example": "The author points out an error.",
+                "memory": "Look here."
+              },
+              {
+                "verb": "Illustrate",
+                "def": "Give an example.",
+                "example": "The author illustrates the idea.",
+                "memory": "Examples teach."
+              },
+              {
+                "verb": "Clarify",
+                "def": "Make easier.",
+                "example": "The conclusion clarifies the argument.",
+                "memory": "Removes confusion."
+              }
+            ]
+          },
+          {
+            "name": "Opposition Verbs",
+            "isOpposition": true,
+            "verbs": [
+              {
+                "verb": "Challenge",
+                "def": "Question an idea.",
+                "example": "The author challenges the established consensus.",
+                "memory": "Calls into question."
+              },
+              {
+                "verb": "Counter",
+                "def": "Fight back with another idea.",
+                "example": "The rebuttal counters the critic's argument.",
+                "memory": "Strikes back."
+              },
+              {
+                "verb": "Contradict",
+                "def": "Say the opposite.",
+                "example": "The findings contradict the initial hypothesis.",
+                "memory": "Direct conflict."
+              },
+              {
+                "verb": "Criticize",
+                "def": "Point out weaknesses.",
+                "example": "The essay criticizes the methodology.",
+                "memory": "Finds flaws."
+              },
+              {
+                "verb": "Reject",
+                "def": "Completely disagree.",
+                "example": "The committee rejects the proposal.",
+                "memory": "Throws away."
+              },
+              {
+                "verb": "Refute",
+                "def": "Completely prove wrong.",
+                "example": "The author refutes the claim with logic.",
+                "memory": "Proves wrong."
+              },
+              {
+                "verb": "Disprove",
+                "def": "Show false.",
+                "example": "New data disproves the theorem.",
+                "memory": "Shows untrue."
+              },
+              {
+                "verb": "Overturn",
+                "def": "Replace old idea by proving it wrong.",
+                "example": "The paradigm shift overturns classical physics.",
+                "memory": "Replaces old."
+              },
+              {
+                "verb": "Object",
+                "def": "Express disagreement.",
+                "example": "Scholars object to the interpretation.",
+                "memory": "Says NO."
+              },
+              {
+                "verb": "Deny",
+                "def": "Say not true.",
+                "example": "The company denies allegations.",
+                "memory": "Refuses truth."
+              }
+            ]
+          },
+          {
+            "name": "Neutral / Analytical Verbs",
+            "isNeutral": true,
+            "verbs": [
+              {
+                "verb": "Suggest",
+                "def": "Propose an idea gently without 100% proof.",
+                "example": "The author suggests that alternative energy is viable.",
+                "memory": "Hints rather than declares."
+              },
+              {
+                "verb": "Offer",
+                "def": "Put forward an explanation or solution.",
+                "example": "The study offers a new hypothesis.",
+                "memory": "Presents for consideration."
+              },
+              {
+                "verb": "Propose",
+                "def": "Put forward a plan or theory for consideration.",
+                "example": "The writer proposes a restructuring of the department.",
+                "memory": "Presents a formal recommendation."
+              },
+              {
+                "verb": "Speculate",
+                "def": "Form a theory without firm evidence.",
+                "example": "Biologists speculate about the origin of the species.",
+                "memory": "Educated guess."
+              },
+              {
+                "verb": "Theorize",
+                "def": "Form a scientific explanation for something.",
+                "example": "Physicists theorize about parallel universes.",
+                "memory": "Builds a model."
+              },
+              {
+                "verb": "Analyze",
+                "def": "Examine details carefully to understand structure.",
+                "example": "The paper analyzes economic data from the recession.",
+                "memory": "Breaks down to study."
+              },
+              {
+                "verb": "Assess",
+                "def": "Evaluate the quality, value, or significance of.",
+                "example": "The report assesses the damage caused by the storm.",
+                "memory": "Rates or measures."
+              },
+              {
+                "verb": "Compare",
+                "def": "Look at similarities and differences.",
+                "example": "The essay compares classical and modern literature.",
+                "memory": "Finds likeness/difference."
+              },
+              {
+                "verb": "Contrast",
+                "def": "Highlight differences between things.",
+                "example": "The study contrasts two distinct species.",
+                "memory": "Looks only at differences."
+              },
+              {
+                "verb": "Examine",
+                "def": "Inspect closely and investigate.",
+                "example": "The scientist examines the tissue samples.",
+                "memory": "Looks under a microscope."
+              },
+              {
+                "verb": "Explore",
+                "def": "Inquire into or discuss systematically.",
+                "example": "The chapter explores social movements in the 19th century.",
+                "memory": "Tours the topic."
+              },
+              {
+                "verb": "Develop",
+                "def": "Elaborate or expand an idea over time.",
+                "example": "The author develops the thesis across three paragraphs.",
+                "memory": "Grows the idea."
+              },
+              {
+                "verb": "Describe",
+                "def": "Give a detailed account of something's features.",
+                "example": "The book describes the architecture of ancient Rome.",
+                "memory": "Paints a word picture."
+              },
+              {
+                "verb": "Outline",
+                "def": "Give a summary of the main points.",
+                "example": "The introduction outlines the upcoming chapters.",
+                "memory": "Skeletal summary."
+              },
+              {
+                "verb": "Summarize",
+                "def": "Give a brief statement of the main points.",
+                "example": "The conclusion summarizes the main findings.",
+                "memory": "Short version."
+              },
+              {
+                "verb": "Explain",
+                "def": "Make an idea clear by describing it in detail.",
+                "example": "The professor explains how photosynthesis occurs.",
+                "memory": "Makes clear."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "strategy_name": "Main Idea (Short + Long)",
     "category": "Reading Comprehension Core",
     "what_it_is": "The skill of identifying the central argument or observation of a passage by stripping away decorative details. For short passages, this is done after one read; for long passages, it is built incrementally.",
