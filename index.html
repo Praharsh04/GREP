@@ -2521,6 +2521,42 @@ body::before {
   }
 }
 
+/* MODULAR CARD META BADGES */
+.rc-card-meta-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+}
+.rc-card-meta-badge.difficulty-easy {
+  color: var(--teal);
+  background: rgba(16, 185, 129, 0.04);
+  border-color: rgba(16, 185, 129, 0.15);
+}
+.rc-card-meta-badge.difficulty-medium {
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.04);
+  border-color: rgba(201, 168, 76, 0.15);
+}
+.rc-card-meta-badge.difficulty-hard {
+  color: var(--red);
+  background: rgba(192, 57, 43, 0.04);
+  border-color: rgba(192, 57, 43, 0.15);
+}
+.rc-card-meta-badge.tag-badge {
+  font-size: 9px;
+  text-transform: uppercase;
+  background: var(--gold-dim);
+  border-color: var(--gold-glow);
+  color: var(--gold);
+  padding: 2px 6px;
+}
+
 /* VERB CARDS & BADGES STYLES */
 .rc-strength-badge {
   font-family: 'JetBrains Mono', monospace;
@@ -8293,13 +8329,28 @@ function renderStrategyCards(strategies) {
     return;
   }
 
-  grid.innerHTML = strategies.map(s => `
-    <div class="strategy-card" onclick="showStrategyDetail('${s.strategy_name.replace(/'/g, "\\'")}')">
-      <div class="strategy-badge">${s.category}</div>
-      <div class="strategy-card-title">${s.strategy_name}</div>
-      <div class="strategy-card-teaser">${s.what_it_is.split(' ').slice(0, 12).join(' ')}...</div>
-    </div>
-  `).join('');
+  grid.innerHTML = strategies.map(s => {
+    const diffBadge = s.difficulty ? `<span class="rc-card-meta-badge difficulty-${s.difficulty.toLowerCase()}">${s.difficulty}</span>` : '';
+    const timeBadge = s.reading_time ? `<span class="rc-card-meta-badge"><svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:inline-block; vertical-align:text-top; margin-right:4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>${s.reading_time}</span>` : '';
+    const tagBadge = s.tag ? `<span class="rc-card-meta-badge tag-badge">${s.tag}</span>` : '';
+
+    return `
+      <div class="strategy-card" onclick="showStrategyDetail('${s.strategy_name.replace(/'/g, "\\'")}')">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div class="strategy-badge">${s.category}</div>
+          ${tagBadge}
+        </div>
+        <div class="strategy-card-title">${s.strategy_name}</div>
+        <div class="strategy-card-teaser">${s.what_it_is.split(' ').slice(0, 12).join(' ')}...</div>
+        ${s.difficulty || s.reading_time ? `
+          <div style="display:flex; gap:6px; margin-top:12px; font-size:10px; font-family:'JetBrains Mono',monospace;">
+            ${diffBadge}
+            ${timeBadge}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  }).join('');
 }
 
 function showStrategyDetail(name) {
@@ -8335,7 +8386,8 @@ function showStrategyDetail(name) {
     setTimeout(() => {
       setupRCScrollSpy();
       setupRCKeyboardNavigation();
-      const isBookmarked = localStorage.getItem('gre_rc_bookmarked') === 'true';
+      const key = `gre_rc_bookmark_${s.strategy_name}`;
+      const isBookmarked = localStorage.getItem(key) === 'true';
       updateRCBookmarkUI(isBookmarked);
       
       // Initialize all verb bookmark states
@@ -8508,11 +8560,15 @@ function showRCToast(message) {
 }
 
 function toggleRCBookmark() {
-  const isBookmarked = localStorage.getItem('gre_rc_bookmarked') === 'true';
+  const titleEl = document.querySelector('.strategy-detail-title');
+  if (!titleEl) return;
+  const activeStrategy = titleEl.innerText;
+  const key = `gre_rc_bookmark_${activeStrategy}`;
+  const isBookmarked = localStorage.getItem(key) === 'true';
   const newStatus = !isBookmarked;
-  localStorage.setItem('gre_rc_bookmarked', newStatus ? 'true' : 'false');
+  localStorage.setItem(key, newStatus ? 'true' : 'false');
   updateRCBookmarkUI(newStatus);
-  showRCToast(newStatus ? 'Strategy Bookmarked!' : 'Bookmark Removed!');
+  showRCToast(newStatus ? `Strategy "${activeStrategy}" bookmarked!` : `Bookmark removed for "${activeStrategy}"`);
 }
 
 function updateRCBookmarkUI(isBookmarked) {
@@ -8532,37 +8588,39 @@ function updateRCBookmarkUI(isBookmarked) {
 }
 
 function copyRCNotes() {
-  const notesText = `GRE Reading Comprehension Strategies:
-1. Core Philosophy:
-   - Don't read every word; don't skim randomly. Read for the argument.
-   - Four skills: Finding the Hammer, Simplification, Sentence Function, Gold vs Rocks.
-2. Finding the Hammer (Author's core point):
-   - Look after contrast pivots (However, Yet, But, Nevertheless, Still, Although).
-   - Apply the Collapse Test: "If I removed this sentence, would the passage collapse?"
-3. Simplification:
-   - Compress long GRE sentences into simple, conversational ideas in your own words.
-4. Sentence Function:
-   - Identify roles: Background, Evidence, Example, Counterargument, Qualification, Hammer, Transition, Conclusion.
-5. Gold vs Rocks:
-   - Gold (Read slowly at 100 WPM): Claims, opinions, contrasts, tone.
-   - Rocks (Scan quickly at 300 WPM): Examples, statistics, history, descriptions.
-6. Reading Workflow:
-   - Read -> Find Hammer -> Identify Function -> Simplify -> Gold vs Rocks -> Answer Questions.
-7. Question Mapping:
-   - Main Idea -> Hammer
-   - Purpose -> Function
-   - Inference -> Hammer + Function
-   - Detail -> Gold vs Rocks
-   - Tone -> Hammer
-   - Vocabulary -> Simplification
-8. Function Verbs:
-   - General (Present, Give, Discuss, Provide, Make)
-   - Support (Support, Advocate, Promote, Confirm, Establish, Demonstrate, Recognize, Account for, Point Out, Illustrate, Clarify)
-   - Opposition (Challenge, Counter, Contradict, Criticize, Reject, Refute, Disprove, Overturn, Object, Deny)
-   - Neutral (Suggest, Offer, Propose, Speculate, Theorize, Analyze, Assess, Compare, Contrast, Examine, Explore, Develop, Describe, Outline, Summarize, Explain)`;
+  const titleEl = document.querySelector('.strategy-detail-title');
+  if (!titleEl) return;
+  const name = titleEl.innerText;
+  const s = allStrategies.find(st => st.strategy_name === name);
+  if (!s) return;
+  
+  let notes = `${s.strategy_name} (${s.category})
+`;
+  notes += `Difficulty: ${s.difficulty} | Est. Reading Time: ${s.reading_time}
+`;
+  notes += `Core Idea: "${s.core_idea}"
 
-  navigator.clipboard.writeText(notesText).then(() => {
-    showRCToast('RC Strategy Notes copied to clipboard!');
+`;
+  
+  if (s.sections) {
+    s.sections.forEach(sec => {
+      notes += `■ ${sec.title}
+`;
+      if (sec.explanation) notes += `  ${sec.explanation}
+`;
+      if (sec.points && sec.points.length > 0) {
+        sec.points.forEach(p => {
+          notes += `  • ${p.replace(/<[^>]*>/g, '')}
+`;
+        });
+      }
+      notes += `
+`;
+    });
+  }
+  
+  navigator.clipboard.writeText(notes).then(() => {
+    showRCToast(`Copied "${s.strategy_name}" study notes to clipboard!`);
   }).catch(() => {
     showRCToast('Failed to copy notes.');
   });
@@ -8588,10 +8646,11 @@ function setupRCKeyboardNavigation() {
     
     const key = event.key.toLowerCase();
     
-    // 1-8 keys to jump to sections
-    if (key >= '1' && key <= '8') {
+    // Dynamic keys to jump to sections
+    const items = document.querySelectorAll('.rc-accordion-item');
+    const sections = Array.from(items).map(item => item.id.replace('sec-', ''));
+    if (key >= '1' && key <= '9') {
       event.preventDefault();
-      const sections = ['core-philosophy', 'finding-the-hammer', 'simplification', 'sentence-function', 'gold-vs-rocks', 'reading-workflow', 'question-mapping', 'function-verbs'];
       const targetId = sections[parseInt(key) - 1];
       if (targetId) {
         scrollToSection(targetId);
@@ -8741,8 +8800,9 @@ function setupRCScrollSpy() {
     main.removeEventListener('scroll', mainScrollListener);
   }
   
-  const sections = ['core-philosophy', 'finding-the-hammer', 'simplification', 'sentence-function', 'gold-vs-rocks', 'reading-workflow', 'question-mapping', 'function-verbs'];
-  const progressBar = document.getElementById('rc-reading-progress');
+  const items = document.querySelectorAll('.rc-accordion-item');
+  const sections = Array.from(items).map(item => item.id.replace('sec-', ''));
+  const progressBar = document.getElementById('rc-scroll-progress');
   
   mainScrollListener = () => {
     const mainRect = main.getBoundingClientRect();
@@ -8881,168 +8941,22 @@ function highlightTextNode(node, word) {
 }
 
 function renderRCStrategiesHTML(s) {
-  const currentIndex = allStrategies.findIndex(st => st.strategy_name === s.strategy_name);
-  const prevStrat = currentIndex > 0 ? allStrategies[currentIndex - 1] : null;
-  const nextStrat = currentIndex < allStrategies.length - 1 ? allStrategies[currentIndex + 1] : null;
+  // Find previous and next strategies in allStrategies to build navigation links
+  const rcStrategies = allStrategies.filter(st => st.internal_cat === 'RC');
+  const currentIndex = rcStrategies.findIndex(st => st.strategy_name === s.strategy_name);
+  const prevStrat = currentIndex > 0 ? rcStrategies[currentIndex - 1] : null;
+  const nextStrat = currentIndex < rcStrategies.length - 1 ? rcStrategies[currentIndex + 1] : null;
 
-  const sectionsHTML = s.custom_sections.map((sec, idx) => {
+  // Generate TOC links
+  const tocHTML = s.sections.map(sec => `
+    <a href="#${sec.id}" class="rc-toc-link" onclick="scrollToSection('${sec.id}', event)">${sec.title}</a>
+  `).join('');
+
+  // Generate sections
+  const sectionsHTML = s.sections.map(sec => {
     let innerHTML = '';
-    if (sec.id === 'core-philosophy') {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Core Rules:</div>
-          <ul class="strategy-list">
-            ${sec.points.map(p => `<li>${p}</li>`).join('')}
-          </ul>
-        </div>
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">The Four Skills:</div>
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
-            ${sec.four_skills.map(skill => `
-              <div style="background:var(--surface2); border:1px solid var(--border); padding:12px; border-radius:6px;">
-                <div style="font-weight:bold; color:var(--gold); font-size:14px; margin-bottom:4px;">${skill.name}</div>
-                <div style="font-size:12px; color:var(--muted);">${skill.desc}</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Example:</div>
-          <div class="strategy-pro-tip" style="margin:5px 0;">${sec.examples[0]}</div>
-        </div>
-        <div class="strategy-trap-box" style="margin:15px 0 0 0;">
-          <div style="font-weight:bold; color:var(--red); margin-bottom:6px;">Common Mistakes:</div>
-          <ul class="strategy-list" style="margin:0;">
-            ${sec.common_mistakes.map(m => `<li style="color:var(--cream);">${m}</li>`).join('')}
-          </ul>
-        </div>
-        <div class="strategy-pro-tip" style="margin:15px 0 0 0;">
-          <div style="font-weight:bold; color:var(--gold); margin-bottom:6px;">Memory Tip:</div>
-          <div style="color:var(--cream);">${sec.memory_tips[0]}</div>
-        </div>
-      `;
-    } else if (sec.id === 'finding-the-hammer') {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Common Signal Words:</div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px;">
-            ${sec.signal_words.map(w => `<span style="background:var(--gold-dim); border:1px solid var(--gold-glow); color:var(--gold); padding:4px 10px; border-radius:15px; font-family:'JetBrains Mono',monospace; font-size:12px;">${w}</span>`).join('')}
-          </div>
-        </div>
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">The Collapse Test:</div>
-          <div style="background:rgba(201,168,76,0.05); border:1px dashed var(--gold); padding:15px; border-radius:6px;">
-            <div style="font-weight:bold; color:var(--gold); font-size:14px; margin-bottom:4px;">"${sec.collapse_test.question}"</div>
-            <div style="font-size:13px; color:var(--muted);">${sec.collapse_test.desc}</div>
-          </div>
-        </div>
-        <div>
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Example Passage:</div>
-          <div style="background:var(--surface2); border:1px solid var(--border); padding:15px; border-radius:6px; font-size:14px; color:var(--cream); line-height:1.6;">
-            ${sec.examples[0]}
-          </div>
-        </div>
-      `;
-    } else if (sec.id === 'simplification') {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div style="margin-bottom:20px;">
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Simplification Rules:</div>
-          <ul class="strategy-list">
-            ${sec.rules.map(r => `<li>${r}</li>`).join('')}
-          </ul>
-        </div>
-        <div>
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Before / After Examples:</div>
-          <div style="display:flex; flex-direction:column; gap:15px;">
-            ${sec.examples.map(ex => `
-              <div style="border:1px solid var(--border); border-radius:6px; overflow:hidden;">
-                <div style="background:var(--surface2); padding:10px 15px; font-size:13px; border-bottom:1px solid var(--border); font-family:'JetBrains Mono',monospace; color:var(--red);">BEFORE (GRE Style):</div>
-                <div style="padding:15px; font-size:14px; color:var(--cream); background:var(--bg); font-style:italic;">"${ex.before}"</div>
-                <div style="background:var(--gold-dim); padding:10px 15px; font-size:13px; border-top:1px solid var(--border); font-family:'JetBrains Mono',monospace; color:var(--gold);">AFTER (Simplified):</div>
-                <div style="padding:15px; font-size:14px; color:var(--gold); background:var(--surface2); font-weight:600;">"${ex.after}"</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `;
-    } else if (sec.id === 'sentence-function') {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div>
-          <div style="font-weight:600; color:var(--gold); margin-bottom:8px;">Core Sentence Roles:</div>
-          <div style="display:flex; flex-direction:column; gap:12px;">
-            ${sec.functions.map(f => `
-              <div style="background:var(--surface2); border:1px solid var(--border); border-left:4px solid var(--gold); padding:15px; border-radius:6px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                  <span style="font-weight:bold; color:var(--gold); font-size:15px;">${f.name}</span>
-                  <span style="font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--muted); text-transform:uppercase; background:var(--surface); padding:2px 6px; border-radius:4px;">Role</span>
-                </div>
-                <div style="font-size:13px; color:var(--cream); margin-bottom:8px;"><strong>Definition:</strong> ${f.def}</div>
-                <div style="font-size:13px; color:var(--gold); font-style:italic; background:var(--bg); padding:8px 12px; border-radius:4px; margin-bottom:6px;">"${f.example}"</div>
-                <div style="font-size:12px; color:var(--muted);"><strong>Purpose:</strong> ${f.purpose}</div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      `;
-    } else if (sec.id === 'gold-vs-rocks') {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px;">
-          ${sec.categories.map(c => `
-            <div style="background:var(--surface2); border:1px solid var(--border); border-top:4px solid ${c.type === 'Gold' ? 'var(--gold)' : 'var(--muted)'}; padding:15px; border-radius:6px;">
-              <div style="font-weight:bold; color:${c.type === 'Gold' ? 'var(--gold)' : 'var(--cream)'}; font-size:16px; margin-bottom:4px;">${c.type}</div>
-              <div style="font-size:11px; font-family:'JetBrains Mono',monospace; color:var(--gold); margin-bottom:12px;">${c.speed}</div>
-              <ul class="strategy-list" style="gap:8px;">
-                ${c.items.map(item => `<li style="font-size:13px; color:var(--cream);">${item}</li>`).join('')}
-              </ul>
-            </div>
-          `).join('')}
-        </div>
-        <div class="strategy-pro-tip" style="margin:0;">
-          <div style="font-weight:bold; color:var(--gold); margin-bottom:6px;">Pro Reading Speed Rule:</div>
-          <div style="color:var(--cream);">${sec.pro_tip}</div>
-        </div>
-      `;
-    } else if (sec.id === 'reading-workflow') {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div style="display:flex; flex-direction:column; gap:10px; position:relative; padding-left:20px; border-left:1px dashed var(--gold); margin-left:10px;">
-          ${sec.steps.map((st, sidx) => `
-            <div style="position:relative; margin-bottom:15px;">
-              <div style="position:absolute; left:-30px; top:0; width:20px; height:20px; border-radius:50%; background:var(--gold); color:var(--bg); display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:12px;">${sidx + 1}</div>
-              <div style="font-weight:bold; color:var(--gold); font-size:16px; margin-bottom:4px; padding-left:10px;">${st.step}</div>
-              <div style="font-size:13px; color:var(--muted); padding-left:10px;">${st.desc}</div>
-            </div>
-          `).join('')}
-        </div>
-      `;
-    } else if (sec.id === 'question-mapping') {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div style="overflow-x:auto;">
-          <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
-            <thead>
-              <tr style="border-bottom:2px solid var(--border2); color:var(--gold); font-family:'JetBrains Mono',monospace;">
-                <th style="padding:10px;">GRE QUESTION TYPE</th>
-                <th style="padding:10px;">FRAMEWORK TARGET & TASK</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${sec.mapping.map(m => `
-                <tr style="border-bottom:1px solid var(--border); background:rgba(255,255,255,0.01);">
-                  <td style="padding:12px; font-weight:bold; color:var(--cream); width:40%;">${m.qtype}</td>
-                  <td style="padding:12px; color:var(--muted);">${m.task}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
-      `;
-    } else if (sec.id === 'function-verbs') {
+    
+    if (sec.id === 'function-verbs') {
       innerHTML = `
         <div class="strategy-text" style="margin-bottom:20px;">${sec.explanation}</div>
         <div style="display:flex; flex-direction:column; gap:20px;">
@@ -9113,11 +9027,78 @@ function renderRCStrategiesHTML(s) {
         </div>
       `;
     } else {
-      innerHTML = `
-        <div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>
-        <div style="background:var(--surface2); border:1px dashed var(--border2); padding:30px; border-radius:8px; text-align:center; color:var(--dim); font-style:italic;">
-          ${sec.placeholder}
+      const explanationHTML = sec.explanation ? `<div class="strategy-text" style="margin-bottom:15px;">${sec.explanation}</div>` : '';
+      
+      const pointsHTML = sec.points && sec.points.length > 0 ? `
+        <ul class="strategy-list" style="margin-top: 15px; margin-bottom: 20px;">
+          ${sec.points.map(p => `<li>${p}</li>`).join('')}
+        </ul>
+      ` : '';
+
+      const diagramHTML = sec.diagram ? `
+        <div style="background:var(--surface2); border:1px dashed var(--border2); padding:20px; border-radius:8px; margin: 20px 0; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--gold); white-space:pre-wrap; text-align:center;">
+          ${sec.diagram}
         </div>
+      ` : '';
+
+      const examplesHTML = sec.examples && sec.examples.length > 0 ? `
+        <div style="margin-top: 20px;">
+          <div style="font-size: 14px; font-weight: bold; color: var(--gold); margin-bottom: 8px;">Examples & Explanations</div>
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            ${sec.examples.map(ex => `
+              <div class="strategy-pro-tip" style="margin: 0; padding: 12px 18px;">
+                ${ex}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : '';
+
+      const mistakesHTML = sec.common_mistakes && sec.common_mistakes.length > 0 ? `
+        <div class="strategy-trap-box" style="margin-top: 20px;">
+          <div style="font-weight: bold; color: var(--red); margin-bottom: 8px;">Common Traps & Mistakes</div>
+          <ul class="strategy-list" style="margin: 0;">
+            ${sec.common_mistakes.map(m => `<li style="color:var(--cream);">${m}</li>`).join('')}
+          </ul>
+        </div>
+      ` : '';
+
+      const memoryHTML = sec.memory_tips && sec.memory_tips.length > 0 ? `
+        <div style="margin-top: 20px; font-size: 13px; color: var(--muted); border-left: 2px solid var(--gold); padding-left: 12px; font-style: italic;">
+          <strong>Memory Tip:</strong> ${sec.memory_tips.join(' ')}
+        </div>
+      ` : '';
+
+      const practiceHTML = sec.practice_questions && sec.practice_questions.length > 0 ? `
+        <div style="margin-top: 20px;">
+          <div style="font-size: 14px; font-weight: bold; color: var(--gold); margin-bottom: 10px;">Practice Questions</div>
+          ${sec.practice_questions.map((pq, pqIdx) => `
+            <div style="background:var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 15px; margin-bottom: 12px;">
+              <div style="font-size: 13px; color: var(--cream); margin-bottom: 12px; line-height: 1.5;">${pq.question}</div>
+              <div style="display:grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 12px;">
+                ${pq.options.map(opt => `<div class="strategy-option" style="padding: 8px; font-size: 12px;">${opt}</div>`).join('')}
+              </div>
+              <div class="strategy-example-toggle" onclick="const c = this.nextElementSibling; c.style.display = c.style.display === 'none' ? 'block' : 'none';" style="font-size:12px; padding:6px 12px; background:var(--surface2); border:1px solid var(--border); border-radius:4px; display:inline-block; cursor:pointer;">
+                <span>View Solution & Reasoning</span>
+                <span>▼</span>
+              </div>
+              <div style="display:none; padding:12px; margin-top:10px; border-top:1px solid var(--border); font-size:12px; color:var(--muted); line-height:1.5;">
+                <div style="color:var(--gold); font-weight:bold; margin-bottom:6px;">Correct Answer: ${pq.answer}</div>
+                <div>${pq.explanation}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      ` : '';
+
+      innerHTML = `
+        ${explanationHTML}
+        ${pointsHTML}
+        ${diagramHTML}
+        ${examplesHTML}
+        ${mistakesHTML}
+        ${memoryHTML}
+        ${practiceHTML}
       `;
     }
 
@@ -9138,15 +9119,15 @@ function renderRCStrategiesHTML(s) {
     <div class="rc-strategy-container">
       <!-- Reading Progress Bar Container -->
       <div class="rc-progress-container">
-        <div id="rc-reading-progress" class="rc-progress-bar"></div>
+        <div id="rc-scroll-progress" class="rc-progress-bar"></div>
       </div>
 
       <!-- Hero Section -->
       <div class="strategy-detail-header" style="margin-bottom: 20px;">
-        <div class="strategy-badge" style="background:var(--gold-dim); color:var(--gold); border: 1px solid var(--gold-glow); font-family:'JetBrains Mono',monospace; padding: 3px 8px; border-radius: 4px; font-size: 11px;">READING COMPREHENSION</div>
-        <h1 class="strategy-detail-title" style="font-size: 38px; font-weight: 900; font-family:'Playfair Display',serif; color:var(--cream); margin-top: 10px;">RC Strategies</h1>
+        <div class="strategy-badge" style="background:var(--gold-dim); color:var(--gold); border: 1px solid var(--gold-glow); font-family:'JetBrains Mono',monospace; padding: 3px 8px; border-radius: 4px; font-size: 11px;">${s.category.toUpperCase()}</div>
+        <h1 class="strategy-detail-title" style="font-size: 38px; font-weight: 900; font-family:'Playfair Display',serif; color:var(--cream); margin-top: 10px;">${s.strategy_name}</h1>
         <div class="strategy-text" style="font-size: 15px; color: var(--muted); margin-top: 10px; line-height: 1.6;">
-          Master GregMat's Reading Comprehension framework including Hammer Identification, Function Analysis, Simplification, Gold vs Rocks, and Function Verbs.
+          ${s.what_it_is}
         </div>
       </div>
 
@@ -9154,11 +9135,11 @@ function renderRCStrategiesHTML(s) {
       <div class="rc-meta-bar">
         <div class="rc-meta-item">
           <svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <span>12 min read</span>
+          <span>${s.reading_time || '5 mins'} read</span>
         </div>
         <div class="rc-meta-item">
           <svg class="meta-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          <span>Difficulty: Medium-Hard</span>
+          <span>Difficulty: ${s.difficulty || 'Medium'}</span>
         </div>
       </div>
 
@@ -9187,14 +9168,7 @@ function renderRCStrategiesHTML(s) {
         <div class="rc-toc-container">
           <div class="rc-toc">
             <div class="rc-toc-header">Table of Contents</div>
-            <a href="#core-philosophy" class="rc-toc-link active" onclick="scrollToSection('core-philosophy', event)">1. Core Philosophy</a>
-            <a href="#finding-the-hammer" class="rc-toc-link" onclick="scrollToSection('finding-the-hammer', event)">2. Finding the Hammer</a>
-            <a href="#simplification" class="rc-toc-link" onclick="scrollToSection('simplification', event)">3. Simplification</a>
-            <a href="#sentence-function" class="rc-toc-link" onclick="scrollToSection('sentence-function', event)">4. Sentence Function</a>
-            <a href="#gold-vs-rocks" class="rc-toc-link" onclick="scrollToSection('gold-vs-rocks', event)">5. Gold vs Rocks</a>
-            <a href="#reading-workflow" class="rc-toc-link" onclick="scrollToSection('reading-workflow', event)">6. Reading Workflow</a>
-            <a href="#question-mapping" class="rc-toc-link" onclick="scrollToSection('question-mapping', event)">7. Question Mapping</a>
-            <a href="#function-verbs" class="rc-toc-link" onclick="scrollToSection('function-verbs', event)">8. Function Verbs</a>
+            ${tocHTML}
           </div>
         </div>
 
