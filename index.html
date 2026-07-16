@@ -6,6 +6,9 @@
 <title>GREP - Master Every Word</title>
 <link rel="icon" type="image/png" href="graduation-cap.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -6989,7 +6992,7 @@ function showSynonymClusters() {
           </div>
           <div class="accordion-content">
             <div class="cluster-image-wrap">
-              <img src="${imgPath}" class="cluster-image" alt="${cluster.name}" onerror="this.style.display='none'">
+              <img src="${imgPath}" class="cluster-image" alt="${cluster.name}" loading="lazy" onerror="this.style.display='none'">
             </div>
             <div class="cluster-details">
               <div class="cluster-meaning-label">Core Meaning</div>
@@ -7083,7 +7086,7 @@ function renderWordItem(w, globalIdx) {
   return `<div class="word-item${isCurrent ? ' active' : ''}${isMastered ? ' mastered' : ''}${inHitlist ? ' in-hitlist' : ''}" onclick="goToWord(${globalIdx})">
     <div class="word-img-box${activePastingWord === w.w ? ' pasting' : ''}" 
          onclick="event.stopPropagation(); activatePasteMode('${w.w}', this)">
-      ${imgUrl ? `<img src="${imgUrl}" alt="${w.w}">` : `<span class="word-img-placeholder">${ICONS.image || '+'}</span>`}
+      ${imgUrl ? `<img src="${imgUrl}" alt="${w.w}" loading="lazy">` : `<span class="word-img-placeholder">${ICONS.image || '+'}</span>`}
     </div>
     <span class="wi-name">${w.w}</span>
     <div style="display:flex; gap:4px; align-items:center;">
@@ -7294,7 +7297,7 @@ function renderCard() {
          ondragover="event.preventDefault(); this.classList.add('drag-over')"
          ondragleave="this.classList.remove('drag-over')"
          ondrop="handleDrop(event, '${w.w}', this)">
-      <img src="${imgUrl}" alt="${w.w}">
+      <img src="${imgUrl}" alt="${w.w}" loading="lazy">
     </div>` : (UPLOAD_ENABLED ? `
     <div class="word-media-container" 
          onclick="event.stopPropagation(); activatePasteMode('${w.w}', this)"
@@ -8407,7 +8410,7 @@ function showStrategyDetail(name) {
            ondragover="event.preventDefault(); this.classList.add('drag-over')"
            ondragleave="this.classList.remove('drag-over')"
            ondrop="handleDrop(event, '${s.strategy_name}', this, true)">
-        <img src="${imgUrl}" alt="${s.strategy_name}">
+        <img src="${imgUrl}" alt="${s.strategy_name}" loading="lazy">
       </div>` : (UPLOAD_ENABLED ? `
       <div class="word-media-container" 
            onclick="event.stopPropagation(); activatePasteMode('${s.strategy_name}', this, true)"
