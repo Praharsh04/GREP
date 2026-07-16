@@ -1047,6 +1047,30 @@ body::before {
 
 .nav-btn:disabled { opacity: 0.2; cursor: not-allowed; }
 
+/* PREMIUM THEME BTN */
+.theme-btn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.theme-btn:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.05);
+  box-shadow: 0 4px 12px var(--gold-glow);
+  transform: scale(1.08) rotate(15deg);
+}
+.theme-btn:active {
+  transform: scale(0.95);
+}
+.theme-btn svg {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.theme-btn:hover svg {
+  transform: rotate(360deg);
+}
+
 .card-counter {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
