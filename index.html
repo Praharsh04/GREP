@@ -2290,9 +2290,10 @@ body::before {
   font-size: 13px;
   color: var(--muted);
   text-decoration: none;
-  transition: all 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 4px 0;
   text-align: left;
+  border-left: 2px solid transparent;
 }
 .rc-toc-link:hover {
   color: var(--cream);
@@ -2300,7 +2301,7 @@ body::before {
 .rc-toc-link.active {
   color: var(--gold);
   font-weight: 600;
-  border-left: 2px solid var(--gold);
+  border-left-color: var(--gold);
   padding-left: 8px;
   margin-left: -16px;
 }
@@ -2419,6 +2420,7 @@ body::before {
   background: var(--gold);
   width: 0%;
   transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px var(--gold-glow), 0 0 5px var(--gold);
 }
 @media (max-width: 768px) {
   .rc-layout {
@@ -2465,53 +2467,59 @@ body::before {
 }
 
 .rc-verb-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: left;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 .rc-verb-card:hover {
-  transform: translateY(-2px);
-  background: var(--surface2);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 .rc-verb-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 10px;
 }
 .rc-verb-title {
   font-family: 'JetBrains Mono', monospace;
   font-size: 16px;
   font-weight: 700;
+  letter-spacing: -0.2px;
 }
 .rc-verb-actions {
   display: flex;
   gap: 8px;
 }
 .rc-verb-action-btn {
-  background: transparent;
-  border: none;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   color: var(--muted);
   cursor: pointer;
-  padding: 4px;
-  border-radius: 4px;
-  transition: all 0.2s;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .rc-verb-action-btn:hover {
-  color: var(--cream);
-  background: rgba(255,255,255,0.05);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.08);
+  border-color: var(--gold-glow);
+  transform: scale(1.08);
 }
 .rc-verb-detail {
   font-size: 13px;
@@ -8953,19 +8961,19 @@ function renderRCStrategiesHTML(s) {
             const titleStyle = `color: ${themeColor}; border-left: 3px solid ${themeColor}; padding-left: 10px; margin-left: -20px;`;
             const catIcon = getVerbIconSVG(cat.icon);
             return `
-              <div style="border: 1px solid var(--border); border-radius: 8px; background: var(--surface2); overflow: hidden; border-left: 4px solid ${themeColor}; margin-bottom: 12px;">
-                <div onclick="toggleVerbCategory(${cidx})" style="padding:16px 20px; background:var(--surface); cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none;">
-                  <div style="display:flex; align-items:center; gap:10px;">
-                    <span style="display:flex; align-items:center; color:${themeColor};">${catIcon}</span>
-                    <span style="font-weight:bold; font-size:16px; font-family:'Playfair Display',serif; ${titleStyle}">${cat.name}</span>
+              <div style="border: 1px solid var(--border); border-radius: 8px; background: var(--surface2); overflow: hidden; border-left: 4px solid ${themeColor}; margin-bottom: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                <div onclick="toggleVerbCategory(${cidx})" style="padding:16px 20px; background:var(--surface); cursor:pointer; display:flex; justify-content:space-between; align-items:center; user-select:none; border-bottom: 1px solid rgba(255,255,255,0.01);">
+                  <div style="display:flex; flex-direction:column; gap:4px; text-align:left;">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                      <span style="display:flex; align-items:center; color:${themeColor};">${catIcon}</span>
+                      <span style="font-weight:bold; font-size:16px; font-family:'Playfair Display',serif; color:${themeColor};">${cat.name}</span>
+                    </div>
+                    <div style="font-size:12px; color:var(--muted); font-style:italic; padding-left: 26px;">${cat.description}</div>
                   </div>
                   <div style="display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace;">${cat.verbs.length} verbs</span>
+                    <span style="font-size:11px; color:var(--muted); font-family:'JetBrains Mono',monospace; background:rgba(255,255,255,0.03); padding:2px 6px; border-radius:4px; border:1px solid var(--border);">${cat.verbs.length} verbs</span>
                     <span id="verb-cat-arrow-${cidx}" style="font-size:11px; color:var(--dim); transition: transform 0.2s;">▼</span>
                   </div>
-                </div>
-                <div style="padding: 10px 20px 0; background: var(--surface); border-top: 1px solid var(--border);">
-                  <div style="font-size:13px; color:var(--muted); font-style:italic;">${cat.description}</div>
                 </div>
                 <div id="verb-cat-content-${cidx}" style="display:none; padding:20px; border-top:1px solid var(--border); background:var(--bg);">
                   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:15px;">
