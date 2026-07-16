@@ -2422,12 +2422,78 @@ body::before {
   transition: width 0.1s ease-out;
   box-shadow: 0 0 10px var(--gold-glow), 0 0 5px var(--gold);
 }
+/* Custom premium scrollbars for Windows browsers */
+.main::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.main::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+.main::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.main::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
 @media (max-width: 768px) {
   .rc-layout {
     grid-template-columns: 1fr;
   }
   .rc-toc-container {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .rc-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .rc-search-box {
+    max-width: 100%;
+  }
+  .rc-action-btns {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .rc-action-btns button {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .rc-meta-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  /* Adjust accordions and verb categories for touch */
+  .rc-accordion-header, 
+  div[onclick^="toggleVerbCategory"] {
+    padding: 12px 15px !important;
+  }
+  .rc-accordion-title {
+    font-size: 16px !important;
+  }
+  div[onclick^="toggleVerbCategory"] div[style*="font-size:12px"] {
+    font-size: 11px !important;
+    padding-left: 0 !important;
+  }
+  .rc-verb-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rc-nav-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .rc-nav-btn.next {
+    margin-left: 0;
+    text-align: left;
   }
 }
 
