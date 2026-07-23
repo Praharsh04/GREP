@@ -12,8 +12,20 @@ if (!fs.existsSync(imagesDir)) {
 const files = fs.readdirSync(imagesDir);
 const mapping = {};
 
-files.forEach(file => {
-  if (file.match(/\.(jpg|jpeg|png|webp|svg|gif)$/i)) {
+// Sort files to process less-preferred extensions first, so preferred extensions overwrite them.
+// Preference: gif > webp > png > jpg > jpeg > avif > svg
+const extensionPreference = ['svg', 'avif', 'jpeg', 'jpg', 'png', 'webp', 'gif'];
+
+const sortedFiles = files.sort((a, b) => {
+  const extA = path.extname(a).slice(1).toLowerCase();
+  const extB = path.extname(b).slice(1).toLowerCase();
+  const prefA = extensionPreference.indexOf(extA);
+  const prefB = extensionPreference.indexOf(extB);
+  return prefA - prefB;
+});
+
+sortedFiles.forEach(file => {
+  if (file.match(/\.(jpg|jpeg|png|webp|svg|gif|avif)$/i)) {
     // Basic heuristic: take the first part before underscore or dot
     const wordName = path.parse(file).name.toLowerCase().split('_')[0].split('.')[0];
     mapping[wordName] = `/Images/${file}`;
